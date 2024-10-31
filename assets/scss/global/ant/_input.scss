@@ -1,0 +1,179 @@
+@import "assets/variables/light.scss";
+
+// WORD WRAP
+.wrap-label {
+    .ant-form-item-label {
+        line-height: 19.9999px !important;
+
+        label {
+            white-space: pre-wrap;
+        }
+    }
+}
+span.ant-form-item-children-icon {
+    display: none;
+}
+// input
+.ant-input {
+    background: #ffffff;
+    border: 1px solid #d0d5dd;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    border-radius: 6px;
+    height: 38px !important;
+
+    &::placeholder {
+        color: #d5d3d3;
+        font-weight: 400;
+        font-size: $fs_xs;
+    }
+
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+.ant-input-number {
+    background: #ffffff;
+    border: 1px solid #d0d5dd;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    border-radius: 6px;
+    height: 38px !important;
+    line-height: 38px;
+    width: 100%;
+
+    &::placeholder {
+        color: #d5d3d3;
+        font-weight: 400;
+        font-size: $fs_xs;
+    }
+
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+textarea.ant-input {
+    min-height: 90px;
+}
+
+.ant-form-item-label {
+    line-height: 44px;
+}
+
+.all-input-search {
+    height: 32px !important;
+    border-radius: 4px !important;
+}
+
+.ant-form-item {
+    margin-bottom: 10px;
+}
+
+span.ant-form-item-children-icon {
+    z-index: 0 !important;
+}
+
+.ant-form-item-label>label {
+    color: $heading-color;
+    font-weight: 500;
+    font-size: $fs_sm;
+}
+
+.has-error .ant-input-affix-wrapper .ant-input,
+.has-error .ant-input-affix-wrapper .ant-input:hover {
+    background: #f4f4f4;
+}
+
+.has-error .ant-input-affix-wrapper .ant-input:focus {
+    box-shadow: none;
+}
+
+.has-error .ant-input:focus {
+    box-shadow: none;
+}
+
+.has-error .ant-form-explain {
+    margin-top: 3px;
+}
+
+.has-error .ant-input {
+    background: #f4f4f4;
+
+    &:hover {
+        background: #f4f4f4;
+    }
+}
+
+// select
+.ant-select-selection {
+    background: #ffffff;
+    border: 1px solid #d0d5dd;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    border-radius: 6px;
+    height: 38px;
+}
+
+.has-error .ant-select-focused .ant-select-selection {
+    box-shadow: none;
+}
+
+.ant-select-selection__rendered {
+    line-height: 38px;
+}
+
+.ant-select-focused .ant-select-selection,
+.ant-select-selection:focus,
+.ant-select-selection:active {
+    box-shadow: none;
+}
+
+.ant-select-selection-selected-value {
+    color: $black;
+}
+li.ant-select-dropdown-menu-item {
+    font-weight: 500;
+}
+.ant-select-dropdown-menu {
+    overflow-x: hidden;
+}
+
+.ant-select-dropdown-menu::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.ant-select-dropdown-menu::-webkit-scrollbar {
+    width: 6px;
+    background-color: #fff;
+}
+
+.has-error .ant-select-arrow {
+    color: rgba(0, 0, 0, 0.25);
+}
+
+.ant-select-dropdown-menu::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #c1c1c1;
+}
+
+.ant-calendar-range-picker-separator {
+    vertical-align: baseline;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0;
+    /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input:-internal-autofill-selected {
+    background-color: #fff;
+}
+
+
+// ant-tags-select-list is custom class. use at a-select when you're using a-select in tags mode
+.ant-tags-select-list .ant-select-selection {
+    height: auto;
+}

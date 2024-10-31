@@ -1,0 +1,116 @@
+@import "assets/variables/light.scss";
+.feedback-header {
+    background-image: url("/images/feedback-bg.png");
+    padding: 114px 288px 121px 288px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .feedback-heading {
+        font-size: 49px;
+        line-height: 66px;
+        color: #344054;
+    }
+    .feedback-desc {
+        font-size: $fs_2xl;
+        line-height: 27px;
+        color: #263238;
+    }
+}
+
+#submit-feedback {
+    .feedback-txt {
+        font-size: 39px;
+        line-height: 66px;
+        color: #344054;
+    }
+    .submit-card {
+        background-image: url("/images/feedback-card.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        .white-card {
+            background: #ffffff;
+            box-shadow: 0px 4px 37px rgba(159, 159, 159, 0.25);
+            border-radius: 4px;
+            border: 1px solid #fff;
+            .ant-card-body {
+                padding: 20px 24px;
+                .lang-txt {
+                    font-size: $fs-base;
+                    line-height: 22px;
+                    color: #344054;
+                }
+                .lang-desc {
+                    font-size: $fs-base;
+                    line-height: 22px;
+                    color: #afafaf;
+                    min-height: 44px;
+                }
+            }
+            &:hover {
+                background: #fff8ec;
+                border: 1px solid #ffa500;
+                box-shadow: 0px 4px 37px rgba(159, 159, 159, 0.25);
+                border-radius: 4px;
+            }
+        }
+    }
+    .feedback-detail {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .social-feedback {
+        font-size: $fs_sm;
+        line-height: 19px;
+        color: #344054;
+    }
+    .works-detail-desc {
+        font-size: $fs-base;
+        line-height: 22px;
+        color: #afafaf;
+        min-height: 22px;
+        max-width: 860px;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .form-card {
+        background-image: url("/images/feed-back-form.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        .feedback-btn {
+            border-radius: 100px;
+        }
+        .design-btn {
+            border: 1px solid #dbdbdb;
+            border-radius: 3px;
+            font-size: $fs_sm;
+            color: #263238;
+        }
+        .suggestion-type {
+            font-size: $fs_sm;
+            color: #263238;
+        }
+        textarea.ant-input {
+            min-height: 120px;
+        }
+        .submit-txt {
+            font-size: $fs_sm;
+            line-height: 19px;
+            color: #263238;
+        }
+        .submit-btn {
+            background: #f7f9fc;
+            box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+            border-radius: 4px;
+            font-size: $fs_md;
+            color: #6978a0;
+        }
+        .ant-upload.ant-upload-drag {
+            background: #fafcfe;
+            border: 1px dashed #d9dbdf;
+        }
+    }
+}

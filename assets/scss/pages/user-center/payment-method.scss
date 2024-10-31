@@ -1,0 +1,287 @@
+@import "assets/variables/light.scss";
+
+#payment-method {
+
+    .payment-card {
+        .ant-card-body {
+            padding: 15px 20px;
+
+            .main-heading {
+                font-size: $fs_2xl;
+                color: $heading-color;
+            }
+
+            .payment-btn {
+                background: #f7f9fc;
+                border-radius: 3px;
+                border: none;
+                font-weight: 500;
+                font-size: $fs_xmd;
+                color: #6978a0;
+                height: 44px !important;
+            }
+        }
+    }
+
+    .orange-card-btn {
+        background: #ffeed1;
+        border-radius: 4px;
+
+        .notice-txt {
+            font-size: $fs_sm;
+            color: #1e2329;
+            line-height: 24px;
+            display: flex;
+            justify-content: flex-start;
+        }
+    }
+
+    .main-card {
+        .ant-card-body {
+            padding: 0px;
+        }
+
+        .bank-transfer-card {
+            background: #ffffff;
+            border: 0.5px solid #e2e2e2;
+            border-radius: 3px 3px 0px 0px;
+
+            .bank-color-name {
+                background: #f9f9f9;
+                font-size: $fs-base;
+                padding-top: 12px;
+                border-radius: 0px;
+                color: #081131;
+
+                a {
+                    font-size: $fs_xs !important;
+                    color: #081131;
+                    font-weight: 400 !important;
+                }
+            }
+
+            .ant-card-body {
+                padding: 0px;
+            }
+
+            .user-name {
+                font-size: $fs_xmd;
+                color: #718096;
+            }
+
+            .user-detail {
+                font-size: $fs_sm;
+                color: #081131;
+            }
+        }
+    }
+}
+
+.ant-popover-arrow {
+    display: none;
+}
+
+.payment-method-popover {
+    max-width: 210px;
+    width: 100%;
+    padding-top: 0;
+    margin-left: 2px;
+
+    .ant-popover-content {
+        .ant-popover-inner {
+            background: #ffffff;
+            box-shadow: 0px 0px 8px rgba(150, 150, 150, 0.16);
+            border-radius: 4px;
+        }
+
+        .ant-popover-inner-content {
+            padding: 0px;
+
+            .bank-transfer {
+                font-size: $fs_sm;
+                line-height: 13px;
+                color: $black;
+                margin-bottom: 0px;
+
+                &:hover {
+                    background: rgba(255, 243, 229, 0.45) !important;
+                }
+            }
+
+            .more {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+    }
+}
+
+.qrcode-popover {
+    max-width: 110px;
+    width: 100%;
+
+    .ant-popover-content {
+        .ant-popover-inner {
+            background: #ffffff;
+            box-shadow: 0px 0px 8px rgba(150, 150, 150, 0.16);
+            border-radius: 4px;
+            border: 1px solid #e2e2e2;
+        }
+
+        .ant-popover-inner-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+        }
+
+        .ant-popover-title {
+            border: none;
+        }
+    }
+}
+
+#add-payment {
+    .ant-modal-content {
+        box-shadow: 0px 3px 24px rgba(0, 0, 0, 0.1);
+        border-radius: 12px;
+    }
+
+    .verification-paypass {
+        font-size: $fs_sm;
+        color: $heading-color;
+    }
+.payment-methods-border {
+    height: 8px;
+}
+    .change-type-verify {
+        font-weight: 500;
+        color: #ffa500;
+    }
+
+    .google-fund-txt {
+        font-size: $fs_sm;
+        line-height: 20px;
+        color: $heading-color;
+    }
+
+    .payment-heading {
+        font-size: 20px;
+        color: $heading-color;
+    }
+
+    .ant-modal-close {
+        display: none;
+    }
+
+    .recommended-txt {
+        font-size: 1rem;
+        color: #000000;
+        line-height: 16px;
+    }
+
+    .list-scroll {
+        overflow-x: hidden;
+        max-height: 318px;
+    }
+
+    .list-scroll::-webkit-scrollbar-track {
+        border-radius: 10px;
+        background-color: #fff;
+    }
+
+    .list-scroll::-webkit-scrollbar {
+        width: 6px;
+        background-color: #fff;
+    }
+
+    .list-scroll::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color: #c1c1c1;
+    }
+
+    .show-more-txt {
+        color: $primary-color;
+        cursor: pointer;
+    }
+
+    .payment-divider {
+        background-color: #eeeeee;
+    }
+
+    .search-payment-method.ant-input-affix-wrapper {
+        .ant-input {
+            border: 1px solid #d0d5dd;
+            box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+            border-radius: 6px;
+            background-color: #fff !important;
+            font-size: 16px;
+            &::placeholder {
+                font-size: 16px;
+  
+            }
+
+        }
+    }
+    .ant-input-affix-wrapper .ant-input:not(:first-child) {
+        padding-left: 40px;
+    }
+    .bank-transfer {
+        font-weight: 400;
+        font-size: $fs_2xl;
+        color: $black;
+    }
+
+    .ant-modal-body {
+        padding: 0px;
+
+        .payment-txt {
+            font-weight: 500;
+            font-size: 1rem;
+            color: $black;
+            line-height: 24px;
+
+        }
+
+        .sub-heading {
+            font-weight: 400;
+            font-size: $fs_2xl;
+            color: $black;
+        }
+
+        .cancel-btn {
+            background: #ffffff !important;
+            font-size: $fs_md;
+            color: #afafaf;
+
+            &:hover {
+                color: #afafaf;
+            }
+        }
+
+        .blue-list {
+            font-size: 14px;
+            color: #53a2f3;
+            line-height: 30px;
+            padding: 0 2px;
+            margin-left: 2px;
+
+        }
+
+        ul.payment-list {
+            list-style: none;
+            padding-left: 0;
+        }
+    }
+}
+@media screen and (max-width: 1200px) {
+    #payment-method {
+        .main-bank-card {
+            overflow-x: auto;
+        .bank-transfer-card {
+            width: 1026px;
+        }
+    }
+    }
+}

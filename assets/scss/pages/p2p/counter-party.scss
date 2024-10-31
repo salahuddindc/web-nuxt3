@@ -1,0 +1,318 @@
+@import "assets/variables/light.scss";
+#counter-party {
+    .edit-input {
+        height: 30px !important;
+        margin-bottom: 5px;
+    }
+    .bank-tag-border {
+        border-radius: 37px;
+        line-height: 40px;
+        height: 40px;
+    }
+    .bank-tag {
+        border-radius: 3px;
+        font-weight: 400;
+        font-size: $fs_sm;
+        text-align: center;
+        border: none;
+        padding-left: 6px !important;
+        cursor: pointer;
+    }
+    .bank-tag-txt:last-child {
+        margin-right: 0 !important;
+    }
+    .main-card {
+        .bank-transfer-card {
+            background: #ffffff;
+            border: 0.5px solid #e2e2e2;
+            border-radius: 3px 3px 0px 0px;
+            .bank-color-name {
+                background: #f9f9f9;
+                font-size: $fs-base;
+                padding-top: 12px;
+                border-radius: 0px;
+                color: #081131;
+                a {
+                    font-size: $fs_xs !important;
+                    color: #081131;
+                    font-weight: 400 !important;
+                }
+            }
+            .ant-card-body {
+                padding: 0px;
+            }
+            .user-name {
+                font-size: $fs_xmd;
+                color: #718096;
+            }
+            .user-detail {
+                font-size: $fs_sm;
+                color: #081131;
+            }
+        }
+    }
+    .user-name {
+        font-size: $fs_lg;
+        color: $heading-color;
+    }
+    .counter-date {
+        font-size: $fs_md;
+        color: $text-grey;
+    }
+    span.ant-tag {
+        padding: 0;
+        border: none;
+        background: none;
+        margin-right: 10px;
+    }
+    .counter-list-text {
+        font-size: $fs_sm;
+        color: $heading-color;
+    }
+    .trades-title1 {
+        font-weight: 400;
+        font-size: $fs_sm;
+        color: $text-grey;
+    }
+    .verified-merchant {
+        font-size: $fs_md;
+        color: #0ecb81;
+    }
+    .estimated-txt {
+        font-size: $fs_sm;
+        color: $text-grey;
+    }
+    .block-txt {
+        color: $primary-color !important;
+    }
+    .ant-tabs-bar {
+        border-bottom: 1px solid #f2f2f2 !important;
+    }
+    .blocked-card {
+        .ant-card-body {
+            padding: 0;
+            .ant-tabs-nav-wrap {
+                padding-bottom: 0px;
+            }
+
+            .light-pink-card {
+                background: #ffffff;
+                border: 1px solid #ffe7e6;
+                border-radius: 12px;
+                .pink-row {
+                    background: linear-gradient(
+                        91.64deg,
+                        #fff3f3 -0.7%,
+                        rgba(255, 243, 243, 0) 96.29%
+                    );
+                    border-radius: 12px 12px 0 0px;
+                    .aliston-square {
+                        font-size: $fs_md;
+                        color: $heading-color;
+                    }
+                }
+            }
+        }
+        .ant-tabs-extra-content {
+            line-height: 92px;
+        }
+    }
+
+    .trades-card {
+        border-right: 1px solid #f2f2f2;
+        text-align: center;
+        min-height: 83px;
+        .ant-card-body {
+            padding: 0;
+            .trades-buy-list {
+                font-size: $fs_sm;
+                .trade-buy-txt {
+                    color: #0ecb81 !important;
+                }
+                .trade-sell-txt {
+                    color: #f6465d !important;
+                }
+            }
+            .trades-title1 {
+                font-size: $fs_sm;
+                color: $text-grey;
+                margin-bottom: 8px;
+            }
+            .trades-desc1 {
+                font-size: $fs-base;
+                color: $heading-color;
+                line-height: 27px;
+            }
+        }
+    }
+    .main-card {
+        .ant-card-body {
+            padding-bottom: 8px;
+        }
+    }
+    .positive-card {
+        background: #effef8 !important;
+        img {
+            box-shadow: 0px 4px 16px rgba(14, 203, 129, 0.64) !important;
+        }
+    }
+    .negative-card {
+        background: #fff2f2 !important;
+        img {
+            box-shadow: 0px 4px 16px rgba(233, 89, 80, 0.64) !important;
+        }
+    }
+    .feedback-card {
+        background: #fffaf2;
+        border-radius: 12px;
+
+        .ant-card-body {
+            padding: 13px 17px;
+            img {
+                box-shadow: 0px 4px 16px rgba(255, 165, 0, 0.64);
+                border-radius: 8px;
+            }
+            .feedbacck-title {
+                font-size: $fs_sm;
+                line-height: 19px;
+                color: $text-grey;
+                margin-bottom: 6px;
+            }
+            .feedbacck-desc {
+                font-size: $fs_2xl;
+                line-height: 24px;
+                color: $heading-color;
+            }
+        }
+    }
+    .counter-party-table-card {
+        .ant-card-body {
+            padding: 0 !important;
+            .buy-user {
+                font-weight: 500;
+                font-size: $fs_lg;
+                color: $heading-color;
+            }
+        }
+        // .ant-tabs-nav-wrap {
+        //     padding-bottom: 24px !important;
+        // }
+        .ant-tabs-extra-content {
+            line-height: 89px;
+        }
+    }
+    .trades-card-border {
+        border-right: none !important;
+    }
+    .user-online-ads {
+        font-size: $fs_lg;
+        color: $heading-color;
+    }
+    .feedback {
+        .hidden-feedback {
+            font-size: $fs_sm;
+            color: $text-grey;
+        }
+        .feedback-email {
+            font-size: $fs_md;
+            color: $heading-color;
+            line-height: 21px;
+        }
+        .feedback-desc {
+            font-weight: 500;
+            font-size: $fs_sm;
+            color: $heading-color;
+        }
+        .feedback-divider {
+            background: #f2f2f2;
+        }
+    }
+    @media screen and (max-width: 1367px) {
+        .right-profile {
+            padding-left: 0 !important;
+        }
+    }
+    @media screen and (max-width: 1280px) {
+        .profile-avatar {
+            padding-left: 25px !important;
+        }
+        .user-name {
+            font-size: $fs_sm_base;
+        }
+        .feedback-card {
+            .ant-card-body {
+                padding: 13px;
+                img {
+                    height: 30px;
+                }
+            }
+        }
+        .trades-card .ant-card-body {
+            .trades-title1 {
+                font-size: $fs_xmd;
+                margin-bottom: 0;
+            }
+            .trades-desc1 {
+                font-size: $fs_sm;
+            }
+        }
+    }
+    @media screen and (max-width: 1024px) {
+        .profile-row {
+            margin-top: 20px;
+            padding-left: 15px;
+        }
+        .main-card {
+            margin-top: 15px;
+        }
+        .trades-card .ant-card-body .trades-buy-list {
+            font-size: $fs_xmd;
+        }
+    }
+}
+#reason-modal {
+    .reason-heading {
+        font-size: $fs_lg;
+        color: $heading-color;
+    }
+    .ant-modal-content {
+        box-shadow: 0px 20px 136px -4px rgba(16, 24, 40, 0.1),
+            0px 8px 8px -4px rgba(16, 24, 40, 0.04);
+        border-radius: 12px;
+    }
+    .orange-bg {
+        background: rgba(255, 165, 0, 0.03);
+        border-radius: 6px;
+        .ant-card-body {
+            padding: 8px 13px;
+            .reason-note {
+                font-size: $fs_xmd;
+                color: $text-grey;
+            }
+        }
+    }
+    .ant-checkbox + span {
+        font-weight: 500;
+        font-size: $fs_md;
+        color: $heading-color;
+    }
+    textarea.ant-input {
+        height: 90px !important;
+    }
+}
+.info-popover {
+    max-width: 271px;
+    width: 100%;
+
+    .ant-popover-content {
+        .ant-popover-inner {
+            background: #ffffff;
+            box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.12);
+            border-radius: 8px;
+        }
+        .info-desc-txt {
+            font-size: $fs_md;
+            color: $text-grey;
+        }
+    }
+}

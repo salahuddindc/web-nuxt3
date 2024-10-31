@@ -1,0 +1,200 @@
+@import "assets/variables/light.scss";
+
+#chat {
+    .chat-header-border {
+        border-bottom: 1px solid #f2f2f2;
+        padding: 15px 20px;
+        background: linear-gradient(180deg, rgba(255, 165, 0, 0.08) -10.98%, rgba(255, 165, 0, 0) 100%);
+    }
+    .chat-footer-border {
+        border-top: 1px solid #f2f2f2;
+        padding: 15px;
+    }
+    .chat-container {
+        border-radius: 9px;
+        position: relative;
+        border: 1px solid #f2f2f2;
+
+        .ant-card-body {
+            padding: 0px;
+            .header-txt {
+                font-size: $fs-base;
+                color: #495057;
+            }
+        }
+    }
+    .chat-white-bg {
+        .notice-row{
+            background: #FFF4E1;
+            border-radius: 4px;
+            p{
+                color: #081131;
+                font-size: 12px;
+                line-height: 17.4px;
+            }
+        }
+        .ant-card-body {
+            padding: 0 !important;
+            .notify-txt {
+                border: 1px solid #d0d5dd;
+                border-radius: 91px;
+                font-weight: 400;
+                font-size: $fs_xs;
+                color: #9b9a9a;
+                padding: 12px 11px;
+            }
+            .date-time {
+                font-weight: 500;
+                font-size: $fs_xmd;
+                color: #9b9a9a;
+            }
+            .date-txt {
+                color: #838999;
+                font-size: $fs_xxs;
+            }
+            .send-messages {
+                position: relative;
+                margin-top: 12px;
+                .online-user {
+                    position: absolute;
+                    right: -12px;
+                    top: -18px;
+                    z-index: 1;
+                }
+                .green-icon {
+                    position: absolute;
+                    right: -3px;
+                    z-index: 1;
+                    top: 5px;
+                }
+                .send-row {
+                    display: flex;
+                    align-items: center;
+                }
+                .send-card {
+                    background: #f6f7fc;
+                    border-radius: 15px 15px 0px 15px;
+                    color: $white;
+                    max-width: max-content;
+                    float: right;
+                    border: none;
+                    text-align: left;
+                    .ant-card-body {
+                        padding: 10px 12px !important;
+                    }
+                    .send-chat-date {
+                        text-align: right;
+                    }
+                    color: #495057;
+                    font-weight: 500;
+                    font-size: $fs_sm;
+                    line-height: 20px;
+                }
+            }
+            .received-messages {
+                position: relative;
+                .recived-chat-icon {
+                    position: absolute;
+                    left: -4px;
+                    top: -10px;
+                    z-index: 1;
+                }
+                .recived-row {
+                    display: flex;
+                    align-items: center;
+                }
+                .received-card {
+                    background-color: #eff3ff;
+                    color: $black;
+                    border-radius: 15px 15px 15px 0px;
+                    max-width: max-content;
+                    float: left;
+                    border: none;
+                    font-size: $fs_sm;
+                    line-height: 20px;
+                    margin-bottom: 8px;
+                    .ant-card-body {
+                        padding: 10px 12px !important;
+                        .received-date1 {
+                            text-align: right;
+                        }
+                    }
+                }
+            }
+            .scroll_div::-webkit-scrollbar {
+                display: none;
+            }
+            .scroll_div {
+                width: 100%;
+                height: 55vh !important;
+                padding-bottom: 5px;
+                overflow-y: auto;
+            }
+            .scroll_div {
+                -ms-overflow-style: none; /* IE and Edge */
+                scrollbar-width: none; /* Firefox */
+            }
+        }
+    }
+    .chat-footer {
+        .chat-footer-card {
+            background: #ffffff;
+            border-radius: 9px;
+            .ant-card-body {
+                padding-top: 0px 12px !important;
+                .footer-row {
+                    display: flex;
+                    align-items: center;
+                    textarea.ant-input{
+                        height: 41px !important;
+                        min-height: 41px !important;
+                        resize: none;
+                    }
+                    .ant-input::-webkit-scrollbar {
+                        width: 4px;
+                    }
+                    .ant-input::-webkit-scrollbar-track {
+                        background: transparent; 
+                    }
+                    .ant-input::-webkit-scrollbar-thumb {
+                        background-color: #ccc;
+                        border-radius: 4px; 
+                    }
+                    .ant-input {
+                        background: #F7F9FC;
+                        border-radius: 5px;
+                        border: none;
+                        color: #9b9a9a;
+                        font-weight: 400;
+                        font-size: $fs_md;
+                        &:focus {
+                            box-shadow: none;
+                        }
+                    }
+                    .ant-input-affix-wrapper .ant-input-prefix {
+                        left: 0px;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 1200px) {
+        .chat-header-border {
+            padding: 15px;
+        }
+        .recieve-right-col {
+            padding-left: 20px !important;
+        }
+        .chat-footer .chat-footer-card .ant-card-body .footer-row { .ant-input {
+            height: 34px !important;
+        }
+        .upload-icon-col {
+            padding-left: 0 !important;
+        }
+        .send-icon {
+            height: 36px;
+        }
+    }
+    
+    }
+}

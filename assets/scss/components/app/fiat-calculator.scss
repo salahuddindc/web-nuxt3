@@ -1,0 +1,81 @@
+@import "@/assets/variables/light";
+@import "@/assets/scss/global/custom/web-font-size.scss"; // Custom Classes
+#fiat-calculator {
+    .main-div {
+        .center-div {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            z-index: 10;
+        }
+        .form-card {
+            background-color: #EAEAEA91;
+            border: 1px solid #D9D9D970;
+            border-radius: 6px;
+            
+            .ant-input {
+                border: none;
+                font-weight: 500;
+                font-size: 1rem !important;
+                color: $heading-color !important;
+                background-color: transparent !important;
+                padding: 0 !important;
+                box-shadow: none !important;
+                height: 20px !important;
+                line-height: 20px !important;
+
+                &::placeholder {
+                    font-weight: 500;
+                    font-size: 1rem !important;
+                }
+            }
+            form .has-feedback :not(.ant-input-group-addon) > .ant-select {
+                .ant-select-selection-selected-value {
+                    padding-right: 10px;
+                }
+            }
+
+            form
+                .has-feedback
+                :not(.ant-input-group-addon)
+                > .ant-select
+                .ant-input-affix-wrapper
+                .ant-input-suffix
+                :not(.anticon) {
+                line-height: 1.1;
+            }
+
+            .ant-form-item {
+                margin-bottom: 0 !important;
+            }
+            .ant-select-arrow {
+                right: 10px;
+            }
+            i.anticon.anticon-down.ant-select-arrow-icon {
+                color: $secondary-gray;
+            }
+            .ant-select.ant-select-enabled {
+                width: 100px !important;
+                height: 21px !important;
+            }
+            .ant-input-affix-wrapper .ant-input-suffix :not(.anticon) {
+                line-height: 1.9;
+            }
+           
+            .ant-select-selection.ant-select-selection--single {
+                background: transparent !important;
+                border: none !important;
+                border-radius: 2px;
+                height: 21px !important;
+                font-size: 14px;
+                font-weight: 500;
+                box-shadow: none;
+            }
+
+            .ant-input-affix-wrapper .ant-input-suffix {
+                right: 0px;
+            }
+        }
+    }
+}

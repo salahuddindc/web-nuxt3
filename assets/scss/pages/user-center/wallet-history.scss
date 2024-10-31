@@ -1,0 +1,105 @@
+@import "assets/variables/light.scss";
+
+#wallet-history {
+    .wallet-history-card {
+        .ant-card-body {
+            padding: 24px;
+            .billing-txt {
+                font-size: $fs_2xl;
+                color: $heading-color;
+            }
+        }
+    }
+    .outline-btn {
+        height: 38px !important;
+    }
+    .tabs-card {
+        .ant-card-body {
+            padding: 0;
+            .last-create-time {
+                color: $text-grey;
+            }
+            .date-txt {
+                color: #868686;
+            }
+            .status-txt {
+                color: #12b298;
+            }
+            .outline-btn {
+                height: 38px !important;
+            }
+            .deposit-table-txt {
+                letter-spacing: 0.2px;
+                color: #f2c45b;
+                opacity: 1;
+                &:hover {
+                    color: #FF9600;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 1200px) {
+        .wallet-history-card {
+            .ant-card-body {
+                padding: 24px;
+                .billing-txt {
+                    font-size: $fs_lg;
+                }
+            }
+        }
+    }
+}
+
+#wallet-detail-modal {
+    .ant-modal-close {
+        display: none !important;
+    }
+    span.ant-checkbox.ant-checkbox-checked {
+        margin-top: 5px;
+        margin-right: 5px;
+    }
+    .ant-modal-content {
+        background: #ffffff;
+        box-shadow: 0px 3px 24px rgba(0, 0, 0, 0.1);
+        border-radius: 12px;
+    }
+    .deposit-heading {
+        font-size: $fs_lg;
+        color: $heading-color;
+    }
+    .ant-checkbox + span {
+        font-weight: 500;
+        font-size: $fs_sm;
+        color: $heading-color;
+    }
+    .cancel-desc {
+        font-size: $fs-base;
+        line-height: 22px;
+        color: #3f6bc9;
+    }
+    .address-desc {
+        font-size: $fs_sm;
+        color: $text-grey;
+        line-height: 22px;
+        padding-left: 27px;
+    }
+    .gray-list {
+        font-size: $fs_xmd;
+        color: $text-grey;
+    }
+    .black-list {
+        font-size: $fs-base;
+        color: $heading-color;
+    }
+    .wallet-address-detail-divider {
+        margin: 13px 0;
+        width: 1px;
+        height: 0.6px !important;
+        top: 0em !important;
+        background-color: #f2f2f2 !important;
+
+    }
+    .success-txt {
+        color:  #0ECB81;
+    }
+}

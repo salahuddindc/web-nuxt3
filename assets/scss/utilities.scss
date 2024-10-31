@@ -1,0 +1,351 @@
+@import '@/assets/scss/breakpoints';
+
+// ◼◼◼ Margin Classes
+$margin-values: (
+); // start with an empty list
+
+@for $i from 0 through 80 {
+    $margin-values: append($margin-values, $i * 1); // generate values from 1px to 80px and append them to the list
+}
+
+$margin-directions: (
+    '',
+    t,
+    r,
+    b,
+    l,
+    x,
+    y
+);
+
+@mixin margin-utilities {
+
+    // Default class with no breakpoint
+    @each $direction in $margin-directions {
+        @each $value in $margin-values {
+            $suffix: #{$value};
+
+            .m#{$direction}-#{$value} {
+                @if $direction ==x {
+                    margin-left: #{$value * 4 }px !important;
+                    margin-right: #{$value * 4 }px !important;
+                }
+
+                @else if $direction ==y {
+                    margin-top: #{$value * 4 }px !important;
+                    margin-bottom: #{$value * 4 }px !important;
+                }
+
+                @else if $direction ==y {
+                    margin-top: #{$value * 4 }px;
+                    margin-bottom: #{$value * 4 }px !important;
+                }
+
+                @else if $direction ==t {
+                    margin-top: #{$value * 4 }px !important;
+                }
+
+                @else if $direction ==r {
+                    margin-right: #{$value * 4 }px !important;
+                }
+
+                @else if $direction ==b {
+                    margin-bottom: #{$value * 4 }px !important;
+                }
+
+                @else if $direction ==l {
+                    margin-left: #{$value * 4 }px !important;
+                }
+
+                @else {
+                    margin: #{$value * 4 }px !important;
+                }
+            }
+        }
+    }
+
+    // Responsive classes with breakpoints
+    @each $breakpoint, $width in $breakpoints {
+        @media (min-width: $width) {
+            @each $direction in $margin-directions {
+                @each $value in $margin-values {
+                    $suffix: #{$value};
+
+                    .m#{$direction}-#{$breakpoint}-#{$value} {
+                        @if $direction ==x {
+                            margin-left: #{$value * 4}px !important;
+                            margin-right: #{$value * 4}px !important;
+                        }
+
+                        @else if $direction ==y {
+                            margin-top: #{$value * 4}px !important;
+                            margin-bottom: #{$value * 4}px !important;
+                        }
+
+                        @else if $direction ==t {
+                            margin-top: #{$value * 4}px !important;
+                        }
+
+                        @else if $direction ==r {
+                            margin-right: #{$value * 4}px !important;
+                        }
+
+                        @else if $direction ==b {
+                            margin-bottom: #{$value * 4}px !important;
+                        }
+
+                        @else if $direction ==l {
+                            margin-left: #{$value * 4}px !important;
+                        }
+
+                        @else {
+                            margin: #{$value * 4}px !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+// ◼◼◼ Padding Classes
+$padding-values: (
+); // start with an empty list
+
+@for $i from 0 through 80 {
+    $padding-values: append($padding-values, $i * 1); // generate values from 1px to 100px and append them to the list
+}
+
+$padding-directions: (
+    '',
+    t,
+    r,
+    b,
+    l,
+    x,
+    y
+);
+
+@mixin padding-utilities {
+
+    // Default class with no breakpoint
+    @each $direction in $padding-directions {
+        @each $value in $padding-values {
+            $suffix: #{$value};
+
+            .p#{$direction}-#{$value} {
+                @if $direction ==x {
+                    padding-left: #{$value * 4}px !important;
+                    padding-right: #{$value * 4}px !important;
+                }
+
+                @else if $direction ==y {
+                    padding-top: #{$value * 4}px !important;
+                    padding-bottom: #{$value * 4}px !important;
+                }
+
+                @else if $direction ==t {
+                    padding-top: #{$value * 4}px !important;
+                }
+
+                @else if $direction ==r {
+                    padding-right: #{$value * 4}px !important;
+                }
+
+                @else if $direction ==b {
+                    padding-bottom: #{$value * 4}px !important;
+                }
+
+                @else if $direction ==l {
+                    padding-left: #{$value * 4}px !important;
+                }
+
+                @else {
+                    padding: #{$value * 4}px !important;
+                }
+            }
+        }
+    }
+
+    // Responsive classes with breakpoints
+    @each $breakpoint, $width in $breakpoints {
+        @media (min-width: $width) {
+            @each $direction in $padding-directions {
+                @each $value in $padding-values {
+                    $suffix: #{$value};
+
+                    .p#{$direction}-#{$breakpoint}-#{$value} {
+                        @if $direction ==x {
+                            padding-left: #{$value * 4}px !important;
+                            padding-right: #{$value * 4}px !important;
+                        }
+
+                        @else if $direction ==y {
+                            padding-top: #{$value * 4}px !important;
+                            padding-bottom: #{$value * 4}px !important;
+                        }
+
+                        @else if $direction ==t {
+                            padding-top: #{$value * 4}px !important;
+                        }
+
+                        @else if $direction ==r {
+                            padding-right: #{$value * 4}px !important;
+                        }
+
+                        @else if $direction ==b {
+                            padding-bottom: #{$value * 4}px !important;
+                        }
+
+                        @else if $direction ==l {
+                            padding-left: #{$value * 4}px !important;
+                        }
+
+                        @else {
+                            padding: #{$value * 4}px !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+// font-size classes
+@mixin fonts-utilities {
+
+    // Responsive classes with breakpoints
+    @for $value from 1 through 40 {
+        .font-#{$value} {
+            font-size: #{$value}px;
+        }
+    }
+
+    @each $breakpoint, $width in $breakpoints {
+        @media (min-width: $width) {
+            @for $value from 1 through 40 {
+                .font-#{$breakpoint}-#{$value} {
+                    font-size: #{$value}px;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+// font-size classes
+@mixin line-height-utilities {
+
+    // Responsive classes with breakpoints
+    @for $value from 1 through 60 {
+        .lh-#{$value} {
+            line-height: #{$value}px;
+        }
+    }
+
+    @each $breakpoint, $width in $breakpoints {
+        @media (min-width: $width) {
+            @for $value from 1 through 60 {
+                .lh-#{$breakpoint}-#{$value} {
+                    line-height: #{$value}px;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+// border-radius classes
+@mixin border-radius-utilities {
+
+    // Responsive classes with breakpoints
+    @for $value from 1 through 60 {
+        .border-radius-#{$value} {
+            border-radius: #{$value * 4 }px;
+        }
+    }
+
+    @each $breakpoint, $width in $breakpoints {
+        @media (min-width: $width) {
+            @for $value from 1 through 60 {
+                .border-radius-#{$breakpoint}-#{$value} {
+                    border-radius: #{$value * 4 }px;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+// font-weight classes
+@mixin font-weight-utilities {
+
+    // Responsive classes with breakpoints
+    @for $value from 1 through 9 {
+        .fw-#{$value} {
+            font-weight: #{$value}00;
+        }
+    }
+
+    @each $breakpoint, $width in $breakpoints {
+        @media (min-width: $width) {
+            @for $value from 1 through 9 {
+                .fw-#{$breakpoint}-#{$value} {
+                    font-weight: #{$value}00;
+                }
+            }
+        }
+    }
+}
+
+
+body.home-page-body,body.calculator-body,body.investment-plans-body,
+body.play-card-game-body,
+body.convert-body,
+body.square-module-body,body.copy-trade-body, body.partner-program-body,body.trading-bot-body,body.market-details-body {
+    @include margin-utilities;
+    @include padding-utilities;
+    @include fonts-utilities;
+    @include line-height-utilities;
+    @include border-radius-utilities;
+    @include font-weight-utilities;
+     
+    @import '@/assets/scss/common';
+
+    h1 {
+        font-size: $--h1;
+    }
+
+    h2 {
+        font-size: $--h2;
+    }
+
+    h3 {
+        font-size: $--h3;
+    }
+
+    h4 {
+        font-size: $--h4;
+    }
+
+    h5 {
+        font-size: $--h5;
+    }
+
+    h6 {
+        font-size: $--h6;
+    }
+}
+body.play-card-game-body{
+   background: #111111;
+}

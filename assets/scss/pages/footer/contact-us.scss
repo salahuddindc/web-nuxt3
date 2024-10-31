@@ -1,0 +1,104 @@
+@import "assets/variables/light.scss";
+
+#contact-us {
+    .contact-desc {
+        color: $heading-color;
+        font-size: $fs_base;
+    }
+    .contact-header {
+        background: url("/images/contact-us.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 62px 0;
+        .contact-heading {
+            color: $heading-color;
+            font-size: $fs_14xl;
+        }
+       
+    }
+    .pt-8 {
+        padding-top: 100px;
+    }
+    .pb-6 {
+        padding-bottom: 60px;
+    }
+    .main-heading {
+        color: $heading-color;
+        font-size: $fs_14xl;
+    }
+    .small-text {
+        font-size: $fs_2xl;
+        color: $heading-color;
+        line-height: 25px;
+        a {
+            color: $heading-color;
+        }
+    }
+    // .follow-us-card {
+    //     background: #fafafa;
+    //     .ant-card-body {
+    //         padding: 55px 0;
+    //     }
+    // }
+    .query-box {
+        textarea.ant-input {
+            min-height: 118px;
+        }
+    }
+    .bottom-content {
+        background: url("/images/bottom-bg-contact-us.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 60px 0;
+    .subscribe-txt {
+        .ant-input {
+            color: $text-grey;
+            &::placeholder {
+                color: $text-grey;
+            }
+        }
+    }
+    .primary-btn {
+        height: 40px !important;
+    }
+}
+    .community-cards {
+        border-radius: 65px;
+        border: 1px solid #eaeaea;
+        &:hover {
+            background-color: $light-grey-bg;
+        }
+        .ant-card-body {
+            padding: 10px 14px;
+        }
+    }
+    .social-icon {
+        .all-icon {
+            margin-left: 30px;
+        }
+    }
+    @media screen and (max-width: 1200px) {
+        .contact-header {
+            .contact-heading {
+                font-size: $fs_7xl;
+            }
+            .contact-desc {
+                font-size: $fs-base;
+            }
+        }
+        .main-heading {
+            font-size: $fs_7xl;
+        }
+        .small-text {
+            font-size: $fs-base;
+            line-height: 25px;
+        }
+    }
+    @media screen and (max-width: 1024px) {
+        .social-icon .all-icon {
+            height: 50px !important;
+        }
+    }
+}

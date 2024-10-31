@@ -1,0 +1,162 @@
+@import "@/assets/variables/light";
+
+body::-webkit-scrollbar {
+    width: 5px;
+}
+
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+}
+
+#keycopy {
+    ::selection {
+        background-color: transparent !important;
+        color: inherit;
+    }
+}
+
+.ant-layout-content {
+    height: max-content;
+}
+
+.main-content {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+}
+
+.ant-modal-mask {
+    background: #000000b8;
+}
+
+.ant-layout-sider {
+    border-radius: 6px;
+}
+
+.ant-layout {
+    background-color: #F3F5F7 !important;
+}
+
+#dashbaord-layout {
+    .ant-layout {
+        flex-direction: row;
+        margin-top: 17px;
+    }
+
+    .sidebar-main-content {
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 0;
+        width: 100%;
+    }
+
+    .ant-layout-header {
+        padding: 0px;
+        line-height: 0px;
+    }
+
+    .ant-layout-sider-children {
+        background: #fff;
+        height: 75%;
+    }
+
+    aside.ant-layout-sider.ant-layout-sider-dark {
+        max-width: 230px !important;
+        min-width: 230px !important;
+        width: 230px !important;
+        margin-right: 15px;
+        flex: 0 0 230px !important;
+        border-radius: 6px !important;
+    }
+
+    .ant-layout-sider {
+        border-radius: 6px !important;
+        background-color: #fff !important;
+    }
+
+    aside.ant-layout-sider.ant-layout-sider-dark {
+        height: 75%;
+    }
+}
+
+#ico-layout {
+    .main-ico-layout {
+        padding: 0 100px;
+    }
+
+    .main-box {
+        position: relative;
+
+        .main-container {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: 1;
+        }
+    }
+}
+
+#play-card {
+    .ant-layout {
+        background-color: #111111 !important;
+    }
+}
+
+.mck-sidebox-launcher * {
+    display: none;
+}
+
+#trade-dashboard-layout {
+    .ant-layout {
+        background: #0C1014 !important;
+
+        .trade-layout-content {
+            max-width: 1522px;
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    #dashbaord-layout .ant-layout {
+        padding: 0 20px !important;
+    }
+
+    .main-content {
+        padding: 0 20px
+    }
+}
+
+@media screen and (min-width: 1441px) {
+    #dashbaord-layout .ant-layout {
+        max-width: 1440px;
+    }
+
+    .main-content {
+        max-width: 1440px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #ico-layout {
+        .main-ico-layout {
+            padding: 0 30px;
+        }
+    }
+
+    #dashbaord-layout aside.ant-layout-sider.ant-layout-sider-dark {
+        max-width: 195px !important;
+        min-width: 195px !important;
+        width: 195px !important;
+        margin-right: 15px;
+        flex: 0 0 195px !important;
+        border-radius: 6px !important;
+    }
+}

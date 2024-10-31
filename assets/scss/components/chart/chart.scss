@@ -1,0 +1,66 @@
+.TVChartContainer {
+    height: calc(100vh - 80px);
+}
+
+.hex-chart {
+    height: 100%;
+    position: relative;
+    display: block;
+    background: $cl_0C1014;
+}
+
+.hex-chart-content {
+    background: #0C1014;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    top: 5px;
+    left: 0;
+    z-index: 0;
+
+}
+
+.deal-pro,
+.contract-pro,
+.margin-pro {
+    .hex-chart-content {
+        height: 535px !important;
+    }
+}
+
+.deal {
+    .hex-chart-content {
+        height: 323px;
+    }
+}
+
+.contract {
+    .hex-chart-content {
+        height: 340px;
+    }
+}
+
+.margin {
+    .hex-chart-content {
+        height: 310px;
+    }
+}
+
+.plugin_chart_nav {
+    color: $cl_ADB1B8;
+    cursor: pointer;
+    padding: 4px;
+    margin: 0px 6px;
+    font-size: $fs_sm;
+    font-weight: 500;
+    text-align: right;
+}
+
+.plugin_chart_nav:hover {
+    color: $cl_FFA500;
+}
+
+.header {
+    border-bottom: 3px solid $cl_12181D;
+    padding-bottom: 6px;
+}

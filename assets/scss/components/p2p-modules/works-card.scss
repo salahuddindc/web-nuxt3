@@ -1,0 +1,100 @@
+@import "assets/variables/light.scss";
+
+#works-card {
+    .how-p2p-works {
+        font-size: $fs_7xl;
+        color: $heading-color;
+    }
+    .transaction-fee {
+        font-size: $fs_2xl;
+        color: $heading-color;
+    }
+    .transaction-fee-desc {
+        font-size: $fs_sm;
+        color: $text-grey;
+        min-height: 63px;
+    }
+    .p2p-desc-list {
+        min-height: 84px;
+    }
+    .gray-card {
+        border-radius: 5px;
+        .white-gray-card {
+            border: 1px solid #e9e9e9;
+            border-radius: 6px;
+            &:hover {
+                background: linear-gradient(
+                180deg,
+                $white 55.42%,
+                $light-orange-bg 191.78%
+            );
+            border: 1px solid #ffc73d !important;
+            }
+        }
+        .button-bg {
+            border-radius: 50px;
+            background: #f6f6f6;
+            padding: 7px;
+            height: 46px;
+            float: right;
+        }
+        .buy-crypto {
+            font-size: $fs_sm;
+            background: $white;
+            border: none;
+            border-radius: 100px;
+            color: $heading-color;
+            height: 32px;
+        }
+        .sell-crypto {
+            background: transparent;
+            border-radius: 5px;
+            color: #cacaca;
+            font-size: $fs_sm;
+            height: 32px;
+        }
+        .list-title {
+            font-size: $fs_2xl;
+            color: $heading-color;
+        }
+        .list-desc {
+            font-size: $fs_sm;
+            color: $text-grey;
+            height: 68px;
+        }
+    }
+    @media screen and (max-width: 1200px) {
+        .how-p2p-works {
+            font-size: $fs_2xl;
+        }
+        .white-gray-card {
+            padding: 20px !important;
+            .white-card-img {
+                height: 60px;
+            }
+            .list-title {
+                margin-top: 10px !important;
+            }
+        }
+        .gray-card {
+            .list-desc {
+                font-size: $fs_xs;
+            }
+            .list-title {
+                font-size: $fs_lg;
+                margin-bottom: 4px !important;
+            }
+        }
+        .transaction-fee {
+            font-size: $fs_lg;
+        }
+        .transaction-fee-desc {
+            font-size: $fs_xmd;
+        }
+    }
+    @media screen and (max-width: 1200px) {
+        .white-gray-card {
+            padding: 20px 20px 40px 20px !important;
+        }
+    }
+}

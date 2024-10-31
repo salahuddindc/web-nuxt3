@@ -1,0 +1,178 @@
+@import "assets/variables/light.scss";
+
+#bug-bounty {
+    background-color: $white;
+    .bounty-desc {
+        font-size: $fs_base;
+        color: $heading-color;
+    }
+    .bug-bounty-bg {
+        background: url("/images/bug-bounty.png");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 55px 0 67px 0;
+        .bounty-heading {
+            font-size: $fs_14xl;
+            color: $heading-color;
+        }
+       
+    }
+    .primary-btn {
+        height: 38px !important;
+        margin-top: 30px;
+    }
+    .pb-8 {
+        padding-bottom: 100px;
+    }
+    .pt-8 {
+        padding-top: 100px;
+    }
+    .pb-6 {
+        padding-bottom: 60px;
+    }
+    .sub-heading {
+        font-size: $fs_14xl;
+        color: $heading-color;
+    }
+    .sub-text {
+        font-size: $fs_2xl;
+        color: $heading-color;
+    }
+    .title-desc {
+        font-size: $fs_base;
+        color: $heading-color;
+        line-height: 30px;
+        min-height: 120px;
+        a {
+            text-decoration: underline;
+            color: $heading-color;
+            font-weight: 500;
+        }
+        ul {
+            margin-bottom: 0;
+            padding-left: 18px;
+        }
+    }
+    .reward-txt {
+        line-height: 30px;
+    }
+    .ant-radio-button-wrapper {
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 100px !important;
+        font-size: $fs_2xl;
+        border: none;
+        margin-right: 10px !important;
+        font-weight: 400;
+        letter-spacing: 0.2px;
+        color: #cacaca;
+        padding: 0 20px;
+        text-align: center;
+    }
+    .ant-radio-button-wrapper:hover {
+        background-color: transparent;
+        border-radius: 100px;
+        color: #cacaca;
+        font-size: $fs_2xl;
+    }
+    label.ant-radio-button-wrapper.ant-radio-button-wrapper-checked {
+        background-color: $primary-color !important;
+        margin-right: 10px !important;
+        color: $white;
+        border: none;
+        border-top: 2px solid $primary-color !important;
+        font-size: $fs_2xl;
+        box-shadow: inset 0px 6px 11px rgba(168, 168, 168, 0.25) !important;
+    }
+    .ant-radio-group-solid
+        .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):hover {
+        box-shadow: none;
+        background: transparent;
+    }
+    span.ant-radio-button.ant-radio-button-checked {
+        background-color: #fff3e0;
+    }
+    .ant-radio-button-wrapper:not(:first-child)::before {
+        background-color: transparent;
+        width: 0;
+    }
+    .critical-txt {
+        font-size: $fs_7xl;
+        color: $heading-color;
+    }
+    .critical-desc {
+        font-size: $fs_base;
+        color: $heading-color;
+    }
+    .disclaimer-txt {
+        font-size: $fs_sm;
+        color: $text-grey;
+        font-style: italic;
+    }
+    .bitnasdaq-partner {
+        background: url("/images/partner-bg.png");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 50px 0;
+        .let-us-know {
+            font-size: $fs_12xl;
+        }
+        .bitnasdaq-desc {
+            font-size: $fs_base;
+            color: $heading-color;
+
+            a {
+                text-decoration: underline;
+                color: $heading-color;
+            }
+        }
+    }
+    @media screen and (max-width: 1200px) {
+        .bug-bounty-bg {
+            .bounty-heading {
+                font-size: $fs_4xl;
+            }
+            .bounty-desc {
+                font-size: $fs_md;
+            }
+        }
+        .sub-heading {
+            font-size: $fs_2xl;
+        }
+        .pt-6 {
+            padding-top: 50px;
+        }
+        .pt-5 {
+            padding-top: 40px !important;
+        }
+        .sub-text {
+            font-size: $fs_md;
+        }
+        .title-desc {
+            font-size: $fs_xs;
+        }
+        .ant-radio-button-wrapper {
+            font-size: $fs_sm;
+            padding: 0 10px;
+        }
+        label.ant-radio-button-wrapper.ant-radio-button-wrapper-checked {
+            font-size: $fs_sm;
+        }
+        .critical-txt {
+            font-size: $fs_2xl;
+            img {
+                height: 50px;
+            }
+        }
+        .critical-desc {
+            font-size: $fs-base;
+        }
+        .bitnasdaq-partner .bitnasdaq-desc { 
+            font-size: $fs-base;
+        }
+        .disclaimer-txt { 
+            font-size: $fs_xs;
+        }
+    }
+}

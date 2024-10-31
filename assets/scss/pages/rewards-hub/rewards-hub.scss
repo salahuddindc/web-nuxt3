@@ -1,0 +1,490 @@
+@import "assets/variables/light.scss";
+#rewards-hub {
+    background-color: #fff;
+    .mt-6 {
+        margin-top: 6.25rem;
+    }
+    .pt-6 {
+        padding-top: 6.25rem;
+    }
+    .reward-header {
+        background: url("/images/reward-header.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 68px 0;
+        .heading {
+            font-size: 2.1875rem;
+            line-height: 45px;
+            color: $text-white;
+        }
+        .desc {
+            font-size: $fs-base;
+            color: $text-white;
+            line-height: 22px;
+            max-width: 630px;
+            width: 100%;
+        }
+        .gray-card-bg {
+            background: #22272c;
+            border-radius: 15px;
+            .ant-card-body {
+                padding: 30px;
+                .total-txt {
+                    font-size: $fs_sm;
+                    color: $text-white;
+                }
+                .total-price {
+                    font-size: $fs_2xl;
+                    color: $text-white;
+                }
+                .black-card-bg {
+                    background: #181b20;
+                    border-radius: 11px;
+                    margin-top: 22px;
+                    .ant-card-body {
+                        padding: 16px 15px;
+                        .bonus-txt {
+                            font-size: $fs_sm;
+                            color: $text-white;
+                            line-height: 20px;
+                        }
+                        .avail-txt {
+                            font-size: $fs_xs;
+                            color: #6d6d6d;
+                            line-height: 20px;
+                        }
+                        .usdt-txt {
+                            font-size: $fs-base;
+                            color: $text-white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .reload-icon {
+        height: 38px !important;
+    }
+    .reward-banner {
+        background: linear-gradient(180deg, #31353c 0%, #31353c 100%);
+        padding: 11px 0;
+        .banner-box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .banner-text {
+                color: #fff;
+                margin-right: 30px;
+            }
+        }
+    }
+    .welcom-txt {
+        font-size: $fs_14xl;
+        line-height: 46px;
+    }
+    .reward-card {
+        border-radius: 20px;
+        border: 1px solid #e6e6e6;
+        &:hover {
+            background: linear-gradient(
+            180deg,
+            $white 55.42%,
+            $light-orange-bg 191.78%
+        );
+        border: 1px solid #ffc73d !important;
+        }
+        .ant-card-body {
+            padding: 0;
+        }
+        .disclaimer-txt {
+            font-size: 0.875rem;
+            padding: 0px 24px;
+            background-color: #fafafa;
+            border: 1px solid #e6e6e6;
+            border-radius: 0 20px 0 33px;
+            border-top: none;
+            border-left: none;
+            color: $text-grey;
+            height: 30px !important;
+        }
+        .price {
+            font-size: $fs_7xl;
+            line-height: 36px;
+            .usdt-price {
+                color: $text-grey !important;
+                font-size: $fs-base;
+            }
+        }
+        .receive-btn {
+            border-radius: 100px;
+            border: 1px solid #d0d5dd;
+            background: #fff;
+            box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+            height: 44px !important;
+            font-size: $fs_sm;
+            &:hover {
+                background: $primary-color;
+                color: $white !important;
+                border: 1px solid $primary-color;
+            }
+        }
+        .reward-divider {
+            top: 2.4em;
+            width: 0px !important;
+            height: 13em;
+            border-style: dashed;
+            background: transparent;
+            border: 1px dashed #e6e6e6;
+        }
+        .future-transaction {
+            font-size: $fs_2xl;
+        }
+        .future-desc {
+            color: rgba(8, 17, 49, 0.71);
+            line-height: 20px;
+            padding-bottom: 30px;
+            min-height: 90px;
+        }
+        .coupon-txt {
+            line-height: 20px;
+        }
+        .current-progress {
+            line-height: 20px;
+            color: $text-grey;
+        }
+        .ant-progress-outer {
+            padding-right: 0 !important;
+            margin-right: 0 !important;
+            .ant-progress-inner {
+                background: #f7f8fb;
+                height: 5px !important;
+                .ant-progress-bg {
+                    background: $primary-color;
+                    height: 5px !important;
+                }
+            }
+        }
+        .ant-progress-text {
+            display: none;
+        }
+        .expriation {
+            margin-top: 30px;
+        }
+        .reward-timer {
+            .reward-timer-box {
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                margin-bottom: 1rem;
+                flex-wrap: nowrap;
+            }
+            .timer-txt {
+                .day-bg {
+                    border-radius: 6px;
+                    background: #f8f8f8;
+                    padding: 3px;
+                    font-size: $fs_lg;
+                    color: $heading-color;
+                }
+                span {
+                    color: $text-grey;
+                    font-size: $fs_xs;
+                }
+            }
+        }
+    }
+  
+    .tabs {
+        .ant-tabs-nav-wrap {
+            padding: 20px 0 0 0 !important;
+        }
+    }
+    .rewards-hub-tabs {
+        .ant-card-body {
+            padding: 0;
+        }
+        .main-reward-card {
+            .ant-card-body {
+                padding: 0;
+            }
+        }
+        .overview-card2 {
+            .ant-card-body {
+                padding: 0;
+            }
+        }
+        .overview-card {
+            background-color: transparent;
+            .ant-card-body {
+                padding: 0;
+            }
+        }
+        .ant-table-thead > tr > th {
+            padding: 14px 0px 14px 0px !important;
+        }
+        .ant-table-thead > tr > th:first-child {
+            padding-left: 6px !important;
+        }
+        .ant-table-thead > tr > th:last-child {
+            padding-right: 6px !important;
+        }
+        .ant-table-tbody > tr > td {
+            padding: 18px 0px 18px 0px;
+        }
+        .ant-table-tbody > tr > td:first-child {
+            padding-left: 6px;
+        }
+        .ant-table-tbody > tr > td:last-child {
+            padding-right: 6px;
+        }
+        .reward-btn {
+            width: 115px;
+        }
+        .reward-btn-tabs {
+            .ant-radio-button-wrapper {
+                background: #fff;
+                border-radius: 0px 0px 0px 0px !important;
+                width: 220px;
+                font-size: $fs-base;
+                border: none;
+                margin-right: 0px !important;
+                font-weight: 500;
+                height: 57px;
+                line-height: 57px;
+                letter-spacing: 0.2px;
+                color: $text-grey;
+                text-align: center;
+            }
+            .ant-radio-button-wrapper:hover {
+                background-color: transparent;
+                border-radius: 0px 0px 0px 0px;
+                color: $text-grey;
+                font-size: $fs-base;
+            }
+            label.ant-radio-button-wrapper.ant-radio-button-wrapper-checked {
+                background-color: #fff !important;
+                border-radius: 0px 0px 0px 0px;
+                margin-right: 0px !important;
+                color: $heading-color;
+                width: 220px;
+                border: none;
+                border-top: 2px solid $primary-color !important;
+                font-size: $fs-base;
+                box-shadow: inset 0px 6px 11px rgba(168, 168, 168, 0.25) !important;
+            }
+            .ant-radio-button-wrapper:first-child {
+                border-radius: 0;
+            }
+            .ant-radio-group-solid
+                .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):hover {
+                box-shadow: none;
+                background: transparent;
+            }
+            span.ant-radio-button.ant-radio-button-checked {
+                background-color: #fff3e0;
+            }
+            .ant-radio-button-wrapper:not(:first-child)::before {
+                background-color: transparent;
+                width: 0;
+            }
+        }
+        .invite-bg {
+            background-image: url("/images/reward-invite-bg.svg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 1rem 4rem;
+            border-radius: .6875rem;
+            .invite-heading {
+                font-size: 1.5625rem;
+                line-height: 43px;
+                color: #ffffff;
+            }
+            .invite-desc1 {
+                font-size: .875rem;
+                line-height: 30px;
+                color: #ffffff;
+            }
+            .primary-btn{
+                border-radius: 2em !important;
+            }
+        }
+    }
+    @media screen and (max-width: 1280px) {
+        .heading {
+            font-size: 1.5rem !important;
+        }
+        .desc {
+            font-size: 0.875rem !important;
+        }
+       
+            .welcom-txt {
+                font-size: $fs_6xl;
+            }
+        
+        .future-transaction {
+            font-size: $fs-base;
+        }
+        .future-desc {
+            font-size: 0.85rem;
+        }
+        .receive-btn {
+            font-size: 12px !important;
+        }
+        .timer-txt {
+            .day-bg {
+                font-size: 0.85rem !important;
+            }
+            span {
+                font-size: 0.65rem !important;
+            }
+        }
+        .reward-divider {
+            top: 1.4em !important;
+        }
+        .reward-card-sec {
+            .right-bottom {
+                top: 230px !important;
+            }
+            .gray-main-card .ant-card-body .white-card {
+                height: 240px;
+            }
+        }
+
+        .rewards-hub-header {
+            .rewards-hub-heading {
+                font-size: $fs_7xl;
+            }
+            .rewards-hub-desc {
+                font-size: $fs_xmd;
+            }
+            .reward-pricing-card {
+                .total-price {
+                    font-size: $fs_2xl;
+                }
+                .available-price {
+                    font-size: $fs_xs;
+                }
+                .orange-card-reward .ant-card-body {
+                    padding-bottom: 8px;
+                }
+            }
+        }
+        .rewards-hub-tabs {
+            .main-card {
+                height: 290px;
+                .ant-card-body {
+                    .left-card {
+                        height: 290px;
+                        .ant-card-body {
+                            .reward-pt-3 {
+                                margin-top: 15px !important;
+                            }
+                            .first-time {
+                                font-size: $fs_sm;
+                                margin-bottom: 15px !important;
+                            }
+                            .usd-price {
+                                font-size: $fs_xs;
+                            }
+                            .counter-month {
+                                font-size: $fs_xs;
+                            }
+                            .counter-days {
+                                font-size: $fs_xmd;
+                            }
+                            .note-txt {
+                                font-size: $fs_xxs;
+                            }
+                        }
+                    }
+                    .right-card {
+                        height: 290px;
+                        .ant-card-body {
+                            .coupon-txt {
+                                font-size: $fs_2xl;
+                            }
+                            .doller-txt {
+                                font-size: $fs-base;
+                                margin-bottom: 15px !important;
+                            }
+                        }
+                    }
+                }
+            }
+            .reward-btn {
+                width: 100px;
+                height: 36px !important;
+            }
+            .invite-bg {
+                .invite-heading {
+                    font-size: $fs_2xl;
+                }
+                .invite-desc1 {
+                    font-size: $fs_sm;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 1200px) {
+        .reward-card{
+            min-height: 355px;
+        }
+    }
+    @media screen and (max-width: 1024px) {
+        .gray-image {
+            display: none;
+        }
+        .reward-timer {
+            display: block;
+        }
+        .reward-timer {
+            .reward-timer-box {
+                flex-wrap: wrap !important;
+            }
+        }
+        .rewards-hub-tabs {
+            .rewards-tabs {
+                margin-top: -50px;
+            }
+            .reward-card{
+                min-height:396px;
+            }
+            .reward-card-sec .gray-main-card .ant-card-body {
+                .ant-card-body {
+                    .coupon-txt {
+                        font-size: 1rem;
+                    }
+                    .usdt-txt {
+                        font-size: 1rem;
+                    }
+                }
+                .total-amount {
+                    padding-bottom: 10px;
+                }
+            }
+            .reward-btn-tabs {
+                .ant-radio-button-wrapper {
+                    width: 180px;
+                    height: 50px;
+                    line-height: 50px;
+                }
+                label.ant-radio-button-wrapper.ant-radio-button-wrapper-checked {
+                    width: 180px;
+                }
+            }
+        }
+    }
+}
+.disclaimer-popover {
+    width: 200px;
+    .ant-popover-inner-content {
+        color: $heading-color !important;
+    }
+    .ant-popover-inner {
+        background: white;
+        border-color: white;
+        box-shadow: 0px 9px 20px rgba(185, 185, 185, 0.25);
+    }
+}

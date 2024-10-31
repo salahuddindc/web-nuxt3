@@ -1,0 +1,41 @@
+@import "assets/variables/light.scss";
+
+.safety-guide-header {
+    background-image: url("/images/safety-guide.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 78px 0px 78px 0px;
+    .safety-heading {
+        font-size: 45px;
+        color: #344054;
+    }
+}
+#safety-guide {
+    .guide-desc {
+        font-size: $fs-base;
+        color: #344054;
+        line-height: 24px;
+    }
+    .guide-title {
+        font-size: $fs_2xl;
+        color: #344054;
+    }
+    .usd-txt {
+        font-size: $fs_2xl;
+        color: #344054;
+    }
+    .green-txt {
+        font-size: $fs_2xl;
+        color: #0ECB81;
+    }
+    .percent-txt {
+        font-size: $fs_sm;
+        color: #afafaf;
+    }
+    .several-txt {
+        font-size: $fs-base;
+        color: #afafaf;
+        line-height: 24px;
+    }
+}

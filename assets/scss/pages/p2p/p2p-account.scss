@@ -1,0 +1,1150 @@
+@import "assets/variables/light.scss";
+
+#p2p-account {
+    .cancel-txt {
+        color: $heading-color;
+        font-size: $fs-base;
+    }
+ 
+    .bank-transfer-img {
+        background-image: url('/images/bank-transfer-bg.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        padding: 33px 0 84px 23px;
+        border-radius: 6px;
+        width: 100%;
+        .buy-sell-crypto {
+            font-size: $fs_8xl;
+            color: $heading-color;
+            width: 260px;
+        }
+    }
+    .account-card {
+        .ant-card-body {
+            padding: 0;
+            .new-tag {
+                background: linear-gradient(
+                    90.96deg,
+                    #ff8000 0.77%,
+                    #ff5f59 92.82%
+                );
+                border-radius: 4px;
+                margin-right: 0;
+                font-size: $fs_xxxs;
+                // width: 36px;
+                // max-width: 36px;
+                color: $white;
+                line-height: 15px;
+                border: none;
+            }
+        }
+        .ant-tabs-extra-content {
+            padding-top: 25px;
+            line-height: 0;
+            padding-right: 24px;
+        }
+    }
+
+    button.ant-btn.ant-btn-primary.ant-input-search-button {
+        background-color: #fff;
+        border: 1px solid #d0d5dd;
+        border-radius: 0 6px 6px 0;
+    }
+
+    i.anticon.anticon-search {
+        color: #718096;
+        font-size: $fs-base;
+    }
+    // .ant-tabs-bar.ant-tabs-top-bar {
+    //     border-bottom: 1px solid #f2f2f2;
+    // }
+    // .ant-tabs-tab {
+    //     padding: 5px 12px !important;
+    // }
+    // .ant-tabs-nav-wrap {
+    //     padding-top: 20px !important;
+    // }
+    // .ant-tabs-nav.ant-tabs-nav-animated {
+    //     padding: 5px !important;
+    // }
+    // .ant-tabs-nav.ant-tabs-nav-animated {
+    //     margin-bottom: 20px;
+    // }
+    .ant-input-search-enter-button
+        + .ant-input-group-addon
+        .ant-input-search-button {
+        color: $white;
+        height: 38px;
+    }
+    .tutorial-txt {
+        color: #6978a0;
+        font-size: $fs_xmd;
+        span:hover{
+            color: #ffbb29;
+        }
+    }
+    .bank-transfer {
+        .bank-transfer-heading {
+            font-size: $fs_7xl;
+            color: $black;
+        }
+        .ant-timeline-item-head {
+            width: 33px;
+            height: 33px;
+        }
+        .ant-timeline-item {
+            padding-bottom: 26px !important;
+            min-height: 73px;
+            font-weight: 500;
+            font-size: $fs_sm;
+            color: $black;
+        }
+        .ant-timeline-item-tail {
+            left: 13px;
+            border: 1px dashed $primary-color;
+        }
+        .ant-timeline-item-content {
+            margin-left: 50px;
+        }
+        .faqs-txt {
+            font-size: $fs_sm;
+            color: $black;
+            line-height: 22px;
+        }
+        .bank-transfer-card {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid #ebebeb;
+            border-radius: 12px;
+            .bank-transfer-form {
+                span.ant-form-item-children-icon {
+                    display: none;
+                }
+                form
+                    .has-feedback
+                    :not(.ant-input-group-addon)
+                    > .ant-select
+                    .ant-select-selection-selected-value {
+                    padding-right: 0 !important;
+                }
+                form .has-feedback .ant-input-affix-wrapper .ant-input-suffix {
+                    padding-right: 0;
+                }
+                form
+                    .has-feedback
+                    :not(.ant-input-group-addon)
+                    > .ant-select
+                    .ant-select-arrow {
+                    right: 10px;
+                }
+                .all-text {
+                    font-size: $fs_sm;
+                    color: $primary-color;
+                }
+            }
+            .post-btn-bg {
+                background: #fafafa;
+                border-radius: 5px;
+                padding: 5px;
+                display: flex;
+                justify-content: space-between;
+                max-width: 435px;
+                width: 100%;
+                .sell-left-btn {
+                    max-width: 215px;
+                    width: 100%;
+                    .buy-sell {
+                        font-size: $fs_md;
+                        color: #000000;
+                    }
+                }
+
+                .trans-btn {
+                    background-color: #fafafa !important;
+                    color: #cacaca !important;
+                    border-radius: 5px;
+                }
+                .right-btn {
+                    background: #0ecb81 !important;
+                    color: #fff !important;
+                    box-shadow: 0px 1px 14px rgba(14, 203, 129, 0.46);
+                }
+                .left-btn {
+                    background: #f6465d !important;
+                    color: #fff !important;
+                    box-shadow: 0px 1px 14px rgba(255, 0, 0, 0.46);
+                }
+            }
+            .buy-btn {
+                height: 73px;
+                background-color: #fff;
+                font-weight: 400;
+                font-size: $fs_lg;
+                color: #000000;
+                border: none;
+            }
+            .sell-btn {
+                background: #edeff1;
+            }
+
+            .ant-input-affix-wrapper .ant-input-suffix :not(.anticon) {
+                line-height: 30px;
+            }
+            .ant-input-affix-wrapper .ant-input-suffix {
+                right: 2px;
+                .ant-select-selection {
+                    height: 30px !important;
+                    background: #f8f8f8;
+                    border: 1px solid #d0d5dd;
+                    border-radius: 4px;
+                    margin-top: 1px;
+                    margin-right: 10px;
+                }
+                .ant-select-selection-selected-value {
+                    margin-right: 5px;
+                    font-size: $fs_xs;
+                }
+            }
+            .quantity-input {
+                .ant-input {
+                    height: 56px !important;
+                }
+            }
+            .bank-account-tag {
+                .ant-select-arrow {
+                    top: 40%;
+                    right: 4px;
+                }
+                .ant-select-selection {
+                    height: 60px;
+                    border-color: #f1f1f1;
+                }
+                .ant-select-selection__rendered {
+                    line-height: 60px;
+                }
+                .bank-tag {
+                    border: none;
+                    background: #f7f8f9;
+                    padding: 2px 5px;
+                    color: #000000;
+                    font-size: $fs_xxxs;
+                }
+            }
+            .disclaimer-desc {
+                font-weight: 400;
+                font-size: $fs_sm;
+                line-height: 18px;
+                color: $black;
+            }
+           
+            .payment-method-icons {
+                height: 56px;
+                background: #ffffff;
+                border: 1px solid #d0d5dd;
+                border-radius: 3px;
+            }
+            .estimated-price-txt {
+                font-size: $fs_sm;
+                color: $text-grey;
+            }
+            .green-usdt-btn {
+                background: #12b298;
+                height: 56px;
+                color: $white;
+            }
+            .reminder-txt {
+                font-size: $fs_lg;
+                color: $black;
+                line-height: 12px;
+                border-left: 3px solid #ff8000;
+            }
+            .payment-type {
+                height: 24px;
+                max-width: 24px;
+                background: #afafaf;
+                border-radius: 50%;
+                text-align: center;
+                color: $white;
+            }
+            .payment-type-txt {
+                font-size: $fs_lg;
+                color: $black;
+            }
+            .vertical-payment {
+                height: 111px;
+            }
+        }
+    }
+}
+
+#buy-method {
+    .bank-card-info {
+        background-color: #FBFBFB !important;
+        .ant-card-body {
+            padding: 14px 18px;
+            .bank-name {
+                font-size: $fs_sm;
+                color: $heading-color;
+            }
+            .refernce-msg {
+                font-size: $fs_sm;
+                color: $text-grey;  
+            }
+            .copy-num {
+                font-size: $fs-base;
+                color: $heading-color;
+            }
+        }
+    }
+    .card-info {
+        .ant-tabs-nav-wrap {
+            padding: 0 !important;
+        }
+        .ant-tabs-tab-active.ant-tabs-tab {
+            font-size: $fs_sm;
+            font-weight: 500;
+            color: $text-grey !important;
+        }
+        .ant-tabs-nav .ant-tabs-tab {
+            padding: 15px !important;
+            height: 51px !important;
+            margin: 0px !important;
+            background-color: $white !important;
+            text-align: left;
+            border-bottom: 1px solid #f2f2f2 !important;
+        }
+        .ant-tabs-nav.ant-tabs-nav-animated {
+            background-color: #fff !important;
+            padding: 0 !important;
+        }
+        .ant-tabs .ant-tabs-left-bar .ant-tabs-nav {
+            width: 204px;
+            border-right: 1px solid #f2f2f2;
+            margin-right: 2px !important;
+        }
+
+.payment-method-radiobtn {
+    width: 100%;
+    .ant-radio-wrapper {
+        height: 50px;
+        line-height: 50px;
+        width: 100%;
+        border-bottom: 1px solid #F2F2F2;
+        padding-left: 12px;
+        margin-right: 0;
+        font-weight: 500;
+    }
+}
+.left-tab-card {
+    border-left: 1px solid #F2F2F2;
+    padding-left: 25px;
+}
+
+    }
+    .all-payment-method {
+        font-size: $fs-base;
+        color: $heading-color;
+    }
+    .view-all-txt {
+        font-size: $fs_sm;
+        color: $text-grey;
+    }
+    .thumbs-up-btn {
+        background: #d1ffed;
+        border-radius: 75px;
+        height: 37px !important;
+        border: none !important;
+        font-size: $fs_md;
+        color: #0ecb81;
+    }
+    .thumbs-down-btn {
+        background: #ffdfdf;
+        border-radius: 75px;
+        height: 37px !important;
+        border: none !important;
+        font-size: $fs_md;
+        color: #f6465d;
+    }
+    .thumbs-neutral-btn {
+        background: #fafafa;
+        color: #afafaf;
+        border-radius: 75px;
+        height: 37px !important;
+        border: none !important;
+        font-size: $fs_md;
+    }
+
+    .buy-speed-star {
+        font-size: $fs-base;
+        color: $heading-color;
+        line-height: 27px;
+    }
+   
+    .system-confirmation {
+        font-size: $fs_md;
+        color: $text-grey;
+    }
+    .post-heading {
+        font-size: $fs_2xl;
+        color: #000000;
+    }
+    .counter {
+        background: #f7f9fc;
+        border-radius: 3px;
+        padding: 4px 7px;
+        margin-left: 5px;
+        font-size: $fs-base;
+        color: #777e90;
+        text-align: center;
+    }
+    .ant-steps-item-icon {
+        margin-left: 0 !important;
+    }
+    .ant-steps-item-content {
+        width: 300px;
+        text-align: left;
+    }
+    .ant-steps-item-title {
+        font-size: $fs_md !important;
+    }
+    .ant-steps-item.ant-steps-item-wait {
+        .ant-steps-item-content {
+            width: 275px;
+            text-align: left;
+        }
+    }
+    .ant-steps-item-tail {
+        margin-left: 15px !important;
+    }
+    .gray-card-order {
+        background: #f8f8f8;
+        border-radius: 7px;
+        .ant-card-body {
+            padding: 9px 15px !important;
+        }
+    }
+    .p2p-divider {
+        background-color: #f2f2f2;
+        height: 0.6px !important;
+    }
+    .p2p-divider-vertical {
+        background-color: #f2f2f2;
+        height: 55px !important;
+        width: 0.6px !important;
+    }
+    .cancel-order-card {
+        border: none;
+    }
+    .question-txt {
+        font-size: $fs_sm;
+        color: $primary-color;
+        &:hover {
+            color: #ff7f00;
+        }
+    }
+    .cancel-order-text {
+        font-size: $fs-base;
+        color: $heading-color;
+    }
+    .gray-cancel-card {
+        background: #fbfbfb;
+        .ant-card-body {
+            padding: 22px 15px;
+        }
+    }
+    .cardlist-border {
+        background: #fbfbfb;
+        border: 1px solid #f2f2f2;
+        min-height: 300px;
+    }
+    .cardlist-border:last-child {
+        border-bottom: none;
+    }
+    .enterprises-txt {
+        font-weight: 400;
+        font-size: $fs_sm;
+        color: $text-grey;
+    }
+    .recieve-txt {
+        font-size: $fs-base;
+        color: $heading-color;
+    }
+    .info-heading {
+        font-size: $fs_2xl;
+        color: #000000;
+    }
+    .trades-d {
+        font-size: $fs_sm;
+        color: $primary-color;
+    }
+    .amount-txt {
+        font-size: $fs-base;
+        color: $text-grey;
+        line-height: 18px;
+    }
+    .price-txt {
+        font-size: $fs_2xl;
+        color: $heading-color;
+    }
+    
+    .trades-numd {
+        font-size: $fs_sm;
+        color: $heading-color;
+    }
+    .positive-txt-box {
+        display: flex;
+        justify-content: center;
+        max-width: 333px;
+        width: 100%;
+        background: #fafafa;
+        border-radius: 75px;
+        padding: 5px;
+    }
+    .thumbs-up-btn {
+        background: #d1ffed;
+        border-radius: 75px;
+        height: 37px !important;
+        border: none !important;
+        font-size: $fs_md;
+        color: #0ecb81;
+        width: 158px;
+    }
+    .thumbs-down-btn {
+        background: #ffdfdf;
+        border-radius: 75px;
+        height: 37px !important;
+        border: none !important;
+        font-size: $fs_md;
+        color: #f6465d;
+        width: 158px;
+    }
+
+    .thumbs-neutral-btn {
+        background: #fafafa;
+        color: #afafaf;
+        border-radius: 75px;
+        height: 37px !important;
+        border: none !important;
+        font-size: $fs_md;
+        width: 158px;
+    }
+    .account-txt {
+        font-size: $fs-base;
+        color: $heading-color;
+        line-height: 27px;
+    }
+    .account-desc {
+        font-size: $fs-base;
+        line-height: 19px;
+        color: $primary-color;
+    }
+    .ant-tabs-bar.ant-tabs-left-bar {
+        border-right: none;
+    }
+    .ant-radio-button-wrapper {
+        background: #fafafa;
+        border-radius: 6px;
+        font-size: $fs_sm;
+        border: none;
+        margin-right: 10px;
+        font-weight: 500;
+        height: 60px;
+        line-height: 60px;
+        letter-spacing: 0.2px;
+        padding: 0 30px;
+        color: $black;
+        text-align: center;
+    }
+    .ant-radio-button-wrapper:hover {
+        background: #ffffff;
+        box-shadow: 0px 3px 24px rgba(0, 0, 0, 0.1);
+        border-radius: 6px;
+        color: $black;
+        font-size: $fs_sm;
+    }
+    label.ant-radio-button-wrapper.ant-radio-button-wrapper-checked {
+        background: #ffffff;
+        box-shadow: 0px 3px 24px rgba(0, 0, 0, 0.1);
+        border-radius: 6px;
+        margin-right: 13px !important;
+        color: $black;
+        font-size: $fs_sm;
+    }
+    .ant-radio-button-wrapper :last-child {
+        margin-right: 0 !important;
+    }
+    .ant-radio-group-solid
+        .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):hover {
+        box-shadow: none;
+    }
+    span.ant-radio-button.ant-radio-button-checked {
+        background: #ffffff;
+        box-shadow: 0px 3px 24px rgba(0, 0, 0, 0.1);
+        border-radius: 6px;
+    }
+    .ant-radio-button-wrapper:not(:first-child)::before {
+        background-color: transparent;
+        width: 0;
+    }
+
+    .cardlist-border {
+        background: #fbfbfb;
+        border: 1px solid #f2f2f2;
+        min-height: 300px;
+    }
+    .cardlist-border:last-child {
+        border-bottom: none;
+    }
+    .enterprises-txt {
+        font-weight: 400;
+        font-size: $fs_sm;
+        color: $text-grey;
+    }
+    .recieve-txt {
+        font-size: $fs-base;
+        color: $heading-color;
+    }
+
+    .ant-tabs-tab-active.ant-tabs-tab {
+        background: #ffffff;
+        border-radius: 6px;
+        margin-top: 6px;
+        margin-bottom: 0;
+    }
+    .ant-tabs-tab-active.ant-tabs-tab:first-child {
+        margin-top: 0;
+    }
+    .ant-tabs-bar {
+        padding: 0;
+    }
+
+    .earn-blance {
+        font-size: $fs_sm;
+        color: $primary-color;
+        &:hover {
+            color: #ff7f00;
+        }
+    }
+    .transfer-btn {
+        background: #ffffff;
+        border: 1px solid #ededed;
+        border-radius: 5px;
+        font-weight: 500;
+        font-size: $fs_md;
+        color: #344054;
+    }
+    textarea.ant-input {
+        background: #ffffff;
+        border: 1px solid #d0d5dd;
+        box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+        border-radius: 6px;
+        padding: 12px 15px;
+        height: 249px !important;
+        font-weight: 400;
+        font-size: $fs_md;
+        &::placeholder {
+            color: #9b9a9a;
+        }
+    }
+    .optional-question {
+        font-weight: 400;
+        font-size: $fs_md;
+        color: #344054;
+    }
+    .char-num {
+        font-weight: 400;
+        font-size: $fs_sm;
+        color: #9b9a9a;
+    }
+}
+
+label.ant-radio-button-wrapper.ant-radio-button-wrapper-checked {
+    background: #ffffff ;
+    box-shadow: 0px 3px 24px rgba(0, 0, 0, 0.1) !important;
+    border-radius: 6px !important;
+}
+#beginners-guide {
+    .beginner-guide-heading {
+        font-size: $fs_2xl;
+        color: #344054;
+    }
+    .subitems {
+        font-size: 0.875rem;
+        color: #081131 !important;
+        text-decoration: underline;
+        &:hover {
+            color: $text-grey !important;
+        }
+    }
+    // .ant-tabs-top-bar {
+    //     border-bottom: 0 !important;
+    // }
+    .guide-desc {
+        font-size: $fs-base;
+        color: #344054;
+    }
+    .card-tabs {
+        background: #ffffff;
+        .ant-card-body {
+            padding: 0px;
+
+            // .ant-tabs-nav-wrap {
+            //     padding: 0px !important;
+            // }
+        }
+
+        .ant-card-head {
+            border-color: #f6f6f6;
+            font-size: $fs_2xl;
+            color: #344054;
+            font-weight: 500;
+        }
+    }
+    .videos-card {
+        .ant-card-body {
+            padding: 20px 0px;
+            .english-heading {
+                font-size: $fs_md;
+                color: #344054;
+            }
+            .english-desc {
+                font-weight: 400;
+                font-size: $fs_sm;
+                color: #afafaf;
+            }
+        }
+    }
+    .gray-img-card {
+        .ant-card-body {
+            padding: 11px 0;
+            .ant-card-meta-title {
+                font-weight: 400;
+                font-size: $fs_sm;
+                color: #afafaf;
+                margin-bottom: 5px;
+            }
+            .ant-card-meta-description {
+                font-weight: 500;
+                font-size: $fs_md;
+                color: #344054;
+                min-height: 45px;
+            }
+        }
+    }
+}
+
+#cancel-order-question {
+    .ant-modal-content {
+        box-shadow: 0px 20px 136px -4px rgba(16, 24, 40, 0.1),
+            0px 8px 8px -4px rgba(16, 24, 40, 0.04);
+        border-radius: 12px;
+    }
+    .heading-txt {
+        font-size: $fs_lg;
+        color: $heading-color;
+    }
+    .border-card {
+        border: 1px solid #dfdfdf;
+        border-radius: 9px;
+        .ant-card-body {
+            padding: 16px 14px;
+        }
+    }
+    .appeal-btn {
+        font-weight: 400;
+        font-size: $fs_sm;
+        background-color: #fff;
+        color: #303030;
+        border: none;
+    }
+    .question-desc {
+        font-size: $fs_xmd;
+        color: $text-grey;
+    }
+    .question-txt-desc {
+        background: rgba(255, 165, 0, 0.03);
+        border-radius: 12px;
+        border: none;
+        .ant-card-body {
+            padding: 12px 16px;
+        }
+        .question-heading {
+            font-size: $fs_sm;
+            color: $heading-color;
+        }
+    }
+    .text-desc-bg {
+        background-color: #fff !important;
+        border: 1px solid #dfdfdf !important;
+        border-radius: 12px !important;
+    }
+    .appeal-txt {
+        font-size: $fs_sm;
+        color: $heading-color;
+    }
+    .tip-desc2 {
+        font-size: $fs_xmd;
+        color: $heading-color;
+        line-height: 20px;
+    }
+    .appeal-txt2 {
+        font-size: $fs_sm;
+        color: $heading-color;
+    }
+    .appeal-desc {
+        font-size: $fs_xmd;
+        color: $text-grey;
+    }
+    .tip-card {
+        .ant-card-body {
+            padding: 16px 11px;
+        }
+    }
+    .cancel-btn {
+        background: #ffffff;
+        border: none;
+        font-size: $fs_sm;
+        color: #303030;
+    }
+    .contact-btn {
+        width: 180px;
+    }
+    .ant-modal-close {
+        display: none;
+    }
+
+    .orange-card {
+        background: #fef6d8;
+        border-radius: 10px;
+        .ant-card-body {
+            padding-left: 30px;
+            .order-list {
+                font-size: $fs_xmd;
+                color: #81858c;
+            }
+        }
+    }
+    textarea.ant-input {
+        min-height: 188px !important;
+        font-weight: 400;
+        font-size: $fs_sm;
+        color: #afafaf;
+        padding-top: 10px;
+    }
+    .proof-txt {
+        font-size: $fs_xmd;
+        color: #000000;
+    }
+}
+#submit-appeal {
+    .ant-modal-content {
+        box-shadow: 0px 20px 136px -4px rgba(16, 24, 40, 0.1),
+            0px 8px 8px -4px rgba(16, 24, 40, 0.04);
+        border-radius: 12px;
+    }
+    .ant-steps.ant-steps-horizontal.ant-steps-label-vertical {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        background: #ffffff;
+    }
+    .ant-modal-close {
+        display: none;
+    }
+    .ant-modal-body {
+        padding: 24px 10px;
+    }
+    .scroll_div {
+        width: 100%;
+        height: 77vh !important;
+        padding-bottom: 5px;
+        overflow-y: auto;
+        position: relative;
+    }
+
+    .scroll_div::-webkit-scrollbar-track {
+        border-radius: 8px;
+        background-color: #f1f1f1;
+    }
+
+    .scroll_div::-webkit-scrollbar {
+        width: 8px;
+        background-color: #f5f5f5;
+    }
+
+    .scroll_div::-webkit-scrollbar-thumb {
+        border-radius: 8px;
+        background-color: #c1c1c1;
+    }
+    .ant-upload.ant-upload-drag {
+        background: #ffffff;
+        border: 1px dashed #d0d5dd;
+        border-radius: 12px;
+    }
+    .ant-upload-text {
+        font-weight: 400;
+        font-size: $fs_sm;
+        color: #475467;
+    }
+    .ant-upload-hint {
+        font-weight: 400;
+        font-size: $fs_xs;
+        color: #475467;
+    }
+
+    .post-heading {
+        font-size: $fs_2xl;
+        color: $black;
+    }
+    .ant-steps-item-description {
+        font-weight: 400;
+        font-size: $fs_xs;
+        color: #9b9a9a;
+    }
+    .ant-steps-item-title {
+        line-height: 22px !important;
+        margin-top: 10px;
+    }
+    .ant-steps-label-vertical .ant-steps-item-content {
+        width: 140px;
+    }
+    .heading-txt {
+        font-size: $fs_lg;
+        color: $heading-color;
+    }
+    .border-card {
+        border: 1px solid #afafaf;
+        border-radius: 9px;
+    }
+
+    .question-desc {
+        font-size: $fs_xs;
+        color: #81858c;
+    }
+
+    .question-txt-desc {
+        background: #f9f9f9;
+        border-radius: 9px;
+        .question-heading {
+            font-size: $fs_xs;
+            color: #344054;
+        }
+    }
+
+    .appeal-txt {
+        font-weight: 700;
+        font-size: $fs_xmd;
+        color: #344054;
+    }
+    .appeal-txt2 {
+        font-size: $fs_sm;
+        color: $heading-color;
+    }
+    .tip-desc2 {
+        font-size: $fs_xmd;
+        color: $heading-color;
+    }
+    .appeal-desc {
+        font-weight: 400;
+        font-size: $fs_xmd;
+        color: #344054;
+    }
+    .tip-card {
+        .ant-card-body {
+            padding: 16px 11px;
+        }
+    }
+    .cancel-btn {
+        background: #ffffff;
+        border: none;
+        font-size: $fs_sm;
+        color: #303030;
+    }
+    .contact-btn {
+        width: 180px;
+    }
+    .ant-modal-close {
+        display: none;
+    }
+
+    .orange-card {
+        background: #fef6d8;
+        border-radius: 10px;
+        .ant-card-body {
+            padding-left: 30px;
+            .order-list {
+                font-size: $fs_xmd;
+                color: #81858c;
+            }
+        }
+    }
+    textarea.ant-input {
+        min-height: 188px !important;
+        font-weight: 400;
+        font-size: $fs_sm;
+        color: #afafaf;
+        padding-top: 10px;
+    }
+    .proof-txt {
+        font-size: $fs_xmd;
+        color: #000000;
+    }
+    .ant-modal {
+        top: 15px;
+    }
+}
+@media screen and (max-width: 1367px) {
+    #p2p-account {
+        .bank-transfer .bank-transfer-card .post-btn-bg {
+        max-width: 384px;
+    } 
+}
+}
+@media screen and (max-width: 1280px) {
+    #p2p-account {
+        .bank-transfer .bank-transfer-card .post-btn-bg {
+        max-width: 346px;
+    } 
+}
+}
+@media screen and (max-width: 1200px) {
+    #p2p-account {
+        .bank-transfer {
+            .bank-transfer-heading {
+                font-size: $fs_2xl;
+            }
+            .bank-transfer-card .post-btn-bg {
+                max-width: 307px;
+            }
+        }
+        .bank-right-col {
+            padding-left: 10px !important;
+        }
+        .cancel-txt {
+            font-size: $fs_sm;
+        }
+    }
+
+    #buy-method {
+   
+        .ant-steps-item-content { 
+            width: 160px !important;
+        }
+        .ant-steps-item-title { 
+            font-size: $fs_xs !important;
+            margin-top: 13px;
+            line-height: 18px;
+        }
+        .bank-card-info {
+            background-color: #FBFBFB !important;
+            .ant-card-body {
+                padding: 14px 5px;
+                .bank-name {
+                    font-size: $fs_xs;
+                    color: $heading-color;
+                }
+                .refernce-msg {
+                    font-size: $fs_xs;
+                    color: $text-grey;  
+                }
+                .copy-num {
+                    font-size: $fs_xmd;
+                    color: $heading-color;
+                }
+            }
+        }
+        .positive-txt-box { 
+            max-width: 260px;
+        }
+        .amount-txt {
+            font-size: $fs_sm;
+        }
+        .price-txt {
+            font-size: $fs-base;
+        }
+        .account-desc {
+            font-size: $fs_sm;
+        }
+        .trades-d {
+            font-size: $fs_xs;
+        }
+        .info-heading {
+            font-size: $fs-base;
+        }
+    }
+    #beginners-guide {
+        .gray-img-card .ant-card-body .ant-card-meta-description {
+            font-size: $fs_xmd;
+        }
+    }
+}
+@media screen and (max-width: 1024px) {
+    #buy-method {
+        .ant-steps-item-content { 
+            width: 144px !important;
+        }
+        .buy-speed-star { 
+            font-size: $fs_sm;
+        }
+        .system-confirmation {
+            font-size: $fs_xs;
+        }
+        .thumbs-up-btn {
+            width: 110px;
+            padding: 0 10px; 
+        }
+        .thumbs-down-btn {
+            width: 110px;
+            padding: 0 10px;
+        }
+        .thumbs-neutral-btn { 
+            width: 110px;
+            padding: 0 10px;
+
+        }
+        .account-txt {
+            font-size: $fs_sm;
+         }
+         .account-desc  {
+            font-size: $fs_xmd;
+         }
+        .cancel-order-text {
+            font-size: $fs_sm;
+        }
+        .gray-cancel-card .ant-card-body { 
+            padding: 15px;
+        }
+        .amount-txt {
+            font-size: $fs_xs;
+        }
+        .cancel-order-text {
+            padding-top: 0 !important;
+        }
+        .card-info {
+            margin-top: 10px !important;
+        }
+        .price-txt {
+            font-size: $fs_xs !important;
+        }
+        .faqs-mt {
+            margin-top: 10px !important;
+        }
+        .ant-collapse .ant-collapse-item {
+            margin-bottom: 10px;
+             .ant-collapse-header {
+            font-size: $fs_xs;
+            padding: 10px;
+        }
+    }
+    .bank-detail-row {
+        display: block;
+        .refernce-msg {
+            margin-top: 15px;
+            padding-left: 10px;
+        }
+        .copy-num {
+            padding-left: 10px;
+        }
+    }
+    }
+}

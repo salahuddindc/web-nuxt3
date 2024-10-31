@@ -1,0 +1,66 @@
+@import "assets/variables/light.scss";
+
+#partner-program {
+    .partner-header {
+        background: url("/images/partner.png");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 58px 0;
+        p {
+            color: #ffffffe5;
+        }
+    }
+    .partner-list-card {
+        border: 1px solid #e7e7e7;
+    }
+    .last-index:last-child {
+        padding-right: 20px !important;
+    }
+    .partner-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        .list-card {
+            max-width: 263px;
+            width: 100%;
+        }
+    }
+    .show-more-btn {
+        border: 1px solid #EAEAEA;
+        height: 40px !important;
+        background-color: $white !important;
+        &:hover {
+            color: $primary-color;
+        }
+        &:focus {
+            color: $secondary-black;
+        }
+    }
+    .partner-bottom {
+        background: url("/images/partner-bottom.png");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        p {
+            color: #ffffffe5;
+        }
+    }
+
+  
+}
+#partner-modal {
+    .ant-modal-content {
+        border-radius: 12px;
+        .partner-heading {
+            font-size: $fs_lg;
+            color: $heading-color;
+        }
+        .partner-desc {
+            font-size: $fs_sm;
+            color: $text-grey;
+        }
+        .query-desc {
+            min-height: 110px;
+        }
+    }
+}

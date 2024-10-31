@@ -1,0 +1,331 @@
+.night {
+    #language {
+        .ant-modal-content {
+            border-radius: 6px !important;
+            border: 1px solid $--modal-border !important;
+            background: $--modal-background;
+            box-shadow: $--modal-box-shadow;
+            .rate-title {
+                color: $--modal-heading;
+            }
+            .region-text {
+                color: $--modal-heading;
+            }
+            .language-divider {
+                background: $--divider;
+            }
+            .ant-input {
+                background-color: $--modal-input-background;
+                border: none;
+                color: $--modal-heading;
+            }
+            .language-txt {
+                color: $--modal-subheading;
+            }
+        }
+        .scroll_div::-webkit-scrollbar-track {
+            border-radius: 6px;
+            background-color: transparent;
+        }
+
+        .scroll_div::-webkit-scrollbar {
+            width: 6px;
+            background-color: transparent;
+        }
+
+        .scroll_div::-webkit-scrollbar-thumb {
+            border-radius: 6px;
+            background-color: rgba(94, 101, 115, 0.6);
+        }
+    }
+    .ant-select-dropdown-menu::-webkit-scrollbar-track {
+        border-radius: 10px;
+        background-color: transparent;
+    }
+    
+    .ant-select-dropdown-menu::-webkit-scrollbar {
+        width: 6px;
+        background-color: transparent;
+    }
+    .ant-select-dropdown-menu::-webkit-scrollbar-thumb {
+        border-radius: 6px;
+        background-color: rgba(94, 101, 115, 0.6);
+    }
+    .delete-confirm-modal {
+        .ant-modal-content {
+            border-radius: 6px !important;
+            border: 1px solid $--modal-border !important;
+            background: $--modal-background;
+            box-shadow: $--modal-box-shadow;
+            .success-desc {
+                color: $--modal-heading !important;
+            }
+            .cancel-outline-btn {
+                background-color: transparent;
+                border: 1px solid $--modal-border !important;
+                color: $--modal-subheading;
+                &:hover {
+                    color: $--modal-heading !important;
+  
+                }
+            }
+        }
+    }
+    #agent-apply-modal {
+        .ant-modal-content {
+            border-radius: 6px !important;
+            border: 1px solid $--modal-border !important;
+            background: $--modal-background;
+            box-shadow: $--modal-box-shadow;
+            .success-txt {
+                color: $--modal-heading;
+  
+            }
+        }
+    }
+    #confirm-delete-model{
+        .ant-modal-content {
+            border-radius: 6px !important;
+            border: 1px solid $--modal-border !important;
+            background: $--modal-background;
+            box-shadow: $--modal-box-shadow;
+            .success-txt {
+                color: $--modal-heading;
+  
+            }
+        }
+    }
+    #transfer-modal {
+        .ant-modal-content {
+            border-radius: 6px !important;
+            border: 1px solid $--modal-border !important;
+            background: $--modal-background;
+            box-shadow: $--modal-box-shadow;
+            .rate-title {
+                color: $--modal-heading;
+            }
+            .region-text {
+                color: $--modal-heading;
+            }
+            .language-divider {
+                background: $--divider;
+            }
+            .ant-input {
+                background-color: $--modal-input-background;
+                border: none;
+                color: $--modal-heading;
+            }
+            .ant-select-selection {
+                background-color: $--modal-input-background;
+                border: none;
+                color: $--modal-heading;
+            }
+           
+            .ant-form-item-label > label {
+                color: $--modal-heading;
+            }
+            .amount-text {
+                color: $--modal-heading !important;
+            }
+            .cancel-outline-btn {
+                background-color: transparent;
+                border: 1px solid $--modal-border !important;
+                color: $--modal-subheading;
+                &:hover {
+                    color: $--modal-heading !important;
+  
+                }
+            }
+            .btc-usdt-btn {
+                background: $--modal-notification-background;
+                color: $--modal-heading;
+                &:hover {
+                    background: $--modal-notification-background !important;
+                    color: $--modal-heading !important;
+                }
+            }
+            
+            .btn-box {
+                background-color: $--modal-input-background;
+                .usdt-btn {
+                    color: $--modal-subheading;
+                }
+            }
+            .btc-gray-txt {
+                color: $--modal-subheading;
+            }
+            .label-sec {
+                color: $--modal-subheading;
+            }
+            .all-transfer-txt {
+                border: none;
+                background: $--modal-input-background;
+                color: $--modal-heading;
+            }
+            .transfer-crypto {
+                color: $--modal-heading;
+            }
+            .orange-transfer-bg {
+                background: $--modal-notification-background;
+            }
+            .ant-select-selection-selected-value {
+                color: $--modal-subheading !important;
+            }
+            .from-dropdown {
+                color: $--modal-heading !important;
+            }
+            .network-inch {
+                color: $--modal-subheading !important;
+            }
+        }
+    }
+    #delete-confirm-modal{
+        .ant-modal-content{
+            background: $--modal-background;
+            .success-desc{
+                color: $--modal-heading;
+            }
+            .cancel-outline-btn{
+                background-color: rgba(94, 101, 115, 0.6);
+                color: $--modal-heading;
+            }
+        }
+    }
+    .menu-popover.download-popover {
+        .ant-popover-content .ant-popover-inner {
+            border-radius: 6px !important;
+            border: 1px solid $--modal-border !important;
+            background: $--modal-background;
+            box-shadow: $--modal-box-shadow;
+            .text-black {
+                color: $--modal-heading !important;
+                margin-top: 5px;
+            }
+        }
+    }
+    .menu-popover {
+        .ant-popover-content .ant-popover-inner {
+            border-radius: 6px !important;
+            border: 1px solid $--modal-border !important;
+            background: $--modal-background;
+            box-shadow: $--modal-box-shadow;
+            .text-black {
+                color: $--modal-heading !important;
+                margin-top: 5px;
+            }
+            .menu-list-text {
+                color: $--modal-heading;
+            }
+            .total-wallet {
+                color: $--modal-heading;
+            }
+            .wallet-usd {
+                color: $--modal-subheading;
+            }
+            .finance-txt {
+                color: $--modal-heading;
+            }
+            .view-txt {
+                color: $--modal-heading;
+            }
+            .all-notification-view {
+                color: $--modal-heading !important;
+            }
+            .num-color {
+                color: $--modal-heading !important;
+            }
+            .view-task {
+                color: $--modal-subheading;
+            }
+            .promotion-title {
+                color: $--modal-heading;
+            }
+            .promotion-desc-txt {
+                color: $--modal-subheading;
+            }
+            .notifications-card {
+                background-color: $--modal-notification-background;
+                border-radius: 6px !important;
+            }
+            .verified-user {
+                background-color: $--modal-notification-background;
+                border-radius: 6px !important;
+                .verified-email {
+                    color: $--modal-heading;
+                }
+            }
+            .menu-sub-txt {
+                color: $--modal-subheading;
+            }
+            .header-list:hover {
+                background-color: $--modal-hover-background !important;
+            }
+            .header-divider {
+                background: $--divider;
+            }
+            .left-side {
+                border: 1px solid $--divider;
+            }
+            .notifications-card .ant-card-body .ant-badge-count {
+                background-color: $--modal-background !important;
+                border: none;
+            }
+        }
+    }
+    .ant-select-dropdown{
+        background: $--modal-background;
+        color: $white !important;
+    }
+    
+     .ant-select-dropdown-menu-item-active:not(.ant-select-dropdown-menu-item-disabled) {
+        color: $white !important;
+    }
+    
+    .ant-select-dropdown-menu-item {
+        color: $white;
+    }
+    
+     .ant-select-dropdown-menu-item-selected {
+        background-color: $--modal-dropdown-list-bg;
+    }
+    
+    .ant-select-dropdown-menu-item:hover:not(.ant-select-dropdown-menu-item-disabled) {
+        background: $--modal-dropdown-list-bg;
+        color:  $white !important;
+    }
+   .ant-select-dropdown-menu-item-active:not(.ant-select-dropdown-menu-item-disabled) {
+        background: $--modal-dropdown-list-bg;
+        color:  $white !important; 
+    }
+    #repayment-modal{
+        .ant-modal-content {
+            background-color: $--modal-background;
+            .returning-loans, .btc-heading, .interest-heading, .return-num, .balance{
+                color: $--modal-heading;
+            }
+            .accounts-heading, .text{
+                color: $--modal-subheading;
+            }
+            .ant-input, .all-transfer-txt{
+                background-color: $--modal-input-background;
+                border-color: $--modal-border;
+                color: $--modal-subheading;
+            }
+            .cancel-outline-btn {
+                background-color: transparent;
+                border: 1px solid $--modal-border !important;
+                color: $--modal-subheading;
+                &:hover {
+                    color: $--modal-heading !important;
+  
+                }
+            }
+            .disabled-btn{
+                background-color:#f4f4f417 !important;
+                color: $--modal-subheading !important;
+                border-color: $--modal-border !important;
+            }
+        }
+        
+    }
+}

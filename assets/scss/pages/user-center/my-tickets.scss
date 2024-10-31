@@ -1,0 +1,178 @@
+@import "assets/variables/light.scss";
+
+#my-tickets {
+    .ticket-txt {
+        font-size: $fs_2xl;
+        color: $heading-color;
+    }
+    .ant-tabs-nav-wrap {
+        padding: 0 !important;
+    }
+    .ant-tabs-nav .ant-tabs-tab {
+        background-color: #fff !important;
+    }
+    .ant-tabs-nav-animated {
+        background-color: #fff !important;
+        padding: 0 !important;
+    }
+    .ant-tabs-tab-active.ant-tabs-tab {
+        background-color: $primary-color !important;
+        color: $white !important;
+    }
+    .tickets-table {
+        .outline-btn {
+            height: 38px !important;
+        }
+    }
+    .tickets-card {
+        .ant-card-body {
+            padding: 25px 30px;
+            .count-tickets {
+                font-size: $fs_7xl;
+                color: $heading-color;
+                line-height: 41px;
+            }
+            .tickets-desc {
+                font-size: $fs_sm;
+                color: $text-grey;
+                margin-bottom: 3px;
+            }
+        }
+    }
+    .table-card {
+        .ant-card-body {
+            padding: 0;
+        }
+    }
+    .create-ticket-card {
+        border-radius: 9px;
+        .ant-card-body {
+            padding: 20px 24px;
+        }
+    }
+    .find-ticket {
+        .ant-input {
+            background: #ffffff !important;
+            border-radius: 6px;
+            color: #afafaf;
+        }
+    }
+    .create-tabs {
+        border-radius: 9px;
+        position: relative;
+        .deposit-heading {
+            position: absolute;
+            top: 28px;
+            font-size: $fs_2xl;
+        }
+        .ant-card-body {
+            padding: 24px;
+            .upload-txt {
+                font-size: $fs_sm;
+                line-height: 18px;
+                color: $text-grey;
+            }
+            .submit-txt1 {
+                font-size: $fs_sm;
+                line-height: 20px;
+                color: $heading-color;
+            }
+            .ant-upload-list-picture-card-container {
+                width: 200px;
+                height: 125px;
+                margin-right: 20px;
+            }
+            i.anticon.anticon-plus {
+                font-size: $fs_12xl;
+            }
+            .ant-upload-text {
+                font-weight: 500;
+                font-size: $fs_sm;
+                line-height: 20px;
+                color: $heading-color;
+            }
+            .ant-upload-list-item.ant-upload-list-item-done.ant-upload-list-item-list-type-picture-card {
+                width: 200px;
+                height: 125px;
+                border: 1px dashed #d0d5dd;
+                border-radius: 3px;
+            }
+            .ant-upload.ant-upload-select.ant-upload-select-picture-card {
+                width: 200px !important;
+                height: 125px !important;
+                background-color: #ffffff !important;
+            }
+            .ant-upload-list-picture-card .ant-upload-list-item-thumbnail {
+                object-fit: none !important;
+            }
+            .ant-upload-list-picture-card .ant-upload-list-item {
+                width: 200px;
+                height: 125px;
+            }
+            .ant-upload-list-picture-card .ant-upload-list-item-thumbnail {
+                font-size: $fs_8xl;
+                line-height: 34px;
+            }
+            textarea.ant-input {
+                min-height: 170px;
+                background: rgba(255, 255, 255, 0.28);
+                border-radius: 6px;
+                padding-top: 10px;
+            }
+            .submit-screenshots {
+                font-weight: 400;
+                font-size: $fs_md;
+                color: $black;
+            }
+        }
+    }
+    .create-tickets {
+        .orange-card-btn {
+            background: #ffeed1;
+            border-radius: 4px;
+        }
+    }
+
+    @media screen and (max-width: 1024px) {
+        .tickets-card {
+            .ant-card-body {
+                .tickets-desc {
+                    font-size: $fs-base;
+                }
+                .count-tickets {
+                    font-size: $fs_7xl;
+                }
+            }
+        }
+    }
+}
+#ticket-detail {
+    .ant-modal-content {
+        border-radius: 12px;
+        background:  #FFF;
+        box-shadow: 0px -5px 25.4px 0px rgba(159, 159, 159, 0.10);
+    }
+    .ticket-detail-heading {
+        font-size: $fs_lg;
+        line-height: 28px;
+    }
+    .ticket-desc {
+        color: $text-grey;
+        line-height: 20px;
+    }
+    .ticket-divider {
+        margin: 20px 0;
+        background-color: #e4e7ec;
+    }
+    .desc-card {
+        border-radius: 8px;
+        background: #fafafa;
+        .ant-card-body {
+            padding: 12px 14px;
+            .ticket-date {
+                color: #B9BABD;
+                font-size: 12px;
+            }
+        }
+    }
+}

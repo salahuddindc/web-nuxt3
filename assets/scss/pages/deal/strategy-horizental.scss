@@ -1,0 +1,41 @@
+@import "assets/variables/light.scss";
+
+#strategy-exchange-horizental {
+    .ant-tabs-nav.ant-tabs-nav-animated {
+        width: 100%;
+        background: #191b1f !important;
+        border-radius: 6px !important;
+        padding: 7px 8px 8px 8px;
+        .ant-tabs-tab {
+            width: 49.5%;
+            padding: 8px 12px !important;
+            background-color: transparent;
+            color: #bcbcbc;
+        }
+        .ant-tabs-tab-active.ant-tabs-tab {
+            padding: 8px 12px !important;
+        }
+    }
+    .ant-tabs-nav .ant-tabs-tab:first-child {
+        margin-left: 0 !important;
+    }
+    .ant-tabs-tab:last-child {
+        margin-right: 0 !important;
+    }
+    .ant-tabs-tab-active.ant-tabs-tab {
+        background: #0C1014 !important;
+        border-radius: 6px !important;
+        color: #ffffff !important;
+    }
+    .price-range {
+                font-size: $fs_xs;
+                color: $white;
+            }
+            .ant-input {
+                background-color: #171B23;
+                border-color: #171B23;
+                border-radius: 4px;
+                color: #B7BDC6;
+            }
+            
+}

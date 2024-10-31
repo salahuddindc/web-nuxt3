@@ -1,0 +1,96 @@
+@import "@/assets/scss/utilities";
+
+.tab-bottom-line {
+    max-width: 25px;
+    width: 100%;
+    margin: 7px auto 0 auto;
+    border-bottom: 3px solid $primary-color;
+}
+.secondary-black {
+    color: $secondary-black;
+}
+.secondary-gray {
+    color: $secondary-gray;
+}
+.game-text-color {
+    color: $game-text-color;
+}
+.rounded {
+    border-radius: 50%;
+}
+ .object-fit-contain {
+    object-fit: contain;
+ }
+ .object-fit-cover {
+    object-fit: cover;
+ }
+.yellow-tag-bg.white-theme {
+    background-color: #FFF6E7;
+    color: $primary-color;
+    &:hover {
+        background-color: #FFF6E7;
+        color: $primary-color;
+    }
+}
+.green-tag-bg.white-theme {
+    background-color: #E7FAF3;
+    color: #0ECB81;
+    &:hover, &:focus {
+        background-color: #E7FAF3;
+        color: #0ECB81;
+    } 
+} 
+.red-tag-bg.white-theme {
+    background-color: #F8EEED;
+    color: #CA0000;
+    &:hover, &:focus {
+        background-color: #F8EEED;
+        color: #CA0000;
+    } 
+} 
+.blue-tag-bg.white-theme {
+    color: #0E7CCB;
+    background: #e7f0fa;
+    &:hover, &:focus {
+        background-color: #e7f0fa;
+        color: #0E7CCB;
+    }
+}
+.blue-tag-bg.dark-theme{
+    color: #0E7CCB;
+    background: #6C8BB847;
+    &:hover, &:focus {
+        background-color: #6C8BB847;
+        color: #0E7CCB;
+    }
+}
+.yellow-tag-bg.dark-theme {
+    background-color: #FFA50047;
+    color: $primary-color;
+    &:hover {
+        background-color: #FFA50047;
+        color: $primary-color;
+    }
+}
+.green-tag-bg.dark-theme {
+    background-color: #0ECB814D;
+    color: #0ECB81;
+    &:hover, &:focus {
+        background-color: #0ECB814D;
+        color: #0ECB81;
+    }
+} 
+.red-tag-bg.dark-theme{
+    background-color: #5b1f19a8;
+    color: #CA0000;
+    &:hover, &:focus {
+        background-color: #5b1f19a8;
+        color: #CA0000;
+    } 
+} 
+.position-relative {
+    position: relative;
+}
+
+
+

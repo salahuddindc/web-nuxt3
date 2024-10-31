@@ -1,0 +1,99 @@
+@import "assets/variables/light.scss";
+
+#buy-sell-card {
+    .buy-card {
+        background: #ffffff;
+        box-shadow: 0px 3px 24px rgba(0, 0, 0, 0.1);
+        border-radius: 6px;
+    }
+    .cancel-outline-btn {
+        border-radius: 4px !important;
+        height: 38px !important;
+    }
+    .speed-star-txt {
+        font-size: $fs_sm;
+        line-height: 22px;
+        color: #081131;
+    }
+    .speed-star-desc {
+        font-size: $fs_md;
+        color: #718096;
+    }
+    .sell-left-border {
+        border-left: 1px solid #f4f4f4;
+    }
+
+    .sell-gray-card {
+        .trade-info {
+            font-size: $fs_sm;
+            color: $text-grey;
+        }
+        .buy-price {
+            color: #0ecb81 !important;
+        }
+        .price-txt {
+            font-size: $fs_sm;
+            color: $text-grey;
+        }
+        .cny-txt {
+            color: $heading-color;
+            font-size: $fs_md;
+        }
+
+        .mezan-bank {
+            background: #f5f7fa;
+            border-radius: 3px;
+            font-size: $fs_xxxs;
+            height: 23px;
+            text-align: center;
+            border: none;
+            width: 87px;
+            margin-bottom: 7px;
+            color: #43bbff;
+            cursor: pointer;
+        }
+    }
+    .term-and-conditions {
+        font-size: $fs_sm;
+        color: $heading-color;
+    }
+    .term-and-conditions-desc {
+        color: $text-grey !important;
+    }
+
+    .buy-usdt-btn {
+        background: #0ecb81;
+        border-radius: 4px;
+        font-size: $fs_sm;
+        color: $white;
+        width: 100%;
+        height: 38px;
+    }
+    .sell-usdt-btn {
+        background: #f6465d;
+        border-radius: 4px;
+        font-size: $fs_sm;
+        color: $white;
+        width: 100%;
+        height: 38px;
+    }
+
+    @media screen and (max-width: 1280px) {
+
+        .sell-gray-card .price-txt {
+        font-size: $fs_xs;
+    }
+    .sell-gray-card .cny-txt { 
+        font-size: $fs_xmd;
+    }
+}
+}
+ul.ant-dropdown-menu.ant-dropdown-menu-vertical.ant-dropdown-menu-root.ant-dropdown-menu-light.ant-dropdown-content {
+    margin-top: 25px !important;
+    width: 300px !important;
+    li.ant-dropdown-menu-item {
+        font-weight: 500;
+        font-size: $fs_md;
+        color: $heading-color;
+    }
+}

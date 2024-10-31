@@ -1,0 +1,295 @@
+@import "assets/variables/light.scss";
+
+#trading-bot {
+    .bg-white {
+        background-color: $white;
+    }
+    .ant-carousel .slick-slide img {
+        display: inline-block;
+    }
+    .ant-btn {
+        border-radius: 4px;
+    }
+    .strategy-bot-bg {
+        padding: 32px 0 60px 0;
+        position: relative;
+        background: url("/images/strategy-bot-bg.png");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        .strategy-bot-title {
+            font-size: 35px;
+            color: $white;
+        }
+        .strategy-bot-desc {
+            font-size: $fs-base;
+            color: #adb1b8;
+        }
+    }
+    .list-notifi {
+        background-color: transparent;
+        .ant-card-body {
+            padding: 0px !important;
+        }
+    }
+    .bot-title {
+        gap: 1rem;
+    }
+    // .create-bot {
+    //     font-size: 24px;
+    //     line-height: 34px;
+    //     // padding: 24px 0 32px 0;
+    // }
+
+    .grid-bot-card {
+        // background-color: #F5F7FA;
+        // border: 1px solid #E9EDF2;
+        background-color: $white;
+        border-radius: 0.875rem;
+        box-shadow: 0px 4px 43px 0px #e7e7e738;
+        max-width: 28.23038rem;
+        .ant-card-body {
+            padding: 28px 24px;
+        }
+        .create-btn {
+            display: none;
+        }
+
+        .grid-bot-desc {
+            min-height: 40px;
+        }
+        .success-active {
+            color: #00c076 !important;
+        }
+        .highest-apr {
+            font-size: 14px;
+            color: $text-grey;
+            line-height: 20px;
+        }
+        .running-bot {
+            font-size: 16px;
+            line-height: 23px;
+        }
+        &:hover {
+            .create-btn {
+                display: inline-block;
+                color: #ffa500;
+            }
+            background-color: #fff;
+            transform: translateY(-8px);
+            box-shadow: 0 4px 43px rgba(12, 12, 12, 0.15);
+            transition: all 0.17s cubic-bezier(0.52, 0.07, 0.45, 2.35);
+        }
+    }
+
+    .tag {
+        border: 1px solid #f2f2f2;
+        border-radius: 2px;
+        font-size: $fs_xxs;
+        color: $text-grey;
+        background-color: $white;
+        padding: 0px 5px;
+    }
+    .perpetual-txt {
+        font-size: $fs_xs;
+        color: $text-grey;
+    }
+    .gird-bot-title {
+        font-size: 20px;
+        color: $heading-color;
+    }
+    // .grid-bot-desc {
+    //     font-size: $fs_sm;
+    //     color: $text-grey;
+    // }
+    .highest-apr {
+        font-size: $fs_sm;
+        color: $heading-color;
+    }
+    .running-bot {
+        font-size: $fs_2xl;
+        color: $heading-color;
+    }
+
+    .dca-bots {
+        font-size: $fs-base;
+        color: $heading-color;
+    }
+    .text-end {
+        text-align: end;
+    }
+    .grid-spot-bg {
+        // background-image: url('/images/spot-card-bg.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        .main-card {
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(25, 25, 25, 0.04);
+        }
+        // padding: 78px 0 62px 0;
+        .refresh-btn {
+            background-color: transparent;
+            border: 1px solid #d9d9d9;
+            color: $heading-color;
+            height: 44px !important;
+        }
+        .grid-spot-card {
+            .trade-btn {
+                height: 32px !important;
+                font-size: $fs_sm !important;
+            }
+            .ant-tabs-bar {
+                border-bottom: 1px solid #e9edf2 !important;
+            }
+            .ant-tabs-nav-wrap {
+                padding: 0 24px;
+                .ant-tabs-nav.ant-tabs-nav-animated {
+                    background-color: transparent;
+                    padding: 0;
+                }
+
+                .ant-tabs-nav .ant-tabs-tab:first-child {
+                    margin-left: 0 !important;
+                }
+                .ant-tabs-tab-active.ant-tabs-tab {
+                    // background-color: #EDEDED !important;
+                    background-color: $white;
+                    color: $secondary-black;
+                    font-weight: 600;
+                    font-size: 18px;
+                    border: none;
+                    border-radius: 4px !important;
+                }
+                .ant-tabs-nav .ant-tabs-tab {
+                    background-color: $white;
+                    color: $secondary-gray;
+                    font-weight: 600;
+                    font-size: 18px;
+                    border: none;
+                }
+            }
+            .strategy-bot-filters {
+                margin-bottom: 27px;
+                margin-top: 22px;
+                .outline-btn {
+                    // border: 1px solid transparent;
+                    background: $white !important;
+                    box-shadow: 0 1px 2px rgba(16, 24, 40, 0.05);
+                    height: 38px;
+                    &:hover,
+                    &:active,
+                    &:focus {
+                        i.anticon.anticon-reload {
+                            color: $primary-color;
+                        }
+                    }
+                }
+                // .ant-select-selection {
+                //     border: 1px solid transparent;
+                //     background: $white !important;
+                //     box-shadow: 0 1px 2px rgba(16, 24, 40, 0.05);
+
+                // }
+            }
+            .strategy-cards {
+                .st-card {
+                    .usdt-img {
+                        position: relative;
+                        left: -3px;
+                        border: 1px solid white;
+                    }
+                    border-radius: 8px;
+                    border: 1px solid #f3f5f7;
+                    transition: all 0.5s ease;
+                    min-height: 299px;
+                    .ant-card-body {
+                        .bot-tag {
+                            background-color: #ffa50026;
+                            color: $primary-color;
+                            font-size: 12px !important;
+                            font-weight: 500 !important;
+                            border: none;
+                            line-height: 18px;
+                        }
+                        .pl-desc {
+                            color: $text-grey;
+                        }
+                        .trade-num {
+                            font-size: $fs-base;
+                            color: $heading-color;
+                        }
+                    }
+                    .primary-btn {
+                        border-radius: 8px;
+                        color: $secondary-black;
+                        font-weight: 500;
+                        font-size: 16px;
+                        background-color: $white !important;
+                        border: 1px solid #c2c8cf !important;
+                        &:hover {
+                            background-color: $primary-color !important;
+                            border: 1px solid $primary-color !important;
+                        }
+                    }
+                }
+                .bot-details-row {
+                    display: flex;
+                    justify-content: space-between;
+                }
+                .ranking {
+                    .rank-img {
+                        height: 25px;
+                    }
+                    background: #f4f4f4;
+                    border-radius: 0px 8px 0px 16px;
+                    height: 38px;
+                    width: 118px;
+                }
+            }
+
+            .ant-tabs-tab {
+                font-size: $fs-base;
+            }
+            .ant-tabs-tab-active {
+                border-radius: 7px !important;
+                border: 1px solid #ebebeb;
+            }
+        }
+    }
+    .faqs-bg {
+        // background: #f2f2f2;
+        // padding: 84px 0;
+        .bot-faqs-card {
+            border-radius: 8px !important;
+            box-shadow: 0 4px 20px rgba(25, 25, 25, 0.04);
+            .ant-card-body {
+                padding: 24px;
+
+                .ant-collapse-header {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 1280px) {
+        .grid-spot-bg .grid-spot-card .strategy-cards .st-card .ant-card-body {
+            .profit-row .pl-value {
+                font-size: 20px;
+            }
+            .running-bot {
+                font-size: 18px;
+            }
+        }
+    }
+    @media screen and (max-width: 1200px) {
+        .grid-bot-card .grid-bot-desc {
+            min-height: 72px;
+        }
+        .graph {
+            canvas.curve {
+                width: 120px;
+            }
+        }
+    }
+}

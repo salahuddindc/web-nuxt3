@@ -1,0 +1,181 @@
+@import "assets/variables/light.scss";
+
+#profit-and-loss {
+    .ant-modal-content {
+        background: #12181d;
+        border-radius: 6px;
+        border: 1px solid #202020;
+        .symbol-text {
+            color: #6d777e;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .take-profit-heading {
+            color: $white;
+        }
+        .cancel-outline-btn {
+            border: 1px solid #d0d5dd;
+            background: transparent !important;
+            color: #fff;
+
+            &:hover {
+                background: #f4a000 !important;
+                color: #fff;
+                border: 1px solid #f4a000;
+            }
+        }
+        .ipt_hover .after {
+            height: 44px;
+            line-height: 44px;
+        }
+        .ipt_hover {
+            background: #1e252b !important;
+            height: 44px;
+            line-height: 44px;
+            color: #fff !important;
+            border: none;
+        }
+        .ant-select-selection {
+            background: #1e252b;
+            height: 44px !important;
+            border: none;
+        }
+        .ant-select-selection__rendered {
+            line-height: 44px;
+        }
+        .ant-select-selection-selected-value {
+            color: #fff;
+        }
+        input[type="number"] {
+            height: 44px !important;
+        }
+        .input-number-container {
+            height: 44px;
+            line-height: 44px;
+        }
+        .ant-modal-body {
+            padding: 30px;
+        }
+        .primary-btn {
+            height: 44px !important;
+            font-size: 16px;
+        }
+        .ant-form-item-label > label {
+            color: #fff;
+        }
+
+        .ant-tabs-nav-wrap {
+            padding: 0;
+        }
+    }
+    .detail-txt {
+        font-size: 20px;
+    }
+    .profit-tabs {
+        border-bottom: none !important;
+    }
+    .ant-table-placeholder {
+        background: transparent;
+        border: none;
+        .ant-empty-description {
+            color: $white;
+        }
+    }
+    .exchange-block_slider {
+        margin: 20px 6px 15px 12px;
+    }
+    .tabs-border {
+        border-bottom: 1px solid #202020;
+        width: 100%;
+        label.ant-radio-button-wrapper.ant-radio-button-wrapper-checked {
+            background-color: transparent !important;
+            color: $white;
+            border: none;
+            // border-bottom: 2px solid #ffa500;
+            border-radius: 0 !important;
+            padding: 0;
+        }
+        .bottom-line {
+            max-width: 20px;
+            width: 100%;
+            margin: 8px auto 0 auto;
+            border-bottom: 2px solid $primary-color;
+        }
+        .ant-radio-button-wrapper {
+            background-color: transparent;
+            color: #ADB1B8;
+            font-weight: 600;
+            border: none;
+            padding: 0;
+            margin-right: 45px;
+            height: 40px;
+        }
+        .ant-radio-button-wrapper:not(:first-child)::before {
+            background: transparent;
+        }
+    }
+    tbody.ant-table-tbody {
+        background: transparent;
+        font-weight: 400;
+    }
+    .ant-table-thead > tr > th {
+        background: transparent;
+        color: #71757a;
+        border-bottom: 1px solid #202020;
+        font-weight: 700;
+        font-size: 12px;
+    }
+    .cancel-all-btn {
+        background-color: #1e252a;
+        border-radius: 4px;
+        color: $white;
+    }
+    .ant-table-tbody > tr > td {
+        border-bottom: 1px solid #202020;
+        font-size: 12px;
+        font-weight: 400;
+        color: #fff;
+
+    }
+    .ant-table-thead > tr > th:first-child {
+        padding-left: 0px;
+    }
+    .ant-table-thead > tr > th:last-child {
+        padding-right: 0px;
+    }
+    .ant-table-tbody > tr > td:first-child {
+        padding-left: 0px;
+    }
+    .ant-table-tbody > tr > td:last-child {
+        padding-right: 8px;
+    }
+    .ant-table-thead
+        > tr.ant-table-row-hover:not(.ant-table-expanded-row):not(.ant-table-row-selected)
+        > td,
+    .ant-table-tbody
+        > tr.ant-table-row-hover:not(.ant-table-expanded-row):not(.ant-table-row-selected)
+        > td,
+    .ant-table-thead
+        > tr:hover:not(.ant-table-expanded-row):not(.ant-table-row-selected)
+        > td,
+    .ant-table-tbody
+        > tr:hover:not(.ant-table-expanded-row):not(.ant-table-row-selected)
+        > td {
+        background-color: transparent;
+    }
+    .leverage-slider {
+        margin-top: 10px;
+        margin-bottom: 27px;
+    }
+    .ant-spin.ant-spin-spinning {
+        background-color: #12181d;
+    }
+
+    .before {
+        color: #6d777e;
+    }
+    .ant-modal-close-x {
+        display: none;
+    }
+}

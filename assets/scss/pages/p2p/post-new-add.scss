@@ -1,0 +1,172 @@
+@import "assets/variables/light.scss";
+
+#post-new-add {
+    .price-type {
+        font-size: $fs-base;
+        color: $heading-color;
+    }
+    .ant-steps-item-title {
+        font-weight: 500;
+        font-size: $fs_md;
+        line-height: 20px;
+        color: #344054;
+        margin-top: 12px;
+    }
+    .post-heading {
+        font-size: $fs_2xl;
+        color: $black;
+    }
+    .ant-steps-label-vertical .ant-steps-item-content {
+        width: 140px;
+    }
+
+    .post-btn-bg {
+        background: #fafafa;
+        border-radius: 5px;
+        padding: 5px;
+        display: flex;
+        justify-content: space-between;
+        max-width: 663px;
+        width: 100%;
+        .sell-left-btn {
+            max-width: 305px;
+            width: 100%;
+            .buy-sell {
+                font-size: $fs_md;
+                color: #000000;
+            }
+        }
+        .trans-btn {
+            background-color: #fafafa !important;
+            color: #cacaca !important;
+            border-radius: 5px;
+        }
+        .right-btn {
+            background: #0ECB81 !important;
+            color: #fff !important;
+            box-shadow: 0px 1px 14px rgba(14, 203, 129, 0.46);
+        }
+        .left-btn {
+            background: #f6465d !important;
+            color: #fff !important;
+            box-shadow: 0px 1px 14px rgba(255, 0, 0, 0.46);
+        }
+    }
+    .increase-num {
+        input.ant-input {
+            text-align: center !important;
+            border-left: none;
+            border-right: none;
+        }
+    }
+    .order-price {
+        font-size: $fs-base;
+        color: $text-grey;
+    }
+    .highest-price {
+        font-size: $fs-base;
+        color: $heading-color;
+    }
+    .ant-input-group-addon {
+        background: #fff;
+        padding: 0 15px;
+        border-right: 1px solid #d0d5dd;
+        border-radius: 6px 0 0 6px;
+    }
+    .ant-input-group-addon:last-child {
+        border-left: 1px solid #d0d5dd;
+        border-radius: 0 6px 6px 0;
+    }
+    label.ant-radio-button-wrapper.ant-radio-button-wrapper-checked {
+        border-color: $primary-color !important;
+        border: 1px solid $primary-color !important;
+    }
+    .active-btn {
+        border-color: $primary-color !important;
+        border: 1px solid #ffa500 !important;
+        color: #344054 !important;
+        background: rgba(255, 165, 0, 0.1) !important;
+    }
+    .total-all-amount {
+        height: 39px;
+        border: 1px solid #d0d5dd;
+        border-left: none;
+        padding: 12px;
+        border-radius: 0px 8px 8px 0;
+        line-height: 12px;
+    }
+    .total-num-input {
+        .ant-input {
+            border-radius: 6px 0 0 6px;
+        }
+    }
+    .ant-radio-button-wrapper {
+        font-weight: 500;
+        font-size: $fs_sm;
+        padding: 0 13px;
+        margin-right: 12px;
+        background: #ffffff;
+        border-radius: 4px;
+        border: 1px solid #D2D6DB;
+        text-align: center;
+        color: $heading-color;
+        margin-bottom: 10px;
+        height: 32px;
+        line-height: 32px;
+    }
+    .add-paymentmethod-btn {
+        background: #ffffff !important;
+        color: $heading-color !important;
+        border: 1px solid #D2D6DB;
+    }
+    .ant-radio-button-wrapper:last-child {
+        margin-right: 0;
+        background: #f7f9fc;
+        color: #6978a0;
+    }
+
+    .ant-radio-button-wrapper:not(:first-child)::before {
+        background-color: transparent;
+        width: 0;
+    }
+
+    .add-payment-method {
+        font-size: $fs_sm;
+        color: $heading-color;
+    }
+    .total-amount-txt {
+        font-size: $fs_xmd;
+        color: $heading-color;
+    }
+    .total-usdt-num {
+        font-size: $fs_sm;
+        color: #afafaf;
+    }
+    textarea.ant-input {
+        height: 160px !important;
+    }
+    .counterparty {
+        font-weight: 500;
+        font-size: $fs_sm;
+        color: #000000;
+    }
+    span.ant-radio + * {
+        font-weight: 500;
+        font-size: $fs-base;
+        color: $text-grey;
+    }
+    .ant-checkbox + span {
+        font-weight: 500;
+        font-size: $fs_sm;
+        color: $heading-color;
+    }
+    form .ant-input-number-handler-wrap {
+        display: none;
+    }
+ 
+    @media screen and (max-width: 1200px) {
+        .post-new-mx {
+            margin: 0 !important;
+        }
+    }
+}

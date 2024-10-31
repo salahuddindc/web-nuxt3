@@ -1,0 +1,158 @@
+@import "assets/variables/light.scss";
+
+#p2p-filters {
+    .buy-sell-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #F6F6F6;
+        border-radius: 5px;
+        padding: 5px 8px;
+        max-width: 205px;
+        width: 100%;
+    }
+
+    .buy-btn {
+        width: 95px;
+        height: 37px;
+        background: #0ECB81;
+        border-radius: 5px;
+        color: $white;
+        font-size: $fs_md;
+        margin-right: 8px;
+    }
+    .gray-p2pbtn {
+        width: 95px;
+        height: 37px;
+        background: transparent;
+        border-radius: 5px;
+        color: #afafaf;
+        font-size: $fs_md;
+    }
+    .sell-btn {
+        width: 95px;
+        height: 37px;
+        background: #f6465d;
+        color: #fff;
+        border-radius: 5px;
+        font-size: $fs_md;
+    }
+    .ant-form-item-label > label {
+        color: $heading-color;
+        font-weight: 500;
+        font-size: $fs_sm;
+    }
+    .ant-input {
+        font-size: 14px;
+        color: $secondary-black;
+        height: 38px !important;
+        &::placeholder {
+            color: $secondary-black;
+            font-size: 14px;
+
+        }
+    }
+    .ant-select-selection {
+        height: 38px !important;
+    }
+    .ant-select-selection__rendered {
+        height: 38px !important;
+    }
+    .ant-select-selection-selected-value {
+        color: $secondary-black;
+        font-size: 14px;
+    }
+    .ant-btn.ant-btn-primary.ant-input-search-button{
+       
+        &:hover{
+            border-color: #ffbb29;
+            i.anticon.anticon-search{
+                color: #ffbb29;
+            }
+        }
+    }
+    .ant-input-group-addon {
+        background: transparent;
+        font-weight: 400;
+        font-size: 14px;
+        color: $black;
+    }
+    .filter-btn {
+        font-size: $fs_sm;
+        color: $secondary-black;
+        height: 38px;
+        padding: 0;
+    }
+    .filters-orange-btn {
+        border: 1px solid #ff8000;
+        border-radius: 3px;
+        font-size: $fs_sm;
+        height: 38px;
+    }
+    .reset-btn {
+        height: 38px;
+        background: #f7f9fc;
+        border-radius: 3px;
+        color: $secondary-black;
+    }
+    .ant-input-affix-wrapper .ant-input-suffix :not(.anticon) {
+        line-height: 38px;
+    }
+    .ant-select-selection__rendered {
+        line-height: 38px !important;
+    }
+    .ant-input-affix-wrapper .ant-input-suffix {
+        right: 2px;
+        .ant-select-selection {
+            border: none;
+            height: 34px !important;
+            margin-top: 3px;
+        }
+        .ant-select-selection-selected-value {
+            margin-right: 5px;
+            font-size: 14px;
+        }
+    }
+    .ant-select-selection:focus,
+    .ant-select-selection:active {
+        box-shadow: none;
+    }
+    @media screen and (max-width: 1280px) {
+        .buy-sell-box {
+            max-width: 175px;
+            width: 100%;
+        }
+        .buy-btn {
+            width: 80px;
+        } 
+        .gray-p2pbtn {
+            width: 80px ; 
+        }
+        .sell-btn {
+            width: 80px;
+        }
+    }
+    @media screen and (max-width: 1024px) {
+        .buy-sell-box {
+            max-width: 143px;
+            width: 100%;
+        }
+        .buy-btn {
+            width: 60px;
+        } 
+        .gray-p2pbtn {
+            width: 60px ; 
+        }
+        .sell-btn {
+            width: 60px;
+        }
+    }
+}
+.ant-select-dropdown.p2p-filter-drop.ant-select-dropdown--single.ant-select-dropdown-placement-bottomLeft {
+    width: 190px !important;
+    left: 925px !important;
+}
+.ant-select-dropdown.p2p-search-filter-drop.ant-select-dropdown--single.ant-select-dropdown-placement-bottomLeft {
+    width: 269px !important;
+    left: calc((100vw - 1440px) / 2 + 990px) !important;
+}

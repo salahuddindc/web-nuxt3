@@ -1,0 +1,77 @@
+@import 'assets/variables/light.scss';
+
+#deposit-detail {
+  .crypto-heading {
+    font-size: $fs_4xl;
+    color: $black;
+  }
+  .deposit-subheading {
+    font-size: $fs_xmd;
+    color: #9b9a9a;
+  }
+  .qrcode-card {
+    background: #ffffff;
+    border: 0.6px solid #e2e2e2;
+    border-radius: 6px;
+  }
+  .note-txt {
+    color: $primary-color;
+  }
+  .note-desc {
+    font-weight: 400;
+    font-size: $fs_sm;
+    color: #9b9a9a;
+  }
+  a {
+    text-decoration: underline;
+    color: $primary-color;
+  }
+  .minimum-withdraw {
+    font-size: $fs_sm;
+    line-height: 24px;
+    color: #9b9a9a;
+    max-width: 334px;
+    width: 100%;
+  }
+  .express-txt {
+    color: $primary-color;
+    font-size: $fs_md;
+    line-height: 25px;
+  }
+  .withdraw-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+    li {
+      font-weight: 400;
+      font-size: $fs_sm;
+      color: #9b9a9a;
+      line-height: 1.7;
+    }
+    .price-list {
+      color: $black;
+    }
+  }
+  .withdraw-btn {
+    background: linear-gradient(180deg, #ff8d00 0%, #ffa500 100%);
+    border-radius: 6px;
+  }
+  .deposit-detail-card {
+    .ant-card-body {
+      padding: 0;
+      .deposit-success {
+        background: #defffa;
+        border-radius: 3px;
+        color: #12b298;
+        font-size: $fs_xs;
+        border: none;
+      }
+    }
+  }
+}
+.canvas{
+    text-align:center;
+    border-radius:4px;
+    margin-top: 5px;
+  }
+

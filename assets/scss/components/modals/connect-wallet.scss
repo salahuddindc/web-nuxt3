@@ -1,0 +1,183 @@
+@import "assets/variables/light.scss";
+
+#connect-wallet-modal {
+    .response-card {
+        background: #1D1C20;
+        border-radius: 16px;
+        .ant-card-body {
+            padding: 60px 24px;
+        }
+        .balance-txt {
+            font-size: 40px;
+            font-weight: 600;
+            color: $white;
+        }
+        .balance-desc {
+            color: #a9a9a9;
+            font-size: $fs_4xl;
+            font-weight: 400;
+        }
+    }
+    .ant-modal-content {
+        border: 2px solid #a9a9a9ab;
+        border-radius: 16px;
+        .ant-modal-body {
+            padding: 0;
+        }
+        .buy-desc {
+            color: #a9a9a9;
+            font-size: $fs_lg;
+            font-weight: 400;
+        }
+        .mob-cross-icon {
+            display: none;
+        }
+        .left-side {
+            background: #1d1c20;
+            padding: 35px 0px 0px 35px;
+            min-height: 504px;
+            border-radius: 16px 0 0 16px;
+        }
+        .connect-heading {
+            font-size: $fs_4xl;
+            font-weight: 600;
+            color: $white;
+        }
+
+        .apps-title {
+            font-size: $fs-base;
+            color: #a9a9a9;
+        }
+        .right-side {
+            background: #131216;
+            border-radius: 0px 16px 16px 0;
+            min-height: 504px;
+            .trust-wallet {
+                padding-top: 35px;
+            }
+            .qr-code {
+                width: 183px;
+                height: 183px;
+                border: 2px solid #ffffff73;
+                padding: 8px;
+            }
+            .qr-sec-code {
+                width: 143px;
+                height: 143px;
+                border: 2px solid #ffffff73;
+                padding: 8px;
+            }
+            .step-guide-btn {
+                background: #131216;
+                border: 1px solid #ffffff75;
+                color: $white;
+            }
+            .buy-bnq-btn {
+                border: 1px solid #707070;
+                border-radius: 4px;
+                background-color: transparent;
+                font-size: $fs-base;
+                font-weight: 600;
+                color: #a9a9a9;
+                border-radius: 8px;
+            }
+            .common-btn {
+                width: 150px;
+                height: 48px;
+                font-size: $fs_lg;
+                border-radius: 10px;
+            }
+            .step1 {
+                font-size: $fs-base;
+                font-weight: 400;
+                color: $white;
+            }
+            .desc-usdt-txt {
+                font-size: $fs_sm;
+                color: #a9a9a9;
+            }
+            label.ant-radio-button-wrapper {
+                margin-right: 9px;
+                border: 1px solid #ffffff45;
+                border-radius: 7px;
+                background: #ffffff1c;
+                color: #fff;
+                font-size: $fs-base;
+                font-weight: 500;
+            }
+            .ant-radio-button-wrapper:not(:first-child)::before {
+                background-color: transparent;
+            }
+        }
+        .app-img:hover {
+            cursor: pointer;
+            img {
+                border: 2px solid #ffa500;
+                border-radius: 17px;
+                box-shadow: 0px 0px 20px rgba(255, 165, 0, 0.67);
+            }
+            p {
+                color: $white;
+            }
+        }
+        .ant-modal-close {
+            display: none;
+        }
+    }
+    @media screen and (max-width: 1024px) {
+        .ant-modal {
+            width: 78% !important;
+            .connect-heading {
+                font-size: $fs_lg;
+            }
+            .buy-desc {
+                font-size: $fs_sm;
+            }
+            .app-img {
+                img {
+                    height: 50px;
+                }
+                .apps-title {
+                    font-size: $fs_sm;
+                }
+            }
+            .common-btn {
+                font-size: $fs_sm !important;
+                width: 130px !important;
+            }
+        }
+    }
+    @media screen and (max-width: 768px) {
+    .right-side-col {
+        display: none;
+    }
+    .mob-cross-icon {
+        display: block;
+    }
+    .ant-modal{
+        width: 55% !important;
+        padding-bottom: 0;
+    }
+    .left-side {
+        border-radius: 16px !important;
+        min-height: 400px !important;
+        padding-top: 24px !important;
+    .wallet-apps {
+        margin-bottom: 10px;
+    }
+}
+}
+@media screen and (max-width: 576px) {
+    .ant-modal{
+        width: 95% !important;
+    }
+    .left-side {
+        padding: 15px 0 15px 25px !important;
+        .app-img {
+            .apps-title {
+                font-size: $fs_xs;
+            }
+        }
+    }
+}
+}

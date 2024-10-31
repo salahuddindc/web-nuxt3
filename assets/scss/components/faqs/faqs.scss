@@ -1,0 +1,100 @@
+@import "assets/variables/light.scss";
+#faqs {
+    .faqs-txt {
+        font-size: 24px;
+        color: $heading-color;
+        line-height: 32px;
+        font-weight: 600 !important;
+
+    }
+    .ant-collapse-content {
+        border: none;
+    }
+
+    .ant-collapse {
+        border: none !important;
+        background-color: $white;
+        .ant-collapse-item {
+            // border: none;
+            border-bottom: 1px solid #F6F6F6;
+            background: $white !important;
+            border-radius: 3px;
+            margin-bottom: 0;
+
+            .ant-collapse-header {
+                padding-left: 0;
+                font-weight: 500;
+                font-size: 16px;
+                color: $heading-color !important;
+                background-color: #fff;
+                padding: 24px 25px 24px 0;
+                margin-top: 0;
+
+                i.anticon.anticon-caret-right.ant-collapse-arrow {
+                    right: 0 !important;
+                    position: absolute;
+                    text-align: right !important;
+                    // padding-right: 15px;
+                }
+            }
+            .ant-collapse-content > .ant-collapse-content-box {
+                // background: #f5f5f5;
+                border-radius: 4px;
+                margin-top: 0;
+                padding: 0px 0px 24px 20px;
+                font-weight: 400;
+                font-size: $fs-base;
+                color: $heading-color;
+
+                p {
+                    max-width: 1191px;
+                    width: 100%;
+                    color: $text-grey;
+                    font-size: $fs-base;
+                }
+            }
+            &:last-child {
+                border: none;
+            }
+        }
+    }
+    .ant-collapse-icon-position-right
+        > .ant-collapse-item
+        > .ant-collapse-header
+        .ant-collapse-arrow {
+        right: 0;
+    }
+    .faq-header {
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: 0 !important;
+    }
+    .number-wrapper {
+        border-radius: 0.375rem;
+        border: 1px solid #e5e7eb;
+        padding: 0.2rem 0.6rem;
+        margin-right: 8px;
+        .number {
+            color: #081131;
+            font-size: 1rem;
+        }
+    }
+    @media screen and (max-width: 1200px) {
+        .faqs-txt {
+            font-size: $fs_lg;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        h3{
+            font-size: .875rem !important;
+        }
+        .ant-collapse-content-box{
+            p{
+                font-size: .75rem !important;
+            }
+        }
+        .ant-collapse-header{
+            padding: 8px 25px 8px 0px !important;
+        }
+    }
+}

@@ -1,0 +1,14 @@
+@import "assets/variables/light.scss";
+
+#nick-name {
+    .nick-name {
+        font-size: $fs_lg;
+        color: $heading-color;
+    }
+    .ant-modal-close {
+        display: none;
+    }
+    .ant-modal-content {
+        border-radius: 12px;
+    }
+}

@@ -1,0 +1,710 @@
+@import "assets/variables/light.scss";
+@import "@/assets/scss/global/mixins/scrollbar"; // Ant Table
+
+#recommend-friend {
+    .primary-btn {
+        height: 46px !important;
+    }
+
+    .invite-code-btn {
+        height: 46px !important;
+    }
+    .friend-list {
+        margin-top: 4rem;
+    }
+    .bg-white {
+        background-color: $white;
+    }
+    .ant-btn {
+        border-radius: 4px !important;
+    }
+    .all-card-heading {
+        font-size: $fs-base;
+        line-height: 1.45rem;
+        color: $heading-color;
+    }
+    .all-card-desc {
+        font-size: $fs_sm;
+        line-height: 1.26875rem;
+        color: $heading-color;
+    }
+    .all-input-desc {
+        font-size: $fs_sm;
+        line-height: 1.26875rem;
+        color: #fff !important;
+    }
+    .join-img-circle {
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        background: #fafafa;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .text-end {
+        text-align: end;
+    }
+    .recommend-friend-header {
+        background-image: url("/images/recommend-friend-bg.png");
+        background-position: top center;
+        background-repeat: no-repeat;
+        padding: 3.65rem 0;
+        background-size: 100% 100%;
+        .recommend-friend-header-btns {
+            flex-wrap: wrap;
+        }
+        .p2p-account-heading {
+            font-size: $fs_16xl;
+            line-height: 3.17188rem;
+            color: $white;
+        }
+        .friend-desc {
+            line-height: 1.45rem;
+            font-size: $fs-base;
+            color: $white;
+        }
+        .rules-btn {
+            background: transparent;
+            color: $white;
+            font-size: $fs-base;
+            &::after {
+                display: none !important;
+            }
+        }
+    }
+    .commision-profile{
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+    }
+    .ant-card-head {
+        border-bottom: 1px solid #f2f2f2;
+    }
+    .ant-card-head-title {
+        font-weight: 500;
+        font-size: $fs_2xl;
+        color: $heading-color;
+    }
+    .invite1-desc {
+        font-size: $fs-base;
+        color: $heading-color;
+    }
+    .event-guide {
+        font-size: $fs_16xl;
+        color: $heading-color;
+    }
+    .recommend-friend-card {
+        .ant-card-body{
+            padding: 24px 0;
+        }
+        .referal-2 {
+            min-height: 45px;
+        }
+
+        .tiers-card-list {
+            align-items: center;
+            display: flex;
+            min-height: 184px;
+
+            .ant-card-body {
+                padding-left: 0;
+            }
+        }
+        .event-guid-cards{
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            background: rgba(250, 250, 250, 0.98);
+            min-height: 188px;
+            max-height: 205px;
+            border: 1px solid transparent;
+            &:hover {
+                background: linear-gradient(
+                180deg,
+                $white 55.42%,
+                $light-orange-bg 191.78%
+            );
+            border: 1px solid #ffc73d !important;
+            }
+            .col-alignment{
+                justify-content: space-between;
+            }
+            .all-card-heading{
+                font-size: 1.5rem;
+            }
+            .all-card-desc{
+                font-size: 1rem;
+            }
+        }
+        .recommend-and-earn{
+            .all-card-heading{
+                font-size: 1.25rem;
+            }
+        }
+    }
+
+    .friend-card {
+        .ant-card-body {
+            padding: 24px 24px 6px 24px;
+            .outline-btn {
+                height: 28px !important;
+                font-size: $fs_sm !important;
+            }
+            .invitataion-card {
+                background: #fafafa;
+                border-radius: 8px;
+                .ant-card-body {
+                    padding: 24px;
+                    .count-people {
+                        font-size: $fs_12xl;
+                        color: #081131;
+                        line-height: 32px;
+                    }
+                    .copy-link-box {
+                        background: rgba(217, 217, 217, 0.28);
+                        border-radius: 3px;
+                        padding: 15px 19px;
+                    }
+                    .invite-desc {
+                        font-size: $fs_sm;
+                        color: $heading-color;
+                    }
+                }
+            }
+        }
+    }
+    .commision-login {
+        padding-top: 3.25rem;
+        .login-heading {
+            color: $heading-color;
+            font-size: $fs_7xl;
+        }
+    }
+    .login-invite-card {
+        background-color: #22272C;
+        border-radius: 5px;
+        .all-card-desc {
+            color: rgba(255, 255, 255, 0.50);
+        }
+        .main-heading {
+            font-size: $fs_2xl;
+            color: #FFF;
+        }
+        .sub-heading {
+            font-size: $fs_sm !important;
+            color: $text-grey !important;
+        }
+        #invitation,
+        #keycopy {
+            color: $--normal-text;
+        }
+        #copyimage {
+            margin-bottom: 0.25rem !important;
+        }
+        .invite-code-btn {
+            background-color: #3B4046;
+        }
+        .invite-btn {
+            height: 3rem;
+        }
+        .link-card {
+            border-radius: 4px;
+            font-size: $fs_sm;
+            color: $heading-color;
+            padding: 1rem;
+            background-color: #3B4046;
+            .deposit-address-link {
+                color: #fff !important;
+                white-space: nowrap;
+                width: 300px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+
+        .login-heading {
+            font-weight: 700;
+            font-size: $fs_7xl;
+            line-height: 34px;
+            color: #344054;
+        }
+        .ant-card-head-title {
+            text-align: center !important;
+        }
+        .ant-divider-horizontal.ant-divider-with-text-center::before {
+            border-top: 1px solid #f3f3f3;
+        }
+        .ant-divider-horizontal.ant-divider-with-text-center::after {
+            border-top: 1px solid #f3f3f3;
+        }
+        span.ant-divider-inner-text {
+            font-weight: 400;
+            font-size: $fs_xs;
+            color: $heading-color;
+            padding: 0 15px;
+        }
+        .our-Commission-title {
+            font-size: $fs_7xl;
+            line-height: 2.26563rem;
+            color: #fff;
+            text-align: end;
+        }
+        .invite-friend-box {
+            display: flex;
+            justify-content: flex-start;
+            background: #f3f3f3;
+            border-radius: 5px;
+            padding: 5px;
+        }
+        .sub-heading {
+            font-size: $fs_xmd;
+            color: #344054;
+        }
+        .copy-link-box {
+            border: 1px solid #d0d5dd;
+            border-radius: 3px;
+            padding: 14px 17px;
+            .copy-txt {
+                font-weight: 400;
+                font-size: $fs_xmd;
+                color: #344054;
+            }
+        }
+    }
+
+    .get-invite-card {
+        height: 490px;
+        background: rgba(255, 255, 255, 0.8);
+        padding: 70px 0 110px 0;
+        border-radius: 5px;
+    }
+    tr.ant-table-expanded-row td > .ant-table-wrapper {
+        margin: 0px;
+    }
+    .invite-innertable {
+        .components-table-demo-nested {
+        .ant-table-tbody > tr > td {
+            &:first-child {
+                padding-left: 6px !important;
+            }
+        }
+        .ant-table-thead>tr>th {
+            &:first-child {
+                padding-left: 6px;
+            }
+        }
+    }
+        tr.ant-table-expanded-row {
+            background: #fff;
+        }
+        tr.ant-table-expanded-row td > .ant-table-wrapper {
+            margin:0;
+        }
+        .nested-invite-table {
+            .ant-table-placeholder {
+                border: none;
+            }
+            .ant-table-tbody > tr > td {
+                &:first-child {
+                    padding-left: 68px !important;
+                }
+            }
+            .ant-table-thead>tr>th {
+                &:first-child {
+                    padding-left: 68px;
+                }
+            }
+          
+        }
+
+   
+
+    
+
+    }
+    .myref {
+        .ant-table-thead > tr > th:first-child {
+            padding: 0;
+        }
+        .ant-table-thead > tr > th:last-child {
+            padding: 0;
+        }
+    }
+    .ranking-card {
+        border: 1px solid #eaeaea;
+        border-radius: 5px;
+        .ant-card-head {
+            border: none !important;
+        }
+        .ant-card-body {
+            padding: 0 0;
+            .ant-table-thead > tr > th {
+                background: #fafafa !important;
+                border: none !important;
+                font-weight: 500 !important;
+                color: #718096 !important;
+            }
+
+            .ant-table-tbody > tr > td {
+                border: none !important;
+                padding-bottom: 0px !important;
+                margin-top: 10px !important;
+            }
+            .ant-table-row-cell-break-word {
+                img {
+                    height: 1.75rem;
+                }
+            }
+        }
+        #ranking-table {
+            .ant-table {
+                min-height: 200px;
+            }
+            .ant-pagination {
+                padding: 0 1rem;
+            }
+        }
+    }
+    .records-btn {
+        background: #f7f9fc;
+        border-radius: 4px;
+        height: 46px !important;
+        font-weight: 500;
+        color: #6978a0;
+        font-size: $fs_xs;
+    }
+    .invitation-tabs {
+       //table-styling
+       .ant-table-tbody > tr > td:first-child {
+        padding-left: 0 !important;
+    }
+    .ant-table-tbody > tr > td:last-child{
+        padding-right: 0 !important;
+    }
+    .ant-table-tbody > tr > td{
+        padding-right: 0 !important;
+    }
+        .ant-table-placeholder {
+            border-top: none;
+            border-bottom: none;
+        }
+        .ant-table .ant-table-row-indent + .ant-table-row-expand-icon {
+            margin-right: 12px !important;
+        }
+        //end
+        .ant-tabs-nav-wrap {
+            padding: 0;
+        }
+        .tabs-card {
+            .ant-card-body {
+                padding: 0;
+
+                .ant-divider {
+                    height: 1px;
+                    background-color: #f3f5f5;
+                }
+
+                .table-list {
+                    letter-spacing: 0.2px;
+                    color: $text-grey;
+                    font-size: $fs_sm;
+                }
+                .table-list1 {
+                    letter-spacing: 0.2px;
+                    color: #081131;
+                    font-size: $fs_sm;
+                }
+                .invite-detail {
+                    background: #ffffff;
+                    border: 0.65px solid #e0dddd;
+                    border-radius: 9px;
+                    margin: 0 24px;
+                }
+                .detail-bg {
+                    background: #fafafa;
+                    padding: 16px 0 0 0 !important;
+                    border-radius: 9px 9px 0 0;
+                }
+            }
+        }
+    }
+    .my-invites-container {
+        background-image: url("/images/invite-frnd-bg.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: .4rem;
+        .all-card-heading {
+            font-size: 1.56rem;
+            color: #fff;
+        }
+        .all-card-desc{
+            color: #fff;
+        }
+        .invite-now-btn {
+            padding: 0rem 2.25rem;
+            height: 2.5rem;
+            border-radius: 2rem !important;
+            z-index: 999;
+        }
+    }
+    .my-invites-container > .ant-card-body {
+        padding: 0;
+        .ant-row{
+            margin: 0 !important;
+        }
+    }
+    .faq-card{
+        .ant-card-body{
+            padding: 24px 0;
+        }
+    }
+    @media screen and (max-width: 1280px) {
+        .invite1-desc {
+            font-size: $fs_sm;
+        }
+        .recommend-friend-header .p2p-account-heading {
+            font-size: $fs_2xl;
+        }
+        .recommend-friend-header {
+            &::after {
+                width: 30%;
+                right: 0;
+            }
+        }
+        .event-guide {
+            font-size: $fs_lg;
+        }
+        .ant-card-head-title {
+            font-size: $fs-base;
+        }
+        .all-card-heading {
+            font-size: $fs-base;
+        }
+        .recommend-and-earn , .event-guid-cards{
+            .all-card-heading{
+                font-size: $fs-base !important;
+            }
+            .all-card-desc{
+                font-size: .875rem !important;
+            }
+        }
+        .recommend-friend-card {
+            .referal-2 {
+                padding: 0 !important;
+            }
+
+            .tiers-card-list {
+                min-height: 150px;
+                .ant-card-body {
+                    padding: 15px;
+                }
+            }
+        }
+
+        .login-invite-card {
+            .our-Commission-title {
+                font-size: $fs_7xl;
+            }
+            .link-card {
+                font-size: $fs_xs;
+            }
+            .sub-heading {
+                font-size: $fs_xs;
+            }
+        }
+        .friend-card .ant-card-body .invitataion-card .ant-card-body {
+            .count-people {
+                font-size: $fs_7xl;
+            }
+            .invite-desc {
+                font-size: $fs_xs;
+            }
+        }
+        .welfare-heading {
+            font-size: $fs_2xl;
+        }
+        .welfare-desc {
+            font-size: $fs_xmd;
+        }
+    }
+    @media screen and (max-width: 1024px) {
+        .event-guid-cards{
+            padding: .75rem !important;
+        }
+        .r-img-col {
+            display: none;
+        }
+    }
+    @media screen and (max-width: 992px) {
+        .friend-list {
+            margin-top: 1rem;
+        }
+        .recommend-friend-header {
+            text-align: center;
+            &::after {
+                display: none;
+            }
+        }
+        .my-invites-container {
+            margin-left: 0 !important;
+            &::after {
+                display: none;
+            }
+        }
+        .friend-card > .ant-card-body {
+            padding-left: 0;
+        }
+        .recommend-friend-header-btns {
+            justify-content: center;
+            .rules-btn {
+                padding: 0;
+                margin: 0;
+                padding-top: 0.5rem;
+            }
+        }
+    }
+    .tiers-card-list {
+        .ant-card-body {
+            padding: 0 !important;
+        }
+    }
+    .d-block {
+        display: block;
+    }
+
+}
+#invite-user-modal {
+    .invite-friends-title {
+        font-size: $fs_lg;
+        color: $heading-color;
+    }
+    .ant-modal-content {
+        background: #ffffff;
+        box-shadow: 0px 20px 136px -4px rgba(16, 24, 40, 0.1),
+            0px 8px 8px -4px rgba(16, 24, 40, 0.04);
+        border-radius: 12px;
+    }
+    .ant-modal-close {
+        display: none;
+    }
+    .sub-heading {
+        font-size: $fs_sm;
+        color: #718096;
+    }
+    .link-card {
+        border-radius: 4px;
+            font-size: $fs_sm;
+            color: $heading-color;
+            padding: 1rem;
+            background-color: $--input-background;
+            .deposit-address-link {
+                white-space: nowrap;
+                width: 300px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+    }
+    .invite-code-bg {
+         background: url("/images/refer-qr-bg.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 8px;
+        height: 355px;
+    }
+
+    .modal-qrcode {
+        position: absolute;
+        right: 20px !important;
+        bottom: 0;
+        .small-txt {
+            font-size: $fs_xxs;
+            color: $heading-color;
+        }
+        .referral-code {
+            font-size: $fs_xs;
+            color: $text-grey;
+            span {
+                color: $heading-color;
+            }
+        }
+    }
+    .social-icon {
+        display: flex;
+        justify-content: flex-start;
+        span {
+            font-weight: 500;
+            font-size: $fs_xs;
+            color: $text-grey;
+            text-align: center;
+        }
+    }
+}
+//qr-modal
+.qr-modal {
+    font-family: "IBM Plex Sans";
+    .ant-modal-content {
+        border-radius: 8px;
+    }
+    .ant-modal-close {
+        display: none;
+    }
+    .ant-modal-body {
+        background:#272727;
+        border-radius: 8px;
+    }
+    .col-alignment {
+        justify-content: space-between;
+    }
+    .qr-btn {
+        background: transparent;
+        padding: 0;
+        height: auto;
+        width: fit-content;
+        text-align: center;
+        cursor: pointer;
+    }
+    .qr-invite-txt {
+        font-size: $fs-base;
+        color: $white;
+    }
+    .qr-invite-txt-grey {
+        font-size: .875rem;
+        color: #081131;
+        text-align: center;
+    }
+    .qr-invite-txt-grey2 {
+        font-size: .6875rem;
+        color: rgba(255, 255, 255, 0.5);
+        span {
+            font-size: 1rem;
+            color: $white;
+        }
+    }
+    p.qr-invite-txt-code {
+        font-size: 1.25rem;
+        color: #121214;
+        text-align: center;
+    }
+    .qr-container{
+        background: #fff;
+        padding: 1rem 0;
+        border-radius: 8px;
+    }
+    .half-circle{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+#downloadArea{
+    .col-alignment{
+        justify-content: center;
+    }
+    .text-center {
+        text-align: center;
+    }
+    .qr-invite-txt{
+        font-size: .875rem;
+    }
+}

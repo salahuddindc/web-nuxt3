@@ -1,0 +1,690 @@
+@import "assets/variables/light.scss";
+body.trade-layout {
+    font-family: "IBM Plex Sans", sans-serif;
+}
+body.black-theme {
+    $red: #f6465d;
+    $gray: #555a5f;
+    $bg-black: #12181d;
+    $search-bg: #192026;
+    $white: #ffffff;
+    $search-color: #8c8f92;
+    $active-color: #ffa500;
+    $sorted-color: #858789;
+    $table-text: #b7bdc6;
+    $green: #00c076;
+    $table-light-gray: #eaecef;
+    $border-color: #202020;
+    $active-tab: #12181d;
+    $tab-border: #393939;
+    $light-white: #e6e8ec;
+    $input-bg: #1e252b;
+    $input-color: #6d777e;
+    $drop-bg: #0c1014;
+    $auto-tab-bg: #222930;
+    $radio-bg: #19222c;
+    $raio-color: #adb1b8;
+    $divider-bg: #212a31;
+    $tip-text-color: #6d4700;
+    $hover-buybtn-bg: #6cda94;
+    $hover-sellbtn-bg: #f3425f;
+    $margin-bg: #412F11;
+    .coin-txt {
+        color: $gray;
+    }
+   
+    .auto-fill {
+        color: $active-color;
+    }
+    .white {
+        color: $white;
+    }
+    .tip-text {
+        color: $tip-text-color;
+    }
+    .buy-btn {
+        background-color: $green;
+        color: $white;
+        &:hover {
+            background-color: $hover-buybtn-bg;
+        }
+    }
+    .ant-table-header {
+        background-color: #0C1014 !important;
+    }
+    tbody.ant-table-tbody {
+        background-color: #0C1014 !important;
+
+    }
+    .ant-table-fixed-header > .ant-table-content > .ant-table-scroll > .ant-table-body {
+        background-color: #0C1014 !important;
+    }
+    .sell-btn {
+        background-color: $red;
+        color: $white;
+        &:hover {
+            background-color: $hover-sellbtn-bg;
+        }
+    }
+    .border {
+        border: 1px solid $border-color;
+    }
+    .trade-divider {
+        background-color: $border-color;
+    }
+    .coin-price {
+        color: $red;
+    }
+    .green-price {
+        color: $green;
+    }
+    .market-change-bg {
+        background-color: $bg-black;
+    }
+    .first-txt {
+        color: $table-light-gray;
+    }
+    .margin-text {
+        background-color: $margin-bg;
+        color: $active-color;
+    }
+    .limit-price {
+        color: $light-white;
+    }
+    .sec-col::before {
+        background: $border-color;
+    }
+    .theme-col::after {
+        background: $border-color;
+    }
+    .strategy-divider {
+        background-color: $divider-bg;
+    }
+    span.ant-checkbox-inner {
+        border: 1px solid $gray;
+    }
+   
+    .ant-checkbox-wrapper:hover .ant-checkbox-inner,
+    .ant-checkbox:hover .ant-checkbox-inner,
+    .ant-checkbox-input:focus + .ant-checkbox-inner {
+        border: 1px solid $gray;
+    }
+    .ant-checkbox-checked::after {
+        border: 1px solid $gray;
+    }
+    .search-input .ant-input {
+        background-color: $search-bg !important;
+        border-color: $search-bg;
+        color: $search-color !important;
+        &::placeholder {
+            color: $search-color !important;
+        }
+        &:hover {
+            border-color: $search-bg;
+        }
+    }
+    .ant-table-placeholder {
+        background-color: transparent;
+        .ant-empty-description {
+            color: $table-text;
+        }
+    }
+    .ant-radio-button-wrapper {
+        color: $white;
+    }
+    label.ant-radio-button-wrapper.ant-radio-button-wrapper-checked {
+        color: $active-color !important;
+    }
+    .ant-table-thead > tr > th {
+        color: $gray;
+    }
+    .ant-table-thead
+        > tr
+        > th
+        .ant-table-column-sorter
+        .ant-table-column-sorter-inner-full
+        .ant-table-column-sorter-up,
+    .ant-table-thead
+        > tr
+        > th
+        .ant-table-column-sorter
+        .ant-table-column-sorter-inner-full
+        .ant-table-column-sorter-down {
+        color: $sorted-color;
+        font-size: 11px;
+    }
+    .ant-table-tbody > tr > td {
+        color: $white;
+
+        .gray-text {
+            color: $gray;
+        }
+        .sec-txt {
+            color: $table-text;
+        }
+    }
+    .all-tabs {
+        border: 1px solid $border-color;
+    }
+    .trade-tabs-card {
+        .ant-tabs-nav .ant-tabs-tab:last-child {
+            border-right: 1px solid $tab-border !important;
+        }
+        .ant-tabs-nav .ant-tabs-tab {
+            color: $gray;
+            border-right: 1px solid $tab-border !important;
+            border-left: 1px solid $tab-border !important;
+        }
+        .ant-tabs-nav .ant-tabs-tab {
+            border-right: 1px solid $tab-border !important;
+        }
+        .ant-tabs-nav.ant-tabs-nav-animated {
+            background-color: transparent;
+        }
+        .ant-tabs-tab-active.ant-tabs-tab:first-child {
+            border-right: 1px solid $tab-border !important;
+        }
+        .ant-tabs-tab-active.ant-tabs-tab {
+            border-top: 1px solid $active-color !important;
+            border-right: none !important;
+            background: #12181d !important;
+        }
+
+        .ant-tabs-bar.ant-tabs-top-bar.ant-tabs-card-bar {
+            border-bottom: 1px solid $tab-border;
+        }
+        .ant-tabs-tab-active.ant-tabs-tab {
+            color: $white !important;
+        }
+        .ant-tabs-content.ant-tabs-content-no-animated.ant-tabs-top-content.ant-tabs-card-content {
+            background-color: $active-tab;
+        }
+    }
+    .opentrade-table {
+        .ant-table-thead > tr > th {
+            border-bottom: 1px solid $border-color !important;
+        }
+    }
+    .all-tabs {
+        .trade-detail-tabs {
+            .ant-tabs-nav .ant-tabs-tab {
+                color: $gray !important;
+            }
+            .ant-tabs-nav.ant-tabs-nav-animated {
+                background-color: transparent !important;
+            }
+            .ant-tabs-tab-active.ant-tabs-tab {
+                color: $active-color !important;
+                background-color: transparent !important;
+            }
+        }
+    }
+    .trade-detail-tabs {
+        .ant-tabs-nav .ant-tabs-tab {
+            color: $white !important;
+        }
+        .ant-tabs-nav.ant-tabs-nav-animated {
+            background-color: transparent;
+        }
+        .ant-tabs-tab-active.ant-tabs-tab {
+            color: $active-color !important;
+            background-color: transparent !important;
+        }
+    }
+    .ant-input {
+        background-color: $input-bg !important;
+        color: $white !important;
+        &::placeholder {
+            color: $white !important;
+        }
+    }
+    a.ant-dropdown-link.ant-dropdown-trigger {
+        color: $table-light-gray;
+    }
+    .spot-btn {
+        .ant-radio-button-wrapper {
+            color: $active-color;
+        }
+    }
+    ul.ant-dropdown-menu.ant-dropdown-menu-vertical.ant-dropdown-menu-root.ant-dropdown-menu-light.ant-dropdown-content {
+        background-color: $drop-bg;
+        border: 1px solid $border-color;
+        li.ant-dropdown-menu-item a {
+            color: $table-light-gray;
+        }
+        .ant-dropdown-menu-item:hover {
+            background-color: $drop-bg;
+        }
+        .ant-dropdown-menu-item a:hover {
+            color: $active-color;
+        }
+    }
+    .auto-manual-tabs {
+        .ant-tabs-nav.ant-tabs-nav-animated {
+            background-color: $drop-bg !important;
+        }
+        .ant-tabs-nav .ant-tabs-tab {
+            color: $gray !important;
+        }
+        .ant-tabs-tab-active.ant-tabs-tab {
+            background-color: $auto-tab-bg !important;
+            color: $white !important;
+        }
+        .strategy-heading {
+            color: $white;
+        }
+        .time-period-btn {
+            .ant-radio-button-wrapper {
+                color: $raio-color;
+                background-color: transparent;
+            }
+            label.ant-radio-button-wrapper.ant-radio-button-wrapper-checked {
+                color: $white !important;
+                background-color: $radio-bg !important;
+            }
+        }
+    }
+}
+#market-change {
+    .market-change-content {
+        max-width: 1522px;
+        width: 100%;
+        margin: 0 auto;
+        .marquee-box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .marquee-box-first {
+                .coin-txt {
+                    font-size: $fs_sm;
+                }
+            }
+        }
+    }
+}
+#new-trade {
+    .margin-text {
+        padding: 2px 3px;
+        border-radius: 2px;
+        font-size: $fs_xxxs;
+        text-align: center;
+    }
+    .ant-table-thead > tr > th:first-child {
+        padding-left: 0px;
+    }
+    .ant-table-thead > tr > th:last-child {
+        padding-right: 0px;
+    }
+    .ant-table-tbody > tr > td:first-child {
+        padding-left: 0px;
+    }
+    .ant-table-tbody > tr > td:last-child {
+        padding-right: 0px;
+    }
+    .ant-table-thead > tr > th {
+        background-color: transparent;
+        border-bottom: none;
+        font-size: $fs_xs;
+        padding: 10px 8px 10px 8px;
+    }
+    .ant-table-tbody > tr > td {
+        border-bottom: none;
+        padding: 0 8px 10px 8px;
+        font-size: $fs_xs;
+    }
+    .ant-table-thead
+        > tr
+        > th.ant-table-column-has-actions.ant-table-column-has-sorters:hover {
+        background-color: transparent !important;
+    }
+    tbody.ant-table-tbody {
+        background-color: transparent;
+    }
+    .ant-table-tbody
+        > tr:hover:not(.ant-table-expanded-row):not(.ant-table-row-selected)
+        > td {
+        background-color: transparent !important;
+    }
+    .left-side {
+        height: 970px;
+        border-bottom: none;
+        .search-input .ant-input {
+            height: 32px !important;
+            font-size: $fs_xs;
+            border-radius: 4px !important;
+        }
+        .heading {
+            font-size: $fs_xs;
+        }
+        .ant-radio-group {
+            background: transparent;
+            .ant-radio-button-wrapper {
+                background-color: transparent;
+                border: none;
+                padding: 0 18px;
+                font-size: $fs_xs;
+                &:first-child {
+                    padding-left: 0;
+                }
+                &:last-child {
+                    padding-right: 0;
+                }
+            }
+            label.ant-radio-button-wrapper.ant-radio-button-wrapper-checked {
+                background-color: transparent !important;
+                border: none;
+            }
+            .ant-radio-button-wrapper:not(:first-child)::before {
+                background: transparent;
+            }
+        }
+    }
+
+    .trade-divider {
+        height: 0.6px !important;
+    }
+    .currency-detail {
+        .border {
+            border-left: none;
+            .coin-heading {
+                font-size: $fs_2xl;
+            }
+            .sec-col::before {
+                content: "";
+                height: 40px;
+                width: 1px;
+                position: absolute;
+                left: -11px;
+                top: 3px;
+            }
+            .sec-value {
+                font-size: $fs_xs;
+            }
+            .center-col {
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                .col-value {
+                    margin-right: 35px;
+                    .first-value {
+                        font-size: $fs-base;
+                    }
+                }
+            }
+            .theme-col::after {
+                content: "";
+                height: 40px;
+                width: 1px;
+                position: absolute;
+                right: -23px;
+                top: -10px !important;
+            }
+            .theme-btn.ant-radio-group.ant-radio-group-outline.ant-radio-group-default {
+                border-radius: 50px;
+                background: #12181d;
+                height: 40px !important;
+                line-height: 39px !important;
+                padding: 0px 5px;
+            }
+            .theme-btn {
+                .ant-radio-button-wrapper {
+                    background: transparent;
+                    border: none;
+                    padding: 0 5px;
+                }
+                label.ant-radio-button-wrapper.ant-radio-button-wrapper-checked {
+                    background: transparent !important;
+                    border: none;
+                    padding: 0 5px;
+                }
+                .ant-radio-button-wrapper:not(:first-child)::before {
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+    .right-side.border {
+        border-top: none !important;
+        height: 903px !important;
+        label.ant-radio-button-wrapper {
+            padding: 0 5px;
+        }
+        .center-value {
+            font-size: $fs-base;
+        }
+        .center-small-value {
+            font-size: $fs_xs;
+        }
+        a.ant-dropdown-link.ant-dropdown-trigger {
+            font-size: $fs_xs;
+        }
+    }
+
+    .trade-tabs-card {
+        .ant-tabs {
+            height: 48px;
+        }
+        .ant-tabs-bar.ant-tabs-top-bar.ant-tabs-card-bar {
+            height: 48px;
+            line-height: 48px;
+        }
+        .ant-tabs-nav-container {
+            height: 48px !important;
+            line-height: 48px !important;
+        }
+        .ant-tabs-nav.ant-tabs-nav-animated {
+            border-radius: 0;
+            padding: 0;
+            border: none !important;
+        }
+        .ant-tabs-nav .ant-tabs-tab:first-child {
+            margin-left: 0 !important;
+        }
+        .ant-tabs-nav .ant-tabs-tab {
+            height: 48px;
+            line-height: 48px;
+            padding: 0 40px !important;
+            background-color: transparent;
+            border-radius: 0;
+            margin-right: 0 !important;
+            border: none;
+            font-size: $fs_sm;
+            border-top: 1px solid transparent;
+            font-weight: 500;
+        }
+        .ant-tabs-tab-active.ant-tabs-tab {
+            font-size: $fs_sm;
+            height: 48px;
+            line-height: 48px;
+            padding: 0 40px !important;
+            margin-right: 0 !important;
+            border-radius: 0 !important;
+        }
+        .ant-tabs-nav .ant-tabs-tab:first-child {
+            border-left: none !important;
+            border-right: none !important;
+        }
+        .ant-tabs-nav .ant-tabs-tab:last-child {
+            border-right: none !important;
+        }
+        .ant-tabs-ink-bar {
+            display: none !important;
+        }
+        .ant-tabs-nav-wrap {
+            padding: 0 !important;
+        }
+    }
+    .auto-manual-tabs {
+        .ant-tabs-nav-container {
+            height: 38px !important;
+            line-height: inherit !important;
+            .ant-tabs-tab-active.ant-tabs-tab {
+                border-radius: 4px !important;
+            }
+            .ant-tabs-nav.ant-tabs-nav-animated {
+                padding: 5px 6px;
+                border-radius: 6px;
+            }
+            .ant-tabs-nav .ant-tabs-tab {
+                height: 28px !important;
+                line-height: 28px !important;
+                width: 200px;
+            }
+        }
+        .ant-tabs-extra-content {
+            height: 38px !important;
+            line-height: 38px !important;
+        }
+        .spot-btn .ant-radio-button-wrapper {
+            height: 38px !important;
+            line-height: 38px !important;
+            top: -15px;
+            z-index: 999 !important;
+        }
+        .spot-btn .ant-radio-button-wrapper:not(:first-child)::before {
+            height: 55% !important;
+            top: 5px !important;
+        }
+        .strategy-heading {
+            font-size: $fs_md;
+        }
+        .time-period-btn {
+            .ant-radio-button-wrapper {
+                border: none;
+                height: 24px;
+                line-height: 24px;
+                font-size: $fs_xs;
+                padding: 0 6px;
+                margin-left: 15px;
+            }
+            .ant-radio-button-wrapper:not(:first-child)::before {
+                background: none;
+            }
+            label.ant-radio-button-wrapper.ant-radio-button-wrapper-checked {
+                border: none;
+                padding: 0px 6px;
+                border-radius: 3px !important;
+            }
+        }
+        .time-period {
+            font-size: $fs_xs;
+        }
+    }
+    .trade-detail-tabs {
+        .ant-tabs-nav-wrap {
+            padding: 0 !important;
+        }
+        .ant-tabs-nav .ant-tabs-tab {
+            border: none !important;
+            padding-right: 20px !important;
+            padding-left: 0 !important;
+            background-color: transparent;
+            font-weight: 500;
+        }
+        .ant-tabs-bar {
+            border-bottom: none !important;
+        }
+        .ant-tabs {
+            height: auto;
+        }
+        .spot-btn {
+            .ant-radio-button-wrapper {
+                background: transparent;
+                border: none;
+                height: 38px;
+                line-height: 38px;
+            }
+            .ant-tabs-extra-content {
+                height: 38px !important;
+                line-height: 38px !important;
+            }
+            .ant-radio-button-wrapper:last-child {
+                padding-right: 0;
+            }
+            label.ant-radio-button-wrapper.ant-radio-button-wrapper-checked {
+                background-color: transparent !important;
+            }
+            .ant-radio-button-wrapper:not(:first-child)::before {
+                background-color: #333;
+                height: 55%;
+                top: 10px !important;
+            }
+        }
+        .ant-input {
+            height: 38px !important;
+            border-radius: 4px !important;
+            border: transparent !important;
+            font-size: $fs_sm !important;
+
+            &::placeholder {
+                font-size: $fs_sm !important;
+            }
+        }
+
+        .ant-input-affix-wrapper {
+            text-align: end;
+        }
+        .ant-input-affix-wrapper .ant-input:not(:last-child) {
+            padding-right: 60px;
+        }
+        .ant-form-item {
+            margin-bottom: 14px;
+        }
+        .limit-price {
+            font-size: $fs_xs;
+        }
+    }
+    .common-btn {
+        height: 40px !important;
+        border-radius: 4px !important;
+        font-size: $fs_sm !important;
+    }
+    .ant-radio-button-wrapper:focus-within {
+        box-shadow: none;
+    }
+    .ant-checkbox + span {
+        font-size: $fs_md;
+    }
+    span.ant-checkbox-inner {
+        background: transparent;
+        border-radius: 4px;
+    }
+    .tip-text {
+        font-size: $fs_sm;
+    }
+    .auto-fill {
+        font-size: $fs_md;
+    }
+    .TVChartContainer {
+        margin: 0 auto;
+        height: 500px;
+        // padding: 26px 0px;
+        width: 903px;
+      }
+        .ant-table-placeholder {
+            border-top: none;
+            border-bottom: none;
+        }
+    }
+    .ant-dropdown.price-dropdown.usdt-price-dropdown.ant-dropdown-placement-bottomLeft {
+        top: 1063px !important;
+        left: 1315px !important;
+        ul.ant-dropdown-menu.ant-dropdown-menu-vertical.ant-dropdown-menu-root.ant-dropdown-menu-light.ant-dropdown-content {
+            width: 105px !important;
+        }
+
+}
+.ant-dropdown.price-dropdown.ant-dropdown-placement-bottomRight {
+    top: 210px !important;
+    right: 100px !important;
+    left: 1605px !important;
+    ul.ant-dropdown-menu.ant-dropdown-menu-vertical.ant-dropdown-menu-root.ant-dropdown-menu-light.ant-dropdown-content {
+        width: 105px !important;
+        li.ant-dropdown-menu-item a {
+            font-size: $fs_sm;
+        }
+        .ant-dropdown-menu-item:hover {
+            border: none;
+        }
+    }
+}

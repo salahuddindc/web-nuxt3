@@ -1,0 +1,271 @@
+@import "assets/variables/light.scss";
+
+#institution-service {
+    background: #fff;
+    .institution-header {
+        position: relative;
+        background-image: url("/images/ins-bg1.png");
+        padding: 80px 0px 80px 0px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        &::after{
+            content: '';
+            background: url('/images/inst-bg.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            position: absolute;
+            height: 100%;
+            width: 20%;
+            top: 0;
+            right: 19%;
+        }
+        .institution-heading {
+            font-size: $fs_7xl;
+            color: $text-white;
+        }
+        .institution-desc {
+            font-size: $fs_md;
+            color: $text-white;
+            line-height: 22px;
+        }
+    }
+    .institution-avg-card {
+        margin-top: -75px !important;
+        box-shadow: 0px 9px 56px 0px rgba(199, 199, 199, 0.25);
+        .ant-card-body {
+            padding: 37px 28px;
+        }
+    }
+    .institution-nav{
+        text-align: center;
+        justify-content: space-between;
+        .ant-card-body{
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+        }
+        .institution-nav-icon{
+            height: 45px;
+            width: 45px;
+            background: #FAFAFA;
+            border-radius: 50%;
+            justify-content: center;
+        }
+        .institution-nav-card{
+            &:hover{
+                .institution-nav-icon{
+                    background: #FFF7F0;
+                }
+            }
+        }
+        .institution-nav-desc{
+            font-size: $fs_xs;
+            color: $heading-color;
+        }
+    }
+    .institution-heading {
+        font-size: $fs-base;
+        color: $heading-color;
+    }
+    .institution-title {
+        font-size: $fs_14xl;
+        color: $heading-color;
+    }
+    .institution-txt {
+        font-size: $fs_sm;
+        color: $heading-color;
+    }
+    .trading-free {
+        font-size: $fs-base;
+        color: $heading-color;
+    }
+    .tailor-heading {
+        font-weight: 700;
+        font-size: $fs_7xl;
+        color: #344054;
+    }
+    .market-trading-fee {
+        font-size: $fs_2xl;
+        color: $heading-color;
+    }
+    .tailor-solution-card {
+        border-radius: 18px;
+        border: 1px solid #eaeaea;
+        backdrop-filter: blur(100px);
+        padding: 1rem 0;
+        .ant-card-body {
+            padding: 24px;
+
+            .trading-divider {
+                width: 1px;
+                height: 0.6px !important;
+                top: 0em !important;
+                background-color: #f2f2f2 !important;
+            }
+        }
+    }
+    .tailor-solution-card2 {
+        border-radius: 1.125rem;
+        background: #fafafa;
+        padding: 4rem 0;
+        backdrop-filter: blur(100px);
+        justify-content: center;
+        text-align: center;
+        .tailor-content {
+            span {
+                font-size: 2.5rem;
+            }
+        }
+    }
+    .tailor-solution2-card {
+        .ant-card-body {
+            padding: 0;
+        }
+        .maket-trading-count {
+            font-size: $fs_16xl;
+            color: $primary-color;
+        }
+        .list-desc {
+            font-size: $fs_sm;
+            color: $text-grey;
+        }
+    }
+    .tailor-list {
+        list-style: none;
+        li {
+            font-weight: 400;
+            font-size: $fs-base;
+            color: $heading-color;
+            margin-bottom: 10px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        ::marker {
+            color: $text-grey;
+        }
+    }
+    .list-desc {
+        font-weight: 700;
+        font-size: $fs-base;
+        color: #afafaf;
+        line-height: 24px;
+    }
+    .trade-now-card {
+        .ant-card-body {
+            padding: 0;
+            .ant-tabs-nav-wrap {
+                padding: 24px 0px !important;
+            }
+        }
+    }
+    .trade-img-row {
+        border-radius: 18px;
+        background: #fafafa;
+        backdrop-filter: blur(100px);
+        .trade-img {
+            img {
+                border-radius: 12px !important;
+            }
+        }
+    }
+    .ins-heading-bg {
+        background-image: url("/images/institutional-client-bg.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 60px 0;
+    }
+    .primary-btn {
+        height: 40px !important;
+    }
+    @media screen and (max-width: 1500px){
+                .main-content{
+                    padding: 0 25px !important;
+                }
+    }
+    
+    @media screen and (min-width: 1280px)and (max-width: 1366px){
+        .tailor-solution-card {
+            padding: .25rem 0;
+        }
+    }
+    @media screen and (max-width: 1280px) {
+        .institution-header {
+            &::after{
+                right: 10%;
+            }}
+        .institution-txt {
+            font-size: $fs_xmd;
+        }
+        .institution-heading {
+            font-size: $fs_sm_base;
+        }
+        .trading-free {
+            font-size: $fs_xxs;
+        }
+        .market-trading-fee {
+            font-size: $fs-base;
+        }
+        .tailor-list li {
+            font-size: $fs_xmd;
+        }
+        .avg-img {
+            height: 45px;
+        }
+        .tailor-solution2-card .list-desc {
+            font-size: $fs_xmd;
+        }
+        .tailor-solution-card .ant-card-body .trading-divider {
+            margin: 15px 0 !important;
+        }
+        .tailor-solution-card {
+            padding: 1.45rem 0;
+        }
+        .institution-nav{
+            .ant-col{
+                margin-right: .5rem;
+            }
+        }
+    }
+    
+    @media screen and (max-width: 1024px) {
+        .institution-header {
+            &::after{
+                display: none;
+            }}
+        .tailor-list li {
+            font-size: $fs_xs;
+        }
+        .avg-img {
+            height: 35px;
+        }
+        .institution-txt {
+            font-size: $fs_xs;
+        }
+        .institution-heading {
+            font-size: $fs_xmd;
+        }
+        .ant-btn {
+            height: 36px !important;
+        }
+        .market-trading-fee {
+            font-size: $fs_xmd;
+        }
+        .trading-free {
+            font-size: $fs_xxs;
+        }
+        .tailor-solution2-card {
+            .ant-card-body {
+                padding: 15px;
+            }
+        }
+        .trade-img {
+            width: 100%;
+        }
+    }
+}

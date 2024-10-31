@@ -1,0 +1,1688 @@
+@import "@/assets/variables/light";
+@import "@/assets/scss/global/custom/web-font-size.scss"; // Custom Classes
+
+#copy-trade {
+    .sub-heading {
+        font-size: 18px;
+    }
+    .more-btn{
+        color: $primary-color;
+        justify-content: center;
+        padding: 15px 0;
+        background: #131920;
+        border-radius: 4px;
+    }
+    .trader-gray-color{
+        color: #718096 !important;
+    }
+    .ant-tabs .ant-tabs-top-content.ant-tabs-content-animated {
+        transition: none;
+        will-change: unset;
+    }
+    .ant-table-placeholder {
+        border-top: none;
+        border-bottom: none;
+    }
+
+    .ant-table-thead > tr > th {
+        font-size: 12px !important;
+        font-weight: 500 !important;
+        border-bottom: none;
+        &:first-child {
+            padding-left: 24px;
+        }
+        &:last-child {
+            padding-right: 24px;
+        }
+    }
+
+    .ant-table-tbody > tr > td {
+        &:first-child {
+            padding-left: 24px;
+        }
+        &:last-child {
+            padding-right: 24px;
+        }
+    }
+    
+    .ant-tabs-nav .ant-tabs-tab:first-child {
+        margin-left: 0 !important;
+    }
+
+    .ant-table-tbody tr:last-child td {
+        border-bottom: none !important;
+    }
+
+    .ant-radio-button-wrapper:not(:first-child)::before {
+        width: 0;
+    }
+
+    .ant-pagination-item {
+        border: none;
+        border: 1px solid #bebebe;
+        background: none;
+
+        a {
+            color: $secondary-black;
+        }
+    }
+
+    li.ant-pagination-disabled.ant-pagination-prev {
+        background: transparent;
+    }
+
+    .ant-pagination-prev .ant-pagination-item-link,
+    .ant-pagination-next .ant-pagination-item-link {
+        background: transparent;
+    }
+
+    li.ant-pagination-disabled.ant-pagination-next {
+        background-color: transparent;
+    }
+
+    .ant-pagination-item-active a {
+        color: $primary-color !important;
+        border: 1px solid $primary-color;
+        background-color: #fff6e6;
+        border-radius: 4px;
+    }
+
+    .ant-pagination-prev,
+    .ant-pagination-next,
+    .ant-pagination-jump-prev,
+    .ant-pagination-jump-next {
+        border: none;
+        border: 1px solid #bebebe;
+        background: none;
+
+        i.anticon.anticon-right {
+            color: $secondary-black;
+        }
+    }
+
+    .top-banner {
+        background: url("/images/copytrade-top-banner.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 58px 0;
+
+        .refer-to-earn-btn {
+            background: $white;
+            color: black;
+        }
+
+        .my-cop-trading {
+            background: url("/images/rectangle.svg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 398px;
+            height: 154px;
+        }
+    }
+
+    .news-alert {
+        .ant-card-body {
+            padding: 17px 0;
+
+            .news-text {
+                font-size: 16px;
+                color: $secondary-black;
+                font-weight: 500;
+            }
+
+            .read-more {
+                font-size: 14px;
+                color: $secondary-black;
+                font-weight: 500;
+            }
+        }
+    }
+
+    .daily-picks {
+        height: 40px;
+    }
+
+    .master-trader-image {
+        position: absolute;
+        left: 0;
+    }
+
+    .home-traders {
+        position: relative;
+
+        .ant-tabs-bar.ant-tabs-top-bar {
+            background: #fff;
+            border-bottom: 1px solid #dddddd !important;
+        }
+
+        .ant-input-affix-wrapper .ant-input:not(:first-child) {
+            padding-left: 38px;
+        }
+
+        input.ant-input {
+            background: #f3f5f7;
+            border: none;
+            border-radius: 4px !important;
+            color: $secondary-gray;
+            font-size: 14px;
+            font-weight: 400;
+
+            &::placeholder {
+                color: $secondary-gray;
+                font-size: 14px;
+                font-weight: 400;
+            }
+        }
+
+        .ant-tabs-nav-wrap {
+            padding-left: 62px;
+            padding-top: 28px;
+        }
+
+        .ant-tabs-extra-content {
+            line-height: 68px;
+        }
+
+        .ant-form-item {
+            margin-bottom: 0px !important;
+        }
+
+        .fire-image {
+            position: absolute;
+            top: 26px;
+            z-index: 1;
+            left: 33px;
+        }
+    }
+
+    // copy -trade-banners style
+    .copy-trade-banners {
+        .copy-trade-master-trader {
+            background: url("/images/copy-trade-master-trader.svg");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-radius: 12px;
+
+            .leader-board {
+                background: linear-gradient(
+                    180deg,
+                    #fcecd2 18.06%,
+                    #f4c6a6 52.6%,
+                    #f4c6a6 80.56%
+                );
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
+
+            .live-traders {
+                color: #f4c6a6;
+                letter-spacing: 0.42em;
+                text-transform: uppercase;
+            }
+        }
+
+        .check-it-out {
+            background: rgba(42, 48, 60, 0.52);
+            border: 1px solid rgba(255, 255, 255, 0.37);
+            border-radius: 8px;
+            height: 27px !important;
+        }
+
+        .copy-trade-leaderboard {
+            background: url("/images/copy-trade-leaderboard.svg");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-radius: 12px;
+
+            .master-traders {
+                background: linear-gradient(
+                    180deg,
+                    #fcedce 18.06%,
+                    #ffe35c 52.6%,
+                    #ffe45d 80.56%
+                );
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
+
+            .top-traders {
+                color: #f8d059;
+                letter-spacing: 0.42em;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    .ant-tabs {
+        overflow: visible;
+    }
+
+    // trader card style
+    .copy-btn {
+        border: 1px solid #c2c8cf;
+        background-color: #ffffff;
+        color: $secondary-black;
+        border-radius: 8px !important;
+
+        &:hover {
+            color: $secondary-gray;
+        }
+    }
+
+    .trader {
+        .trader-card {
+            background: linear-gradient(
+                180deg,
+                #fffcf3 0%,
+                rgba(255, 228, 173, 0) 43.27%
+            );
+            border-radius: 6px 6px 0 0;
+            height: 408px;
+            box-shadow: 0px 5px 20px rgba(57, 57, 57, 0.13);
+
+            .ant-card-body {
+                padding: 16px;
+
+                .trader-img {
+                    height: 55px;
+                    width: 55px;
+                    border-radius: 50%;
+                    border: 1px solid #ffffff;
+                    box-shadow: 0px 0px 10px rgba(8, 17, 49, 0.37);
+                }
+
+                .first-text {
+                    margin-top: 2px;
+                    border-bottom: 1px dashed #bebebe;
+                    text-decoration: none;
+                }
+
+                .small-text {
+                    font-size: 12px;
+                }
+
+                .profile-images {
+                    margin-left: -4px;
+                }
+            }
+        }
+    }
+    .full-btn {
+        /* Rectangle 34625168 */
+
+        background: linear-gradient(90deg, #ffa500 0%, #ff7f00 100%);
+        color: $white;
+        border-radius: 8px;
+    }
+    // all master traders
+    .ant-table-thead > tr > th .ant-table-column-sorter {
+        vertical-align: top;
+    }
+    .ant-table-thead > tr > th.ant-table-column-sort:hover {
+        background-color: $white !important;
+    }
+    .ant-table-thead
+        > tr
+        > th.ant-table-column-has-actions.ant-table-column-has-sorters:hover {
+        background: $white !important;
+    }
+    .ant-table-thead
+        > tr
+        > th
+        .ant-table-header-column
+        .ant-table-column-sorters::before {
+        background-color: $white !important;
+    }
+    .ant-table-thead
+        > tr
+        > th
+        .ant-table-header-column
+        .ant-table-column-sorters:hover::before {
+        background-color: $white !important;
+    }
+
+    .all-master-traders {
+        .all-dropdowns {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+            .ant-select-selection {
+                border: none;
+                background-color: transparent;
+                color: $secondary-gray;
+                font-weight: 500;
+
+                .ant-select-selection__rendered {
+                    margin: 0;
+                }
+
+                .ant-select-selection-selected-value {
+                    color: $secondary-gray;
+                }
+            }
+
+            .ant-select-arrow {
+                right: 0;
+            }
+        }
+
+        .nickname-user {
+            border-radius: 50%;
+        }
+
+        .ant-table-tbody > tr > td {
+            font-weight: 500 !important;
+            border-bottom: none !important;
+        }
+        .ant-table-thead > tr > th:first-child {
+            padding-left: 32px;
+        }
+        .ant-table-thead > tr > th:last-child {
+            padding-right: 32px;
+        }
+        .ant-table-tbody > tr > td:first-child {
+            padding-left: 32px;
+        }
+        .ant-table-tbody > tr > td:last-child {
+            padding-right: 32px;
+        }
+        .full-btn {
+            height: 34px !important;
+            border-radius: 4px;
+        }
+        .copytrade-view-btn {
+            border: 1px solid #c2c8cf;
+            border-radius: 4px;
+            color: $secondary-black;
+            background-color: $white !important;
+            height: 34px !important;
+        }
+
+        .ant-tag {
+            margin-right: 2px;
+            font-size: 10px;
+            height: 14px;
+            line-height: 14px;
+            padding: 0 4px;
+            border: none;
+            cursor: pointer;
+        }
+
+        // .blue-tag {
+        //     background: #e7f0fa;
+        //     color: #0e7ccb;
+        //     border: 1px solid #e7f0fa;
+        // }
+        // .green-tag {
+        //     background: #e7faf3;
+        //     color: #0ecb81;
+        //     border: 1px solid #e7faf3;
+        // }
+    }
+
+    // agreement confirmation style
+    .agreement-confirmation-steps {
+        .ant-steps-vertical
+            > .ant-steps-item
+            > .ant-steps-item-container
+            > .ant-steps-item-tail {
+            top: 33px;
+            left: 16px;
+            background: #d6d6d6 !important;
+            width: 1px;
+            height: 65%;
+        }
+
+        .ant-steps-item-process
+            > .ant-steps-item-container
+            > .ant-steps-item-tail::after {
+            background: #d6d6d6 !important;
+        }
+
+        .list-span {
+            font-weight: 600;
+        }
+
+        .ant-steps-vertical .ant-steps-item-content {
+            min-height: 96px !important;
+        }
+
+        .ant-steps-item-tail {
+            padding: 0;
+        }
+
+        .ant-steps-item-title {
+            font-weight: 500;
+            font-size: 15px;
+        }
+
+        .ant-steps-item-process .ant-steps-item-icon {
+            background-color: $primary-color;
+            border: $primary-color;
+
+            span.ant-steps-icon {
+                color: $secondary-black;
+            }
+        }
+
+        .ant-steps-item-finish .ant-steps-item-icon {
+            background-color: $primary-color;
+            border: $primary-color;
+
+            .ant-steps-icon {
+                i.anticon.anticon-check.ant-steps-finish-icon {
+                    color: $secondary-black !important;
+                }
+            }
+        }
+
+        .ant-steps-item-finish
+            > .ant-steps-item-container
+            > .ant-steps-item-tail::after {
+            background-color: $primary-color;
+        }
+
+        .ant-steps-item-wait {
+            .ant-steps-item-title {
+                color: $secondary-gray !important;
+            }
+
+            .ant-steps-item-icon {
+                background-color: #f0f0f0;
+
+                .ant-steps-icon {
+                    color: $secondary-gray;
+                }
+            }
+        }
+
+        .ant-steps-item-process .ant-steps-item-title {
+            font-weight: 500;
+            font-size: 15px;
+        }
+
+        .ant-form-item-label {
+            line-height: 28px;
+        }
+
+        input.ant-input,
+        textarea.ant-input {
+            border: 1px solid #d0d5dd;
+            background: #f8f8f8;
+            height: 48px !important;
+            box-shadow: 0 1px 2px rgba(16, 24, 40, 0.05);
+            font-size: 16px !important;
+            border-radius: 8px !important;
+
+            &::placeholder {
+                color: $secondary-gray;
+                font-size: 16px !important;
+            }
+        }
+
+        .avatar-uploader {
+            width: 60px;
+            height: 60px;
+            background-color: #d9d9d9;
+            border: none;
+            border-radius: 50%;
+            margin: 0;
+        }
+
+        .edit-text {
+            color: #bebebe;
+        }
+
+        .edit-btn {
+            border: 1px solid #c2c8cf;
+            border-radius: 4px !important;
+            height: 25px !important;
+
+            &:hover {
+                background-color: $white;
+                color: $secondary-gray;
+            }
+        }
+    }
+
+    // trader user-center style
+    .trader-user-center {
+        .follower-trading-stability {
+            h5 {
+                min-height: 20px;
+            }
+        }
+
+        .upload-img {
+            position: relative;
+
+            .upload-icon {
+                position: absolute;
+                right: -13px;
+                bottom: 10px;
+            }
+        }
+
+        .share-divider {
+            background: $secondary-gray !important;
+        }
+
+        .ant-switch {
+            background: #d9d9d9;
+            border: 1px solid #d9d9d9;
+            height: 18px;
+            min-width: 39px;
+
+            &::after {
+                height: 14px;
+                width: 14px;
+            }
+        }
+
+        .ant-switch-checked {
+            background: $primary-color;
+            border: 1px solid $primary-color;
+        }
+
+        .high-frequency-btn {
+            height: 24px !important;
+            background: #ffa50047;
+            color: $primary-color;
+            border-radius: 4px;
+        }
+
+        .stable-btn {
+            height: 24px !important;
+            background: #0ecb814d;
+            color: #0ecb81;
+            border-radius: 4px;
+        }
+
+        .left-side {
+            .left-side-divider {
+                background: #dddddd66;
+            }
+
+            .process-bar {
+                width: 100%;
+                height: 8px;
+                background-color: #d5dae0;
+                border-radius: 24px;
+                overflow: hidden;
+
+                .process-win-bar {
+                    position: relative;
+                    display: block;
+                    background-color: #0ecb81;
+                    height: 100%;
+                    width: 63.6364%;
+                    transition: width 0.2s linear;
+
+                    .process-divide-line {
+                        right: -2px;
+                        transform: skew(-15deg, -15deg);
+                        position: absolute;
+                        top: -4px;
+                        width: 4px;
+                        height: 12px;
+                        background-color: #fff;
+                    }
+                }
+            }
+
+            .ant-input {
+                font-weight: 500;
+                color: $secondary-black;
+
+                &::placeholder {
+                    color: $secondary-gray;
+                }
+            }
+
+            label.ant-radio-button-wrapper {
+                background: #f8f8f8;
+                border: none;
+                border-radius: 100px;
+                height: 26px;
+                line-height: 26px;
+                font-size: 12px;
+                font-weight: 500;
+                padding: 0 6px;
+                margin-right: 8px;
+                margin-bottom: 16px;
+                color: $secondary-black;
+            }
+
+            .ant-radio-button-wrapper:not(:first-child)::before {
+                width: 0;
+            }
+            .first-text {
+                margin-top: 2px;
+                border-bottom: 1px dashed #bebebe;
+                text-decoration: none;
+            }
+            .performance-dropdown {
+                .ant-select-selection {
+                    height: 24px;
+                    border: none;
+                    box-shadow: none;
+                }
+
+                .ant-select-arrow {
+                    right: 0;
+                }
+
+                .ant-select-selection-selected-value {
+                    font-weight: 500;
+                }
+
+                .ant-select-selection__rendered {
+                    line-height: 24px;
+                    margin-right: 10px;
+                }
+            }
+        }
+
+        .all-right-tabs {
+            .ant-tabs-nav-wrap {
+                background-color: $white;
+                padding: 16px 24px 0px 24px;
+            }
+
+            .ant-tabs-nav .ant-tabs-tab {
+                font-size: 16px;
+            }
+
+            .ant-tabs-bar {
+                border-bottom: none !important;
+            }
+
+            .ant-tabs-tab-active.ant-tabs-tab {
+                font-size: 16px;
+            }
+
+            .trades {
+                .right-side-dropdown {
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+
+                    .all-contracts {
+                        .ant-select-selection {
+                            border: 0.5px solid $secondary-gray;
+                            border-radius: 2px !important;
+                        }
+
+                        .ant-select-selection-selected-value {
+                            color: $secondary-gray;
+                            font-size: 16px;
+                        }
+
+                        i.anticon.anticon-down.ant-select-arrow-icon {
+                            color: $secondary-gray;
+                        }
+                    }
+                }
+
+                .verified-trader-data-table {
+                    .ant-table-thead > tr > th {
+                        padding: 16px 8px 8px 8px;
+                        &:first-child {
+                            padding-left: 24px;
+                        }
+                        &:last-child {
+                            padding-right: 24px;
+                        }
+                    }
+
+                    .ant-table-tbody > tr > td {
+                        font-size: 12px;
+                        font-weight: 500;
+                        padding: 12px 8px 12px 8px;
+                        color: $secondary-black;
+                        &:first-child {
+                            padding-left: 24px;
+                        }
+                        &:last-child {
+                            padding-right: 24px;
+                        }
+                    }
+
+                    .first-text {
+                        margin-top: 2px;
+                        border-bottom: 1px dashed #bebebe;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .common-tags {
+        margin-right: 4px;
+        font-size: 12px;
+        height: 14px;
+        line-height: 10px;
+        padding: 1px 4px;
+        cursor: pointer;
+        border: none;
+    }
+
+    .yellow-tag {
+        background-color: #ffa50026;
+        color: $primary-color;
+    }
+
+    .green-tag {
+        background-color: #0ecb814d;
+        color: #0ecb81;
+    }
+
+    .right-side-dropdown {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        .all-contracts {
+            .ant-select-selection {
+                border: 0.5px solid $secondary-gray;
+                border-radius: 2px !important;
+            }
+
+            .ant-select-selection-selected-value {
+                color: $secondary-gray;
+                font-size: 16px;
+            }
+
+            i.anticon.anticon-down.ant-select-arrow-icon {
+                color: $secondary-gray;
+            }
+        }
+
+        .by-orders-btn {
+            .ant-radio-group.ant-radio-group-outline.ant-radio-group-default {
+                background-color: #f6f6f6;
+                padding: 5px 7px;
+                border-radius: 2px;
+
+                label.ant-radio-button-wrapper {
+                    font-size: 16px;
+                    font-weight: 600;
+                    color: $secondary-gray;
+                    background-color: transparent;
+                    border: none !important;
+                }
+
+                .ant-radio-button-wrapper:focus-within {
+                    box-shadow: none;
+                }
+
+                .ant-radio-button-wrapper:not(:first-child)::before {
+                    width: 0;
+                }
+
+                label.ant-radio-button-wrapper.ant-radio-button-wrapper-checked {
+                    box-shadow: 0px 0px 10px #20202017;
+                    background-color: $white !important;
+                    color: $secondary-black;
+                }
+            }
+        }
+    }
+
+    .copy-trade-tab {
+        .ant-radio-button-wrapper {
+            font-size: 14px;
+            font-weight: 500;
+            color: $secondary-gray;
+            border: none;
+        }
+
+        label.ant-radio-button-wrapper.ant-radio-button-wrapper-checked {
+            background: #ededed !important;
+            border-radius: 4px;
+            box-shadow: 0 1px 2px 0 #1018280d !important;
+            color: $secondary-black !important;
+        }
+    }
+
+    //dashboard style
+    .dashboard {
+        .dashboard-detail {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            // .amount {
+            //     margin-right: 110px;
+            // }
+        }
+
+        .ant-select-selection {
+            height: 43px !important;
+            border: none;
+            box-shadow: none;
+        }
+
+        .ant-select-selection__rendered {
+            line-height: 43px;
+            margin: 0;
+        }
+
+        .ant-select-arrow {
+            right: 0;
+            color: $secondary-gray;
+        }
+
+        .ant-select-selection-selected-value {
+            font-size: 16px;
+            font-weight: 600;
+
+            .dropdown-img {
+                height: 46px;
+                width: 46px;
+            }
+        }
+
+        .ant-divider {
+            height: 98px;
+        }
+    }
+
+    // user center style
+    .user-center {
+        .first-text {
+            margin-top: 2px;
+            border-bottom: 1px dashed #bebebe;
+            text-decoration: none;
+        }
+        .ant-switch {
+            background-color: #DA4434;
+
+        }
+        button.ant-switch.ant-switch-checked {
+            background-color:  #0ECB81;
+
+        }
+        .ant-table-tbody > tr > td {
+            font-size: 12px !important;
+            font-weight: 500 !important;
+       
+        }
+        .top-banner {
+            position: relative;
+            height: 350px;
+
+            .user-guide-btn {
+                background-color: #181c20c7;
+                border-radius: 100px;
+                color: $white;
+                height: 50px !important;
+            }
+        }
+
+        .container-bg {
+            margin-top: -190px !important;
+
+            .container-box {
+                display: flex;
+                justify-content: flex-start;
+
+                .first-col {
+                    // max-width: 220px;
+                    // margin-right: 20px;
+                    width: 80%;
+                }
+            }
+        }
+
+        .user-center-tabs {
+            .ant-tabs-nav-wrap {
+                background-color: $white;
+                padding: 24px 24px 0px 24px;
+            }
+
+            .ant-tabs-nav .ant-tabs-tab {
+                font-size: 16px;
+            }
+
+            .ant-tabs-bar {
+                border-bottom: none !important;
+            }
+
+            .ant-tabs-tab-active.ant-tabs-tab {
+                font-size: 16px;
+            }
+        }
+    }
+
+    .VueCarousel-navigation-prev {
+        left: -10px;
+    }
+
+    .VueCarousel-navigation-next {
+        right: -10px;
+    }
+
+    // copy-trading-leaderboard style
+    .copy-trading-leaderboard {
+        background-color: #0c1014;
+        padding-bottom: 40px;
+        span.ant-calendar-picker {
+            background: #ffffff24 !important;
+            border-radius: 100px !important;
+            width: 250px;
+            span.ant-calendar-picker-input.ant-input {
+                background-color: transparent;
+                border: none;
+                border-radius: 100px !important;
+                color: $white;
+            }
+        }
+        .ant-calendar-range-picker-separator {
+            display: none;
+        }
+        .ant-calendar-picker-clear {
+            background-color: transparent;
+            color: $white;
+        }
+        input.ant-calendar-range-picker-input {
+            text-align: left !important;
+            width: 48%;
+        }
+        .ant-calendar-picker-icon {
+            color: $white;
+        }
+        .top-banner {
+            background: url("/images/copytrade-top-banner.svg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 0;
+
+            .leader-board {
+                background: linear-gradient(
+                    180deg,
+                    #fcecd2 18.06%,
+                    #f4c6a6 52.6%,
+                    #f4c6a6 80.56%
+                );
+                font-size: 50px;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
+
+            .live-traders {
+                letter-spacing: 0.42em;
+                text-transform: uppercase;
+                color: #f4c6a6;
+            }
+
+            .master-traders {
+                background: linear-gradient(
+                    180deg,
+                    #fcedce 18.06%,
+                    #ffe35c 52.6%,
+                    #ffe45d 80.56%
+                );
+                font-size: 50px;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
+
+            .top-traders {
+                color: #f8d059;
+                letter-spacing: 0.42em;
+                text-transform: uppercase;
+            }
+
+            .share-btn {
+                border: 2px solid $primary-color;
+                height: 55px !important;
+                background-color: transparent;
+                border-radius: 8px !important;
+            }
+        }
+
+        .leaderboard-container {
+            .hall-of-fame-btn {
+                background: linear-gradient(180deg, #ffa500 0%, #ff7f00 161.9%);
+                border-radius: 20px 20px 0px 0px;
+                height: 63px !important;
+            }
+
+            .master-pl-btn {
+                border-radius: 10px !important;
+            }
+
+            .date-dropdown {
+                .ant-select-selection {
+                    background: rgba(255, 255, 255, 0.14);
+                    border-radius: 100px;
+                    height: 34px !important;
+                    border: none !important;
+                    box-shadow: none;
+
+                    .ant-select-selection__rendered {
+                        line-height: 34px !important;
+                        margin: 0 18px 0 18px !important;
+
+                        .ant-select-selection-selected-value {
+                            color: $white;
+                            font-weight: 600;
+                        }
+                    }
+                }
+
+                .ant-select-arrow {
+                    right: 14px;
+                    color: $white;
+                }
+            }
+
+            .table-card {
+                background-color: transparent;
+                border: 0.5px solid #ffffff40;
+
+                .ant-table-placeholder {
+                    background-color: transparent;
+                    border-top: none;
+                    border-bottom: none;
+
+                    .ant-empty-description {
+                        color: $white;
+                    }
+                }
+
+                tbody.ant-table-tbody {
+                    background-color: transparent;
+                }
+
+                .ant-table-thead > tr > th:first-child {
+                    padding-left: 28px;
+                }
+
+                .ant-table-thead > tr > th {
+                    background-color: #d9d9d917;
+                    border-bottom: none !important;
+                    padding: 28px 8px;
+                    font-size: 14px;
+                }
+
+                .ant-table-tbody > tr > td {
+                    font-size: 16px;
+                    border-bottom: 0.5px solid #ffffff40;
+                    padding: 24px 8px;
+                    color: $white;
+                }
+
+                .ant-table-tbody > tr > td:first-child {
+                    padding-left: 28px;
+                }
+
+                .ant-table-tbody > tr > td:last-child {
+                    padding-right: 28px;
+                }
+
+                .ant-table-thead
+                    > tr.ant-table-row-hover:not(.ant-table-expanded-row):not(.ant-table-row-selected)
+                    > td,
+                .ant-table-tbody
+                    > tr.ant-table-row-hover:not(.ant-table-expanded-row):not(.ant-table-row-selected)
+                    > td,
+                .ant-table-thead
+                    > tr:hover:not(.ant-table-expanded-row):not(.ant-table-row-selected)
+                    > td,
+                .ant-table-tbody
+                    > tr:hover:not(.ant-table-expanded-row):not(.ant-table-row-selected)
+                    > td {
+                    background-color: #d9d9d917;
+                }
+
+                .view-btn {
+                    border: 1px solid #f5f7fa;
+                    font-size: 14px;
+                    height: 36px !important;
+                    background: transparent;
+                    border-radius: 4px;
+                    color: $white;
+                }
+            }
+
+            .ant-pagination-item a {
+                color: $white;
+            }
+
+            .ant-pagination-item {
+                border: none;
+                border: 1px solid #bebebe;
+                background: none;
+
+                a {
+                    color: $white !important;
+                }
+            }
+
+            .ant-pagination-disabled.ant-pagination-prev {
+                a.ant-pagination-item-link {
+                    i.anticon.anticon-left {
+                        color: $white !important;
+                    }
+                }
+            }
+
+            .ant-pagination-prev,
+            .ant-pagination-next,
+            .ant-pagination-jump-prev,
+            .ant-pagination-jump-next {
+                border: none;
+                border: 1px solid $white;
+                background: none;
+
+                i.anticon.anticon-right {
+                    color: $white;
+                }
+            }
+
+            .master-traders-banner {
+                .VueCarousel-slide {
+                    margin-right: 28px;
+                }
+                .bg-bronze {
+                    background: linear-gradient(to top, #0c1014, #0c1014),
+                        linear-gradient(to top, #0c1014, #ea9362ba);
+                }
+                .bg-cadet {
+                    background: linear-gradient(to top, #0c1014, #0c1014),
+                        linear-gradient(to top, #0c1014, #ea6262d4);
+                }
+                .bg-gold {
+                    background: linear-gradient(to top, #0c1014, #0c1014),
+                        linear-gradient(to top, #0c1014, #ffe5008a);
+                }
+                .bg-silver {
+                    background: linear-gradient(to top, #0c1014, #0c1014),
+                        linear-gradient(to top, #0c1014, #e0e2ee);
+                }
+                .master-card {
+                    width: 543px;
+                    background-color: transparent;
+                    border-radius: 4px !important;
+                    border: 0.5px solid transparent  !important;
+                    background-clip: padding-box, border-box;
+                    background-origin: padding-box, border-box;
+                    //height: 1080px;
+
+                    .bronze-title {
+                        background: linear-gradient(
+                            180deg,
+                            #ff9432 0%,
+                            #ca4900 100%
+                        );
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        background-clip: text;
+                        text-fill-color: transparent;
+                    }
+                    .silver-title {
+                        background: linear-gradient(
+                            180deg,
+                            #d9d9d9 0%,
+                            #f0f0f0 100%
+                        );
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        background-clip: text;
+                        text-fill-color: transparent;
+                    }
+                    .gold-title {
+                        background: linear-gradient(
+                            180deg,
+                            #ffd328 0%,
+                            #ffa632 100%
+                        );
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        background-clip: text;
+                        text-fill-color: transparent;
+                    }
+                    .cadet-title {
+                        background: linear-gradient(
+                            180deg,
+                            #ff5732 0%,
+                            #ca0000 100%
+                        );
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        background-clip: text;
+                        text-fill-color: transparent;
+                    }
+                    .title {
+                        font-style: italic;
+                    }
+                    .master-trade-round-img {
+                        border: 1px solid $white;
+                    }
+                    .follow-btn {
+                        height: 27px !important;
+                        border-radius: 4px;
+                        border: 1px solid $white;
+                        background-color: transparent;
+                    }
+
+                    .master-divider {
+                        background-color: #ffffff42;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 1280px) {
+        .trader-user-center .upload-img .upload-icon {
+            right: 13px;
+        }
+    }
+    @media screen and (max-width: 1024px) {
+        .title-row {
+            display: block !important;
+            .right-side-dropdown {
+                margin-top: 16px;
+            }
+        }
+        .trader-user-center .upload-img .upload-icon {
+            right: -13px;
+        }
+        .container-bg {
+            .ant-card-body {
+                padding: 44px !important;
+            }
+        }
+    }
+}
+
+#copy-trade-confirm-modal {
+    .ant-modal-content {
+        border-radius: 12px;
+        background: #fff;
+        box-shadow: 0px 8px 8px -4px rgba(16, 24, 40, 0.04),
+            0px 20px 136px -4px rgba(16, 24, 40, 0.1);
+
+        .ant-modal-body {
+            padding: 40px 36px;
+        }
+    }
+
+    .user-img {
+        border-radius: 50%;
+    }
+
+    // trador user-center style
+}
+
+.ant-select-dropdown.first-dropdown.ant-select-dropdown--single.ant-select-dropdown-placement-bottomLeft {
+    width: 60px !important;
+}
+
+// copy trade popover
+.badge-popover {
+    width: 180px !important;
+}
+
+.copy-trade-popover {
+    width: 220px;
+
+    .ant-popover-arrow {
+        display: none;
+    }
+    .cancel-outline-btn {
+        color: $secondary-black;
+        font-size: 14px !important;
+        font-weight: 500 !important;
+        border-radius: 8px !important;
+        height: 30px !important;
+    }
+    .primary-btn {
+        color: $secondary-black;
+        font-size: 14px !important;
+        font-weight: 500 !important;
+        border-radius: 8px !important;
+        height: 30px !important;
+    }
+    .ant-checkbox-wrapper + .ant-checkbox-wrapper {
+        margin-left: 0;
+    }
+
+    .ant-popover-inner {
+        background-color: $white;
+        border-radius: 2px;
+    }
+    .ant-checkbox-wrapper {
+        font-weight: 500;
+        color: $secondary-black;
+        font-size: 14px;
+    }
+    .ant-checkbox-group-item {
+        margin-bottom: 9px;
+        display: block;
+    }
+
+    .ant-popover-inner-content {
+        padding: 12px 12px 8px 12px;
+    }
+
+    .popover-btn {
+        height: 30px !important;
+    }
+}
+
+// trador usercenter modal style
+#trader-usercenter-modal {
+    .ant-modal-close {
+        display: none;
+    }
+
+    .ant-modal-content {
+        border-radius: 20px;
+
+        .ant-modal-body {
+            padding: 0;
+        }
+    }
+
+    .parent {
+        display: flex;
+    }
+
+    .left-side {
+        flex: 1;
+        background: #0c1014;
+        border-radius: 20px 0 0 20px;
+        max-width: 506px;
+        width: 100%;
+        text-align: center;
+        padding: 172px 0;
+
+        .high-frequency-btn {
+            height: 24px !important;
+            border-radius: 4px;
+        }
+
+        .user-followers {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            h5 {
+                min-height: 20px;
+            }
+        }
+
+        .total-assets-bg {
+            background-color: #68686826;
+            border-radius: 4px;
+        }
+    }
+
+    .increase-amount-input {
+        .ant-input {
+            border-left: none;
+            border-right: none;
+            background: $white;
+            text-align: center;
+        }
+
+        span.ant-input-group-addon {
+            background: #e8e8e8;
+            width: 43px;
+            border-color: #d9d9d9;
+
+            i.anticon.anticon-minus,
+            i.anticon.anticon-plus {
+                color: $secondary-gray;
+            }
+        }
+
+        .ant-input-group-addon:first-child {
+            border-radius: 8px 0 0 8px;
+        }
+
+        .ant-input-group-addon:last-child {
+            border-radius: 0px 8px 8px 0;
+        }
+    }
+
+    .ant-input {
+        height: 48px !important;
+        font-size: 16px;
+        color: $secondary-black;
+        background-color: #f8f8f8;
+        box-shadow: 0 1px 2px 0 #1018280d;
+        border: 1px solid #d0d5dd;
+
+        &::placeholder {
+            color: $secondary-gray;
+            font-size: 16px;
+        }
+    }
+
+    .right-side {
+        flex: 1;
+
+        .ant-form-item-label {
+            line-height: 32px;
+        }
+
+        .ant-select-selection {
+            border: none;
+            height: 24px !important;
+            box-shadow: none;
+        }
+
+        .ant-select-arrow {
+            color: $secondary-gray;
+        }
+
+        .ant-select-selection__rendered {
+            line-height: 24px !important;
+
+            .ant-select-selection-selected-value {
+                font-weight: 500;
+                color: $secondary-gray;
+            }
+        }
+
+        .transfer-divider {
+            background-color: $primary-color;
+        }
+
+        .ant-tabs-nav-wrap {
+            padding: 0;
+        }
+
+        .info-bg {
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: flex-start;
+            border-radius: 4px;
+        }
+
+        .primary-btn {
+            border-radius: 8px;
+        }
+    }
+
+    .ant-slider {
+        height: 17px;
+        margin: 0px 0px 26px 0;
+
+        .ant-slider-rail {
+            background-color: #d9d9d9;
+            height: 17px;
+            border-radius: 10px;
+        }
+
+        .ant-slider-step {
+            height: 17px;
+            border-radius: 10px;
+        }
+
+        .ant-slider-track {
+            height: 17px;
+            border-radius: 10px;
+            background-color: $primary-color;
+        }
+
+        .ant-slider-handle {
+            height: 19px;
+            width: 19px;
+            border-radius: 50%;
+            border: 1px solid $primary-color;
+            background-color: $white;
+            margin-top: -1.5px;
+            box-shadow: 0px 0px 10px 0 #00000040;
+        }
+
+        .ant-slider-dot {
+            display: none;
+        }
+
+        .ant-slider-mark {
+            position: absolute;
+            top: 24px;
+            left: 8px;
+            width: 94%;
+            font-size: 16px;
+            font-weight: 500;
+            color: $secondary-black !important;
+        }
+
+        .ant-slider-mark-text-active {
+            font-size: 16px;
+            font-weight: 500;
+            color: $secondary-black !important;
+        }
+    }
+
+    .adjust-btn {
+        height: 50px !important;
+        border-radius: 8px;
+    }
+}
+
+.dashboard-dropdown {
+    ul.ant-select-dropdown-menu.ant-select-dropdown-menu-vertical.ant-select-dropdown-menu-root {
+        .dropdown-img {
+            height: 24px;
+            width: 24px;
+        }
+    }
+}
+.ant-calendar-picker-container.copy-trade-timepicker.ant-calendar-picker-container-placement-bottomRight {
+    top: 550px !important;
+    .ant-calendar {
+        background-color: #2e3235;
+        color: $white;
+        border: none;
+    }
+    .ant-calendar-date-panel {
+        border: 0.5px solid #ffffff40;
+    }
+    .ant-calendar-range .ant-calendar-body {
+        border: none;
+    }
+    .ant-calendar-range-left {
+        border-right: 0.5px solid #ffffff40;
+    }
+    .ant-calendar-header .ant-calendar-century-select,
+    .ant-calendar-header .ant-calendar-decade-select,
+    .ant-calendar-header .ant-calendar-year-select,
+    .ant-calendar-header .ant-calendar-month-select {
+        color: $white;
+        border-top: none;
+    }
+    .ant-calendar-range .ant-calendar-body,
+    .ant-calendar-range .ant-calendar-month-panel-body,
+    .ant-calendar-range .ant-calendar-year-panel-body,
+    .ant-calendar-range .ant-calendar-decade-panel-body {
+        border-top: 0.5px solid #ffffff40;
+    }
+    a.ant-calendar-decade-panel-decade {
+        color: #fff;
+        &:hover {
+            background-color: transparent;
+            color: $primary-color;
+        }
+    }
+
+    .ant-calendar-range .ant-calendar-in-range-cell::before {
+        background: #0c1014;
+    }
+    .ant-calendar-picker:focus
+        .ant-calendar-picker-input:not(.ant-input-disabled) {
+        box-shadow: none;
+        border: none;
+    }
+    .ant-calendar-date:hover {
+        background-color: #0c1014;
+    }
+    .ant-calendar-date {
+        color: $white;
+    }
+    .ant-calendar-last-month-cell .ant-calendar-date,
+    .ant-calendar-next-month-btn-day .ant-calendar-date,
+    .ant-calendar-last-month-cell .ant-calendar-date:hover,
+    .ant-calendar-next-month-btn-day .ant-calendar-date:hover {
+        color: $secondary-gray;
+    }
+
+    .ant-calendar-range .ant-calendar-year-panel,
+    .ant-calendar-range .ant-calendar-month-panel,
+    .ant-calendar-range .ant-calendar-decade-panel {
+        background-color: #2e3235;
+        td.ant-calendar-year-panel-cell.ant-calendar-year-panel-cell-disabled {
+            a.ant-calendar-year-panel-year {
+                background-color: rgba(0, 0, 0, 0.45);
+                color: $secondary-gray;
+            }
+        }
+        td.ant-calendar-month-panel-cell.ant-calendar-month-panel-cell-disabled {
+            a.ant-calendar-month-panel-month {
+                background-color: rgba(0, 0, 0, 0.45);
+                color: $secondary-gray;
+            }
+        }
+        span.ant-calendar-month-panel-year-select-content {
+            color: $white;
+        }
+        td.ant-calendar-month-panel-cell {
+            a.ant-calendar-month-panel-month {
+                background-color: #0c1014;
+                color: $white;
+            }
+        }
+        td.ant-calendar-decade-panel-cell.ant-calendar-decade-panel-last-century-cell {
+            a.ant-calendar-decade-panel-decade {
+                color: $secondary-gray;
+            }
+        }
+        .ant-calendar-decade-panel-next-century-cell
+            .ant-calendar-decade-panel-decade {
+            color: $secondary-gray;
+        }
+        span.ant-calendar-year-panel-decade-select-content {
+            color: $white;
+        }
+        a.ant-calendar-year-panel-year {
+            background-color: #0c1014;
+            color: $white;
+        }
+    }
+}

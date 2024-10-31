@@ -1,0 +1,139 @@
+@import "assets/variables/light.scss";
+
+#p2p-table {
+    .ant-table-thead > tr > th:first-child {
+        padding-left: 24px;
+    }
+  
+    .ant-table-thead > tr > th { 
+        font-size: $fs_xs;
+        font-weight: 500;
+    }
+    .ant-table-tbody > tr > td { 
+        font-size: $fs_xs;
+    }
+    .ant-table-thead > tr > th:last-child {
+        padding-right: 24px;
+    }
+    .ant-table-tbody > tr > td:first-child {
+        padding-left: 24px;
+    }
+    .ant-table-tbody > tr > td:last-child {
+        padding-right: 24px;
+    }
+    .ant-table-tbody > tr > td {
+        border-bottom: 1px solid #f2f2f2;
+    }
+    .speed-star-txt {
+        font-size: $fs_md;
+        line-height: 22px;
+        color: $heading-color
+    }
+
+    .new-tag {
+        background: linear-gradient(90.96deg, #ff8000 0.77%, #ff5f59 92.82%);
+        border-radius: 4px;
+        margin-right: 0;
+        font-size: $fs_xxxs;
+        width: 43px !important;
+        max-width: 43px !important;
+        color: $white;
+        line-height: 15px;
+        border: none;
+    }
+    .second-txt {
+        color: #718096;
+        font-size: 12px;
+        font-weight: 500;
+    }
+    .third-txt {
+        color: #081131;
+        font-size: 14px;
+    }
+    .buy-lowest-price {
+        font-size: 20px;
+        line-height: 20px;
+        // color: #0ECB81;
+        color: $secondary-black;
+    }
+    .col-alignment {
+        flex-wrap: wrap !important;
+    }
+    .sell-lowest-price {
+        font-size: 20px;
+        line-height: 20px;
+        color: $secondary-black;
+
+        // color: #f6465d;
+    }
+    .price-text {
+        font-size: 12px;
+    }
+    .payment-methods-border {
+        height: 11px;
+    }
+    .recommended-txt {
+        padding-left: 5px;
+        font-size: 14px;
+        color: $secondary-black;
+    }
+    .bank-tag {
+        border-radius: 3px;
+        font-weight: 400;
+        font-size: $fs_xxs;
+        height: 27px;
+        line-height: 27px;
+        text-align: center;
+        border: none;
+        padding: 0 7px !important;
+        margin-bottom: 7px;
+        cursor: pointer;
+    }
+    .bank-tag:last-child {
+        margin-right: 0;
+    }
+    .easypaisa {
+        color: #afafaf;
+    }
+    .mezan-bank {
+        color: #43bbff;
+    }
+    .jazzcash{
+        color: #D7BDE2;
+
+    }
+    .buy-sell-disabled-btn {
+        background: #f4f4f4 !important;
+        border-radius: 4px;
+        color: #d4d3d3 !important;
+        pointer-events: none;
+        font-size: $fs_sm;
+        height: 38px;
+        width: max-content;
+    }
+    .buy-usdt-btn {
+        background: #0ECB81;
+        border-radius: 4px;
+        font-size: $fs_sm;
+        color: $white;
+        height: 38px;
+        width: max-content;
+    }
+    .sell-usdt-btn {
+        background: #f6465d;
+        border-radius: 4px;
+        font-size: $fs_sm;
+        color: $white;
+        height: 38px;
+        width: max-content;
+    }
+    tr.ant-table-expanded-row {
+        background: #ffffff;
+        box-shadow: 0px 3px 24px rgba(0, 0, 0, 0.1);
+        border-radius: 6px;
+    }
+    .ant-tabs-tab-active.ant-tabs-tab {
+        border: 1px solid #EBEBEB !important;
+
+    }
+}

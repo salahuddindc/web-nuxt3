@@ -1,0 +1,114 @@
+@import "assets/variables/light.scss";
+
+#agent-apply-modal {
+    .ant-modal-content {
+        background: #ffffff;
+        border-radius: 12px;
+    }
+    .ant-modal-close {
+        display: none;
+    }
+    .apply-heading {
+        font-size: $fs_lg;
+        color: $heading-color;
+    }
+    .delete-heading {
+        color: #e95950 !important;
+    }
+    .apply-desc {
+        font-size: $fs_sm;
+        line-height: 18px;
+        color: $text-grey;
+    }
+    .success-desc {
+        font-size: $fs_sm;
+        color: $text-grey;
+    }
+    .success-txt {
+        font-size: $fs_lg;
+        color: $heading-color;
+    }
+    .ant-btn[disabled] {
+    color: #fff
+}
+
+}
+#vip-modal {
+    .ant-modal-content {
+        border-radius: 12px;
+    }
+    .mtop-3 {
+        margin-top: 30px;
+    }
+    .upload-proof {
+        font-size: 1rem;
+    }
+    .apply-heading {
+        font-size: 20px;
+        color: $heading-color;
+        line-height: 28px;
+    }
+    .ant-modal-close {
+        display: none;
+    }
+    .success-desc {
+        font-size: 14px;
+        color: $text-grey;
+    }
+    .vip-desc {
+        font-size: 12px;
+        color: $text-grey;
+    }
+    .ant-upload-text {
+        color: $text-grey;
+    }
+    .ant-upload.ant-upload-select.ant-upload-select-text {
+        margin-top: 10px;
+        width: 177px;
+        height: 103px;
+        border-radius: 12px;
+
+    }
+    .ant-upload.ant-upload-select-picture-card {
+        width: 177px;
+        height: 103px; 
+        border-radius: 12px;
+        margin-right: 0px;
+        margin-bottom: 0;
+        border: 0.5px dashed #D6D6D6;
+ 
+    }
+}
+
+// #confirm-delete-model{
+//     .ant-modal-content {
+//         background: #ffffff;
+//         border-radius: 12px;
+//     }
+//     .ant-modal-close {
+//         display: none;
+//     }
+//     .apply-heading {
+//         font-size: $fs_lg;
+//         color: $heading-color;
+//     }
+//     .delete-heading {
+//         color: #e95950 !important;
+//     }
+//     .apply-desc {
+//         font-size: $fs_sm;
+//         line-height: 18px;
+//         color: $text-grey;
+//     }
+//     .success-desc {
+//         font-size: $fs_sm;
+//         color: $text-grey;
+//     }
+//     .success-txt {
+//         font-size: $fs_lg;
+//         color: $heading-color;
+//     }
+//     .ant-btn[disabled] {
+//     color: #fff
+// }
+// }

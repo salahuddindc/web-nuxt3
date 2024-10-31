@@ -1,0 +1,46 @@
+@import "assets/variables/light.scss";
+
+#bank-transfer {
+    .name-transfer {
+        font-weight: 400;
+        font-size: $fs_md;
+        color: $black;
+    }
+
+    .ant-card-head {
+        border-bottom: none !important;
+    }
+    .user-name {
+        font-weight: 400;
+        font-size: $fs_2xl;
+        color: $black;
+    }
+  
+    .transfer-heading {
+        font-size: $fs_lg;
+        color: $heading-color;
+    }
+
+    .reminder-txt {
+        font-size: $fs_sm;
+        color: $text-grey;
+    }
+    .cancel-btn {
+        background: #ffffff !important;
+        font-size: $fs_md;
+        color: #afafaf;
+        &:hover {
+            color: #afafaf;
+        }
+    }
+    .ant-card-head-title {
+        font-weight: 500;
+        font-size: $fs_2xl;
+        color: $black;
+    }
+    @media screen and (max-width: 1200px) {
+    .ant-card-head-title {
+        font-size: $fs_lg;
+    }
+}
+}

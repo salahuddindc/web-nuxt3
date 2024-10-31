@@ -1,0 +1,1104 @@
+@import "assets/variables/light.scss";
+
+
+body {
+    font-family: $font-family;
+}
+
+
+
+#new-home {
+    background-color: #fff;
+
+    .margin-label {
+        font-size: $fs_xs;
+    }
+
+    .time-heading {
+        font-size: $fs_2xl;
+        color: $heading-color;
+    }
+
+    .spot-price {
+        font-size: $fs_2xl;
+        color: $heading-color;
+    }
+
+    .top-sec {
+        padding-top: 100px;
+    }
+
+    .bottom-sec {
+        padding-bottom: 60px;
+    }
+    .ico-clock {
+        background-image: url("/images/ico.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        margin-right: 86px;
+        height: 409px;
+
+        .clock {
+            position: relative;
+            height: 344px;
+            width: 344px;
+            margin: 0 auto;
+            object-fit: cover;
+
+            .header-timer {
+                position: absolute;
+                height: 315px;
+                width: 315px;
+                left: 17.5%;
+                top: 16%;
+                margin: 0 auto;
+                text-align: center;
+                border-radius: 50%;
+
+                z-index: 10;
+
+                .timer-container {
+                    height: 300px;
+                    width: 300px;
+                    margin: 7px auto;
+                    text-align: center;
+                    border-radius: 50%;
+                    background: white;
+                }
+
+                .maintenance-time {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    color: $white;
+                    width: 80%;
+                    margin: 0 auto;
+
+                    .time {
+                        font-size: $fs_7xl;
+                        font-weight: 700;
+                        color: $heading-color;
+                    }
+
+
+                }
+
+                p {
+                    font-size: $fs_lg;
+                    color: $primary-color;
+                    font-weight: 700;
+                    letter-spacing: 1.08px;
+                }
+
+                .private-start {
+                    position: absolute;
+                    top: 30%;
+                    left: 0;
+                    right: 0;
+                    text-align: center;
+                }
+
+                .raised-txt {
+                    font-size: $fs_md;
+                    color: #fff;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+
+    .sec-p {
+        padding: 100px 0 60px 0;
+    }
+
+    .sec-mb {
+        margin-bottom: 100px;
+    }
+
+    .extensive-product {
+        font-size: $fs_7xl;
+        color: $heading-color;
+    }
+
+    .news-divider {
+        background-color: #f2f2f2;
+        top: 0em !important;
+        height: 0.6px !important;
+    }
+
+    .buy-sell-txt {
+        font-size: $fs_2xl;
+        color: $heading-color;
+    }
+
+    .ant-carousel-vertical .slick-dots li {
+        background: transparent;
+        width: 9px;
+        height: 9px;
+        border: 1px solid #c9caca;
+        border-radius: 50px;
+    }
+
+    .ant-carousel-vertical .slick-dots li button {
+        width: 9px;
+        height: 9px;
+        background-color: transparent;
+        border-radius: 50px;
+    }
+
+    .ant-carousel-vertical .slick-dots li.slick-active button {
+        width: 9px;
+        height: 9px;
+        background: transparent;
+        border: 1px solid $primary-color;
+        border-radius: 50px;
+        background-color: $primary-color;
+    }
+
+    li.slick-active {
+        width: 9px;
+        height: 9px;
+        background: transparent;
+        border: 1px solid $primary-color;
+        border-radius: 50px;
+        background-color: $primary-color;
+    }
+
+    .top-slider {
+        position: relative;
+        padding: 30px 0 20px 0;
+
+        img {
+            object-fit: contain;
+        }
+    }
+
+    .ant-carousel-vertical .slick-dots-right {
+        right: 20px;
+    }
+
+    .slider-top-arrow {
+        position: absolute;
+        top: 140px;
+        right: 0px;
+    }
+
+    .slider-down-arrow {
+        position: absolute;
+        bottom: 130px;
+        right: 0px;
+    }
+
+    .example-img {
+        border-radius: 15px;
+        object-fit: cover;
+    }
+
+    .read-more {
+        font-size: $fs_sm;
+        color: $heading-color;
+
+        &:hover {
+            color: $primary-color !important;
+        }
+    }
+
+    .list-time-txt {
+        font-size: $fs_xmd;
+        color: $heading-color;
+    }
+
+    .update-time {
+        font-size: $fs_xs !important;
+        color: $text-grey;
+    }
+
+    .home-banner-row {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+    }
+
+    .banner-content-img {
+        position: relative;
+
+    }
+
+    .home-banner {
+
+        .login-home {
+            padding: 67px 0 0px 0;
+        }
+
+        .home-input {
+            height: 65px !important;
+            font-size: $fs-base !important;
+            color: #324054;
+
+            &::placeholder {
+                font-size: $fs-base !important;
+                color: $text-grey;
+            }
+        }
+
+        .common-btn {
+            width: 134px !important;
+            border-radius: 4px;
+            border: 1px solid #d0d5dd !important;
+            &:hover {
+                border-color: $primary-color !important;
+            }
+        }
+
+        .get-btn {
+            height: 65px !important;
+        }
+
+        .join-us-heading {
+            font-size: 45px;
+            color: $heading-color;
+            max-width: 500px;
+            line-height: 1.3;
+        }
+
+        .exchange-heading {
+            font-size: $fs_2xl;
+            max-width: 500px;
+            color: $heading-color;
+        }
+
+        .spot-heading {
+            font-size: $fs_12xl;
+            color: $heading-color;
+            line-height: 41px;
+            margin-bottom: 20px;
+        }
+
+        .spot-desc {
+            font-size: $fs_2xl;
+            line-height: 27px;
+            color: $primary-color;
+            margin-bottom: 10px;
+        }
+    }
+
+    .user-img {
+        position: relative;
+        background-color: #fff;
+        z-index: 1;
+
+        .user-img-sec {
+            position: absolute;
+            top: -50px;
+            border-radius: 50%;
+            left: 50%;
+            right: 50%;
+            background-color: #fff;
+            height: 80px;
+            width: 80px;
+            transform: translate(-50%);
+            text-align: center;
+            padding-top: 10px;
+
+            img {
+                position: absolute;
+                border-radius: 50%;
+                left: 50%;
+                right: 50%;
+                transform: translate(-50%);
+                height: 60px;
+                width: 60px;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    .user-img-new {
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .market-card {
+        margin-top: -105px !important;
+
+        .spot-detail-card {
+            background: #ffffff;
+            border: 1px solid #F1F1F1;
+            &:hover {
+                border: 1px solid $primary-color;
+            }
+
+            .ant-card-body {
+                padding: 24px 0px 24px 24px;
+            }
+
+            .time-heading {
+                font-size: $fs-base;
+                color: $text-grey;
+            }
+        }
+    }
+
+    .marqueeItem {
+        .ant-card-body {
+            padding: 15px;
+        }
+    }
+
+    .user-marquee {
+        .marquee-gray-card:hover {
+            background: linear-gradient(180deg, #FFF 55.42%, #FFECCA 191.78%);
+            border: 1px solid $primary-color;
+            cursor: pointer;
+
+            .ant-card-body {
+                .gray-btn {
+                    background: $primary-color !important;
+                    border: none;
+                    color: $white !important;
+                    transition: initial
+                }
+            }
+        }
+        .marquee-gray-card {
+            background-color: #FAFAFA;
+            position: relative;
+            border-radius: 6px;
+            width: 291px;
+            border: 1px solid transparent;
+
+            .ant-card-body {
+                padding: 20px;
+
+                .product-txt {
+                    font-size: $fs_sm;
+                    color: $heading-color;
+                }
+
+                .copynum-txt {
+                    font-size: $fs_sm;
+                    color: $heading-color;
+                }
+
+                .symbol-txt {
+                    font-size: $fs_xs;
+                    color: $text-grey;
+                }
+
+                .symbol-btc {
+                    color: $heading-color;
+                    font-size: $fs-base;
+
+                    span {
+                        color: #081131;
+                    }
+                }
+
+                .green-txt {
+                    color: #0ecb81 !important;
+                }
+
+                .copy-txt {
+                    color: $text-grey;
+                    font-size: $fs_xs;
+                    font-weight: 500;
+                }
+
+                .gray-btn {
+                    background-color: #EAECEF !important;
+                    color: $heading-color !important;
+                    border-radius: 25px;
+                    height: 32px !important;
+                    border: none;
+                    font-size: $fs_sm;
+
+                }
+
+            }
+        }
+    }
+
+    .home-new-heading {
+        font-size: $fs_7xl;
+        color: $heading-color;
+    }
+
+    .news-heading {
+        color: $heading-color;
+        font-size: $fs_xmd;
+    }
+
+    .more-news {
+        font-size: $fs_sm;
+        color: $text-grey;
+
+        &:hover {
+            color: $primary-color !important;
+        }
+    }
+
+    .list-heading {
+        font-size: $fs_sm;
+        color: $heading-color;
+        .min-height {
+            min-height: 40px;
+        }
+    }
+
+
+
+
+
+    .list-notifi {
+        background: rgba(255, 165, 0, 0.04);
+
+        .ant-card-body {
+            padding: 4px 12px;
+        }
+
+        .ant-carousel .slick-slide img {
+            display: inline-block;
+        }
+    }
+
+    .symbolFrom {
+        font-size: $fs-base;
+    }
+
+    .bitnasdaq-app {
+        .marquee-item-img {
+            border-radius: 50%;
+        }
+
+        .running-time {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .user-card {
+            background: url("/images/move-card.png");
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            height: 283px;
+
+            .product-txt {
+                font-weight: 500;
+                font-size: $fs_2xl;
+                color: $heading-color;
+            }
+        }
+
+        .product-bg {
+            .product-suite {
+                display: flex;
+                justify-content: space-between;
+
+                .product1 {
+                    max-width: 294px;
+                    width: 100%;
+
+                    .product-card {
+                        border: 1px solid #eaeaea;
+                        border-radius: 18px;
+                        min-height: 343px;
+
+                        .ant-card-body {
+                            padding: 30px 28px 20px 28px;
+                        }
+
+                        &:hover {
+                            border-color: $primary-color;
+                        }
+
+                        .product-desc {
+                            color: $heading-color;
+                            font-size: $fs-base;
+                            line-height: 24px;
+                        }
+                    }
+
+                    .product-title {
+                        font-size: $fs_7xl;
+                        color: $heading-color;
+                    }
+                }
+            }
+        }
+    }
+
+    .list-price-card {
+        background-color: #fff;
+
+        .email-binding-txt {
+            font-weight: 400;
+            font-size: $fs-sm;
+            line-height: 26px;
+            color: $heading-color;
+        }
+
+        .symbol-txt {
+            font-size: $fs_sm;
+            color: $heading-color;
+        }
+
+
+
+        .left-tabs {
+            .main-card-market {
+                .ant-tabs-nav.ant-tabs-nav-animated {
+                    padding: 5px !important;
+                }
+
+                .ant-tabs-nav .ant-tabs-tab:first-child {
+                    margin-left: 0px !important;
+                }
+
+                .ant-tabs-nav .ant-tabs-tab:last-child {
+                    margin-right: 0px !important;
+                }
+
+                .ant-card-body {
+                    padding: 0;
+
+                    .ant-tabs-nav-wrap {
+                        padding: 0 0 15px 0px;
+                    }
+
+                    .ant-tabs-bar {
+                        border-bottom: none;
+                    }
+
+                    .ant-table-tbody>tr>td {
+                        border: none;
+                    }
+
+                    .ant-table-tbody>tr>td:first-child {
+                        padding-left: 0px !important;
+                    }
+
+                    .ant-tabs-nav .ant-tabs-tab {
+                        padding: 6px 12px !important;
+                    }
+
+                    .ant-tabs-extra-content {
+                        margin-right: 24px;
+                        max-width: 240px;
+                        width: 100%;
+                        height: 40px;
+                        line-height: 40px;
+
+                        .ant-input-affix-wrapper .ant-input:not(:first-child) {
+                            padding-left: 33px;
+                        }
+
+                        .ant-input {
+                            border: 1px solid #d0d5dd !important;
+                            box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+                            border-radius: 6px !important;
+                            height: 38px !important;
+
+                            &::placeholder {
+                                font-weight: 400;
+                                font-size: $fs_sm !important;
+                                color: #667085 !important;
+                            }
+                        }
+                    }
+                }
+
+                .table-card {
+                    .ant-card-body {
+                        padding: 0;
+
+                        .home-trade-btn {
+                            height: 40px !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .community-bg1 {
+        background-color: $white;
+
+        .right-card {
+            .ant-card-body {
+                padding: 19px 19px 44px 19px !important
+            }
+        }
+
+        .extensive-community-card {
+            height: 220px;
+            border-color: transparent;
+
+            .spot-price1 {
+                font-size: $fs-base;
+            }
+
+            &:hover {
+                border: 1px solid $primary-color !important;
+            }
+        }
+
+        .community-card {
+            border-radius: 18px;
+            background: #fafafa;
+
+            .ant-card-body {
+                padding: 10px 30px 25px 30px;
+
+                .community-desc-txt {
+                    color: $heading-color;
+                    font-size: $fs_xmd;
+                    line-height: 25px;
+                }
+
+                .num-value {
+                    font-size: $fs_16xl;
+                    color: #E7E7E7;
+                }
+            }
+
+            .center-white-card {
+                border-radius: 18px;
+                .ant-input {
+                    height: 46px !important;
+                }
+                .primary-btn {
+                    height: 46px !important;
+                }
+                .right-card {
+                    .ant-card-body {
+                        padding: 30px 10px 30px 14px;
+
+                        .social-community {
+                            display: flex;
+                            justify-content: space-between;
+                        }
+                    }
+                }
+
+                input.community-input.ant-input {
+                    color: $text-grey !important;
+                    font-size: $fs-base !important;
+                    font-weight: 400;
+                    background-color: #F5F5F5 !important;
+                    border: 1px solid #F5F5F5;
+
+                    &::placeholder {
+                        color: $text-grey !important;
+                        font-size: $fs-base !important;
+                        font-weight: 400;
+                    }
+                }
+            }
+
+            .social-icon {
+                justify-content: start;
+                flex-flow: row wrap;
+                margin-bottom: 0 !important;
+
+                .all-icon {
+                    margin-right: 25px;
+                    width: 30px;
+                    height: 40px;
+                }
+            }
+        }
+
+        .right-phone-bg {
+            position: relative;
+            background-image: url("/images/phone.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            padding: 80px 0;
+
+
+        }
+    }
+
+    .get-in-touch {
+        background-color: #fff;
+
+        .img-qr-product {
+            font-size: $fs-base;
+        }
+
+        .scan-card {
+            border-radius: 9px;
+            background: #f9f9f9;
+
+            .ant-card-body {
+                padding: 15px 0 !important;
+            }
+        }
+
+        .download-btn {
+            border-radius: 4px;
+            border: 1px solid #E2E5E9;
+            font-size: $fs_sm;
+
+            &:hover {
+                background: #f9f9f9;
+            }
+        }
+
+        .download-sec {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .download1 {
+                max-width: 100px;
+                width: 100%;
+                padding: 10px 0 0 0;
+
+                &:hover {
+                    border-radius: 10px;
+                    background: rgba(255, 154, 59, 0.05);
+                    padding: 10px 0 0 0;
+                }
+
+                .download-txt {
+                    color: $heading-color;
+                    font-size: $fs_sm;
+                    line-height: 42px;
+                }
+            }
+        }
+
+        .right-img {
+            position: absolute;
+            right: 0;
+
+            .right-img1 {
+                transition: all 0.6s;
+                transform: translateZ(0);
+            }
+
+            img {
+                transition: all 0.6s;
+                transform: scale(1);
+            }
+        }
+    }
+
+    .start-trading {
+        background: #fafafa;
+    }
+
+    @media screen and (max-width: 1400px) {
+        .login-input-icon {
+            .ant-input {
+                height: 58px !important;
+            }
+
+            img {
+                height: 58px !important;
+            }
+
+            .outline-btn {
+                height: 58px !important;
+
+            }
+        }
+
+        .community-right-col {
+            .center-white-card {
+                .bit-qrh {
+                    height: 160px;
+                }
+            }
+        }
+
+        .community-desc-txt {
+            padding-right: 0 !important;
+        }
+
+        .time-heading {
+            font-size: $fs_lg;
+        }
+    }
+    @media screen and (max-width: 1440px) {
+        .market-card {
+            margin-top: 40px !important;
+        }
+    }
+    @media screen and (max-width: 1367px) {
+        .market-card {
+            margin-top: 40px !important;
+        }
+    }
+
+    @media screen and (max-width: 1280px) {
+        .scan-card-img {
+            height: 175px;
+        }
+
+    }
+
+    @media screen and (max-width: 1200px) {
+        .home-icon {
+            height: 60px;
+            width: 60px;
+        }
+        .home-banner {
+            color: red;
+            padding-bottom: 140px;
+        }
+
+        .market-card {
+            margin-top: 0px !important;
+        }
+
+        .swiper-container-img {
+            // width: 285px;
+            height: 128px;
+        }
+
+        .list-price-card .left-tabs .main-card-market .ant-card-body .ant-tabs-nav .ant-tabs-tab {
+            padding: 3px 12px !important
+        }
+
+        .spot-price {
+            font-size: $fs_lg;
+        }
+
+        .time-heading {
+            font-size: $fs_xs;
+        }
+
+        .market-card {
+            .spot-detail-card {
+                .ant-card-body {
+                    padding-left: 10px;
+
+                    img {
+                        height: 50px;
+                    }
+                }
+            }
+        }
+
+        .ant-carousel-vertical .slick-dots-right {
+            right: 32px;
+        }
+
+        .slider-top-arrow {
+            right: 12px;
+        }
+
+        .slider-down-arrow {
+            right: 12px;
+        }
+
+        .top-sec {
+            padding-top: 60px
+        }
+
+        .home-new-heading {
+            font-size: $fs_lg;
+        }
+
+        .news-heading {
+            font-size: $fs_lg;
+        }
+
+        .bitnasdaq-app .product-bg .product-suite .product1 {
+            max-width: 230px;
+
+            img {
+                height: 60px;
+            }
+
+            .product-title {
+                font-size: $fs_lg;
+            }
+
+            .product-card {
+                height: 300px;
+
+                .product-desc {
+                    font-size: $fs_xs;
+                }
+            }
+        }
+
+        .community-right-col {
+            padding-left: 10px !important;
+
+            .center-white-card {
+                .bit-qrh {
+                    height: 144px;
+                }
+
+                .multi-user-img {
+                    height: 30px;
+                }
+            }
+        }
+
+        .extensive-product {
+            font-size: $fs_2xl !important;
+        }
+
+        .buy-sell-txt {
+            font-size: $fs_sm;
+        }
+
+        .right-card {
+            height: 400px !important;
+        }
+
+        .community-bg1 {
+            padding: 0 20px;
+
+            .community-card {
+                height: 193px;
+
+                .ant-card-body {
+                    padding: 0 15px 15px 15px;
+
+                    .spot-price1 {
+                        font-size: $fs-base;
+                    }
+
+                    .community-desc-txt {
+                        font-size: $fs_xs;
+                        line-height: 22px;
+                    }
+                }
+            }
+        }
+
+        .community-row {
+            margin-bottom: 0 !important;
+        }
+
+        .get-in-touch {
+
+            .big-img {
+                width: 100%;
+            }
+
+            .scan-card {
+                .scan-card-img {
+                    height: 158px;
+                }
+            }
+
+            .download-sec {
+                padding-top: 30px !important;
+
+                img {
+                    height: 30px;
+                }
+
+                .download1 .download-txt {
+                    font-size: $fs_xs;
+                }
+            }
+        }
+
+        .community-bg1 {
+            .main-content {
+                padding: 0 !important;
+            }
+        }
+
+        .right-card {
+            .center-white-card {
+                .ant-card-body {
+                    padding-bottom: 0px !important;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 1024px) {
+        .home-banner {
+
+
+            .join-us-heading {
+                font-size: 36px;
+            }
+        }
+        .home-icon {
+            height: 50px;
+            width: 50px;
+        }
+        .time-heading {
+            font-size: $fs_xmd !important;
+        }
+
+    }
+}
+
+.ant-popover-placement-bottom>.ant-popover-content>.ant-popover-arrow {
+    background: #fff0d6 !important;
+    border-top-color: #fff0d6 !important;
+    border-right-color: #fff0d6 !important;
+    border-bottom-color: #fff0d6 !important;
+    border-left-color: #fff0d6 !important;
+}
+
+.p2p-account-desc {
+    line-height: 22px;
+    max-width: 585px;
+    width: 100%;
+    font-size: $fs_md;
+    color: $black;
+}
+
+.home-popover {
+    max-width: 183px;
+    width: 100%;
+
+    .ant-popover-content {
+        .ant-popover-inner {
+            background: #ffffff;
+            box-shadow: 0px 4px 23px rgba(175, 175, 175, 0.25);
+            border-radius: 14px;
+        }
+
+        .ant-popover-inner-content {
+            padding: 0;
+        }
+
+        .spot-list {
+            font-size: $fs_xs;
+            color: #ffa500;
+            line-height: 30px;
+        }
+
+        .hours-list {
+            font-size: $fs_xs;
+            color: #000000;
+            text-align: center;
+        }
+
+        .ant-divider-horizontal {
+            height: 0.6px !important;
+        }
+
+        .home-popover-divider {
+            background-color: #f2f2f2;
+        }
+
+        .read-more {
+            font-size: $fs_xs;
+        }
+
+        .ant-popover-arrow {
+            display: none;
+        }
+
+    }
+
+
+}

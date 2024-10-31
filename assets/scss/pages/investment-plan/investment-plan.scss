@@ -1,0 +1,63 @@
+@import "@/assets/variables/light";
+@import "@/assets/scss/global/custom/web-font-size.scss"; // Custom Classes
+
+#investment-plan {
+    // top banner style
+    .ant-card {
+        border-radius: 8px;
+    }
+    .top-banner {
+        background: url("/images/topbanner-bg.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .program-card {
+        min-height: 377px;
+    }
+    .investment-main-plan {
+        background: url("/images/investment-main-bg.svg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        // bitnasdaq investment plan
+        .plan-status-list {
+            border: 1px solid #f2f2f2;
+            border-radius: 4px;
+            .gray-bg {
+                background-color: #fafafa;
+            }
+            .status-divider {
+                background-color: #f2f2f2;
+            }
+            .right-border {
+                border-left: 1px solid #f2f2f2;
+            }
+        }
+        // choose your next plan
+        .choose-your-investment-plan {
+            .center-card {
+                border: 1px solid #FFA500;
+                background: #FFA5000D;
+                box-shadow: 0px 3px 24px rgba(0, 0, 0, 0.1);
+                border-radius: 4px;
+                .investment-plan-gray-bg { 
+                    background-color: #FFA5000D;
+                    border-bottom: 1px solid #FFA50036;
+                }
+            }
+            .main-card {
+                border: 1px solid #EAEAEA;
+                border-radius: 4px;
+                .main-list {
+                    min-height: 275px;
+                }
+            .investment-plan-gray-bg {
+                background: #eaeaea5c;
+                border-radius: 4px 4px 0 0;
+            }
+        }
+        }
+    }
+}
+

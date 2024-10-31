@@ -1,0 +1,215 @@
+@import "assets/variables/light.scss";
+
+#new-footer {
+    .footer-bg {
+        background-color: $white;
+
+        .footer-box {
+            max-width: 1440px;
+            margin: 0px auto;
+            width: 100%;
+            padding: 100px 0;
+
+            .list-title {
+                font-size: $fs_2xl;
+                color: $heading-color;
+            }
+
+            .list-desc {
+                font-size: $fs_md;
+                color: #1E2329;
+            }
+            .faq-header {
+                font-size: $fs-base;
+                color: #1E2329;
+          
+            }
+            .footer-sec-space {
+                width: 20%;
+
+                .ant-collapse-item-disabled>.ant-collapse-header {
+                    cursor: auto;
+                }
+            }
+        }
+
+        i.anticon.anticon-caret-right.ant-collapse-arrow {
+            display: none;
+        }
+
+        .ant-collapse {
+            border: none;
+            background-color: $white;
+
+            .ant-collapse-item {
+                border: none;
+
+                .ant-collapse-header {
+                    padding: 0;
+                }
+            }
+
+            .ant-collapse-content {
+                border-top: none;
+                padding-right: 20PX;
+
+                .ant-collapse-content-box {
+                    padding: 0;
+
+                    a {
+                        font-size: $fs_sm;
+                        color: #1E2329;
+                        font-weight: 400;
+
+                        &:hover {
+                            color: $primary-color;
+                        }
+                    }
+                }
+            }
+        }
+
+        .footer-community {
+            display: none;
+        }
+
+        .footer-divider {
+            background-color: #eceef1;
+        }
+        .social-icon {
+            display: flex;
+            justify-content: start;
+            flex-flow: row wrap;
+            margin-bottom: 10px !important;
+            .all-icon {
+                margin-bottom: 15px;
+                margin-right: 28px;
+            }
+        }
+
+
+    }
+
+    @media screen and (max-width: 1200px) {
+        .footer-bg {
+            .footer-box {
+                padding: 0 20px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 1024px) {
+        .footer-bg {
+            .footer-box {
+                padding: 0 20px;
+
+                .footer-logo {
+                    height: 28px;
+                }
+
+                .list-title {
+                    font-size: $fs-base;
+                }
+
+                .list-desc {
+                    font-size: $fs_xmd;
+                }
+
+            }
+        }
+    }
+
+    .sub-bar {
+        background: $white;
+
+        .sub-bar-txt {
+            font-size: $fs_xmd;
+            color: #afafaf;
+        }
+    }
+    @media screen and (max-width: 1024px) {
+
+        .social-icon {
+            margin-bottom: 0 !important;
+            .all-icon {
+                margin-right: 11px !important;
+                height: 27px !important;
+            }
+        }
+    }
+    @media screen and (max-width: 992px) {
+        .logo-col {
+            display: none;
+        }
+
+        .footer-bg .footer-box {
+            .ant-collapse .ant-collapse-content .ant-collapse-content-box {
+                padding-right: 20px;
+            }
+
+            .footer-sec-space {
+                width: 25%;
+            }
+        }
+    }
+
+
+    @media screen and (max-width: 576px) {
+        .faq-header {
+            font-size: 1rem !important;
+        }
+
+        i.anticon.anticon-caret-right.ant-collapse-arrow {
+            display: block !important;
+            right: 0 !important;
+            position: absolute;
+            text-align: right !important;
+            padding-right: 15px;
+            color: $text-grey;
+        }
+
+        .footer-bg {
+            padding-bottom: 10px !important;
+            .footer-box .footer-sec-space {
+                width: 50%;
+            }
+        }
+
+        .footer-divider {
+            display: none;
+        }
+
+        .ant-collapse {
+            font-size: $fs-base;
+            color: $heading-color;
+        }
+
+        .footer-community {
+            font-size: 1rem;
+            color: $heading-color;
+            display: block !important;
+        }
+
+        .social-icon {
+            justify-content: start;
+            flex-flow: row wrap;
+            margin-bottom: 0 !important;
+            padding: 0 24px;
+
+            .all-icon {
+                width: 30px;
+                height: 40px;
+                margin-right: 15px;
+            }
+        }
+        .sub-bar {
+            padding-bottom: 140px;
+        }
+    }
+
+    @media screen and (max-width: 425px) {
+        .footer-bg .footer-box .footer-sec-space {
+            width: 100%;
+        }
+    }
+}

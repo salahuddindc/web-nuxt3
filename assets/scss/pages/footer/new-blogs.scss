@@ -1,0 +1,180 @@
+@import "assets/variables/light.scss";
+
+#new-blogs {
+    background: $white;
+    .mt-6 {
+        margin-top: 60px !important;
+    }
+    .p-7{
+        padding: 4.375rem !important;
+    }
+    .mb-custom{
+        margin-bottom: 25px;
+    }
+    .section-margin{
+        margin-top: 4.625rem;
+    }
+    .blogs-header {
+        background: url("/images/new-blogs-header.svg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 45px 0;
+        text-align: center;
+        color: $white;
+        .blog-main-heading {
+            font-size: 32px;
+            line-height: 46.4px;
+           
+        }
+        .blog-main-desc{
+            font-size: 20px;
+            line-height: 29px;
+        }
+    }
+    .sub-heading {
+        font-size: 30px;
+        line-height: 39px;
+    }
+    .border{
+        border: 1px solid #EAEAEA;
+        border-radius: 5px;
+        height: 398px;
+    overflow: hidden;
+    }
+    .detail-heading {
+        font-size: $fs_10xl;
+    }
+    .sub-title {
+        font-size: $fs_lg;
+    }
+    .count {
+        color: $text-grey;
+    }
+    .share-post {
+        font-size: $fs_2xl;
+    }
+  
+    .share-posts-icon {
+        display: flex;
+        justify-content: flex-start;
+        .icon-box {
+            margin-right: 40px;
+        }
+    }
+    .desc-header{
+        font-size: 16px;
+        line-height: 18.2px;
+        color: #71839B;
+        text-align: justify;
+        height: 130px;
+    }
+    .desc {
+        font-size: 14px;
+        line-height: 18.2px;
+        color: #71839B;
+        text-align: justify;
+    }
+    .date-text {
+        color: $heading-color;
+        font-size: 12px;
+        line-height: 15.6px;
+        span{
+            float: right;
+            a{
+                color: $text-grey;
+                &:hover{
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+   //slider
+   .VueCarousel-dot {
+    padding: 4px !important;
+   }
+   .VueCarousel-dot-button{
+    width: 20px !important;
+    height: 4px !important;
+    border-radius: 0;
+   }
+   .VueCarousel-dot--active{
+    .VueCarousel-dot-button{
+        width: 25px !important;
+       }
+   }
+    .ant-radio-button-wrapper {
+        border: none;
+        margin-right: 20px;
+        font-size: 1rem;
+        font-weight: 500;
+        padding: 0 12px;
+        color: $text-grey;
+        border-radius: 100px;
+        height: 38px;
+        line-height: 38px;
+    }
+    .ant-radio-button-wrapper:not(:first-child)::before {
+        background-color: #fff;
+    }
+    label.ant-radio-button-wrapper.ant-radio-button-wrapper-checked {
+        background-color: $primary-color !important;
+        color: $white !important;
+        border-radius: 100px !important;
+    }
+    /* .ant-radio-button-wrapper:first-child{
+        padding-left: 0;
+    } */
+    
+    //search bar
+    .ant-input {
+        background: #f6f6f6;
+        border-radius: 6px;
+        font-size: 1rem !important;
+        height: 54px !important;
+        border: none;
+        padding: 15px 14px;
+        &::placeholder {
+            font-size: 1rem !important;
+            color:#667085;
+
+        }
+    }
+    .ant-input-affix-wrapper .ant-input-suffix{
+        right: 14px;
+    }
+
+
+    .blog-title {
+        font-size: $fs_2xl; 
+        line-height: 26px;
+    }
+    
+    .blog-box-new {
+        height: 382px;
+        max-width: 332px;
+        border: 1px solid #EAEAEA;
+        border-radius: 5px;
+        overflow: hidden;
+        .blog-card{
+            margin-bottom: 30px !important;
+        }
+    }
+    @media screen and (max-width: 1200px) {
+        .sub-heading {
+            font-size: 24px;
+        }
+        .blog-title {
+            font-size: 1rem; 
+        }
+        .desc{
+            font-size: 12px;
+        }
+        .desc-header{
+            font-size: 14px;
+        }
+        .p-7{
+            padding: 3rem !important;
+        }
+    }
+}

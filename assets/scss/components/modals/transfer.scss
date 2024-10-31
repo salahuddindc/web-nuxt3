@@ -1,0 +1,137 @@
+@import "assets/variables/light.scss";
+
+#transfer-modal {
+    background: #ffffff;
+    box-shadow: 0px 3px 24px rgba(0, 0, 0, 0.1);
+
+    .ant-modal-close {
+        display: none;
+    }
+
+
+    .ant-modal-content {
+        border-radius: 12px !important;
+    }
+    span.ant-form-item-children-icon {
+        display: none;
+    }
+    .ant-input-group-addon {
+        padding: 0 15px;
+        background: #ffffff;
+        border: 1px solid #d0d5dd;
+        box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+        border-radius: 8px;
+        border-radius: 3px;
+    }
+
+    .orange-transfer-bg {
+        background: rgba(255, 165, 0, 0.03);
+        border-radius: 20px;
+
+        .ant-card-body {
+            padding: 15px 24px;
+        }
+
+        .from-dropdown {
+            font-size: $fs-base;
+            color: $text-grey;
+        }
+
+        .ant-input {
+            background-color: transparent !important;
+            border-color: transparent !important;
+            box-shadow: none !important;
+            font-weight: 500 !important;
+            font-size: $fs_sm !important;
+            color: $heading-color !important;
+        }
+
+        .ant-select-selection {
+            background-color: transparent !important;
+            border-color: transparent !important;
+            box-shadow: none !important;
+            font-weight: 500 !important;
+            font-size: $fs_sm !important;
+            color: $heading-color !important;
+        }
+
+        .ant-select-arrow .ant-select-arrow-icon {
+            color: $heading-color !important;
+
+        }
+    }
+
+    .ant-form-item {
+        margin-bottom: 0px;
+    }
+
+    .transfer-crypto-input {
+        .ant-input {
+            border-radius: 8px 0 0 8px !important;
+        }
+    }
+
+    .all-transfer-txt {
+        border: 1px solid #d0d5dd;
+        height: 38px;
+        border-left: none;
+        border-radius: 0px 6px 6px 0 !important;
+        line-height: 38px;
+        margin-top: 1px !important;
+        cursor: pointer;
+        color: $text-grey;
+
+        &:hover {
+            color: $primary-color;
+        }
+    }
+
+    .btc-gray-txt {
+        color: $text-grey;
+        font-size: $fs_xs;
+    }
+
+    .transfer-crypto {
+        font-size: $fs_lg;
+        color: $heading-color;
+    }
+
+    .btn-box {
+        background: #f3f3f3;
+        border-radius: 5px;
+        padding: 4px 5px;
+    }
+
+    .token-btn {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .network-inch {
+        font-size: $fs_sm !important;
+        color: $heading-color !important;
+    }
+
+    .btc-usdt-btn {
+        height: 30px;
+        font-size: $fs_md;
+        color: $heading-color;
+
+        &:hover {
+            background-color: #fff !important;
+        }
+    }
+
+    .usdt-btn {
+        height: 30px;
+        font-size: $fs_md;
+        color: $text-grey;
+        background-color: transparent;
+    }
+
+    .label-sec {
+        color: $text-grey;
+        font-size: $fs_xmd;
+    }
+}

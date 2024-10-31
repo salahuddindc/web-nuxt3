@@ -1,0 +1,811 @@
+@import "assets/variables/light.scss";
+
+#trade-table {
+    .total-blance {
+        font-size: $fs_md;
+        color: $heading-color;
+    }
+    .token-blance {
+        font-size: $fs_lg;
+        color: $heading-color;
+    }
+    .deposit-withdraw-heading {
+        font-size: $fs_2xl;
+        color: $heading-color;
+    }
+
+    .margin-txt {
+        font-size: $fs_sm;
+        color: $text-grey;
+    }
+
+    .gray-frozen-txt {
+        font-size: $fs_sm;
+        color: $heading-color;
+    }
+
+    
+    
+    .prepetual-txt {
+        color: $text-grey;
+    }
+
+    .margin-account-card {
+        .ant-card-body {
+            padding: 16px 24px;
+        }
+    }
+
+    .deposit-card {
+        .ant-card-body {
+            padding: 16px 24px;
+
+            .main-heading {
+                font-weight: 500;
+                font-size: $fs_2xl;
+                color: $black;
+            }
+
+            .deposit-blance {
+                font-size: $fs_4xl;
+                color: $heading-color;
+            }
+
+            .withdraw-txt {
+                color: $text-grey;
+                font-size: $fs_md;
+            }
+
+            .green-txt {
+                font-size: $fs_2xl;
+                color: #12b298;
+            }
+
+            .small-txt {
+                font-size: $fs_xs;
+            }
+
+            .limit-txt {
+                color: $text-grey;
+                font-size: $fs_lg;
+            }
+
+            .light-blue-btn {
+                height: 44px !important;
+            }
+            .send-btn {
+                height: 38px;
+                background: #EAECEF;
+                color: $heading-color;
+            }
+        }
+    }
+
+    .deposit-detail-card {
+        .total-blance {
+            font-size: $fs_lg;
+        }
+        .ant-card-body {
+            padding: 24px 0;
+        }
+
+        .hide-txt {
+            font-size: $fs_md;
+            color: $text-grey;
+        }
+
+        .show-hide {
+            min-width: 192px;
+            width: 100%;
+        }
+
+        .ant-input {
+            background: #ffffff;
+            border: 1px solid #d0d5dd;
+            box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+            border-radius: 8px;
+            height: 38px !important;
+        }
+
+        .deposit-btn {
+            background: #f4f4f4;
+            border-radius: 3px;
+            color: #c2c0c0;
+            border: none;
+            box-shadow: none;
+        }
+
+        .withdraw-btn {
+            background: #fff1e3;
+            border-radius: 3px;
+            color: #ff9600;
+            box-shadow: none;
+            border: none;
+        }
+        .ant-table-placeholder {
+            border-bottom: none !important;
+        }
+        .deposit-table-txt {
+            letter-spacing: 0.2px;
+            color: #f2c45b;
+            opacity: 1;
+
+            &:hover {
+                color: #ff9600;
+            }
+        }
+        .spot-color a{
+            letter-spacing: 0.2px;
+            color: $secondary-black;
+            font-weight: 500;  
+            &:hover {
+                color: $secondary-gray;
+            }
+        }
+        .spot-link-color a {
+            letter-spacing: 0.2px;
+            color: #f2c45b;
+            font-weight: 500;
+            opacity: 1;
+
+            &:hover {
+                color: #ff9600;
+            }
+        }
+
+        .transaction-btn {
+            background: #defffa;
+            border-radius: 3px;
+            color: #12b298;
+            box-shadow: none;
+            border: none;
+        }
+
+        .head-example {
+            font-size: $fs_xs;
+        }
+    }
+
+    .contract-table {
+        .ant-card-body {
+            padding: 0;
+        }
+    }
+
+    .ant-table-pagination.ant-pagination {
+        margin-right: 15px;
+    }
+
+
+    @media screen and (max-width: 1200px) {
+        .gray-frozen-txt {
+            font-size: $fs_xs;
+        }
+        .deposit-withdraw-heading { 
+            font-size: $fs_lg;
+        }
+        .deposit-card .ant-card-body .deposit-blance {
+            font-size: $fs_2xl;
+        }
+    }
+}
+
+#transfer-modal {
+    background: #ffffff;
+    box-shadow: 0px 3px 24px rgba(0, 0, 0, 0.1);
+
+    .ant-modal-content {
+        border-radius: 12px !important;
+    }
+
+    .ant-input-group-addon {
+        padding: 0 15px;
+        background: #ffffff;
+        border: 1px solid #d0d5dd;
+        box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+        border-radius: 8px;
+        border-radius: 3px;
+    }
+
+    .orange-transfer-bg {
+        background: rgba(255, 165, 0, 0.03);
+        border-radius: 20px;
+
+        .ant-card-body {
+            padding: 15px 24px;
+        }
+
+        .from-dropdown {
+            font-size: $fs-base;
+            color: $text-grey;
+        }
+
+        .ant-input {
+            background-color: transparent !important;
+            border-color: transparent !important;
+            box-shadow: none !important;
+            font-weight: 500 !important;
+            font-size: $fs_sm !important;
+            color: $heading-color !important;
+        }
+
+        .ant-select-selection {
+            background-color: transparent !important;
+            border-color: transparent !important;
+            box-shadow: none !important;
+            font-weight: 500 !important;
+            font-size: $fs_sm !important;
+            color: $heading-color !important;
+        }
+
+        .ant-select-arrow .ant-select-arrow-icon {
+            color: $heading-color !important;
+
+        }
+    }
+
+    .ant-form-item {
+        margin-bottom: 0px;
+    }
+
+    .transfer-crypto-input {
+        .ant-input {
+            border-radius: 8px 0 0 8px !important;
+        }
+    }
+
+    .all-transfer-txt {
+        border: 1px solid #d0d5dd;
+        height: 38px;
+        border-left: none;
+        border-radius: 0px 6px 6px 0 !important;
+        line-height: 38px;
+        margin-top: 1px !important;
+        cursor: pointer;
+        color: $text-grey;
+
+        &:hover {
+            color: $primary-color;
+        }
+    }
+
+    .btc-gray-txt {
+        color: $text-grey;
+        font-size: $fs_xs;
+    }
+
+    .transfer-crypto {
+        font-size: $fs_lg;
+        color: $heading-color;
+    }
+
+    .btn-box {
+        background: #f3f3f3;
+        border-radius: 5px;
+        padding: 4px 5px;
+    }
+
+    .token-btn {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .network-inch {
+        font-size: $fs_sm !important;
+        color: $heading-color !important;
+    }
+
+    .btc-usdt-btn {
+        height: 30px;
+        font-size: $fs_md;
+        color: $heading-color;
+    }
+
+    .usdt-btn {
+        height: 30px;
+        font-size: $fs_md;
+        color: $text-grey;
+        background-color: transparent;
+    }
+
+    .label-sec {
+        color: $text-grey;
+        font-size: $fs_xmd;
+    }
+}
+
+.manage-icon {
+    padding: 0px 4px;
+    background: #ff8000;
+    color: white;
+    font-size: $fs_xxxs;
+    border-radius: 2px;
+}
+
+.ant-modal-close {
+    display: none;
+}
+
+li.ant-select-dropdown-menu-item {
+    .first-bsc-txt {
+        font-size: $fs_xs !important;
+        color: #344054;
+    }
+
+    .smart-chain-txt {
+        font-size: $fs_xs !important;
+        color: #959595;
+    }
+}
+
+.ant-select-selection-selected-value {
+    .second-txt {
+        display: none;
+    }
+
+    .btc-secondtxt {
+        float: right !important;
+    }
+
+    .bold-header {
+        font-weight: 700 !important;
+    }
+}
+
+#deposit-modal {
+    .ant-modal-content {
+        border-radius: 12px;
+    }
+
+    .qrcode-card {
+        .ant-card-body {
+            padding: 24px 0;
+
+            .withdraw-qrcode-txt {
+                font-size: $fs_sm;
+                line-height: 20px;
+                color: $heading-color;
+            }
+
+            .minimum-deposit-rqcode {
+                font-size: $fs_sm;
+                color: $text-grey;
+                line-height: 20px;
+            }
+
+            .num-deposit-rqcode {
+                color: $heading-color;
+                font-size: $fs_sm;
+                line-height: 20px;
+            }
+        }
+    }
+
+    .wallet-green-txt {
+        background: #d1ffed;
+        border-radius: 3px;
+        padding: 5px 10px;
+
+        .green-account-wallet {
+            line-height: 20px;
+        }
+    }
+
+    .acknowledge-btn {
+        background: #ffffff;
+        border: 0.6px solid $heading-color;
+        border-radius: 3px;
+        font-size: $fs_sm;
+        color: $heading-color;
+    }
+
+    input.ant-input.ant-select-search__field {
+        background: #ffffff !important;
+        border: 1px solid #d0d5dd !important;
+        box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05) !important;
+        border-radius: 8px !important;
+        height: 38px !important;
+    }
+
+    .scroll {
+        width: 100%;
+        height: 90px !important;
+        padding-bottom: 5px;
+        overflow-y: auto;
+    }
+
+    .scroll-withdraw-note {
+        height: 55px !important;
+    }
+
+    .scroll::-webkit-scrollbar-track {
+        border-radius: 8px;
+        background-color: #f1f1f1;
+    }
+
+    .scroll::-webkit-scrollbar {
+        width: 8px;
+        background-color: #f5f5f5;
+    }
+
+    .scroll::-webkit-scrollbar-thumb {
+        border-radius: 8px;
+        background-color: #c1c1c1;
+    }
+
+    .deposit-address-link {
+        white-space: nowrap;
+        width: 220px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .acknowledge-list {
+        padding: 0 25px;
+
+        li {
+            font-weight: 500;
+            font-size: $fs_xmd;
+            color: $heading-color;
+            line-height: 19px;
+            margin-bottom: 15px;
+        }
+    }
+
+    .important-list {
+        padding-left: 18px;
+
+        li {
+            font-weight: 400;
+            font-size: $fs_xmd;
+            color: $heading-color;
+            line-height: 19px;
+            margin-bottom: 12px;
+            cursor: grab
+        }
+    }
+
+    .deposit-address-copy {
+        font-size: $fs_sm;
+        background: #ffffff;
+        border: 1px solid #d0d5dd;
+        border-radius: 8px;
+        height: 46px;
+        padding: 12px 10px;
+    }
+
+    .ant-select-selection__rendered {
+        line-height: 38px !important;
+    }
+
+    .deposit-crypto-head {
+        font-size: $fs_2xl;
+        color: $heading-color;
+    }
+
+    .step-heading {
+        font-size: $fs_md;
+        color: $black;
+    }
+
+    .gray-card {
+        background: rgba(217, 217, 217, 0.17);
+        border-radius: 12px;
+
+        .ant-card-body {
+            padding: 15px 0 15px 18px !important;
+        }
+
+        .important-txt {
+            font-size: $fs_md;
+            color: $heading-color;
+        }
+    }
+
+    .ant-tabs-bar {
+        margin-bottom: 16px;
+    }
+
+    .ant-tabs-nav-wrap {
+        padding: 0px;
+    }
+
+    .add-box {
+        position: relative;
+
+        .add-txt {
+            position: absolute;
+            right: 3px;
+        }
+
+        .add-txt1 {
+            top: 12px;
+
+        }
+    }
+
+    .available-txt {
+        font-size: $fs_sm;
+        color: $heading-color;
+    }
+
+    .network-inch {
+        font-size: $fs_sm;
+        color: $heading-color;
+    }
+
+    .limit-btc {
+        font-size: $fs_xmd;
+        color: #afafaf;
+    }
+
+    .important-txt-desc {
+        font-size: $fs_xmd;
+        color: #000000;
+    }
+
+    .ant-form-item-label>label {
+        color: $heading-color;
+        font-weight: 500;
+        font-size: $fs_sm;
+    }
+
+    .ant-form-explain {
+        margin-top: 3px;
+    }
+
+    .myself-txt {
+        font-weight: 400;
+        font-size: $fs_xs;
+        color: #959595;
+    }
+
+    .email-phone-tabs {
+        .ant-tabs-tab {
+            font-weight: 500;
+            font-size: $fs_sm;
+            border-radius: 3px;
+            background-color: #fff !important;
+            color: #afafaf;
+        }
+
+        .ant-tabs-tab-active.ant-tabs-tab {
+            border: none !important;
+            border-radius: 3px;
+            background: #fff !important;
+            margin-bottom: 1px;
+            color: $primary-color !important;
+        }
+
+        .ant-tabs-nav.ant-tabs-nav-animated {
+            background-color: #fff !important;
+        }
+
+        .ant-tabs-nav .ant-tabs-tab {
+            margin-right: 10px !important;
+        }
+
+        .ant-tabs-nav .ant-tabs-tab:first-child {
+            padding-left: 0 !important;
+        }
+
+        .ant-tabs-bar {
+            margin-bottom: 16px;
+        }
+
+        .ant-tabs-extra-content {
+            line-height: 38px;
+        }
+
+        .vti__dropdown-list.below {
+            top: 56px;
+            width: 447px;
+            border: none;
+            box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+            border-radius: 4px;
+            overflow-x: hidden;
+            max-height: 240px;
+            left: -1;
+        }
+
+        .vti__dropdown-item {
+            margin: 0 7px 0 2px;
+            padding: 0px 5px;
+        }
+
+        .vti__dropdown-list.below::-webkit-scrollbar-track {
+            border-radius: 10px;
+            background-color: #fff;
+        }
+
+        .vti__dropdown-list.below::-webkit-scrollbar {
+            width: 6px;
+            background-color: #fff;
+        }
+
+        .vti__dropdown-list.below::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            background-color: #c1c1c1;
+        }
+
+        .vue-tel-input {
+            border: none;
+
+            &:focus-within {
+                box-shadow: none;
+            }
+        }
+
+        .vue-tel-input {
+            height: 46px !important;
+        }
+
+        .vti__search_box {
+            width: 98% !important;
+        }
+
+        .vti__dropdown-item.highlighted strong {
+            font-weight: 500 !important;
+        }
+
+        .vti__dropdown-item strong {
+            font-weight: 500 !important;
+            margin-left: 8px;
+        }
+
+        input.vti__input.vti__search_box {
+            height: 38px !important;
+            margin: 10px 5px 10px 2px;
+            background: $white;
+        }
+
+        .ant-input-affix-wrapper .ant-input-suffix {
+            z-index: 0;
+        }
+
+        .vti__input {
+            margin-left: 10px;
+            background: #ffffff;
+            border: 1px solid #d0d5dd;
+            border-radius: 8px;
+            font-weight: 400;
+            font-size: $fs_xs;
+            padding-left: 12px;
+
+            &::placeholder {
+                color: #d5d3d3 !important;
+            }
+        }
+
+        .vti__dropdown-arrow {
+            padding-left: 5px;
+        }
+
+        .vti__dropdown {
+            background: #f4f4f4;
+            border: 0.5px solid #e2e2e2 !important;
+            border-radius: 4px;
+        }
+    }
+
+    .ant-input-suffix {
+        z-index: 0;
+    }
+}
+
+.myself-tag.ant-tag {
+    padding: 0px 4px;
+    background: rgba(247, 147, 26, 0.2);
+    border-radius: 1px;
+    color: $primary-color;
+    height: 15px;
+    line-height: 15px;
+    border: none;
+}
+
+.myself-address {
+    font-weight: 400;
+    font-size: $fs_xxs;
+    color: $black;
+}
+
+.verified-self.ant-tag {
+    background: rgba(132, 255, 151, 0.28) !important;
+    border-radius: 1px;
+    color: #11ad75 !important;
+    height: 17px !important;
+    line-height: 17px !important;
+}
+
+.unverified-self {
+    background: rgba(192, 192, 192, 0.28) !important;
+    border-radius: 1px;
+    color: #afafaf !important;
+}
+
+.add-myself-address {
+    font-size: $fs_sm;
+    color: #afafaf;
+}
+
+.p2paccount-popover {
+    width: 276px;
+
+    .ant-popover-inner {
+        background: #f9f9f9;
+        border-radius: 3px;
+        box-shadow: none;
+
+        .p2p-info-txt {
+            font-size: $fs_xmd;
+            color: $heading-color;
+        }
+    }
+}
+
+.deposit-main-popover {
+    width: 500px !important;
+}
+
+#repay-modal {
+    .ant-modal-content {
+        background: #ffffff;
+        box-shadow: 0px 3px 24px rgba(0, 0, 0, 0.1);
+        border-radius: 12px;
+    }
+
+    .repay-heading {
+        font-size: $fs_4xl;
+        color: $black;
+    }
+
+    .ant-input-group-addon {
+        background-color: #fff !important;
+        color: #afafaf;
+    }
+
+    .repayment-txt {
+        font-size: $fs_xmd;
+        color: $black;
+    }
+
+    .repay-btn {
+        background: #f7f9fc;
+        border-radius: 3px;
+        color: #6978a0;
+        font-size: $fs_xxxs;
+
+        .available-usdt {
+            color: #b7b7b7;
+        }
+    }
+
+    .transfr-in-card {
+        border: 1px solid #f2efef;
+        border-radius: 3px;
+
+        .ant-card-body {
+            padding: 16px 12px;
+
+            .transfer-heading {
+                font-size: $fs_xmd;
+                color: $heading-color;
+            }
+        }
+    }
+
+    .cancel-btn {
+        border: 0.6px solid #000000;
+        border-radius: 3px;
+        color: $black;
+        font-size: $fs_sm;
+    }
+}
+
+#wallet-history {
+    .refresh-btn:focus {
+        background-color: $primary-color;
+        color: $white !important;
+    }
+}

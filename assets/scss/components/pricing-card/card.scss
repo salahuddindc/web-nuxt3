@@ -1,0 +1,71 @@
+@import "assets/variables/light.scss";
+
+#pricing-card {
+    .card-detail {
+        background: #ffffff;
+        border-radius: 10px;
+        border: 1px solid $white;
+        &:hover {
+            background: linear-gradient(
+                180deg,
+                $white 55.42%,
+                $light-orange-bg 191.78%
+            );
+        }
+        .ant-card-body {
+            padding: 14px 15px 14px 18px;
+        }
+        .currency-curve {
+            width: 100%;
+            height: 53px;
+            canvas {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .left {
+            float: left;
+        }
+        .right {
+            float: right;
+        }
+        .text-heading {
+            font-size: $fs-base;
+            color: $heading-color;
+            letter-spacing: 0;
+            margin-bottom: 9px;
+        }
+        .price-heading {
+            font-size: $fs_2xl;
+            color: #312a64;
+            line-height: 36px;
+            margin-bottom: 9px;
+        }
+        .doller-txt {
+            color: $text-grey;
+            font-size: $fs_sm;
+        }
+        .heading-percent {
+            font-size: $fs_sm;
+        }
+        .second-price-txt {
+            font-size: $fs_xs;
+            color: $text-grey;
+        }
+        .currency-img {
+            width: 28px;
+            height: 28px;
+        }
+        .num-txt {
+            font-size: $fs-base;
+            font-weight: 600;
+            line-height: 22px;
+        }
+        .pkr-txt {
+            font-weight: 275;
+            font-size: $fs_sm;
+            line-height: 21px;
+            color: $black;
+        }
+    }
+}

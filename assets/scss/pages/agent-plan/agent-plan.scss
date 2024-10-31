@@ -1,0 +1,158 @@
+@import "assets/variables/light.scss";
+
+#agent-plan {
+    .bg-white {
+        background-color: $white;
+    }
+    .affiliate-btn {
+        height: 2.5rem;
+        padding: 0rem 1.3125rem;
+    }
+    .submit-btn {
+        padding: 0rem 0.75rem;
+        height: 2rem;
+    }
+    .aff-heading {
+        font-size: 2rem;
+        color: #081131;
+        line-height: 145%;
+    }
+    .aff-subheading {
+        color: #081131;
+        font-size: 1.25rem;
+        line-height: 168%;
+    }
+    .aff-desc {
+        font-size: 1rem;
+        color: #081131;
+    }
+    .white-desc {
+        font-size: 1rem;
+        color: #fff;
+    }
+    .white-heading{
+        color: #fff;
+        font-size: 1.875rem;
+    }
+    .agent-plan-header {
+        background-image: url("/images/aff-bg.svg");
+        padding: 6.65rem 0;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            height: 65%;
+            width: 40%;
+            background: url(/images/graph.svg);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            left: 48.5%;
+            top: 55px;
+        }
+        .header-txt {
+            font-size: 2.1875rem;
+            color: #fff;
+        }
+    }
+    .agent-card {
+        .agent-img-circle {
+            width: 4.375rem;
+            height: 4.375rem;
+            background-color: #fafafa;
+            border-radius: 50%;
+            justify-content: center;
+        }
+        .card-border {
+            border-radius: 1.125rem;
+            border: 1px solid #eaeaea;
+            backdrop-filter: blur(100px);
+            min-height: 289px;
+            &:hover {
+                background: linear-gradient(
+                180deg,
+                $white 55.42%,
+                $light-orange-bg 191.78%
+            );
+            border: 1px solid #ffc73d !important;
+            }
+        }
+    }
+    .commission-card{
+        .ant-card-body{
+            padding: 50px;
+            padding-left: 0px !important;
+        }
+    }
+    .join-card{
+        background: url('/images/join-backg.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: .5rem;
+        .affiliate-btn{
+            border-radius: 2em;
+            float: right;
+        }
+    }
+    .financial-card{
+        .ant-card-body{
+            padding: 24px 0 !important;
+        }
+    }
+    @media screen and (max-width: 1367px) {
+        .commission-card{
+            .ant-card-body{
+                padding: 27px;
+            }
+        }
+    }
+    @media screen and (max-width: 1280px) {
+        .aff-heading {
+            font-size: 1.5rem;
+        }
+        .aff-subheading {
+            font-size: 1rem;
+        }
+        .aff-desc {
+            font-size: .875rem;
+        }
+        .white-desc {
+            font-size: .875rem;
+        }
+    }
+
+    @media screen and (max-width: 1200px) {
+        .commission-card{
+            .ant-card-body{
+                padding: 28px;
+            }
+        }
+        .aff-desc {
+            font-size: .75rem;
+        }
+    }
+    @media screen and (max-width: 1030px) {
+        .aff-heading {
+            font-size: 1.3rem;
+        }
+        .aff-subheading {
+            font-size: .92rem;
+        }
+        .agent-card{
+            .ant-card-body{
+                padding: 12px;
+            }
+        }
+    }
+    @media screen and (max-width: 992px) {
+        .agent-plan-header {
+            &::after {
+                display: none;
+            }
+        }
+    }
+}

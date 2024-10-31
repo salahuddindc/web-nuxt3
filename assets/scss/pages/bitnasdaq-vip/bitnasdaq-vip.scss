@@ -1,0 +1,274 @@
+@import "assets/variables/light.scss";
+
+#bitnasdaq-vip {
+    background: $white;
+    // common classes
+    .main-heading {
+        font-size: $fs_16xl;
+        line-height: 50px;
+    }
+    .main-decs {
+        font-size: $fs-base;
+        line-height: 24px;
+    }
+
+    .mt-10 {
+        margin-top: 100px;
+    }
+    .mt-6 {
+        margin-top: 60px;
+    }
+    .recharge-fee {
+        font-size: 14px;
+        color: $text-grey;
+    }
+    .vip-header {
+        background-image: url("/images/vip-bg.png");
+        padding: 28px 0 17px 0;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        .vip-heading {
+            font-size: $fs_16xl;
+            color: $white;
+        }
+        .vip-desc {
+            font-size: $fs-base;
+            color: $white;
+        }
+    }
+    // vip trading fee
+    .vip-trading-fee {
+        .left-fee-card {
+            border: 1px solid #e6e6e6;
+            border-radius: 20px;
+            height: 215px;
+            &:hover {
+                background: linear-gradient(
+                180deg,
+                $white 55.42%,
+                $light-orange-bg 191.78%
+            );
+            border: 1px solid #ffc73d !important;
+            }
+            .ant-card-body {
+                padding: 30px 30px 60px 30px;
+                .spot-margin-fee {
+                    margin-bottom: 40px;
+                }
+                .fee-text {
+                    font-size: 20px;
+                    span {
+                        text-decoration: line-through;
+                        color: $text-grey;
+                        font-size: 16px;
+                    }
+                }
+                .vip-trading-divider {
+                    top: 1.4em;
+                    height: 111px;
+                    background: #e6e6e6;
+                    width: 0.6px;
+                }
+            }
+        }
+        .right-fee-card {
+            border: 1px solid #e6e6e6;
+            border-radius: 20px;
+            height: 215px;
+            &:hover {
+                background: linear-gradient(
+                180deg,
+                $white 55.42%,
+                $light-orange-bg 191.78%
+            );
+            border: 1px solid #ffc73d !important;
+            }
+            .ant-card-body {
+                padding: 0px 36px 23px 26px;
+                .sub-main-desc {
+                    font-size: 12px;
+                    color: $text-grey;
+                    width: 197px;
+                }
+                .vip-status {
+                    padding: 30px 0 0 0;
+                }
+
+                .vip-trading-divider {
+                    top: 3.7em;
+                    height: 111px;
+                    background: #e6e6e6;
+                    width: 0.6px;
+                }
+                .status-progress {
+                    .ant-progress-text {
+                        display: none;
+                    }
+                    .ant-progress-outer {
+                        padding-right: 0;
+                    }
+                    .ant-progress-bg {
+                        height: 5px !important;
+                        background: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+    .ant-card-body .levels,
+    .left-fee-card{
+
+        .ant-select-selection {
+            height: 30px;
+        }
+        .ant-select-selection-selected-value {
+            font-size: 12px;
+            font-weight: 600;
+        }
+        .ant-select-selection__rendered {
+            line-height: 30px;
+        }
+    }
+    // vip-level
+    .vip-level {
+
+        .level-card {
+            border: 1px solid #e6e6e6;
+            border-radius: 20px;
+            margin-right: 28px;
+            height: 616px;
+            position: relative;
+            &:hover {
+                background: linear-gradient(
+                180deg,
+                $white 55.42%,
+                $light-orange-bg 191.78%
+            );
+            border: 1px solid #ffc73d !important;
+            }
+            .ant-card-body {
+                padding: 0;
+                .card-bg-img {
+                    position: relative;
+
+                }
+                .levels {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    
+                    .or-text {
+                        font-size: 12px;
+                        color: $text-grey;
+                    }
+                    .maker-taker-card {
+                        background: #FAFAFA;
+                        border-radius: 10px;
+                        .ant-card-body {
+                            padding: 10px;
+                            .small-txt {
+                                font-size: 12px;
+                                color: $text-grey;
+                            }
+                        }
+                    }
+                }
+            }
+            .active-btn {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                .current-btn {
+                    background: #FFF9ED;
+                    border-radius: 0 0 20px 20px;
+                    height: 44px !important;
+                }
+            }
+        }
+        .active-card {
+            border: 1px solid $primary-color;
+        }
+        .VueCarousel-navigation-prev {
+            left: -10px;
+        }
+        .VueCarousel-navigation-next{
+            right: -8px;
+        }
+    }
+    // vip-levels and handling fee
+    .vip-handling-fee {
+    .ant-tabs-nav-wrap {
+        padding: 0;
+    }
+    .ant-table-thead > tr:first-child > th:first-child {
+        padding-left: 5px !important;
+    }
+    .ant-table-tbody > tr > td:first-child {
+        padding-left: 5px !important;
+    }
+}
+// vip benefits
+.vip-benefits {
+    .benefit-title {
+        font-size: 20px;
+        margin-top: 30px;
+    }
+}
+.vip-bottom-banner {
+    background-image: url("/images/vip-bottom-banner.png");
+    padding: 25px 100px 25px 42px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+.bottom-heading {
+    font-size: 30px;
+    color: $white;
+}
+}
+
+@media screen and (max-width: 1280px) {
+    .vip-level {
+    .VueCarousel-navigation-prev {
+        left: 40px;
+    }
+    .VueCarousel-navigation-next{
+        right: 45px;
+    }
+}
+}
+@media screen and (max-width: 1200px) {
+.vip-trading-fee {
+    .right-fee-card .ant-card-body {
+    padding: 0px 15px 23px 0px;
+}
+.left-fee-card .ant-card-body {
+    padding: 30px 15px 60px 15px;
+    .fee-text {
+        font-size: 16px;
+        span {
+            font-size: 12px;
+        }
+    }
+}
+}
+}
+@media screen and (max-width: 1024px) {
+    .vip-trading-fee .right-fee-card .ant-card-body {
+        // .right-col-first-title {
+        //     margin-top: 35px;
+        // }
+        .sub-main-desc {
+        width: 127px;
+    }
+}
+}
+.vip-trading-fee .left-fee-card .ant-card-body .fee-text span {
+    margin-left: 0 !important;
+}
+.vip-benefits .benefit-title {
+    font-size: 18px;
+}
+}

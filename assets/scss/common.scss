@@ -1,0 +1,43 @@
+// this file is being included inside assets/scss/utilities.scss
+.ant-tabs-nav-wrap {
+    padding: 16px 28px 0 28px;
+}
+
+
+
+.ant-tabs-tab-active.ant-tabs-tab {
+    background-color: transparent !important;
+    font-size: 18px;
+    font-weight: 600;
+    color: $secondary-black !important;
+    padding: 0;
+}
+
+.ant-tabs-nav.ant-tabs-nav-animated {
+    background: transparent;
+    padding: 0 0 2px 0 !important;
+}
+
+.ant-tabs-nav .ant-tabs-tab {
+    color: $secondary-gray;
+    background-color: transparent !important;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 0;
+    margin-right: 30px !important;
+}
+
+.ant-tabs-bar {
+    border-bottom: 1px solid #70717336 !important;
+}
+
+// bottom-line is @deperecated use tab-bottom-line
+.tab-bottom-line,
+.bottom-line {
+    max-width: 26px;
+    width: 100%;
+    margin: 13px auto 0 auto;
+    border-bottom: 3px solid #ff7f00;
+    box-shadow: 0px 0px 9px rgba(255, 122, 0, 0.47);
+    border-radius: 6px 6px 0 0;
+}

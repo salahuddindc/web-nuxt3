@@ -1,0 +1,89 @@
+@import "assets/variables/light.scss";
+
+#merchant-account {
+    .main-heading {
+        font-size: $fs_2xl;
+        color: $heading-color;
+    }
+    .p2p-heading {
+        font-size: $fs_2xl;
+        color: $heading-color;
+    }
+    .merchant-account-card {
+        height: 257px;
+        .account-desc {
+            font-size: $fs_sm;
+            color: $heading-color;
+        }
+    }
+    .merchant-list-card {
+        .ant-card-body {
+            padding: 40px 24px;
+            .marchant-divider {
+                margin: 35px 0;
+                background-color: #f5f5f5;
+                width: 1px !important;
+                height: 0.6px !important;
+                top: 0em !important;
+            }
+        }
+        .green-bg {
+            border: none !important;
+            background-color: #fff !important;
+            font-weight: 600 !important;
+            font-size: $fs-base !important;
+            color: #0ecb81 !important;
+            &:hover {
+                box-shadow: none !important;
+            }
+        }
+        .requirment-title {
+            font-size: $fs-base;
+            color: $heading-color;
+        }
+        .requirment-subtext {
+            font-size: $fs_md;
+            color: $text-grey;
+        }
+        .ant-checkbox + span {
+            font-weight: 400;
+            font-size: $fs-base;
+            color: $heading-color;
+        }
+    }
+    @media screen and (max-width: 1200px) {
+        .main-heading {
+            font-size: $fs-base;
+        }
+        .p2p-heading {
+            font-size: $fs-base;
+        }
+        .merchant-account-card {
+            .account-desc {
+                font-size: $fs_xs;
+            }
+            .card-account {
+                padding: 40px 0 !important;
+            }
+        }
+        .merchant-list-card {
+            .requirment-title {
+                font-size: $fs_xmd;
+            }
+            .requirment-subtext {
+                font-size: $fs_xmd;
+            }
+            .ant-checkbox + span {
+                font-size: $fs_xmd;
+            }
+        }
+    }
+    @media screen and (max-width: 1200px) {
+        .p2p-heading {
+            font-size: $fs_xmd;
+        }
+        .advertise-detail {
+            padding: 0 !important;
+        }
+    }
+}

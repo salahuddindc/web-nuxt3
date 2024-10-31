@@ -1,0 +1,91 @@
+@import 'assets/variables/light.scss';
+
+#spot {
+  .spot-card {
+    .ant-card-body {
+      padding: 15px 16px;
+      .main-heading {
+        font-weight: 500;
+        font-size: $fs_2xl;
+        color: $black;
+      }
+    }
+  }
+  .open-filled-card {
+    .ant-card-body {
+      padding: 15px 0;
+      .ant-tabs-tab {
+        font-weight: 400;
+        font-size: $fs_md;
+        color: $black;
+      }
+      .ant-tabs-tab:first-child {
+        margin-left: 15px;
+      }
+      .ant-tabs-nav .ant-tabs-tab-active {
+        color: $primary-color;
+      }
+      .ant-tabs-tab-active.ant-tabs-tab:first-child {
+        margin-left: 15px;
+      }
+      .ant-select-selection {
+        background: #f4f4f4;
+        border-radius: 8px;
+        height: 40px;
+        border: none;
+        font-weight: 300;
+        font-size: $fs_md;
+        color: $black;
+      }
+      .ant-select-selection__rendered {
+        line-height: 40px;
+      }
+      .search {
+        background: linear-gradient(180deg, #ff7f00 0%, #ffa500 79.27%);
+        border-radius: 3px;
+      }
+      .reset {
+        background-color: #fff;
+        border: none;
+        box-shadow: none;
+        color: $primary-color;
+      }
+      .revoke-btn {
+        background: #f6465d;
+        border-radius: 3px;
+        font-weight: 400;
+        font-size: $fs_xs;
+        border: none;
+      }
+      .success-btn {
+        background-color: #12b298;
+        border-radius: 3px;
+        font-weight: 400;
+        font-size: $fs_xs;
+        border: none;
+      }
+      .bank-transfer-btn {
+        background: rgba(217, 217, 217, 0.28);
+        border-radius: 3px;
+        color: #b8b8b8;
+        font-size: $fs_xs;
+        box-shadow: none;
+        border: none;
+      }
+      .deposit-success-btn {
+        background: #defffa;
+        border-radius: 3px;
+        color: #12b298;
+        box-shadow: none;
+        border: none;
+      }
+      .unshelving-btn {
+        background: #fff1e3;
+        border-radius: 3px;
+        color: #ff9600;
+        box-shadow: none;
+        border: none;
+      }
+    }
+  }
+}

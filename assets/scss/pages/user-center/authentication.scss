@@ -1,0 +1,148 @@
+@import "assets/variables/light.scss";
+
+#authentication {
+    .authentication-heading-card {
+        font-size: $fs_2xl;
+        color: $heading-color;
+    }
+    .kyc-varification {
+        font-size: 20px;
+        line-height: 22px;
+    }
+    .verify-common-btn {
+        border-radius: 6px;
+        border: 1px solid #d0d5dd;
+        background: #fff;
+        height: 36px !important;
+        font-size: 14px;
+        box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+        color: $heading-color;
+        &:hover {
+            background: $primary-color;
+            border: 1px solid $primary-color;
+            color: $text-white;
+        }
+    }
+    .verified-btn {
+        background: #0ecb81;
+        border:1px solid #00c076;
+        color: $white;
+        border-radius: 4px !important;
+        width: max-content;
+        height: 36px !important;
+
+        &:hover {
+            background: #0ecb81cf;
+        }
+    }
+    .primary-btn {
+       width: 130px;  
+    }
+    .under-review-btn {
+        background-color: #F4F4F4;
+        border: 1px solid #D0D5DB !important;
+        color: $text-grey;
+        border-radius: 4px !important;
+        font-size: 16px;
+        max-width: max-content;
+        &:hover {
+           border: 1px solid #EFEFEF !important;
+           color: #C2C2C2; 
+        }
+    }
+    .kyc-divider {
+        margin: 16px 0 20px 0;
+        background-color: #f6f6f6;
+    }
+    .p2p-trading {
+        color: $text-grey;
+        line-height: 15.68px;
+    }
+    .requirements-heading {
+        margin-top: 30px;
+        .requirements {
+            background: #ffa500 !important;
+            width: 3px;
+        }
+    }
+    .verification-requirements {
+        display: flex;
+        justify-content: flex-start;
+    .email-virification {
+        margin-right: 28px;
+        font-size: 13px;
+        color: $text-grey;
+        line-height: 18.85px;
+    }
+}
+.kyc-requirements {
+    display: flex;
+    justify-content:space-between;
+.kyc-txt {
+    font-size: 13px;
+    color: $text-grey;
+    line-height: 18.85px;
+}
+}
+.view-more-text {
+    color: $primary-color;
+    font-size: 14px;
+    font-weight: 500;
+}
+span.ant-select-arrow {
+    right: 13px;
+}
+.error-msg {
+    font-size: 14px;
+    color: #E95950;
+    // font-style: italic;
+}
+.support-team {
+    font-size: 16px;
+}
+.cancel-outline-btn {
+    border-color: #D0D5DD;
+    border-radius: 8px !important;
+    font-size: 1rem;
+    color: $heading-color;
+    height: 44px !important;
+}
+.note {
+    color: $text-grey;
+}
+@media screen and (max-width: 1280px) {
+    .p2p-trading {
+        font-size: 13px;
+    }
+    .usdt-text {
+        font-size: 13px;
+    }
+    .faqs-auth-card {
+        .ant-card-body {
+            padding: 24px 18px;
+            .faq-header {
+                font-size: 13px;
+        
+            }
+         
+        }
+     
+    }
+   
+}
+}
+.faqs-auth-card {
+.ant-collapse .ant-collapse-item {
+  
+     .ant-collapse-header {
+    font-size: $fs_sm !important;
+    padding: 16px 25px 16px 0 !important;
+}
+.ant-collapse-content > .ant-collapse-content-box {
+    font-size: $fs_sm !important;
+    p {
+        font-size: $fs_sm !important;
+    }
+}
+}
+}

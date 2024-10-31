@@ -1,0 +1,331 @@
+@media screen and (min-width:1441px) {
+    .hide-on-small{
+        display: inline !important;
+    }
+    .show-on-small{
+        display: none !important;
+    }
+    .horizontal-block-list {
+        .VueCarousel{
+            margin-left:-16px !important;
+        }
+    }
+    .license-rules .top-main-content .game-helpcenter-bg{
+        height: 156px !important;
+    }
+   .help-center{
+    .top-main-content {
+        .game-helpcenter-bg {
+            height: 185px !important;
+        }}
+   }
+    .help-center-sidebar{
+        min-height: 685px !important;
+    }
+}
+@media screen and (max-width: 1367px) {
+    .timer-colon {
+       // padding-right: 0 !important;
+    }
+    .horizontal-block-list {
+        .VueCarousel{
+            padding-left: 18px !important;
+        }
+    }
+    .license-rules .top-main-content .game-helpcenter-bg{
+        height: 144px !important;
+    }
+    .help-center{
+        .top-main-content {
+         .game-helpcenter-bg {
+        height: 167px  !important;
+    }
+    }
+    }
+    
+   
+}
+@media screen and (max-width: 1280px) {
+    h6 {
+        font-size: 0.875rem !important;
+    }
+    h5 {
+        font-size: 1rem !important;
+    }
+    h4 {
+        font-size: 1.25rem !important;
+    }
+    h2{
+       font-size: 1.5rem !important;
+    }
+    .game-header {
+        .right-side .convert {
+            width: 85px !important;}
+        .convert,
+        .user-profile {
+            .user-img{
+                height: 40px;
+                width: 40px;
+                img{
+                    height: 30px;
+                    width: 29px;
+                }
+            }
+        }
+    }
+    .banner {
+        .banner-img {
+            height: 180px;
+        }
+    }
+    .total-players {
+        .need-help {
+            padding-top: 0px !important;
+        }
+    }
+    .vertical-block{
+        .ant-progress-inner {
+        height: 38px !important;
+        width: 38px !important;
+        .ant-progress-text {
+            font-size: 14px;
+        }
+    }
+    }
+    .user-detail-bg{
+        height: 160px !important;
+        .user-img{
+            height: 100px;
+        }
+    }
+    .horizontal-block-list {
+        .VueCarousel{
+            padding-left: 37px !important;
+        }
+    }
+    .help-center{
+        .license-rules .top-main-content .game-helpcenter-bg{
+            height: 133px !important;
+        }
+         .top-main-content {
+        .game-helpcenter-bg {
+        height: 157px !important;
+    }
+    }
+    }
+   
+    .help-center-sidebar{
+        min-height: 656px !important;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .game-header{
+        background-image: url("/new-images/md-game-header-bg.png") !important;
+    }
+    .lh-24 {
+        line-height: 18px !important;
+    }
+    p {
+        font-size: 0.75rem;
+    }
+    .banner {
+        .banner-img {
+            height: 135px;
+        }
+    }
+    .banner-menu-img {
+        margin-right: 1px !important;
+    }
+  /*   .total-players {
+        .ant-card-body {
+            padding: 1rem;
+        }
+    } */
+    .top-bosses {
+        .share-icon,
+        .investment,
+        .divider {
+            padding-left: 0 !important;
+        }
+    }
+    .vertical-block{
+        .ant-progress-inner {
+        height: 30px !important;
+        width: 30px !important;
+        .ant-progress-text {
+            font-size: 12px;
+        }
+    }
+
+    .timer-colon {
+        padding-left: 0 !important;
+    } 
+    .blockid-img {
+        height: 140px !important;
+    }
+    }
+    
+    /* .total-players {
+        .need-help {
+            padding-top: 8px !important;
+        }
+    } */
+    .session-text {
+        font-size: 0.75rem;
+    }
+    .ant-btn {
+        font-size: 0.875rem;
+    }
+   
+    .coin-dropdown .ant-select-selection-selected-value {
+        font-size: 12px;
+        img{
+            height: 12px !important;
+        }
+    }
+
+    .horizontal-block-list {
+        .VueCarousel{
+            padding-left: 56px !important;
+        }
+    }
+    .license-rules .top-main-content .game-helpcenter-bg{
+        height: 124px !important;
+        font-size: 24px !important;
+    }
+    .help-center{
+         .top-main-content {
+        .game-helpcenter-bg {
+        height: 147px !important;
+        font-size: 28px !important;
+    }
+    }
+    }
+   
+    .players-table{
+        margin: 110px 10px !important;
+    height: 330px !important;
+    }
+    .licensing-steps-guide
+    {
+        .license-step, .view-rule a {
+        font-size: 16px !important;
+       }
+       .step-sec-text{
+        font-size: 14px !important;
+       }
+    } 
+    .center-logo{
+        padding: 39px 120px !important;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .game-header {
+        .right-side .convert {
+            width: 77px !important;}
+        .user-detail{
+            img{
+                height: 12px !important;
+            }
+        }
+    }
+ 
+        .green-border{
+            right: -12px !important;
+            float: inline-end;
+        }
+   
+   /*  .total-players .ant-card-body {
+        padding: 12px !important;
+    } */
+    .vertical-block{
+        .horizontal-blocks {
+        .timer-colon {
+           // padding-right: 0 !important;
+            padding-left: 5px !important;
+        }
+    }
+    .blockid-img {
+        height: 205px !important;
+        text-align: center;
+    }
+    }
+    
+    .total-players {
+        .ant-card-body {
+            padding: 12px 24px !important;
+        }
+        .multi-colors {
+           .ant-card-body{
+            padding: 24px 24px !important;
+           }
+        }
+    }
+    .user-detail-bg{
+        height: 130px !important;
+        padding-top:12px !important;
+        padding-bottom: 12px !important;
+    }
+    .help-center{
+            .help-center-sidebar{
+        padding-left: 12px !important;
+            padding-right: 12px !important;
+            min-height: 618px !important;
+            .ant-radio-button-wrapper, .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled){
+                font-size: 16px !important;
+                margin-bottom: 20px !important;
+            }
+    }
+    .tab-content {
+        .first-div{
+            padding-top: 20px !important;
+        }
+    }
+    }
+    .banner-menu-img{
+        height: 30px;
+    }
+    .horizontal-block-list {
+        .VueCarousel{
+            padding-left: 18px !important;
+        }
+    }
+    .license-rules .top-main-content .game-helpcenter-bg{
+        height: 106px !important;
+    }
+    .help-center{
+        .top-main-content {
+        .game-helpcenter-bg {
+        height: 119px !important;
+    }
+}
+    }
+    
+.game-lang-dropdown {
+    width: 60px !important;
+    .ant-select-selection {
+
+        .ant-select-selection-selected-value {
+          span{
+            display: none;
+          }
+        }
+        }
+    }
+    .licensing-steps-guide {
+        .result-card{
+        padding-left: 11px !important;
+    }
+    .game-card{
+        column-gap: 62px !important;
+    }
+    
+}
+
+.game-card-box{
+    .card-box-img{
+        height: 145px !important;
+    }
+}
+}
+    

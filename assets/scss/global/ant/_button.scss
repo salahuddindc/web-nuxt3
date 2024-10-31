@@ -1,0 +1,38 @@
+//button
+.ant-btn {
+    height: 44px;
+    border: none;
+    box-shadow: none;
+    font-weight: 500;
+    font-size: $--lg-button-text;
+    color: $primary-color;
+    border-radius: 8px;
+    &:hover {
+        background-color: #FFB800;
+    }
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+// date-picker
+.ant-calendar-date {
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    padding-top: 2px;
+}
+.ant-calendar-today .ant-calendar-date {
+    background-color: $primary-color;
+    color: $white;
+}
+.ant-calendar-selected-day .ant-calendar-date {
+    background-color: $primary-color;
+    color: $white;
+}
+.ant-calendar-input-wrap {
+    display: none;
+}
+.ant-calendar-footer {
+    display: none;
+}

@@ -1,0 +1,613 @@
+@import "assets/variables/light.scss";
+
+#send-crypto {
+  
+    .crypto-heading {
+        font-size: $fs_lg;
+        color: $black;
+    }
+
+    .ant-form-item-label {
+        line-height: 34px !important;
+    }
+    .first-step {
+        .ant-input {
+            height: 46px !important;
+            border: none;
+        }
+    }
+    .ant-form-item label {
+        text-align: left !important;
+    }
+
+    .sendto-heading {
+        font-size: $fs_md;
+        color: $heading-color;
+    }
+
+    .receive-right-card {
+        .ant-card-body {
+            padding: 17px 15px 0px 15px;
+            .qr-receive {
+                position: relative;
+                .text-card {
+                    position: absolute;
+                    top: 30%;
+                    right: 106px;
+                    p {
+                        width: 165px;
+                        text-align: left;
+                        color: $secondary-black;
+
+                    }
+                }
+            }
+            .right-side-txt {
+                font-size: $fs_md;
+                color: $heading-color;
+            }
+        }
+    }
+
+    .send-receive-card {
+        .ant-card-body {
+            padding: 24px 15px;
+        }
+
+        .scan-send-txt {
+            font-size: $fs-base;
+            color: $heading-color;
+        }
+
+        .ant-input {
+            height: 40px !important;
+        }
+
+        .ant-select-selection {
+            height: 40px !important;
+        }
+
+        .ant-select-selection__rendered {
+            line-height: 40px !important;
+        }
+
+
+        .link-card {
+            border: 1px solid #d0d5dd;
+            box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+            border-radius: 8px;
+            font-size: $fs_sm;
+            color: $heading-color;
+
+            .ant-card-body {
+                padding: 10px 14px !important;
+            }
+        }
+
+        .nickname-txt {
+            font-size: $fs_sm;
+            color: $text-grey;
+        }
+
+        .recieve-gray-card {
+            background: #f7f7f7;
+            border-radius: 6px;
+
+            .save-qr-txt {
+                font-weight: 400;
+                font-size: $fs_sm;
+                color: $primary-color;
+            }
+        }
+    
+        .save-qrcode-btn {
+            height: 39px !important;
+            border-radius: 4px !important;
+        }
+
+        .nickname-right-txt {
+            font-size: $fs-base;
+            color: $heading-color;
+        }
+    }
+
+    .steps-card {
+        .crypto-orange-bg {
+            background: linear-gradient(360deg,
+                    #ff8000 -451.79%,
+                    #ffffff 108.93%);
+            border-radius: 4px;
+
+            .ant-card-body {
+                padding: 0 30px;
+
+                .official-account {
+                    font-weight: 400;
+                    font-size: $fs_sm;
+                    color: #535353;
+                }
+            }
+        }
+
+        .ant-tabs-tab {
+            font-weight: 500;
+            font-size: $fs_sm;
+            color: #afafaf;
+            margin-right: 18px;
+            background-color: #fff;
+        }
+        .ant-tabs-tab-active.ant-tabs-tab {
+            &::before {
+                background-color: transparent;
+                border-top: none;
+                box-shadow: none;
+            }
+        }
+        .ant-tabs-nav-wrap {
+            padding: 0px !important;
+        }
+        .ant-tabs-bar {
+            border-bottom: none;
+        }
+        .vti__dropdown-list.below {
+            top: 56px;
+            width: 415px;
+            border: 1px solid #e2e2e2;
+            box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+            border-radius: 4px;
+            overflow-x: hidden;
+            max-height: 240px;
+            left: -1;
+        }
+
+        .vti__dropdown-item {
+            margin: 0 8px 0 10px;
+            padding: 0px 5px;
+        }
+
+        .vti__dropdown-list.below::-webkit-scrollbar-track {
+            border-radius: 10px;
+            background-color: #fff;
+        }
+
+        .vti__dropdown-list.below::-webkit-scrollbar {
+            width: 6px;
+            background-color: #fff;
+        }
+
+        .vti__dropdown-list.below::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            background-color: #c1c1c1;
+        }
+
+        .vue-tel-input {
+            border: none;
+
+            &:focus-within {
+                box-shadow: none;
+            }
+        }
+.first-step-input {
+    .ant-select-selection__rendered {
+        line-height: 46px !important;
+    }
+}
+     
+
+        .ant-form-explain {
+            text-align: left;
+        }
+
+        .ant-select-selection {
+            background: #ffffff;
+            border: 1px solid #d0d5dd !important;
+            box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+            border-radius: 8px !important;
+        }
+
+        .vue-tel-input {
+            height: 46px !important;
+        }
+
+        .vti__search_box {
+            width: 95% !important;
+        }
+
+        .vti__dropdown-item.highlighted strong {
+            font-weight: 500 !important;
+            color: $secondary-black;
+
+        }
+
+        .vti__dropdown-item strong {
+            font-weight: 500 !important;
+            margin-left: 8px;
+            color: $secondary-black;
+
+        }
+        .vti__dropdown-item span {
+            color: $secondary-black;
+
+        }
+        input.vti__input.vti__search_box {
+            height: 38px !important;
+            margin: 10px;
+            background: $white;
+            color: $secondary-black;
+        }
+
+        .ant-input-affix-wrapper .ant-input-suffix {
+            z-index: 0;
+        }
+
+        .vti__input {
+            margin-left: 10px;
+            background: #ffffff;
+            border: 1px solid #d0d5dd;
+            box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+            border-radius: 6px;
+            font-weight: 400;
+            font-size: $fs_xs;
+            padding-left: 12px;
+            color: $secondary-black;
+
+            &::placeholder {
+                color: #d5d3d3 !important;
+            }
+        }
+
+        .vti__dropdown-arrow {
+            padding-left: 5px;
+        }
+
+        .vti__dropdown {
+            background: #f4f4f4;
+            border: 0.5px solid #e2e2e2 !important;
+            border-radius: 4px;
+        }
+
+        .ant-tabs-tab-active.ant-tabs-tab {
+            color: $primary-color !important;
+            background-color: #fff !important;
+        }
+
+        .ant-tabs-nav.ant-tabs-nav-animated {
+            background-color: #fff !important;
+        }
+
+        .add-box {
+            position: relative;
+
+            .add-txt {
+                position: absolute;
+                right: 3px;
+            }
+
+            .network-inch {
+                color: #afafaf;
+            }
+
+            span.ant-input-suffix {
+                color: #afafaf;
+            }
+        }
+
+        .back-btn {
+            background: #ffffff;
+            border: 0.6px solid #000000;
+            border-radius: 3px;
+            color: $black;
+        }
+
+        .sendto-num {
+            font-size: $fs-base;
+            color: #cacaca;
+        }
+
+        .gray-email {
+            color: #cacaca !important;
+        }
+
+        .send-email {
+
+
+            width: 300px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-weight: 500;
+            font-size: $fs-base;
+            color: $heading-color;
+            text-align: left;
+        }
+        .nick-name {
+            height: 24px;
+        }
+        .senduserid {
+            font-size: $fs_7xl;
+            color: $heading-color;
+            line-height: 38px;
+        }
+
+        .uid-txt {
+            font-size: $fs_md;
+            color: #000000;
+        }
+
+        .light-orange-card {
+            background: #F3F5F7;
+            border-radius: 6px;
+
+            .ant-card-body {
+                padding: 13px 0px;
+
+                .user-email {
+                    font-size: $fs_md;
+                    color: $heading-color;
+                    text-align: left;
+                }
+
+                .n-name {
+                    font-size: $fs_xs;
+                    color: $text-grey;
+                }
+            }
+        }
+
+        .third-gray-card {
+            background: #F3F5F7;
+            border-radius: 6px;
+
+            .ant-card-body {
+                padding: 17px 18px;
+            }
+        }
+    }
+
+    .table-card {
+        .ant-card-body {
+            padding: 0px 0 24px 0;
+            .outline-btn {
+                height: 38px !important;
+            }
+            .add-remarks {
+                color: $primary-color;
+            }
+
+            .date-picker-filter {
+                margin-top: 30px;
+            }
+
+            .detail-txt {
+                color: #868686;
+            }
+
+            .deposit-success {
+                color: #12b298;
+            }
+        }
+    }
+
+    @media screen and (max-width: 1280px) {
+        .send-crypto {
+            .steps-card .ant-tabs-tab {
+                font-size: $fs_xs;
+                padding: 10px 0px !important;
+            }
+
+            .ant-tabs-nav .ant-tabs-tab-active {
+                font-size: $fs_xs;
+                padding: 10px 0px !important;
+            }
+        }
+
+        .steps-card {
+            .send-email {
+                font-size: $fs_xmd;
+            }
+        }
+
+        .sendto-num {
+            margin-bottom: 15px !important;
+        }
+
+        .receive-crypto {
+            .send-receive-card {
+                label.ant-form-item-no-colon {
+                    font-size: $fs_xs;
+                }
+
+                .ant-input {
+                    height: 36px !important;
+                }
+
+                .ant-form-item {
+                    margin-bottom: 0;
+                }
+
+                .save-qrcode-btn {
+                    padding: 0 10px !important;
+                }
+
+                .nickname-txt {
+                    font-size: $fs_xs;
+                }
+
+                .nickname-right-txt {
+                    font-size: $fs_xs;
+                }
+            }
+
+            .receive-right-card .ant-card-body .right-side-txt {
+                font-size: $fs_xmd;
+            }
+
+            .second-row {
+                margin-top: 22px;
+            }
+
+            .canvas {
+                margin-left: 8px;
+                height: unset;
+                width: 100%;
+            }
+        }
+    }
+
+    @media screen and (max-width: 1200px) {
+        .receive-right-card .ant-card-body .right-side-txt {
+            margin: 0 5px 16px 5px !important;
+        }
+
+    }
+}
+
+#detail-modal {
+    button.ant-modal-close {
+        display: none;
+    }
+
+    .bnq-txt {
+        font-size: $fs_2xl;
+        color: $heading-color;
+    }
+
+    .send-payment-title {
+        font-size: $fs_md;
+        color: $heading-color;
+    }
+
+    .ant-modal-content {
+        background: #ffffff;
+        box-shadow: 0px 20px 136px -4px rgba(16, 24, 40, 0.1),
+            0px 8px 8px -4px rgba(16, 24, 40, 0.04);
+        border-radius: 12px;
+    }
+
+    .amount-label {
+        font-size: $fs_xmd;
+        color: $heading-color;
+    }
+
+    .bnq-num {
+        font-size: $fs_14xl !important;
+    }
+
+    .gray-success-card {
+        background: #f8f8f8;
+        border-radius: 7px;
+
+        .from-user {
+            font-size: $fs_xmd;
+            color: $text-grey;
+        }
+
+        .right-txt {
+            font-size: $fs-base;
+            color: $heading-color;
+        }
+
+        .n-name {
+            font-size: $fs_xs;
+            color: $text-grey;
+        }
+
+        .nickname-divider {
+            background: #eeeeee;
+            height: 0.6px;
+            top: 0em;
+        }
+    }
+
+    .available-label {
+        font-weight: 400;
+        font-size: $fs_xmd;
+        color: #b7b7b7;
+    }
+
+    span.ant-input-group-addon {
+        border-radius: 0 6px 6px 0;
+        background-color: #fff !important;
+    }
+
+    .optional-txt {
+        font-size: $fs_xs;
+        color: $text-grey;
+    }
+
+    span.ant-input-group-addon {
+        background: #f4f4f4;
+        padding: 0 20px;
+        font-weight: 500;
+        font-size: $fs_xmd;
+        color: $text-grey;
+    }
+
+    .ant-modal-body {
+        padding: 24px 0;
+    }
+
+    .deposit-heading {
+        font-size: $fs_lg;
+        color: $heading-color;
+    }
+
+    .gray-list {
+        font-size: $fs_sm;
+        color: #afafaf;
+    }
+
+    .amount-txt {
+        font-weight: 400;
+        font-size: $fs_md;
+        color: #afafaf;
+    }
+
+    .usdt-price-txt {
+        font-size: $fs_12xl;
+        line-height: 34px;
+        color: $black;
+    }
+
+    .small-price {
+        font-size: $fs_2xl;
+        color: $black;
+    }
+
+    .success-txt {
+        font-size: $fs_4xl;
+        color: #0ecb81;
+    }
+
+    .payment-heading {
+        font-size: $fs_lg;
+        line-height: 28px;
+        color: $heading-color;
+    }
+
+    .black-list {
+        color: $black;
+    }
+
+    .receive-info-list {
+        .select-method {
+            font-size: $fs_sm;
+            line-height: 16px;
+            color: $heading-color;
+            margin-bottom: 2px;
+        }
+
+        .select-method-desc {
+            color: $text-grey;
+            font-size: $fs_sm;
+        }
+    }
+}
+.findid-popover {
+    z-index: 0;
+    .ant-popover-inner {
+        background: white;
+        border-color: white;
+        box-shadow: 0px 9px 20px rgba(185, 185, 185, 0.25);
+
+    }
+}

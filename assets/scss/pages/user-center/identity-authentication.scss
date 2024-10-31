@@ -1,0 +1,565 @@
+@import "assets/variables/light.scss";
+
+#identity-authentication {
+
+    .document-type {
+        font-size: $fs_sm;
+        color: $text-grey;
+    }
+
+    .info-heading {
+        font-size: $fs_lg;
+        color: $heading-color;
+    }
+
+    .info-desc {
+        color: #b8b8b8;
+        font-size: $fs_md;
+    }
+
+    .ant-card-bordered {
+        border: 1px solid #f2f2f2;
+    }
+
+    .error-remark {
+        font-size: $fs_sm;
+        color: #e95950;
+        min-height: 20px;
+    }
+
+    .info-card {
+        .active-heading {
+            color: $primary-color;
+        }
+    }
+
+    .verify-btn {
+        color: #0ecb81;
+        font-weight: 600;
+        font-size: $fs-base;
+        background-color: #fff;
+        border: none;
+    }
+    .unverify-btn {
+        color: #718096;
+        font-weight: 600;
+        font-size: $fs-base;
+        background-color: #fff;
+        border: none;
+    }
+
+    .front-back {
+        position: relative;
+
+        .loading {
+            position: absolute;
+            z-index: 999;
+            width: 100%;
+            top: 50%;
+            transform: translate(-0%, -50%);
+            background-color: #00000024;
+            border-radius: 10px !important;
+        }
+
+        img {
+            width: 100%;
+            object-fit: cover;
+            height: 215px;
+        }
+
+        .file { 
+            object-fit: fill;
+            height: 200px;
+        }
+
+    }
+
+
+
+    .lv-success {
+        font-size: $fs_7xl;
+        color: #12b265;
+    }
+
+    .user-identity-card {
+
+      
+        .ant-card-body {
+            padding: 24px;
+
+            .authentication-level {
+                font-weight: 400;
+                font-size: $fs_md;
+                color: #b8b8b8;
+            }
+
+            .identity-heading {
+                font-size: $fs_2xl;
+                color: $heading-color;
+            }
+
+            .ant-tag {
+                background-color: $white;
+                font-weight: 500;
+                font-size: $fs_xs;
+                color: #ff7f00;
+                padding: 0 3px;
+                border: none;
+            }
+        }
+    }
+
+    .authentication-form {
+        form {
+            height: 796px;
+
+            img {
+                max-width: 100%;
+            }
+        }
+
+        .submit-kyc[disabled] {
+            color: #ebebeb !important;
+        }
+
+        .vti__dropdown-list.below {
+            top: 54px;
+            width: 415px;
+            border: 1px solid #e2e2e2;
+            box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+            border-radius: 8px;
+            overflow-x: hidden;
+            max-height: 240px;
+            left: -1;
+        }
+
+        .vti__dropdown-item {
+            margin: 0 7px 0 10px;
+            padding: 0px 5px;
+        }
+
+        .vti__dropdown-list.below::-webkit-scrollbar-track {
+            border-radius: 10px;
+            background-color: #fff;
+        }
+
+        .vti__dropdown-list.below::-webkit-scrollbar {
+            width: 6px;
+            background-color: #fff;
+        }
+
+        .vti__dropdown-list.below::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            background-color: #c1c1c1;
+        }
+
+        .vue-tel-input {
+            border: none;
+
+            &:focus-within {
+                box-shadow: none;
+            }
+        }
+
+        .vue-tel-input {
+            height: 46px !important;
+        }
+
+        .vti__search_box {
+            width: 96% !important;
+        }
+
+        .vti__dropdown-item.highlighted strong {
+            font-weight: 500 !important;
+        }
+
+        .vti__dropdown-item strong {
+            font-weight: 500 !important;
+            margin-left: 8px;
+        }
+
+        input.vti__input.vti__search_box {
+            height: 38px !important;
+            margin: 10px 5px 10px 10px;
+            background: $white;
+        }
+
+        .ant-input-affix-wrapper .ant-input-suffix {
+            z-index: 0;
+        }
+
+        .vti__input {
+            margin-left: 10px;
+            background: #ffffff;
+            border: 1px solid #d0d5dd;
+            border-radius: 8px;
+            font-weight: 400;
+            font-size: $fs_xs;
+            padding-left: 12px;
+
+            &::placeholder {
+                color: #d5d3d3 !important;
+            }
+        }
+
+        .vti__dropdown-arrow {
+            padding-left: 5px;
+        }
+
+        .vti__dropdown {
+            background: #ffffff;
+            border: 1px solid #d0d5dd;
+            border-radius: 8px;
+        }
+
+        .ant-form-item {
+            margin-bottom: 15px;
+        }
+
+        
+
+        .email-btn {
+            background: #efefef;
+            border-radius: 2px;
+            font-weight: 400;
+            font-size: $fs_md;
+            color: #b8b8b8;
+            max-width: 174px;
+            width: 100%;
+        }
+
+        .kyc-details {
+            font-weight: 400;
+            font-size: $fs_md;
+            color: $black;
+
+            span {
+                color: $primary-color;
+            }
+        }
+    }
+
+    .verify-mailbox {
+        font-weight: 400;
+        font-size: $fs_md;
+        color: #b8b8b8;
+    }
+
+    .form-card {
+        .error-card {
+            .ant-card-body {
+                padding: 13px 17px;
+                background: #ffe4df;
+
+                .kyc-failed {
+                    color: #e74e46;
+                    font-size: $fs-base;
+                }
+            }
+        }
+
+        .iccard-desc {
+            font-size: $fs_xs;
+            color: #344054;
+        }
+
+        .ant-upload.ant-upload-drag {
+            background: #fafcfe;
+            border: 1px dashed #d9dbdf;
+        }
+
+        .proof-of-identity {
+            .border-div {
+                position: relative;
+                border-left: 1px solid $primary-color;
+                border-bottom: 1px solid $primary-color;
+                height: 143px;
+                margin-left: 40px;
+
+                .dot-div {
+                    width: 7px;
+                    height: 7px;
+                    border-radius: 50%;
+                    border: 1px solid $primary-color;
+                    position: absolute;
+                    left: -4px;
+                    top: -7px;
+                }
+            }
+
+            .ant-tabs-bar {
+                border: none;
+                margin-bottom: 10px;
+            }
+
+            .ant-tabs-ink-bar {
+                background: transparent;
+            }
+
+            .ant-tabs-tab {
+                background: linear-gradient(180deg,
+                        rgba(217, 217, 217, 0.28) -11.54%,
+                        rgba(255, 255, 255, 0) 132.69%);
+                border-radius: 3px;
+            }
+
+            .ant-tabs-nav .ant-tabs-tab-active {
+                background: rgba(255, 255, 255, 0.28);
+                box-shadow: 0px 4px 18px rgba(162, 158, 158, 0.26);
+                border-radius: 3px;
+            }
+
+            .ant-tabs-nav .ant-tabs-tab {
+                margin: 15px 13px 15px 0px !important;
+                padding: 8px 13px;
+            }
+
+            .ant-tabs-nav .ant-tabs-tab:first-child {
+                margin-left: 5px !important;
+            }
+
+            .ant-upload.ant-upload-drag {
+                height: 220px;
+                border: 0.5px dashed $primary-color;
+                background-color: $white;
+            }
+        }
+    }
+
+    .lv3-card {
+        border-radius: 8px;
+
+        .ant-card-body {
+            padding: 20px 24px;
+
+            .primary-kyc {
+                font-weight: 600;
+                font-size: $fs_lg;
+                color: #081131;
+            }
+
+
+            .primary-detail {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .ant-divider-horizontal {
+                background-color: #d0d5dd;
+                height: 0.6px;
+            }
+
+
+            .level-list li {
+                font-weight: 500;
+                font-size: $fs_sm;
+                color: #718096;
+                line-height: 20px;
+            }
+        }
+    }
+
+    .new-authentication-form {
+        .trading-txt {
+            font-size: $fs_sm;
+            color: $text-grey;
+        }
+
+        .trading-txt1 {
+            font-size: $fs_sm;
+            color: $heading-color;
+        }
+
+        .trading-txt2 {
+            font-size: $fs_2xl;
+            color: $heading-color;
+        }
+
+        .verified-level {
+            .ant-card-head {
+                background: #f0fff6 !important;
+                border-color: #f0fff6;
+            }
+        }
+
+        .require-icon {
+            min-height: 60px;
+        }
+
+        .first-lv-card {
+            min-height: 400px;
+
+            .ant-card-body {
+                padding: 22px 18px 24px 18px;
+
+                .ant-card-head {
+                    padding: 0 18px;
+                    border-color: #f2f2f2;
+                }
+
+                .ant-card-head-title {
+                    font-weight: 500;
+                    font-size: $fs_lg;
+                    color: $heading-color;
+                }
+
+                .requirements {
+                    background: #ffa500 !important;
+                    width: 2px !important;
+                }
+
+                .email-txt {
+                    font-size: $fs_sm;
+                    color: $heading-color;
+
+                    span {
+                        font-weight: 400;
+                        font-size: $fs_sm;
+                        color: $text-grey;
+                    }
+                }
+                .disabled-btn {
+                    height: 46px !important;
+  
+                }
+                .primary-btn {
+                    height: 46px !important;
+
+                }
+                .verified-card-btn {
+                    background: #f7fffa !important;
+                    border: 1px solid #00c076 !important;
+                    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+                    color: #0ecb81 !important;
+                    border-radius: 8px !important;
+                    font-size: $fs-base;
+                    height: 46px !important;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 1280px) {
+        .ant-card-head {
+            padding: 0 12px;
+        }
+
+        .user-identity-card .ant-card-body .identity-heading {
+            font-size: $fs_lg;
+        }
+
+        .new-authentication-form {
+            .first-lv-card .ant-card-body {
+                padding: 20px 12px 20px 12px;
+
+                .email-txt {
+                    font-size: $fs_xs;
+                }
+            }
+
+            .trading-txt {
+                font-size: $fs_sm;
+            }
+
+            .trading-txt1 {
+                font-size: $fs_xs;
+            }
+        }
+    }
+
+
+}
+
+#upload-modal {
+    .close-camera {
+        position: absolute;
+        right: 0px;
+        z-index: 9;
+        padding: 6px 14px;
+    }
+
+    .ant-modal-body {
+        padding: 0;
+    }
+
+    .upload-heading {
+        font-size: $fs_lg;
+        color: $heading-color;
+    }
+
+    .accurate-txt {
+        font-size: $fs_md;
+        color: $heading-color;
+    }
+
+    .grey-txt {
+        color: $text-grey;
+    }
+
+    .ant-modal-close {
+        display: none;
+    }
+
+    .upload-title {
+        font-size: $fs_xmd;
+        color: $text-grey;
+    }
+
+    .ant-upload.ant-upload-select.ant-upload-select-text {
+        width: 100%;
+    }
+
+    .ant-modal-content {
+        box-shadow: 0px 20px 136px -4px rgba(16, 24, 40, 0.1),
+            0px 8px 8px -4px rgba(16, 24, 40, 0.04);
+        border-radius: 12px;
+    }
+
+    .camera-container {
+        position: relative;
+    }
+
+    .border-capture {
+        border: 3px dashed red;
+        position: absolute;
+        top: 0;
+        height: 280px;
+        margin: 50px 60px !important;
+        width: 474px !important;
+    }
+
+    .orange-bg {
+        background: #fef4e0;
+        border-radius: 7px;
+
+        .ant-card-body {
+            padding: 11px 24px;
+
+            .error-txt {
+                font-size: $fs_md;
+                line-height: 23px;
+                color: $heading-color;
+            }
+        }
+    }
+
+    .capture {
+        background: rgba(0, 0, 0, 0.53);
+        backdrop-filter: blur(10.5px);
+        padding: 10px;
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        left: 0;
+        right: 0;
+        text-align: center;
+    }
+
+
+}
+
+#shufti-pro-modal {
+    p {
+        font-size: $fs-base;
+    }
+}

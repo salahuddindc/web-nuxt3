@@ -1,0 +1,158 @@
+@import "assets/variables/light.scss";
+.ant-calendar-range {
+    margin-top: 51px !important;
+}
+#buy-sell-crypto {
+    .wallet-address-heading {
+        font-size: $fs_2xl;
+        color: $heading-color;
+    }
+    .address-book {
+        font-size: $fs_xmd;
+        color: $text-grey;
+    }
+    .white-list {
+        font-size: $fs-base;
+        color: $text-grey;
+    }
+    .address-book-card {
+        .ant-card-body {
+            padding: 24px;
+        }
+    }
+    .wallet-address-card {
+        .outline-btn {
+            height: 38px !important;
+        }
+        .ant-card-body {
+            padding: 0;
+        }
+    }
+    .buy-sell-card {
+        .ant-card-body {
+            padding: 24px;
+            .buy-sell-heading {
+                font-size: $fs_2xl;
+                color: $heading-color;
+            }
+        }
+    }
+    .financial-card {
+        .ant-card-body {
+            padding: 0 !important;
+        }
+    }
+
+    .ant-calendar-picker-container {
+        top: 274px !important;
+    }
+    .detail-card {
+        .ant-card-body {
+            padding: 0px 0 24px 0;
+            .type-coin-tx {
+                font-weight: 400;
+                font-size: $fs_xmd;
+                color: #9b9a9a;
+            }
+            .outline-btn {
+                height: 38px !important;
+            }
+            .ant-calendar-range-picker-separator {
+                vertical-align: baseline;
+            }
+        }
+    }
+
+    .first-card {
+        border: 0.5px solid #e2e2e2 !important;
+    }
+    .deposit-table-txt {
+        letter-spacing: 0.2px;
+        color: #f2c45b;
+        opacity: 1;
+        &:hover {
+            color: #ff9600;
+        }
+    }
+    .type-coin-txt {
+        font-size: $fs_sm;
+        color: $text-grey;
+    }
+    .main-currency-card {
+        overflow-x: auto;
+        .currency-detail-card.active-border {
+            border-color: #FFA500 !important;
+            border-top: 1px solid #FFA500 !important;
+        }
+        .currency-detail-card {
+            border: 0.5px solid #e2e2e2;
+            border-top: none;
+            border-radius: 0px !important;
+            .ant-card-body {
+                padding: 0;
+                .curency-detail-bg {
+                    background: #fafafa;
+                    padding: 15px 0;
+                    .currency-txt {
+                        font-size: $fs_sm;
+                        color: $text-grey;
+                        .buy-txt {
+                            color: #12b298;
+                        }
+                        .sell-txt {
+                            color: #f6465d;
+                        }
+                        .ant-divider,
+                        .ant-divider-vertical {
+                            width: 1px;
+                            background-color: #868686;
+                        }
+                    }
+                }
+                .copy-link-txt {
+                    color: $heading-color;
+                }
+                .currency-copy-txt {
+                    text-decoration: underline;
+                }
+                .usdt-txt {
+                    color: #081131;
+                    font-size: $fs_sm;
+                }
+
+                .contact-btn {
+                    background: #fff1e3;
+                    border-radius: 3px;
+                    font-size: $fs_xs;
+                    height: 29px;
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 1280px) {
+        .currency-detail {
+            width: 1026px;
+        }
+        .buy-sell-card .ant-card-body .buy-sell-heading {
+            font-size: $fs_lg;
+        }
+        .type-coin-txt {
+            font-size: $fs_xs;
+        }
+        .main-currency-card .currency-detail-card .ant-card-body {
+            .usdt-txt {
+                font-size: $fs_xs;
+            }
+            .curency-detail-bg .currency-txt {
+                font-size: $fs_xs;
+            }
+        }
+        .wallet-address-heading { 
+            font-size: $fs_lg;
+        }
+        .address-book { 
+            font-size: $fs_xs;
+        }
+    }
+}

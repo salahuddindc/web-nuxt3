@@ -1,0 +1,254 @@
+@import "assets/variables/light.scss";
+
+#about-us {
+     
+    .about-us {
+        background: url("/images/about-us-bg.svg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 75px 0;
+        position: relative;
+        &::after {
+            content: "";
+            background-image: url("/images/about-us-top-bg.svg");
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: absolute;
+            height: 85%;
+            width: 50%;
+            top: 30px;
+            right: 5%;
+        }
+        .about-heading {
+            color: $heading-color;
+            font-size: 2.1875rem;
+        }
+        .about-desc {
+            color: $heading-color;
+            font-size: $fs_base;
+        }
+    }
+    .main-heading {
+        color: $heading-color;
+        font-size: 2rem;
+    }
+    .small-text {
+        font-size: $fs_base;
+        color: $heading-color;
+        line-height: 23px;
+    }
+    .sub-heading {
+        font-size: 1.25rem;
+        color: $heading-color;
+    }
+    .pb-6 {
+        padding-bottom: 80px;
+    }
+    .pt-6 {
+        padding-top: 4.62rem;
+    }
+    .section-margin {
+        margin-top: 6.25rem;
+    }
+    .bit-meet {
+        background-color: #fafafa;
+    }
+    .goals-cards {
+        border-radius: 0.75rem;
+        border: 1px solid #eaeaea;
+        min-height: 416px;
+        .ant-card-body {
+            padding: 21px;
+        }
+        &:hover {
+            background: linear-gradient(
+                180deg,
+                $white 55.42%,
+                $light-orange-bg 191.78%
+            );
+            border: 1px solid #ffc73d !important;
+        }
+    }
+    .feature-list-box {
+        justify-content: space-between;
+        gap: 1rem;
+        .all-box {
+            width: 20%;
+        }
+    }
+    .gray-card {
+        width: 100%;
+        border-radius: 18px;
+        background-color: #fafafa;
+        border: 1px solid transparent;
+        .ant-card-body {
+            padding: 24px 17px;
+            min-height: 240px;
+        }
+        &:hover {
+            background: linear-gradient(
+                180deg,
+                $white 55.42%,
+                $light-orange-bg 191.78%
+            );
+            border: 1px solid #ffc73d !important;
+        }
+    }
+    .custom-bg {
+        border-radius: 0.75rem;
+        background: #fafafa;
+    }
+    .inclusive-card {
+        .ant-card-body {
+            padding: 55px;
+        }
+    }
+    .p-6 {
+        padding: 1.12rem;
+    }
+    .m-6 {
+        margin-top: 6rem;
+    }
+    .team-value-cards{
+        border: 1px solid #eaeaea;
+            border-radius: 0.75rem;
+        overflow: hidden;
+    }
+    .team-cards {
+        min-height: 326px;
+        .ant-card-body{
+            padding: 22px 26px;
+        }
+        border: 1px solid #eaeaea;
+        border-radius: 0.75rem;
+        overflow: hidden;
+        .team-heading{
+            font-size: 24px;
+            line-height: 34.8px;
+            color: $heading-color;
+        }
+        .role-txt{
+            line-height: 23.2px;
+            color: #71839B;
+            font-size: 16px;
+        }
+        &:hover {
+            background: linear-gradient(
+                180deg,
+                $white 55.42%,
+                $light-orange-bg 191.78%
+            );
+            border: 1px solid #ffc73d !important;
+        }
+    }
+    .social-community {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .social-icon {
+        justify-content: flex-start !important;
+        .all-icon {
+            width: 61px;
+            min-height: 50px !important;
+            border-radius: 8px;
+            border: 1px solid #ececec;
+            text-align: center;
+            padding: 11px 0;
+            margin-right: 30px;
+        }
+    }
+    @media screen and (min-width: 1441px){
+        .inclusive-card {
+            .ant-card-body {
+                padding: 60px;
+            }
+        }
+    }
+    @media screen and (max-width: 1367px) {
+        .p-6{
+            padding: .98rem;
+        }
+        .inclusive-card {
+            .ant-card-body {
+                padding: 46px;
+            }
+        }
+        .goals-cards {
+            .ant-card-body {
+                padding: 25px;
+            }
+        }
+        .team-cards{
+            min-height: 344px;
+        }
+    }
+    @media screen and (max-width: 1280px) {
+        .about-us {
+            .about-heading {
+                font-size: $fs_16xl;
+            }
+            .about-desc {
+                font-size: $fs-base;
+            }
+        }
+        .main-heading {
+            font-size: 1.5rem;
+        }
+        .small-text {
+            font-size: 0.875rem;
+            line-height: 25px;
+        }
+
+        .sub-heading {
+            font-size: 0.875rem;
+        }
+
+        .goals-cards {
+            .ant-card-body {
+                padding: 15px;
+            }
+            img {
+                height: 5.25rem;
+                width: 5.25rem;
+            }
+        }
+        .inclusive-card {
+            .ant-card-body {
+                padding: 38px;
+            }
+        }
+        .team-cards{
+            .team-heading{
+                font-size: 18px;
+            }
+            .role-txt{
+                font-size: 14px;
+            }
+        }
+    }
+    @media screen and (max-width: 1200px) {
+        .inclusive-card {
+            .ant-card-body {
+                padding: 32px;
+            }
+        } 
+    }
+    @media screen and (max-width: 1024px) {
+        .inclusive-card {
+            .ant-card-body {
+                padding: 23px;
+            }
+        }
+        .goals-cards {
+            .ant-card-body {
+                padding: 16px;
+            }
+        }
+        .team-cards{
+            min-height: 393px;
+        }
+    }
+}

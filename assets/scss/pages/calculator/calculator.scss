@@ -1,0 +1,20 @@
+@import "@/assets/variables/light";
+@import "@/assets/scss/global/custom/web-font-size.scss"; // Custom Classes
+
+#calculator {
+   .ant-card {
+    border-radius: 8px;
+   } 
+   // popular fiat conversions style
+   .popular-fiat-conversions {
+        .fiat-conversion {
+            display: flex;
+            justify-content:space-between;
+            align-items: center;
+            .fiat-currency {
+                margin-top: 24px;
+              
+            }
+        }
+   }
+}

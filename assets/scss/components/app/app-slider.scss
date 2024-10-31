@@ -1,0 +1,89 @@
+@import "assets/variables/light.scss";
+.app-slider-container {
+    .ant-slider-rail {
+        background: #555A5F !important;
+        height: 4px;
+        margin-top: 1px;
+    }
+
+    .ant-slider-track {
+        margin-top: 1px;
+        background: rgb(245, 245, 245) !important;
+    }
+
+    .ant-slider:hover .ant-slider-track {
+        margin-top: 1px;
+        background: rgb(245, 245, 245) !important;
+    }
+
+    .ant-slider-mark-text {
+        margin-top: 11px;
+        font-weight: 700;
+        font-size: $fs_sm;
+        color: #666E79;
+    }
+
+    .ant-slider-mark-text-active {
+        margin-top: 11px;
+        color: #666E79;
+        font-weight: 700;
+        font-size: $fs_sm;
+    }
+
+    .ant-slider-dot:first-child {
+        background: rgb(245, 245, 245) !important;
+    }
+
+    .ant-slider-mark-text:last-child {
+        transform: translateX(-80%) !important;
+    }
+
+    .ant-slider-handle {
+        position: absolute;
+        width: 13px;
+        margin-top: -4px;
+        height: 13px;
+        transform: translateX(-50%) rotate(45deg) !important;
+        background-color: rgb(30, 35, 41);
+        border-radius: 2px;
+        border: 3px solid rgb(245, 245, 245);
+        z-index: 99;
+        cursor: grab;
+        transition: box-shadow 0.2s ease 0s;
+        margin-left: 5px;
+    }
+
+    span.ant-slider-dot.ant-slider-dot-active {
+        background: rgb(245, 245, 245);
+    }
+
+    .ant-slider-dot {
+        box-sizing: content-box;
+        position: absolute;
+        transform: translateX(-50%) rotate(45deg);
+        background-color: #1E2125;
+        color: rgb(132, 142, 156);
+        width: 6px;
+        height: 6px;
+        border-radius: 2px;
+        border: 2px solid #555A5F;
+        z-index: 10;
+        overflow: visible;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #474D57;
+        }
+    }
+    .ant-slider-with-marks {
+        margin-bottom: 17px !important;
+
+    .ant-slider-mark {
+        display: none;
+
+    }
+}
+    .show-marks-value {
+        display: block;
+    }
+}

@@ -1,0 +1,308 @@
+@import "assets/variables/light.scss";
+
+#download {
+    position: relative;
+    .pt-8 {
+        padding-top: 100px;
+    }
+    .ant-tabs-nav .ant-tabs-tab:first-child {
+        margin-left: 0 !important;
+    }
+    .main-content {
+        max-width: 1240px;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .pb-6 {
+        padding-bottom: 60px;
+    }
+    .download-desc {
+        color: $heading-color;
+        font-size: $fs_base;
+    }
+    .download-bg {
+        background: url("/images/download-bg.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        padding: 80px 0 115px 0;
+        position: relative;
+        .download-heading {
+            color: $heading-color;
+            font-size: $fs_14xl;
+        }
+    }
+    .title-txt {
+        font-size: $fs_2xl;
+        color: $heading-color;
+    }
+    .title-desc {
+        font-size: $fs-base;
+        color: $heading-color;
+    }
+    .gate-auth-txt {
+        font-size: $fs_14xl;
+        color: $heading-color;
+    }
+    .download-tabs {
+        margin-top: -53px;
+        .ant-tabs-nav-wrap {
+            padding: 0 !important;
+        }
+        .ant-tabs-nav.ant-tabs-nav-animated {
+            background-color: transparent !important;
+        }
+        .ant-tabs-nav .ant-tabs-tab {
+            padding: 15px 50px;
+            background: transparent !important;
+            color: $text-grey !important;
+            font-size: $fs-base;
+            font-weight: 500
+        }
+        .ant-tabs-tab-active.ant-tabs-tab {
+            background-color: #fff !important;
+            padding: 15px 50px !important;
+            box-shadow: 0px 6px 11px 0px rgba(168, 168, 168, 0.25) inset;
+            color: $heading-color !important;
+        }
+        .ant-tabs-ink-bar {
+            background-color: $primary-color !important;
+            height: 2px;
+            bottom: 0px;
+            top: 1px;
+        }
+
+        .gate-auth-desc {
+            font-size: $fs_base;
+            color: $heading-color;
+        }
+   
+    }
+    .download-btn-sec {
+        display: none;
+    }
+    @media screen and (max-width: 1280px) {
+        .title-txt {
+            font-size: $fs_lg;
+            color: $heading-color;
+        }
+        .title-desc {
+            font-size: $fs_sm;
+            color: $text-grey;
+        }
+        .gate-auth-txt {
+            font-size: $fs_12xl;
+        }
+        .download-bg .download-heading {
+            font-size: $fs_10xl;
+        }
+        .download-desc {
+            font-size: $fs-base;
+        }
+        .news-heading {
+            font-size: $fs_2xl;
+            margin-top: 20px !important;
+        }
+        .ios-card {
+            margin-top: 20px !important;
+        }
+        .download-tabs {
+            .gate-auth-desc {
+                font-size: $fs_sm;
+                padding-bottom: 15px !important;
+            }
+        }
+    }
+    @media screen and (max-width: 575px) {
+        .hidden-xs {
+                display: none;
+        }
+        .title-desc {
+            padding-right: 0 !important;
+        }
+        .white-bg {
+            padding-bottom: 0 !important;
+        }
+        .top-sec {
+            margin: 0 30px;
+            text-align: center;
+        }
+        .hidden-space {
+            padding-top: 0 !important;
+        }
+        .choose-text {
+            text-align: center;
+            margin: 0 50px;
+        }
+        .main-content {
+            padding: 0;
+        }
+        .download-desc {
+            font-size: $fs_sm;
+        }
+        .title-txt {
+            font-size: $fs_4xl;
+        }
+        .title-desc {
+            font-size: $fs_lg;
+        }
+        .main-content {
+            padding: 0;
+        }
+        .download-tabs {
+            .ant-tabs-tab-active.ant-tabs-tab {
+                padding: 15px 15px !important;
+                margin: 0 !important;
+            }
+            .ant-tabs-nav .ant-tabs-tab {
+                padding: 15px 15px !important;
+                margin: 0 !important;
+            }
+        }
+        .download-bg {
+            padding: 58px 0 90px 0;
+            .download-heading {
+                font-size: $fs_7xl;
+            }
+        }
+        .download-tabs { 
+            margin-top: -78px;
+        }
+        .download-btn-sec {
+            display: block !important;
+            position: fixed;
+            bottom: 0;
+            overflow: hidden;
+            z-index: 9;
+            background: #fff;
+            left: 0;
+            right: 0;
+            .mob-btn {
+                display: flex;
+                align-items: center;
+                border: 1px solid #E2E5E9;
+                padding: 8px 15px;
+                justify-content: center;
+                border-radius: 4px;
+                filter: drop-shadow(0 -4px 24px rgba(23,56,153,.08));
+                .btn-desc {
+                    font-size: $fs_xs;
+                    color: $text-grey;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 426px) {
+        .gate-auth-txt {
+            text-align: center;
+        }
+        .gate-auth-desc { 
+            text-align: center;
+            padding:0 30px !important;
+        }
+        .download-tabs {
+            .tab-row {
+                padding: 0 30px;
+            }
+            .ant-tabs-tab-prev.ant-tabs-tab-arrow-show, .ant-tabs-tab-next.ant-tabs-tab-arrow-show {
+                display: none;
+            }
+            .ant-tabs-nav.ant-tabs-nav-animated {
+                width: 100% !important;
+                padding: 3px 0 !important;
+            }
+            .ant-tabs-tab-active.ant-tabs-tab {
+                width: 50% !important;
+            }
+            .ant-tabs-nav .ant-tabs-tab {
+                width: 50% !important;
+            }
+        
+        }
+        .right-col-img {
+            height: 600px;
+            padding-top: 40px;
+            text-align: center
+        }
+        .tab-col {
+            padding: 0 !important;
+        }
+        .white-bg  {
+            padding-top: 25px;
+        }
+    }
+}
+.ios-card {
+    background: #ffffff;
+    border: 0.6px solid #dadada;
+    border-radius: 10px;
+    position: relative;
+
+    .ant-card-body {
+        padding: 0;
+    }
+}
+.list-heading {
+    font-size: $fs_sm;
+    color: #081131;
+}
+.list-subheading {
+    font-size: $fs_xs;
+}
+.news-heading {
+    font-size: $fs_7xl;
+    color: #081131;
+}
+.ios-card:hover {
+    border-radius: 10px;
+    border: 0.6px solid #dadada;
+    background: rgba(250, 250, 250, 0.98);
+    cursor: pointer;
+
+    .ios-img {
+        transition: all 0.6s;
+        transform: scale(0);
+    }
+
+    .right-img1 {
+        transition: all 0.6s;
+        transform: translate3d(25px, -25px, 0);
+    }
+}
+.right-img {
+    position: absolute;
+    right: 0;
+
+    .right-img1 {
+        transition: all 0.6s;
+        transform: translateZ(0);
+    }
+
+    img {
+        transition: all 0.6s;
+        transform: scale(1);
+    }
+}
+.ios-popover {
+    width: 180px !important;
+    height: 180px !important;
+    border: none !important;
+
+    .ant-popover-content {
+        background: rgba(255, 165, 0, 0.08);
+        border-radius: 15px;
+        text-align: center !important;
+        border: none !important;
+
+        .ant-popover-inner {
+            background: #fff0d6 !important;
+            border-radius: 15px !important;
+            border: none !important;
+            box-shadow: none !important;
+        }
+    }
+
+    .ant-popover-inner-content {
+        padding: 0;
+    }
+}

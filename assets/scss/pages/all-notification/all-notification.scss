@@ -1,0 +1,65 @@
+@import "assets/variables/light.scss";
+
+#all-notification {
+    .notification-title {
+        font-size: $fs_2xl;
+        color: $heading-color;
+    }
+    .ant-tabs-nav-wrap {
+        padding: 0 !important;
+    }
+    .notification-detail-card {
+        .ant-card-body {
+            padding: 0;
+            .notification-col {
+                border-right: 1px solid #f1f1f1;
+            }
+            .list-heading {
+                font-size: $fs_sm;
+                color: $black;
+            }
+            .date-txt {
+                font-size: $fs_xmd;
+                color: #afafaf;
+            }
+            .list-desc {
+                font-size: $fs_xmd;
+                color: #afafaf;
+            }
+        }
+    }
+}
+
+#maintenance {
+    .maintenance-content {
+        background: url("/images/maintenance-bg.png");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 170px 0;
+        .maintenance-title {
+            font-size: $fs_16xl;
+            color: $heading-color;
+            line-height: 45px;
+        }
+        .desc {
+            font-size: $fs_sm;
+            line-height: 20px;
+            color: #718096;
+        }
+        .maintenance-time {
+            display: flex;
+            justify-content: flex-start;
+            align-items:center
+        }
+        .day-time {
+            justify-content:space-between !important;
+        }
+        .time {
+            font-weight: 700;
+            font-size: 75px;
+            color: $heading-color;
+            line-height: 1.2;
+        }
+    }
+}

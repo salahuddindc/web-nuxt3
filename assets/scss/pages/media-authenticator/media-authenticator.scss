@@ -1,0 +1,52 @@
+@import "assets/variables/light.scss";
+
+#media-authenticator {
+    .media-heading {
+        font-size: $fs_7xl;
+        line-height: 32px;
+        color: $heading-color;
+    }
+    .bit-details {
+        background: url('/images/bit-logo-bg.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        .media-txt {
+            font-size: $fs_sm;
+            line-height: 20px;
+            color: $heading-color;
+        }
+        .verify-account-txt {
+            font-size: $fs_xmd;
+            color: $text-grey;
+        }
+        .ant-input {
+            height: 48px !important;
+        }
+        button.ant-btn.ant-btn-primary.ant-btn-lg.ant-input-search-button {
+            height: 32px !important;
+            margin-right: 8px !important;
+            color: white;
+            border-radius: 4px !important;
+        }
+        span.ant-input-group-addon {
+            border: 1px solid #d0d5dd !important;
+            border-left: 0 !important;
+            border-radius: 0 6px 6px 0;
+        }
+    }
+    .principles-txt {
+        font-size: $fs_sm;
+        color: $heading-color;
+        min-height: 42px;
+    }
+    .orange-bg-col:hover {
+        background: rgba(255, 187, 63, 0.09);
+        border-radius: 9px;
+    }
+    @media screen and (max-width: 1200px) {
+        .principles-txt {
+            font-size: $fs_xmd;
+        }
+    }
+}

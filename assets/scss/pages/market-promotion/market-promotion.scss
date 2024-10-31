@@ -1,0 +1,519 @@
+@import "assets/variables/light.scss";
+
+#market-promotion {
+    .bg-white {
+        background-color: $white;
+    }
+    .text-center-sm{
+        text-align: left;
+      }
+      .justify-center-sm{
+        justify-content: start;
+      }
+    .mt-9 {
+        margin-top: 94px !important;
+    }
+    .text-center {
+        text-align: center !important;
+    }
+    .gray-color {
+        color: #71839b;
+    }
+    .green-color {
+        color: #0ecb81 !important;
+    }
+    .custom-radius {
+        border: 1px solid #eaeaea;
+        border-radius: 16px;
+        overflow: hidden; 
+        &:hover {
+            background: linear-gradient(
+                180deg,
+                $white 55.42%,
+                $light-orange-bg 191.78%
+            );
+            border: 1px solid #ffc73d !important;
+        }
+    }
+
+    .main-heading {
+        font-size: 30px;
+        line-height: 46.4px;
+        color: $heading-color;
+    }
+
+    .desc {
+        font-size: 1rem;
+        line-height: 23.2px;
+        color: $heading-color;
+    }
+
+    .bit-halving-header {
+        background: url("/images/halving-header.svg") center/cover no-repeat;
+        padding: 4.688rem 0;
+
+        .main-heading,
+        .desc {
+            color: $white !important;
+        }
+
+        .btc-value {
+            font-size: 14px;
+            line-height: 20.3px;
+            color: $white;
+            gap: 0.5rem;
+            background-color: #1f2429;
+            border-radius: 6px;
+            max-width: max-content;
+            padding: 5px 10px;
+            margin-top: 30px;
+        }
+
+        .unit-name {
+            font-size: 14px;
+            line-height: 20.3px;
+            color: #ffffff80;
+        }
+
+        .timer {
+            .timer-box {
+                .timer-wrapper {
+                    max-width: 98px;
+                    padding: 16px 30px;
+                    border-radius: 16px;
+                    border: transparent solid 1px;
+                    background: linear-gradient(
+                                180deg,
+                                #1f2429 0%,
+                                #111417 100%
+                            )
+                            padding-box,
+                        linear-gradient(
+                                0deg,
+                                #101417d4 7.65%,
+                                rgba(157, 167, 181, 0.56) 96.94%
+                            )
+                            border-box;
+                    border-color: transparent;
+                }
+            }
+        }
+    }
+
+    .bit-halving {
+        margin-top: 104px;
+
+        .trade-btc {
+            background-color: #fafafa;
+            padding: 40px 0px;
+        }
+
+        .trade-btn {
+            padding: 8px 64px;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+
+        .halving-btn {
+            background-color: transparent;
+            border: 1px solid #d0d5dd;
+            font-size: 16px;
+            color: $heading-color;
+            border-radius: 4px;
+            margin-top: 40px;
+        }
+
+        .btc-card-col {
+            z-index: 1;
+        }
+
+        .btc-card {
+            float: right;
+            border: 1px solid #e6e6e6;
+            border-radius: 20px;
+            max-width: 384px;
+            padding: 20px 25px;
+            position: relative;
+            background: $white;
+            &:hover {
+                background: linear-gradient(
+                180deg,
+                $white 55.42%,
+                $light-orange-bg 191.78%
+            );
+            border: 1px solid #ffc73d !important;
+            }
+
+            .btc-card-heading {
+                font-size: 20px;
+                line-height: 29px;
+                color: $heading-color;
+            }
+
+            .btc-desc {
+                color: #71839b;
+                font-size: 14px;
+                line-height: 20.3px;
+            }
+
+            .subscribe-btn {
+                background-color: transparent;
+                border: 1px solid #d0d5dd;
+                border-radius: 100px;
+                font-size: 14px;
+                color: $heading-color;
+                padding: 10px 138.5px;
+                height: 44px;
+                width: auto;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                background: url('/images/btc-card-before.svg');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                height: 263px;
+                width: 465px;
+                left: -40%;
+                top: 9%;
+                z-index: -1;
+            }
+        }
+
+        .subscribe-btn:hover {
+            background-color: $primary-color;
+            color: white;
+            border-color: transparent;
+        }
+
+        .halving-btn:hover {
+            background-color: $primary-color;
+            color: white;
+            border-color: transparent;
+        }
+
+        .play-section {
+            border: 1px solid #eaeaea;
+            padding: 32px 10px;
+
+            .halving-btn {
+                border-radius: 4px;
+            }
+        }
+        .game-text{
+            text-align: start;
+        }
+        .insight-cards {
+            padding: 40px 40px 0 40px;
+            min-height: 287px;
+            position: relative;
+
+            .card-img{
+                position: absolute;
+                top: -90px;
+            }
+            .card-img2 {
+                position: absolute;
+                // left: -20px;
+                top: -85px;
+            }
+        }
+
+        .blogs {
+            border: 1px solid #eaeaea;
+            border-radius: 5px;
+            overflow: hidden;
+            min-height: 402px;
+            .blog-desc {
+                min-height: 100px;
+            }
+            .blog-heading {
+                min-height: 52px;
+            }
+            .date {
+                font-size: 12px;
+                line-height: 15.6px;
+                color: $heading-color;
+
+                span {
+                    float: right;
+
+                    &:hover {
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+
+        .blog-heading {
+            font-size: 20px;
+            line-height: 26px;
+            color: $heading-color;
+        }
+
+        .blog-desc {
+            font-size: 14px;
+            line-height: 18.2px;
+            color: #718096;
+        }
+
+        .blog-pagination {
+            .ant-pagination-item-link,
+            .ant-pagination-item a {
+                color: #1c1c1c;
+            }
+        }
+    }
+
+    @media screen and (max-width: 1280px) {
+        .insight-cards {
+            padding: 15px 15px 0 15px !important;
+            .card-img {
+                height: 160px;
+                top: -35px !important;
+            }
+
+            .card-img2 {
+                height: 125px;
+                top: -50px !important;
+            }
+        }
+        .main-heading {
+            font-size: 22px;
+        }
+        .bit-halving {
+            .insight-cards {
+                min-height: 235px;
+            }
+            .blog-heading {
+                font-size: 18px;
+            }
+            .halving-btn {
+                margin-top: 25px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 1200px) {
+        .desc {
+            font-size: 0.875rem;
+        }
+
+        .blog-heading {
+            font-size: 16px !important;
+        }
+
+        .blog-desc {
+            font-size: 12px !important;
+        }
+        .timer-wrapper{
+            padding: 16px 20px !important;
+        }
+    }
+    @media screen and (max-width: 992px) {
+        .insight-cards{
+            .card-img{
+                top: -59px !important;
+    right: -10px !important;
+            }
+            .card-img2{
+                top: 50px !important;
+                right: -10px;
+                height: 110px !important;
+            }
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .bit-halving-header{
+
+            .timer-wrapper{
+                padding: 11px 0 !important;
+            }
+        }
+        .trade-img{
+            height: 170px;
+        }
+        .btc-card{
+            &::before{
+                display: none;
+            }
+            .subscribe-btn{
+                padding: 10px 95.5px !important;
+            }
+        }
+        .play-section {
+            padding: 20px 10px !important; 
+        }
+        .game-text{
+            text-align: center !important;
+        }
+        .insight-cards{
+            .card-img, .card-img2{
+                position: static !important;
+            }
+            .card-img2{
+                height: 140px !important;
+            }
+        }
+        .main-heading{
+            line-height: 31.4px !important;
+            font-size: 18px;
+        }
+        .desc {
+            line-height: 17.2px !important;
+            font-size: .77rem;
+        }
+        .blog-cards-p{
+            padding-left: 1rem !important;
+            padding-right: 1rem !important;
+        }
+        
+    .blogs{
+        min-height: 320px !important;
+        .blog-heading{
+            min-height: 35px !important;
+        }
+        .blog-desc{
+            min-height: 70px;
+        }
+    }
+    }
+    @media screen and (max-width: 577px) {
+        .bit-halving-header{
+            background: #121518;
+              .timer-wrapper{
+            max-width: none !important;
+        }
+        }
+       
+      .btc-card{
+        max-width: 100% !important;
+        float: none !important;
+        .subscribe-btn{
+            width: 100% !important;
+            padding: 10px 60.5px !important;
+        }
+    }
+    .game-img{
+        height: auto;
+    }
+    .trade-btn, .halving-btn {
+        width: 100%;
+    }
+     //utility classes
+     .text-center-sm{
+        text-align: center !important;
+      }
+      .justify-center-sm{
+        justify-content: center;
+      }
+      .mt-9{
+        margin-top: 70px !important;
+      }
+    }
+}
+
+#game-and-rules-modal {
+    .game-heading {
+        font-size: 20px;
+        line-height: 28px;
+        color: #081131;
+    }
+
+    .game-rules {
+        /* background: #fafafa;
+        border-radius: 16px; */
+        padding: 0px 24px;
+
+        ol {
+            padding-left: 16px;
+
+            li {
+                color: #081131;
+                font-size: 14px;
+                line-height: 18px;
+                margin-bottom: 0.688rem;
+                a {
+                    font-weight: 500;
+                    color: $heading-color;
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        p {
+            font-size: 16px;
+            margin-bottom: 6px !important;
+        }
+    }
+
+    .ant-modal-content {
+        border-radius: 6px;
+    }
+    .p-relative {
+        position: relative;
+    }
+    .game-btn {
+        position: absolute;
+        bottom: 2px;
+        text-align: center;
+        left: 50%;
+        transform: translateX(-49%);
+        .gameBtn {
+            border-bottom: 45px solid #FFA500;
+            border-left: 29px solid transparent;
+            border-right: 29px solid transparent;
+            height: 0;
+            width: 216px;
+            color: $white;
+            font-size: 0.875rem;
+            cursor: pointer;
+            span {
+                position: relative;
+                top: 11px;
+            }
+            &:hover {
+                border-bottom-color: #ffb800;
+            }
+        }
+        .primary-btn {
+            height: 40px;
+            padding: 9px 26px;
+            border-radius: 4px;
+        }
+    }
+
+    @media screen and (max-width:1280px) {
+        .game-btn {
+            .gameBtn {
+                border-bottom: 37px solid #FFA500;
+                width: 187px;
+                span{
+                    top: 8px;
+                }
+            }
+        }
+    }
+    @media screen and (max-width:1024px) {
+        .ant-modal{
+            width: 70% !important;
+        }
+        .game-btn {
+            //left: 29%;
+            .gameBtn {
+                border-bottom: 30px solid #FFA500;
+                font-size: 0.75rem;
+                width:156px;
+                span {
+                    top: 5px;
+                }
+            }
+        }}
+        @media screen and (max-width:768px) {
+            .ant-modal{
+                width: 90% !important;
+            }
+        }
+}

@@ -1,0 +1,258 @@
+@import "assets/variables/light.scss";
+
+#my-p2p-ads {
+    .main-heading {
+        font-size: $fs_2xl;
+        color: $heading-color;
+    }
+    .ant-checkbox + span {
+        font-weight: 400;
+        font-size: $fs-base;
+        color: $black;
+    }
+    .account-card {
+        .outline-btn {
+            height: 38px !important;
+        }
+        .ant-card-body {
+            padding: 0;
+            .online-btn {
+                background: #ffffff;
+                border: 1px solid #344054;
+                border-radius: 5px;
+                font-weight: 500;
+                font-size: $fs_md;
+                color: #344054;
+            }
+        }
+    }
+    .first-card {
+        border: 0.5px solid #e2e2e2 !important;
+    }
+    .deposit-table-txt {
+        letter-spacing: 0.2px;
+        color: #f2c45b;
+        opacity: 1;
+        &:hover {
+            color: #ff9600;
+        }
+    }
+    .type-coin-txt {
+        font-size: $fs_sm;
+        color: $text-grey;
+    }
+    .main-currency-card {
+        overflow-x: auto;
+        .currency-detail-card {
+            border: 0.5px solid #e2e2e2;
+            border-top: none;
+            border-radius: 3px;
+
+            .ant-card-body {
+                padding: 0;
+                .curency-detail-bg {
+                    background: #fcfcfc;
+                    padding: 15px 0;
+                    .currency-txt {
+                        font-size: $fs_sm;
+                        color: #868686;
+                        .buy-txt {
+                            color: #12b298;
+                        }
+                        .sell-txt {
+                            color: #f6465d;
+                        }
+                        .ant-divider,
+                        .ant-divider-vertical {
+                            width: 1px;
+                            background-color: #868686;
+                        }
+                    }
+                }
+                .copy-link-txt {
+                    color: $heading-color;
+                }
+                .currency-copy-txt {
+                    text-decoration: underline;
+                }
+                .usdt-txt {
+                    color: $black;
+                    font-size: $fs_sm;
+                    font-weight: 500;
+                }
+                .bank-transfer-tag {
+                    font-size: $fs_xs;
+                    color: #ffc863;
+                    background: #f5f7fa;
+                    border: none;
+                    text-align: center;
+                    height: 23px;
+                    margin-right: 0;
+                    margin-bottom: 4px;
+                }
+                .easypaisa {
+                    color: #afafaf !important;
+                }
+                .publish-btn {
+                    background: #d1ffed;
+                    font-size: $fs_xs;
+                    height: 29px !important;
+                    color: #0ecb81;
+                }
+                .unpublish-btn {
+                    background: #ffdfdf;
+                    font-size: $fs_xs;
+                    height: 29px !important;
+                    color: #f6465d;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 1280px) {
+        .currency-detail {
+            width: 1026px;
+        }
+        .main-heading {
+            font-size: $fs_lg;
+        } 
+        .type-coin-txt {
+            font-size: $fs_xs;
+        }
+        .main-currency-card .currency-detail-card .ant-card-body {
+            .usdt-txt {
+                font-size: $fs_xs;
+            }
+            .curency-detail-bg .currency-txt {
+                font-size: $fs_xs;
+            }
+        }
+    }
+}
+#ad-sharing {
+    .adsharing-title {
+        font-size: $fs_lg;
+        color: $heading-color;
+        line-height: 28px;
+        border-radius: 6px;
+    }
+    .order-detail-row{
+        background-color: #F4F5F69E;
+        padding: 15px 11px;
+    }
+    .ant-modal-content {
+        box-shadow: 0px 20px 136px -4px rgba(16, 24, 40, 0.1),
+            0px 8px 8px -4px rgba(16, 24, 40, 0.04);
+        border-radius: 12px;
+    }
+    .logo-txt{
+        font-size: 14px;
+        line-height: 28px;
+        color: #324054;
+        font-family: 'Satoshi';
+    }
+    .sharing-desc {
+        font-size: $fs-base;
+        color: $text-grey;
+        line-height: 28px;
+    }
+    .total-orders {
+        font-size: $fs_sm;
+        color: $text-grey;
+        line-height: 28px;
+    }
+    .total-price {
+        font-size: $fs_2xl;
+        color: $heading-color;
+        line-height: 28px;
+    }
+    .verified-user {
+        color: #0ecb81 !important;
+    }
+    .share-user-profile {
+        border-radius: 50%;
+        height: 48px;
+        width: 48px;
+    }
+    .usdt-txt {
+        font-size: $fs_xmd;
+        color: $heading-color;
+    }
+    .sharing-divider {
+        background: #f2f2f2 !important;
+        top: 0em !important;
+        height: 0.6px !important;
+        width: 1px !important;
+    }
+    .link-card {
+        background: #ffffff;
+        /* Gray / 300 */
+
+        border: 1px solid #F4F5F6;
+        /* Shadow / xs */
+
+        box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+        border-radius: 8px;
+        font-size: $fs-base;
+        font-weight: 400;
+        color: $heading-color;
+        .ant-card-body {
+            padding: 14px 13px;
+        }
+    }
+    .light-orange-card {
+        background-image: url("/new-images/ad-sharing-bg.svg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+        z-index: 1;
+        border-radius: 8px;
+        .col-alignment{
+            justify-content: flex-start !important;
+        }
+        .total-orders{
+            color: #9b9b9b !important;
+            line-height: normal;
+        }
+        .ant-card{
+            background: transparent !important;
+        }
+        .ant-card-body {
+            padding: 16px;
+            .sell-active {
+                color: #ff6464 !important;
+            }
+
+            .usdt-bold {
+                font-weight: 600;
+            }
+        }
+    }
+    .qr-txt{
+        font-size: 14px;
+        color: white;
+        //line-height: 28px;
+    }
+    .qr-desc{
+        font-size: 12px;
+        color: #9b9b9b;
+    }
+    .rqcode-card {
+
+        .ant-card-body {
+            padding: 0;
+        }
+        .white-card {
+            .ant-card-body {
+                padding: 10px;
+            }
+        }
+    }
+    .scan-list {
+        li {
+            font-weight: 500;
+            font-size: $fs_xmd;
+            color: $text-grey;
+        }
+    }
+}

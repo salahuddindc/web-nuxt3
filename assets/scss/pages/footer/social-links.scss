@@ -1,0 +1,24 @@
+@import 'assets/variables/light.scss';
+
+#social-links {
+    .social-icon {
+        display: flex;
+        justify-content: center;
+        .all-icon {
+            margin-right: 20px;
+        }
+        .all-icon:last-child {
+            margin-right: 0;
+        }
+    }
+    @media screen and (max-width: 1024px) {
+        .social-icon {
+            .all-icon { 
+                height: 40px !important;
+                img {
+                    height: 20px;
+                }
+            }
+        }
+    }
+}

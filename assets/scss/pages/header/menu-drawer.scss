@@ -1,0 +1,134 @@
+@import "assets/variables/light.scss";
+
+.menu-drawer {
+    .ant-drawer-content-wrapper {
+        width: 260px !important;
+    }
+    .ant-menu-inline {
+        border-right: none;
+    }
+    .ant-menu-inline .ant-menu-item::after {
+        left: 0;
+        border-right: none;
+    }
+    button.ant-drawer-close {
+        width: 30px;
+        height: 30px;
+        line-height: 40px;
+        padding-right: 10px;
+    }
+    .ant-menu-item-group-title {
+        display: none;
+    }
+    button.ant-drawer-close {
+        height: 0 ;
+        line-height: 0 ;
+        margin-top: 20px;
+    }
+    .dropdown-list {
+            height: 55px !important;
+            line-height: 24px !important;
+            .eye-icon {
+                z-index: 1;
+            }
+          
+    }
+    .ant-drawer-content {
+        background: #fff !important;
+        .ant-menu {
+            padding-top: 10px;
+            background: transparent !important;
+            a.nuxt-link-exact-active.nuxt-link-active {
+                color: $heading-color;
+            }
+          
+            .ant-menu-horizontal {
+                border: none;
+                line-height: 65px;
+            }
+            .ant-menu-horizontal > .ant-menu-item {
+                border: none;
+            }
+            .ant-menu-horizontal > .ant-menu-item > a:hover {
+                color: $heading-color;
+            }
+            .ant-menu-horizontal > .ant-menu-item-selected {
+                border: none;
+                color: $heading-color;
+            }
+            .ant-menu-horizontal > .ant-menu-item:hover {
+                border: none;
+                color: $heading-color;
+
+            }
+            .ant-menu-submenu-title {
+                font-size: $fs-base !important;
+                padding-left: 30px !important;
+                color: $heading-color;
+                font-weight: 500;
+
+            }
+            li.ant-menu-item {
+                color: $heading-color;
+                font-size: $fs-base;
+                font-weight: 500;
+                padding: 0 30px !important;
+            }
+            ul.ant-menu.ant-menu-inline.ant-menu-sub {
+                padding: 0 0px !important;
+
+                li.ant-menu-item {
+                    padding-left: 30 !important;
+                }
+                li.ant-menu-item:hover {
+                    background: #fff !important;
+                    color: $heading-color;
+                }
+            }
+            li.ant-menu-item a {
+                color: $heading-color;
+            }
+        }
+        .ant-drawer-body {
+            padding: 0;
+        }
+        .ant-menu-vertical {
+            border-right: none;
+        }
+        .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+            background-color: rgba(255,243,229,0.45);
+
+        }
+        .ant-menu-item:active,
+        .ant-menu-submenu-title:active {
+            background: #fff !important;
+            color: $heading-color;
+        }
+        .ant-menu-dark .ant-menu-submenu-title:hover {
+            color: $heading-color;
+        }
+        .ant-menu-dark .ant-menu-submenu-open,
+        .ant-menu-dark .ant-menu-submenu-selected {
+            color: $heading-color;
+        }
+       
+        .ant-menu-dark .ant-menu-inline.ant-menu-sub {
+            box-shadow: none !important;
+        }
+        .ant-menu-submenu-inline > .ant-menu-submenu-title:hover .ant-menu-submenu-arrow::before { 
+            background: linear-gradient(to right, #081131, #081131) !important;
+        }
+        .ant-menu-submenu-inline > .ant-menu-submenu-title:hover .ant-menu-submenu-arrow::after {
+            background: linear-gradient(to right, #081131, #081131) !important;
+        }
+        .ant-menu-submenu-inline > .ant-menu-submenu-title .ant-menu-submenu-arrow::before {
+            background: linear-gradient(to right, #081131, #081131) !important;
+ 
+        }
+        .ant-menu-submenu-inline > .ant-menu-submenu-title .ant-menu-submenu-arrow::after {
+            background: linear-gradient(to right, #081131, #081131) !important;
+
+        }
+    }
+  
+}
