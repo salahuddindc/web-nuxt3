@@ -3,7 +3,7 @@ import * as Cookie from 'js-cookie';
 export function set_token(state, token) {
     state.hex_token.value = token;
     const userPreferencesCookie = useCookie(state.hex_token.type);
-    userPreferencesCookie.value = JSON.stringify(token) 
+    userPreferencesCookie.value = JSON.stringify(token)
 }
 export function set_server_uid(state, params) {
     state.hex_uid.value = params;
@@ -31,18 +31,27 @@ export function remove_user_info(state) {
     state.hex_uid.value = '';
     state.hex_key.value = '';
     state.hex_token.value = { expire: '', token: '' };
-    Cookie.remove(state.hex_uid.type);
-    Cookie.remove(state.hex_key.type);
-    Cookie.remove(state.hex_token.type);
+    useCookie('hex_uid').value = null;
+    useCookie('hex_key').value = null;
+    useCookie('hex_token').value = null;
+
+    // --deperacated-in-nuxt2
+    // Cookie.remove(state.hex_uid.type);
+    // Cookie.remove(state.hex_key.type);
+    // Cookie.remove(state.hex_token.type);
 }
 
 export function set_user_info(state, res) {
     const data = res.data ? res.data : res.hexdata;
     state.hex_server_user_info.value = data;
     state.hex_uid.value = data.uid;
-    state.hex_key.value = data.secretkey;
-    Cookie.set(state.hex_uid.type, data.uid);
-    Cookie.set(state.hex_key.type, data.secretkey)
+    state.hex_key.value = data.secretkey
+    useCookie('hex_uid').value = data.uid;
+    useCookie('hex_key').value = data.secretkey;
+
+    // --deperacated-in-nuxt2
+    // Cookie.set(state.hex_uid.type, data.uid);
+    // Cookie.set(state.hex_key.type, data.secretkey)
 }
 
 export function set_message(state, params) {

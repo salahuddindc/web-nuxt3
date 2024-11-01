@@ -63,17 +63,17 @@ export default () => ({
 
   hex_uid: {
     type: "HEX_UID",
-    value: "126152719136",
+    value: "",
   },
 
   hex_key: {
     type: "HEX_KEY",
-    value: "xbj0mbe2h5kmw0rdykw2yaf6a5sp8663",
+    value: "",
   },
 
   hex_token: {
     type: "HEX_TOKEN",
-    value: { "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIxMjYxNTI3MTkxMzYiLCJzdWIiOiJmaXRzb2wucHJvamVjdHNAZ21haWwuY29tIiwiaWF0IjoiMTczMDM1MjQ5MSIsIm5iZiI6IjE3MzAzNTI0OTEiLCJleHAiOjE3MzAzNjY4OTEsImlzcyI6ImJpdG5hc2RhcSIsImF1ZCI6WyJzMm0iLCJzMm0iXSwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4ifQ.BAOo5OlxS-s0lkHzlUMB8B9C-mgiclyOOrVhSnem0lg", "expire": 1730359691789 }
+    value: ""
   },
 
   hex_user_info: {

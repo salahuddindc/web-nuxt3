@@ -1,8 +1,13 @@
 <template>
     <div>
 
-        header
-        <a href="/">home</a>
+      
+        <NuxtLink href="/">
+            home
+        </NuxtLink>
+        <NuxtLink href="/about">
+            about
+        </NuxtLink>
 
     </div>
 </template>

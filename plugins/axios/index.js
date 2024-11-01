@@ -52,7 +52,7 @@ export default defineNuxtPlugin((nuxtApp) => {
                     type: 'error',
                     text: "Login timeout!"
                 });
-                $store.commit('remove_user_info');
+                // $store.commit('remove_user_info');
             }
 
             if (_data.code == '200') {
