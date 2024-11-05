@@ -1,12 +1,15 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
+
   devServer: {
     port: 9088,
   },
+
   css: [
     '@/assets/scss/main.scss',
   ],
+
   vite: {
     css: {
       preprocessorOptions: {
@@ -24,5 +27,11 @@ export default defineNuxtConfig({
         },
       },
     },
-  }, 
+  },
+
+  modules: ['@nuxtjs/i18n'],
+  i18n: {
+    vueI18n: './i18n.config.js' // if you are using custom path, default
+  }
+
 })
