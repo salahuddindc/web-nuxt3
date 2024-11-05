@@ -1,5 +1,5 @@
-@import "assets/variables/light.scss";
-@import "@/assets/scss/global/custom/web-font-size.scss"; // Custom Classes
+@use "assets/variables/light.scss" as *;
+@use "@/assets/scss/global/custom/web-font-size.scss"; // Custom Classes
 
 #home {
     background: $white;
@@ -57,10 +57,10 @@
                 }
             }
             .trading-price {
-                font-size: $--title-text;
+                font-size: $title-text;
             }
             .home-desc {
-                font-size: $--md-normal-text;
+                font-size: $md-normal-text;
                 color: $white;
             }
             .home-input {
@@ -386,7 +386,7 @@
                     color: $green-color;
                 }
                 .second-text {
-                    font-size: $--md-normal-text !important;
+                    font-size: $md-normal-text !important;
                 }
                 .user-img-new {
                     border-radius: 50%;

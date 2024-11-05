@@ -2,6 +2,7 @@
 import { computed } from 'vue';
 import { useNuxtApp } from '#app';
 
+
 // Access Nuxt app instance once
 
 const $baseUrl = 'https://test_api.bitnasdaq.io';
@@ -594,7 +595,7 @@ const getdecimalsinfos = async () => {//获取币种信息
     const { $store, $storage } = useNuxtApp()
     var precision_result = $storage.get("getdecimalsinfos_1")
     console.log('precision_resultprecision_resultprecision_resultprecision_result', precision_result);
-    
+
     if (precision_result) {
         $store.commit('set_decimals_list', precision_result);
         return precision_result;
@@ -770,6 +771,302 @@ const seconds_conversion = (seconds, convertToHours = false) => {
 
 
 
+//获取订单类型
+const global_get_order_type = (type) => {
+    let ot = '';
+
+    switch (type) {
+        case 1:
+            ot = $t('patch.LimitOrderShort');
+            break;
+        case 2:
+            ot = $t('patch.MarketOrderShort');
+            break;
+        case 3:
+            ot = $t('patch.LossOrder');
+            break;
+        case 4:
+            ot = $t('patch.LimitOrderShort');
+            break;
+        case 5:
+            ot = $t('patch.LossOrder');
+            break;
+        case 6:
+            ot = $t('patch.MarketOrderShort');
+            break;
+        case 7://7:强制平多,8:强制平空；9，止盈订单；10，止损订单
+            ot = $t('system_forced_leveling')
+            break;
+        case 8:
+            ot = $t('system_forced_leveling')
+            break;
+        case 9:
+            ot = $t('stop_profit_order')
+            break;
+        case 10:
+            ot = $t('stop_profit_order')
+            break;
+        case 11:
+            ot = $t('copy_trade')
+            break;
+        case 12:
+            ot = $t('grid_trading')
+            break;
+        case 13:
+            ot = $t('planned_commission')
+            break;
+    }
+    return ot;
+}
+//获取合约订单类型
+const global_get_contract_order_type = (type, trigger) => {
+    let ot = '';
+    switch (type) {
+        case 1:
+            ot = $t('contract.openLimit');
+            if (trigger > 0) {
+                ot = $t('contract.openStop');
+            }
+            break;
+        case 2:
+            ot = $t('contract.openMarket');
+            break;
+        case 3:
+            ot = $t('contract.openStop');
+            break;
+        case 4:
+            ot = $t('contract.closeLimit');
+            if (trigger > 0) {
+                ot = $t('contract.closeStop');
+            }
+            break;
+        case 5:
+            ot = $t('contract.closeMarket');
+            break;
+        case 6:
+            ot = $t('contract.closeStop');
+            break;
+        case 7:
+            ot = $t('system_forced_closing')
+            break;
+        case 8:
+            ot = $t('system_forced_closing')
+            break;
+        case 9:
+            ot = $t('stop_profit_order')
+            break;
+        case 10:
+            ot = $t('stop_loss_order')
+            break;
+
+        case 11:
+            ot = $t('copy_trade')
+            break;
+
+        case 12:
+            ot = $t('grid_trading')
+            break;
+
+        case 13:
+            ot = $t('planned_commission')
+            break;
+
+    }
+    return ot;
+}
+//获取订单状态
+const global_get_order_state = (s) => {
+    let order = '';
+    switch (s) {
+        case 0:
+            order = $t('patch.UnDeal');
+            break;
+        case 1:
+            order = $t('patch.PartialDeal');
+            break;
+        case 2:
+            order = $t('patch.cancelled');
+            break;
+        case 3:
+            order = $t('patch.DealSuccess');
+            break;
+        case 4:
+            order = $t('patch.PartialTransaction');
+            break;
+        case 5:
+            order = $t('patch.SystemWithdrawal');
+            break;
+    }
+    return order;
+}
+//获取充币状态
+const global_get_charge_state = (s) => {
+    let order = '';
+    switch (s) {
+        case 0:
+            order = $t('patch.Pending');
+            break;
+        case 1:
+            order = $t('patch.DealSuccess');
+            break;
+        case 2:
+            order = $t('patch.DepositFailed');
+            break;
+    }
+    return order;
+}
+//获取交易方向
+const global_get_order_direction = (s) => {
+    let order = '';
+    switch (s) {
+        case 1:
+            order = $t('memberCenter.buy');
+            break;
+        case -1:
+            order = $t('memberCenter.sell');
+            break;
+    }
+    return order;
+}
+//获取合约交易方向
+// T type  S 买入卖出
+const global_get_contract_order_direction = (t, s) => {
+    let order = '';
+    if (t >= 4) {
+        if (s == 1) {
+            order = $t('contract.buyopencontract');
+        } else if (s == -1) {
+            order = $t('contract.sellopencontract');
+        }
+    } else if (t <= 3) {
+        if (s == 1) {
+            order = $t('contract.buycontract');
+        } else if (s == -1) {
+            order = $t('contract.sellcontract');
+        }
+    }
+    return order;
+}
+//获取提币状态
+const global_get_mention_state = (s) => {
+    let order = '';
+    switch (s) {
+        case 0:
+            order = $t('patch.WaitingReview');
+            break;
+        case 1:
+            order = $t('patch.DealSuccess');
+            break;
+        case 2:
+            order = $t('patch.WithdrawFailed');
+            break;
+        case 3:
+            order = $t('patch.Processing');
+            break;
+        case 4:
+            order = $t('patch.Rejected');
+            break;
+        case 5:
+            order = $t('patch.cancelled');
+            break;
+    }
+    return order
+}
+//获取杠杆借币记录的状态
+const getEvent = () => {
+    if ($userinfo.uid) {
+        var substr = "event." + $userinfo.uid + ".detail"
+        this.$socket.uninvoke({
+            sub: substr,
+            type: "event"
+        });
+
+        this.$socket.invoke({
+            sub: substr,
+            type: "event"
+        });
+
+        console.log('getEvent:', substr);
+        this.$socket.receive("event", eventcallback);
+    }
+}
+const eventcallback = (data) => {
+     
+    const { $store } = useNuxtApp()
+    if (data.data.type == 102) {//c2c聊天消息
+        var jobj = JSON.parse(data.data.msg);
+        if (!(jobj.fromuserid == $userinfo.uid)) {
+            if (!(jobj.msgcontent.indexOf("#1#") == -1)) {
+                jobj.message = "P2P Notification"
+                jobj.systemMessage = true
+                $store.commit('set_c2c_message', jobj);
+            }
+            else {
+                jobj.message = "P2P Message"
+                jobj.systemMessage = false
+                $store.commit('set_c2c_message', jobj)
+            }
+        }
+
+    } else {//合约撮合消息；杠杆现货撮合消息
+        this.$pubsub.publish(this.$pubsub.getOrderList)
+        this.$store.commit('set_message', {
+            type: 'ok',
+            text: data.data.msg
+        })
+    }
+}
+const cloneObj = (obj) => {
+    var newObj = {};
+    if (obj instanceof Array) {
+        newObj = [];
+    }
+    for (var key in obj) {
+        var val = obj[key];
+        //newObj[key] = typeof val === 'object' ? arguments.callee(val) : val; //arguments.callee 在哪一个函数中运行，它就代表哪个函数, 一般用在匿名函数中。
+        newObj[key] = typeof val === 'object' ? cloneObj(val) : val;
+    }
+    return newObj;
+}
+const global_get_leverage_state = (s) => {
+    let order = '';
+    switch (s) {
+        case 0:
+            order = $t('patch.WaitingReview');
+            break;
+        case 1:
+            order = $t('leverage.alreadyBorrowed');
+            break;
+        case 2:
+            order = $t('leverage.repaid');
+            break;
+    }
+    return order;
+}
+const formatDate = (date, format = 'Y-MM-D') => {
+    return moment(date).format(format)
+}
+const numFormatter = (num) => {
+    // Convert num to a number, handling string input
+    num = Number(num);
+
+    if (num >= 1000 && num < 1000000) {
+        return (num / 1000).toFixed(2) + ' K '; // Convert to K for numbers > 1000 < 1 million
+    } else if (num >= 1000000 && num < 1000000000) {
+        return (num / 1000000).toFixed(2) + ' M '; // Convert to M for numbers > 1 million < 1 billion
+    } else if (num >= 1000000000) {
+        return (num / 1000000000).toFixed(2) + ' B '; // Convert to B for numbers >= 1 billion
+    } else {
+        return num.toString(); // For numbers < 1000
+    }
+}
+
+const $t = (key) => { // new function for locales
+    const { $i18n } = useNuxtApp()
+    return $i18n.t(key)
+}
+
+
 export {
     $baseUrl,
     $userassets,
@@ -801,7 +1098,7 @@ export {
     global_refresh_user_assets,
     global_refresh_user_settings,
     global_refresh_user_inprocessorders_count,
-    
+
     fiatpaymenttypeget,
     getTokenAndUserInfo,
     getcurrencyinfos,
@@ -820,7 +1117,26 @@ export {
     avoid_from_exponent_notation,
     global_get_local_time,
     global_get_utc_time,
-    seconds_conversion
+    seconds_conversion,
+    
+    global_get_order_type,
+    global_get_contract_order_type,
+    global_get_order_state,
+    global_get_charge_state,
+    global_get_order_direction,
+    global_get_contract_order_direction,
+    global_get_mention_state,
+    getEvent,
+    eventcallback,
+    cloneObj,
+    global_get_leverage_state,
+    formatDate,
+    numFormatter
+    
+    
+    
+    
+    
+    
 
- 
 };

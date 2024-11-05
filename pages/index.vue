@@ -25,7 +25,7 @@
     i18n
     <p v-html="$t('game.help_desc')"> </p>
     global_get_order_type
-    <p  >{{ global_get_order_type(1) }} </p>
+    <p  >{{ global_get_order_type(2) }} </p>
 
 
 

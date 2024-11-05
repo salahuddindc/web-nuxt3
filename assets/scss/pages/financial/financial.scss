@@ -1,4 +1,4 @@
-@import "assets/variables/light.scss";
+@use "assets/variables/light.scss";
 
 #financial {
     background-color: #F3F5F7;
@@ -165,7 +165,7 @@
         .ant-card-body {
             padding: 22px 24px;
         }
-        .ant-tabs-nav-wrap {@import "assets/variables/light.scss";
+        .ant-tabs-nav-wrap {@use "assets/variables/light.scss";
 
             #financial {
                 .mb-38{

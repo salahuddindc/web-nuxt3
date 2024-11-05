@@ -7,6 +7,7 @@ export default defineNuxtConfig({
   },
 
   css: [
+    
     '@/assets/scss/main.scss',
   ],
 
@@ -24,7 +25,7 @@ export default defineNuxtConfig({
             // Add more Ant Design variables as needed
           },
           javascriptEnabled: true,
-        },
+        }, 
       },
     },
   },

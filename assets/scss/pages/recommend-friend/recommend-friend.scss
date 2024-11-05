@@ -1,5 +1,5 @@
-@import "assets/variables/light.scss";
-@import "@/assets/scss/global/mixins/scrollbar"; // Ant Table
+@use "assets/variables/light.scss";
+@use "@/assets/scss/global/mixins/scrollbar"; // Ant Table
 
 #recommend-friend {
     .primary-btn {

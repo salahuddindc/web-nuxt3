@@ -1,4 +1,4 @@
-@import "assets/variables/light.scss";
+@use "assets/variables/light.scss";
 .vip-heading {
     font-size: $fs_7xl;
     color: $heading-color;

@@ -1,7 +1,7 @@
-@import "@/assets/fonts/game-fonts"; //fonts
-@import "@/assets/variables/light";
-@import "@/assets/scss/global/custom/web-font-size.scss"; // Custom Classes
-@import "./play-card-responsive.scss"; //responsive
+@use "@/assets/fonts/game-fonts"; //fonts
+@use "@/assets/variables/light";
+@use "@/assets/scss/global/custom/web-font-size.scss"; // Custom Classes
+@use "./play-card-responsive.scss"; //responsive
 
 .game-layout {
     //height: 100%;
@@ -1177,7 +1177,7 @@
                     transform: translateX(50%);
                 }
                 .bet-price {
-                    font-size: $--title-text;
+                    font-size: $title-text;
                 }
             }
         }

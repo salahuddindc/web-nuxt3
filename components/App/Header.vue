@@ -1,7 +1,7 @@
 <template>
     <div>
 
-      
+
         <NuxtLink href="/">
             home
         </NuxtLink>
@@ -9,11 +9,27 @@
             about
         </NuxtLink>
 
+        <button @click="checkPubsub">
+            check pubsub
+        </button>
+
     </div>
 </template>
 
 <script>
 export default {
+    data() {
+        return {
+
+        }
+    },
+    methods: {
+        checkPubsub() { 
+            this.$pubsub.publish('checkPubsub', { id: 1, name: 'Salah-ud-Din' })
+        }
+    },
+
+
 
 }
 </script>

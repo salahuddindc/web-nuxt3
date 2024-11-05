@@ -1,4 +1,4 @@
-@import '@/assets/scss/breakpoints';
+@use '@/assets/scss/breakpoints';
 
 // ◼◼◼ Margin Classes
 $margin-values: (
@@ -320,7 +320,7 @@ body.square-module-body,body.copy-trade-body, body.partner-program-body,body.tra
     @include border-radius-utilities;
     @include font-weight-utilities;
      
-    @import '@/assets/scss/common';
+    @use '@/assets/scss/common';
 
     h1 {
         font-size: $--h1;

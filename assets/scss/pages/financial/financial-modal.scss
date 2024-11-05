@@ -1,4 +1,4 @@
-@import "assets/variables/light.scss";
+@use "assets/variables/light.scss";
 #subscription-modal {
     form .ant-input-number-handler-wrap {
         display: none;

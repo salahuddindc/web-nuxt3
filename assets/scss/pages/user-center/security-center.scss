@@ -1,4 +1,4 @@
-@import "assets/variables/light.scss";
+@use "assets/variables/light.scss";
 .main-heading {
     font-size: $fs_2xl;
     color: $heading-color;

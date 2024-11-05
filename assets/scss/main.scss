@@ -1,15 +1,16 @@
-// @import '@/assets/scss/utilities';
-@import '@/assets/variables/light';
-@import "@/assets/scss/global/ant/ant"; // Ant Table
-@import "@/assets/scss/global/mixins/scrollbar"; // Ant Table
-@import "@/assets/scss/global/custom/classes"; // Custom Classes
-@import "@/assets/fonts/satoshi/satoshi"; //fonts
-@import "@/assets/fonts/roboto/roboto"; //fonts
-@import "@/assets/fonts/plaguard/plaguard"; //fonts
-@import "@/assets/fonts/luckiest-guy/luckiest-guy"; //fonts
-@import "@/assets/fonts/ibm-plex-sans/ibm-plex-sans";// fonts
-@import "@/assets/scss/global/custom/htmlTagStyle"; // Custom Classes
-@import "@/assets/scss/theme/dark"; // dark theme
-@import "@/assets/scss/theme/light"; // light theme
+ 
+@use "@/assets/scss/global/ant/ant"; // Ant Table
+@use "@/assets/scss/global/mixins/scrollbar"; // Ant Table
+@use "@/assets/scss/global/custom/classes"; // Custom Classes
+@use "@/assets/fonts/satoshi/satoshi"; //fonts
+@use "@/assets/fonts/roboto/roboto"; //fonts
+@use "@/assets/fonts/plaguard/plaguard"; //fonts
+@use "@/assets/fonts/luckiest-guy/luckiest-guy"; //fonts
+@use "@/assets/fonts/ibm-plex-sans/ibm-plex-sans";// fonts
+@use "@/assets/scss/global/custom/htmlTagStyle"; // Custom Classes
+@use "@/assets/scss/theme/dark"; // dark theme
+@use "@/assets/scss/theme/light"; // light theme
+
+
 
 

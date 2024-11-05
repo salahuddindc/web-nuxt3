@@ -1,4 +1,4 @@
-@import "assets/variables/light.scss";
+@use "assets/variables/light.scss";
 .feedback-header {
     background-image: url("/images/feedback-bg.png");
     padding: 114px 288px 121px 288px;

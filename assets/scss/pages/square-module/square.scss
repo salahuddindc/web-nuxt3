@@ -1,6 +1,6 @@
-@import "@/assets/variables/light";
-// @import "@/assets/scss/global/custom/classes.scss";
-@import "@/assets/scss/global/custom/web-font-size.scss"; // Custom Classes
+@use "@/assets/variables/light" as *;
+// @use "@/assets/scss/global/custom/classes.scss";
+@use "@/assets/scss/global/custom/web-font-size.scss"; // Custom Classes
 .square-layout {
     // .ant-layout {
     //     background-color: #F3F5F7 !important;
@@ -575,7 +575,7 @@
         }
         .suggested-creators {
             .suggested-text {
-                font-size: $--title-text;
+                font-size: $title-text;
             }
             .follow-btn {
                 height: 28px !important;
@@ -760,7 +760,7 @@
 .suggested-creator-main {
     .suggested-creators {
         .suggested-text {
-            font-size: $--title-text !important;
+            font-size: $title-text !important;
         }
         .follow-btn {
             border: 1px solid #c2c8cf;

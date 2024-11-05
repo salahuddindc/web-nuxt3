@@ -1,14 +1,18 @@
 //button
+@use '@/assets/variables/light' as *;
+
+
 .ant-btn {
     height: 44px;
     border: none;
     box-shadow: none;
-    font-weight: 500;
-    font-size: $--lg-button-text;
-    color: $primary-color;
+    font-weight: 500; 
+    
+    font-size: $lg-button-text;
+    color:  $primary-color;
     border-radius: 8px;
     &:hover {
-        background-color: #FFB800;
+        background-color: #fcd46f;
     }
     &:focus {
         box-shadow: none;

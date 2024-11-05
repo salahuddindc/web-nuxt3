@@ -1,4 +1,4 @@
-@import "assets/variables/light.scss";
+@use "assets/variables/light.scss";
 .app-slider-container {
     .ant-slider-rail {
         background: #555A5F !important;

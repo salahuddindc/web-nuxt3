@@ -1,8 +1,8 @@
-@import "assets/variables/light.scss";
+@use "assets/variables/light.scss" as *;
 .lazybg {
     background-image: none !important;
 }
-//@import "@/assets/scss/global/custom/web-font-size"; // Custom Classes
+//@use "@/assets/scss/global/custom/web-font-size"; // Custom Classes
 .svg-icon {
     vertical-align: middle;
     border-style: none;
@@ -558,7 +558,7 @@
     border-radius: 6px;
     font-weight: 500;
     border: 0.2px solid transparent !important;
-    font-size: $--lg-button-text;
+    font-size: $lg-button-text;
 
     &:hover {
         color: $white !important;
