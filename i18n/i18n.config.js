@@ -8,7 +8,8 @@ export default defineI18nConfig(() => ({
     legacy: false,
     locale: 'en_us', 
     fallbackLocale: 'en_us', // Set fallback locale if a key is missing in another language
-    warnHtmlInMessage: 'off', // disable of the Detected HTML in message
+    warnHtmlMessage: false, // disable of the Detected HTML in message
+     
     messages: {
         'en_us': english,
         'zh': chinese,

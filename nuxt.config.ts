@@ -1,13 +1,20 @@
+
+import path from 'path'
+// import { serverPort } from path.resolve(__dirname, 'utils/constants.js')
+
+const { serverPort } = require(path.resolve(__dirname, 'utils/constants.js'))
+
+
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
 
   devServer: {
-    port: 9088,
+    port: serverPort,
   },
 
   css: [
-    
+
     '@/assets/scss/main.scss',
   ],
 
@@ -25,7 +32,7 @@ export default defineNuxtConfig({
             // Add more Ant Design variables as needed
           },
           javascriptEnabled: true,
-        }, 
+        },
       },
     },
   },
