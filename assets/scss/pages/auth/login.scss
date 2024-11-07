@@ -1,4 +1,4 @@
-@use "assets/variables/light.scss";
+@use "assets/variables/light.scss" as *;
 
 #auth {
     .auth {
@@ -233,7 +233,7 @@
 .overlay {
     position: absolute;
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.53)),
-        url("../static/images/QRCode.png");
+        url("/images/QRCode.png");
     background-position: center;
     background-size: cover;
 

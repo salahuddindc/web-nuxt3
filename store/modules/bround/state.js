@@ -1,0 +1,21 @@
+export default () => ({
+  userFollowdata: [],
+  userInfo:{},
+  singleUserPost:[],
+  followcreate:[],
+  userPosts:[],
+  topFollowData:[],
+  followDetail:[],
+  newsData:[],
+  commentsPagination: {
+    currentPageIndex: 1,
+    hasNextPage: true,
+    hasPreviousPage: true,
+    pageSize: 10,
+    totalItemCount: 9,
+    totalPageCount: 10,
+},
+  articleComments: [],
+  subitem:{},
+  userPostSearch:[],
+})

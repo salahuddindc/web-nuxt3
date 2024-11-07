@@ -13,7 +13,7 @@
                     <span @mouseover="hoverKey = 40" @mouseleave="hoverKey = -1">
                         <a-popover :title="false" trigger="hover" overlay-class-name="menu-popover promotion-popover"
                             placement="bottomLeft">
-                            <template slot="content">
+                            <template #content>
                                 <span @mouseover="hoverKey = 40" @mouseleave="hoverKey = -1">
                                     <a-row :gutter="16" class="pb-3">
                                         <a-col :lg="8" class="left-side pr-0">
@@ -97,7 +97,7 @@
                                                             </p>
                                                             <span class="promotion-desc-txt fw-5">{{
                                                                 $t("public.ph4")
-                                                                }}</span>
+                                                            }}</span>
                                                         </a-col>
                                                     </a-row>
                                                 </nuxt-link>
@@ -125,7 +125,7 @@
                                                             </p>
                                                             <span class="promotion-desc-txt fw-5">{{
                                                                 $t("public.ph8")
-                                                                }}</span>
+                                                            }}</span>
                                                         </a-col>
                                                     </a-row>
                                                 </nuxt-link>
@@ -170,7 +170,7 @@
 
                             <a-popover :title="false" trigger="hover" placement="bottomLeft"
                                 overlay-class-name="menu-popover">
-                                <template slot="content">
+                                <template #content>
                                     <span class="icon-img" @mouseover="hoverKey = 23" @mouseleave="hoverKey = -1">
                                         <div class="px-4 header-list">
                                             <nuxt-link :to="'/contract-pro/btc_yx'">
@@ -251,7 +251,7 @@
                                                         </p>
                                                         <span class="menu-sub-txt fw-5">{{
                                                             $t("deposit.dc14")
-                                                            }}</span>
+                                                        }}</span>
                                                     </a-col>
                                                 </a-row>
                                             </a>
@@ -295,7 +295,7 @@
                         <a-menu-item key="trade" @mouseover="hoverKey = 22" @mouseleave="hoverKey = -1">
                             <a-popover :title="false" trigger="hover" placement="bottomLeft"
                                 overlay-class-name="menu-popover">
-                                <template slot="content">
+                                <template #content>
                                     <span class="icon-img" @mouseover="hoverKey = 22" @mouseleave="hoverKey = -1">
                                         <div class="px-4 header-list">
                                             <nuxt-link :to="'/deal-pro/btc_usdt'">
@@ -308,7 +308,7 @@
                                                         </p>
                                                         <span class="menu-sub-txt fw-5">{{
                                                             $t("public.ph19")
-                                                            }}</span>
+                                                        }}</span>
                                                     </a-col>
                                                 </a-row>
                                             </nuxt-link>
@@ -325,7 +325,7 @@
                                                         </p>
                                                         <span class="menu-sub-txt fw-5">{{
                                                             $t("public.ph21")
-                                                            }}</span>
+                                                        }}</span>
                                                     </a-col>
                                                 </a-row>
                                             </nuxt-link>
@@ -360,7 +360,7 @@
                                                         </p>
                                                         <span class="menu-sub-txt fw-5">{{
                                                             $t("public.ph23")
-                                                            }}</span>
+                                                        }}</span>
                                                     </a-col>
                                                 </a-row>
                                             </nuxt-link>
@@ -697,7 +697,7 @@
                                 @mouseleave="hoverKey = -1">
                                 <a-popover :title="false" trigger="hover" placement="bottom"
                                     overlay-class-name="menu-popover order-popover">
-                                    <template slot="content">
+                                    <template #content>
                                         <span class="icon-img" @mouseover="hoverKey = 21" @mouseleave="hoverKey = -1">
                                             <div class="header-list px-4" v-if="getP2p">
                                                 <nuxt-link to="/p2p/orders-history">
@@ -843,7 +843,7 @@
                             <span class="ml-3 right-icon">
                                 <a-popover :title="false" trigger="hover" placement="bottomLeft"
                                     overlay-class-name="menu-popover user-popover">
-                                    <template slot="content">
+                                    <template #content>
                                         <span @mouseover="hoverKey = 26" @mouseleave="hoverKey = -1">
                                             <a-row class="verified-user px-3 col-alignment">
                                                 <a-col :lg="5"><img :src="$userinfo.avatar
@@ -1019,7 +1019,7 @@
                                 <span @mouseover="hoverKey = 30" @mouseleave="hoverKey = -1">
                                     <a-popover :title="false" trigger="hover" placement="bottomLeft"
                                         overlay-class-name="menu-popover notification-popover">
-                                        <template slot="content">
+                                        <template #content>
                                             <span @mouseover="hoverKey = 30" @mouseleave="hoverKey = -1">
                                                 <a-card class="notifications-card">
                                                     <a-row :gutter="16" class="user-sec col-alignment">
@@ -1092,7 +1092,7 @@
                                 class="ml-3 right-icon header-menu">
                                 <a-popover :title="false" trigger="hover" placement="bottom"
                                     overlay-class-name="menu-popover download-popover">
-                                    <template slot="content">
+                                    <template #content>
                                         <span @mouseover="hoverKey = 27" @mouseleave="hoverKey = -1">
                                             <div class="text-center">
                                                 <img src="/images/bitnasdaqapk.png" class="mt-3" height="155px" />
@@ -1126,6 +1126,7 @@
                                         "></use>
                                 </svg>
                             </span>
+
                             <span @mouseover="hoverKey = 25" @mouseleave="hoverKey = -1" class="ml-3 right-icon">
                                 <img @click="handleExchangeModal()" :src="hoverKey == 25
                                     ? '/images/exchange-active.svg'
@@ -1142,7 +1143,7 @@
                     </div>
                 </a-col>
                 <a-col :md="1" :sm="1" :xs="2" class="drawer-btn pt-1" align="right">
-                    <a-icon type="menu-fold" @click="toggleDrawer" />
+                    <MenuFoldOutlined @click="toggleDrawer" />
                 </a-col>
             </a-row>
         </div>
@@ -1238,28 +1239,30 @@
                 </a-col>
             </a-row>
         </template>
-        <!-- <Language :isLanguage="isLanguage" :handleLanguageModal="handleLanguageModal" />
+        <!-- 
         <Exchange :isExchange="isExchange" :handleExchangeModal="handleExchangeModal" />
-        <Notification :notificationModel="notificationModel" />
+        
         <MenuDrawer :show="showMenuDrawer" @onClose="showMenuDrawer = false" /> -->
+        <PublicLanguage :isLanguage="isLanguage" :handleLanguageModal="handleLanguageModal" />
+        <PublicExchange :isExchange="isExchange" :handleExchangeModal="handleExchangeModal"/>
+        <PublicMenuDrawer :show="showMenuDrawer" @onClose="showMenuDrawer = false" />
     </div>
 </template>
 
 <script>
 // import MenuDrawer from "./MenuDrawer.vue";
-// import Notification from "@/components/AllNotification/NotificationModal/Notification.vue";
+ 
 // import lang from "./lang";
-// import exchange from "./exchange";
+ 
 import crypto from "@/plugins/axios/crypto";
-import { mapGetters } from "vuex"; 
+import { mapGetters } from "vuex";
 import { btcCtid, androidLink, artileDirectLinks } from "~/utils/constants";
 
- 
+
 export default {
     components: {
         // Language: lang,
-        // Exchange: exchange,
-        // Notification,
+    
         // MenuDrawer,
     },
     data() {
@@ -1502,7 +1505,7 @@ export default {
         // }
 
         //console.log('path::::', path);
-         
+
         console.log(
             "userInfo mounted:::",
             $userinfo.uid,

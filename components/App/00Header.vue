@@ -50,7 +50,10 @@ export default {
 
         }
     },
-
+    mounted () {
+        
+        fiatpaymenttypeget();
+    },
 
 
 }
