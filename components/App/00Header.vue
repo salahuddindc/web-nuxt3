@@ -33,14 +33,15 @@ export default {
         subscribeWithSocket() {
 
             console.log("this>socket", this.$socket);
-            // let substr = "market.1.tickers"; 
-            // this.$socket.invoke({ sub: substr, type: this.$socket.type.quotation_daily_getall, })
+            
+            let substr = "market.1.tickers"; 
+            this.$socket.invoke({ sub: substr, type: this.$socket.type.quotation_daily_getall, })
 
-            // let substr = `market.btcusdt.kline.1min`
-            // this.$socket.invoke({ sub: substr, type: this.$socket.type.quotation_kline_get })
+            substr = `market.btcusdt.kline.1min`
+            this.$socket.invoke({ sub: substr, type: this.$socket.type.quotation_kline_get })
 
-            // substr = "indexprice.btcyx.detail";
-            // this.$socket.invoke({ sub: substr, type: this.$socket.type.usercontract_contract_getindexprice, })
+            substr = "indexprice.btcyx.detail";
+            this.$socket.invoke({ sub: substr, type: this.$socket.type.usercontract_contract_getindexprice, })
 
             this.$socket.invoke({ "type": "game", "sub": "game.0.detal" })
             this.$socket.invoke({ "type": "gameplayer", "sub": `game.player.321211221.detal` })

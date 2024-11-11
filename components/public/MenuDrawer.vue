@@ -517,5 +517,5 @@ export default {
 }
 </script>
 <style lang="scss">
-@import '@/assets/scss/pages/header/menu-drawer.scss';
+@use '@/assets/scss/pages/header/menu-drawer.scss';
 </style>

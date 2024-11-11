@@ -1,8 +1,8 @@
 <template>
-    <div>
+    <a-layout >
         <PublicHeader />
         <App00Header />
         <slot /> 
         <App00Footer />
-    </div>
+    </a-layout>
 </template>
