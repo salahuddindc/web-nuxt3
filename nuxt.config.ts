@@ -3,7 +3,7 @@ import path from 'path'
 
 const { serverPort } = require(path.resolve(__dirname, 'utils/constants.js'))
 const { uiTheme } = require(path.resolve(__dirname, 'utils/ui-theme.js'))
-console.log('uiThemeuiTheme', uiTheme);
+
 
 
 
