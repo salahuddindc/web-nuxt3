@@ -413,7 +413,7 @@
               justify-content: flex-end;
               align-items: center;
             ">
-                        <div v-if="!$store.state.hex_uid.value" class="mr-1">
+                        <div v-if="!loggedIn" class="mr-1">
                             <a-button type="default" class="login-btn px-2 fw-5 mr-1 header-menu">
                                 <nuxt-link to="/login">{{ $t("public.ph27") }}</nuxt-link>
                             </a-button>
@@ -427,257 +427,260 @@
                                 <a-popover :title="false" trigger="hover" placement="bottomLeft"
                                     overlay-class-name="menu-popover wallet-popover" @mouseover="hoverKey = 20"
                                     @mouseleave="hoverKey = -1">
-                                    <template slot="content" class="mt-4">
-                                        <span class="icon-img" @mouseover="hoverKey = 20" @mouseleave="hoverKey = -1">
-                                            <div class="px-4 header-list">
-                                                <a-row :gutter="16" class="user-sec1">
-                                                    <a-col :lg="20">
-                                                        <p class="total-wallet fw-7 mb-1">
-                                                            {{ $t("public.ph29") }}
-                                                        </p>
-                                                        <p class="wallet-usd fw-7 mb-2"
-                                                            v-if="$usersettings.moreconfig?.fundsvisible">
-                                                            {{ $store.getters.get_client_exchange_rate_name.mark }}
-                                                            {{ $store.getters.get_client_exchange_rate("USDT",
-                                                                $userassets.totalassetes) }}
-                                                        </p>
-                                                        <span class="wallet-usd fw-7" v-else>{{
-                                                            $store.getters.get_client_exchange_rate_name.mark }}
-                                                            ******</span>
-                                                    </a-col>
-                                                    <a-col :lg="4" class="pt-2">
-                                                        <svg width="15" height="15" class="svg-icon ml-2 pointer"
-                                                            @click="toggleFundVisible">
-                                                            <use :xlink:href="$usersettings.moreconfig?.fundsvisible
-                                                                ? '/images/svg/sprite.svg#us-eye-icon'
-                                                                : '/images/svg/sprite.svg#us-eye-active-icon'
-                                                                "></use>
-                                                        </svg>
-                                                    </a-col>
-                                                </a-row>
-                                                <a-divider class="my-0 header-divider" />
-                                            </div>
-
-                                            <div class="px-4 header-list">
-                                                <nuxt-link to="/person/wallet">
+                                    <template #content>
+                                        <div>
+                                            <span class="icon-img" @mouseover="hoverKey = 20"
+                                                @mouseleave="hoverKey = -1">
+                                                <div class="px-4 header-list">
                                                     <a-row :gutter="16" class="user-sec1">
-                                                        <a-col :lg="4" class="pt-1">
-                                                            <img src="/images/spot-account.svg" alt="" width="17"
-                                                                height="17">
-                                                            <!-- <svg class="svg-icon" width="17" height="17">
-                                                                <use xlink:href="/images/svg/sprite.svg#assets-icon">
-                                                                </use>
-                                                            </svg> -->
-                                                        </a-col>
-                                                        <a-col :lg="20" class="pr-0">
-                                                            <p class="menu-list-text fw-5">
-                                                                {{ $t("public.ph30") }}
+                                                        <a-col :lg="20">
+                                                            <p class="total-wallet fw-7 mb-1">
+                                                                {{ $t("public.ph29") }}
                                                             </p>
-                                                            <span class="menu-sub-txt fw-5"
-                                                                v-if="$usersettings.moreconfig?.fundsvisible">{{
-                                                                    $store.getters.get_client_exchange_rate_name.mark }}
+                                                            <p class="wallet-usd fw-7 mb-2"
+                                                                v-if="$usersettings.moreconfig?.fundsvisible">
+                                                                {{ $store.getters.get_client_exchange_rate_name.mark }}
                                                                 {{ $store.getters.get_client_exchange_rate("USDT",
-                                                                    $userassets.totalfunding)
-                                                                }}</span>
-                                                            <span class="menu-sub-txt fw-5" v-else>{{
+                                                                    $userassets.totalassetes) }}
+                                                            </p>
+                                                            <span class="wallet-usd fw-7" v-else>{{
                                                                 $store.getters.get_client_exchange_rate_name.mark }}
                                                                 ******</span>
                                                         </a-col>
+                                                        <a-col :lg="4" class="pt-2">
+                                                            <svg width="15" height="15" class="svg-icon ml-2 pointer"
+                                                                @click="toggleFundVisible">
+                                                                <use :xlink:href="$usersettings.moreconfig?.fundsvisible
+                                                                    ? '/images/svg/sprite.svg#us-eye-icon'
+                                                                    : '/images/svg/sprite.svg#us-eye-active-icon'
+                                                                    "></use>
+                                                            </svg>
+                                                        </a-col>
                                                     </a-row>
-                                                </nuxt-link>
-                                                <a-divider class="my-0 header-divider" />
-                                            </div>
-                                            <div class="px-4 header-list" v-if="getP2p">
-                                                <nuxt-link to="/person/p2p">
-                                                    <a-row :gutter="16" class="user-sec1">
-                                                        <a-col :lg="4" class="pt-1">
-                                                            <img src="/images/p2p-account.svg" alt="" width="17"
-                                                                height="17">
-                                                            <!-- <svg class="svg-icon" width="17" height="17">
+                                                    <a-divider class="my-0 header-divider" />
+                                                </div>
+
+                                                <div class="px-4 header-list">
+                                                    <nuxt-link to="/person/wallet">
+                                                        <a-row :gutter="16" class="user-sec1">
+                                                            <a-col :lg="4" class="pt-1">
+                                                                <img src="/images/spot-account.svg" alt="" width="17"
+                                                                    height="17">
+                                                                <!-- <svg class="svg-icon" width="17" height="17">
+                                                                <use xlink:href="/images/svg/sprite.svg#assets-icon">
+                                                                </use>
+                                                            </svg> -->
+                                                            </a-col>
+                                                            <a-col :lg="20" class="pr-0">
+                                                                <p class="menu-list-text fw-5">
+                                                                    {{ $t("public.ph30") }}
+                                                                </p>
+                                                                <span class="menu-sub-txt fw-5"
+                                                                    v-if="$usersettings.moreconfig?.fundsvisible">{{
+                                                                        $store.getters.get_client_exchange_rate_name.mark }}
+                                                                    {{ $store.getters.get_client_exchange_rate("USDT",
+                                                                        $userassets.totalfunding)
+                                                                    }}</span>
+                                                                <span class="menu-sub-txt fw-5" v-else>{{
+                                                                    $store.getters.get_client_exchange_rate_name.mark }}
+                                                                    ******</span>
+                                                            </a-col>
+                                                        </a-row>
+                                                    </nuxt-link>
+                                                    <a-divider class="my-0 header-divider" />
+                                                </div>
+                                                <div class="px-4 header-list" v-if="getP2p">
+                                                    <nuxt-link to="/person/p2p">
+                                                        <a-row :gutter="16" class="user-sec1">
+                                                            <a-col :lg="4" class="pt-1">
+                                                                <img src="/images/p2p-account.svg" alt="" width="17"
+                                                                    height="17">
+                                                                <!-- <svg class="svg-icon" width="17" height="17">
                                                                 <use
                                                                     xlink:href="/images/svg/sprite.svg#p2p-account-icon">
                                                                 </use>
                                                             </svg> -->
-                                                        </a-col>
-                                                        <a-col :lg="20" class="pr-0">
-                                                            <p class="menu-list-text fw-5">
-                                                                {{ $t("public.ph33") }}
-                                                            </p>
-                                                            <span class="menu-sub-txt fw-5"
-                                                                v-if="$usersettings.moreconfig?.fundsvisible">{{
-                                                                    $store.getters.get_client_exchange_rate_name.mark }}
-                                                                {{
-                                                                    $store.getters.get_client_exchange_rate("USDT",
-                                                                        $userassets.totalctwoc
-                                                                    )
-                                                                }}</span>
-                                                            <span class="menu-sub-txt fw-5" v-else>{{
-                                                                $store.getters.get_client_exchange_rate_name
-                                                                    .mark
-                                                            }}
-                                                                ******</span>
-                                                        </a-col>
-                                                    </a-row>
-                                                </nuxt-link>
-
-                                                <a-divider class="my-0 header-divider" />
-                                            </div>
-
-                                            <div class="px-4 header-list" v-if="shouldShowMargin">
-                                                <nuxt-link to="/person/margin">
-                                                    <a-row :gutter="16" class="user-sec1">
-                                                        <a-col :lg="4" class="pt-1"><img
-                                                                :src="'/images/margin-account.svg'" /></a-col>
-                                                        <a-col :lg="20" class="pr-0">
-                                                            <p class="menu-list-text fw-5">
-                                                                {{ $t("public.ph31") }}
-                                                            </p>
-                                                            <span class="menu-sub-txt fw-5"
-                                                                v-if="$usersettings.moreconfig?.fundsvisible">{{
+                                                            </a-col>
+                                                            <a-col :lg="20" class="pr-0">
+                                                                <p class="menu-list-text fw-5">
+                                                                    {{ $t("public.ph33") }}
+                                                                </p>
+                                                                <span class="menu-sub-txt fw-5"
+                                                                    v-if="$usersettings.moreconfig?.fundsvisible">{{
+                                                                        $store.getters.get_client_exchange_rate_name.mark }}
+                                                                    {{
+                                                                        $store.getters.get_client_exchange_rate("USDT",
+                                                                            $userassets.totalctwoc
+                                                                        )
+                                                                    }}</span>
+                                                                <span class="menu-sub-txt fw-5" v-else>{{
                                                                     $store.getters.get_client_exchange_rate_name
                                                                         .mark
                                                                 }}
-                                                                {{
-                                                                    $store.getters.get_client_exchange_rate(
-                                                                        "USDT",
-                                                                        $userassets.totalmargin
-                                                                    )
-                                                                }}
-                                                            </span>
-                                                            <span class="menu-sub-txt fw-5" v-else>{{
-                                                                $store.getters.get_client_exchange_rate_name
-                                                                    .mark
-                                                            }}
-                                                                ******</span>
-                                                        </a-col>
-                                                    </a-row>
-                                                </nuxt-link>
-                                                <a-divider class="my-0 header-divider" />
-                                            </div>
-                                            <div class="px-4 header-list">
-                                                <nuxt-link to="/person/contract">
-                                                    <a-row :gutter="16" class="user-sec1">
-                                                        <a-col :lg="4" class="pt-1"><img
-                                                                :src="'/images/future-account.svg'" /></a-col>
-                                                        <a-col :lg="20" class="pr-0">
-                                                            <p class="menu-list-text fw-5">
-                                                                {{ $t("public.ph32") }}
-                                                            </p>
-                                                            <span class="menu-sub-txt fw-5"
-                                                                v-if="$usersettings.moreconfig?.fundsvisible">{{
+                                                                    ******</span>
+                                                            </a-col>
+                                                        </a-row>
+                                                    </nuxt-link>
+
+                                                    <a-divider class="my-0 header-divider" />
+                                                </div>
+
+                                                <div class="px-4 header-list" v-if="shouldShowMargin">
+                                                    <nuxt-link to="/person/margin">
+                                                        <a-row :gutter="16" class="user-sec1">
+                                                            <a-col :lg="4" class="pt-1"><img
+                                                                    :src="'/images/margin-account.svg'" /></a-col>
+                                                            <a-col :lg="20" class="pr-0">
+                                                                <p class="menu-list-text fw-5">
+                                                                    {{ $t("public.ph31") }}
+                                                                </p>
+                                                                <span class="menu-sub-txt fw-5"
+                                                                    v-if="$usersettings.moreconfig?.fundsvisible">{{
+                                                                        $store.getters.get_client_exchange_rate_name
+                                                                            .mark
+                                                                    }}
+                                                                    {{
+                                                                        $store.getters.get_client_exchange_rate(
+                                                                            "USDT",
+                                                                            $userassets.totalmargin
+                                                                        )
+                                                                    }}
+                                                                </span>
+                                                                <span class="menu-sub-txt fw-5" v-else>{{
                                                                     $store.getters.get_client_exchange_rate_name
                                                                         .mark
                                                                 }}
-                                                                {{
-                                                                    $store.getters.get_client_exchange_rate(
-                                                                        "USDT",
-                                                                        $userassets.totalcontractusdt
-                                                                    )
-                                                                }}</span>
-                                                            <span class="menu-sub-txt fw-5" v-else>{{
-                                                                $store.getters.get_client_exchange_rate_name
-                                                                    .mark
-                                                            }}
-                                                                ******</span>
-                                                        </a-col>
-                                                    </a-row>
-                                                </nuxt-link>
-                                                <a-divider class="my-0 header-divider" />
-                                            </div>
-                                            <!-- game account -->
-                                            <div class="px-4 header-list" v-if="shouldShowGame">
-                                                <nuxt-link to="/person/game-account">
-                                                    <a-row :gutter="16" class="user-sec1">
-                                                        <a-col :lg="4" class="pt-1">
-                                                            <svg class="svg-icon" width="17" height="17">
-                                                                <use
-                                                                    xlink:href="/images/svg/sprite.svg#Game-account-icon">
-                                                                </use>
-                                                            </svg>
-                                                        </a-col>
-                                                        <a-col :lg="20" class="pr-0">
-                                                            <p class="menu-list-text fw-5">
-                                                                {{ $t("public.ph80") }}
-                                                            </p>
-                                                            <span class="menu-sub-txt fw-5"
-                                                                v-if="$usersettings.moreconfig?.fundsvisible">{{
-                                                                    $store.getters.get_client_exchange_rate_name.mark }}
-                                                                {{
-                                                                    $store.getters.get_client_exchange_rate("USDT",
-                                                                        $userassets.totalgame
-                                                                    )
+                                                                    ******</span>
+                                                            </a-col>
+                                                        </a-row>
+                                                    </nuxt-link>
+                                                    <a-divider class="my-0 header-divider" />
+                                                </div>
+                                                <div class="px-4 header-list">
+                                                    <nuxt-link to="/person/contract">
+                                                        <a-row :gutter="16" class="user-sec1">
+                                                            <a-col :lg="4" class="pt-1"><img
+                                                                    :src="'/images/future-account.svg'" /></a-col>
+                                                            <a-col :lg="20" class="pr-0">
+                                                                <p class="menu-list-text fw-5">
+                                                                    {{ $t("public.ph32") }}
+                                                                </p>
+                                                                <span class="menu-sub-txt fw-5"
+                                                                    v-if="$usersettings.moreconfig?.fundsvisible">{{
+                                                                        $store.getters.get_client_exchange_rate_name
+                                                                            .mark
+                                                                    }}
+                                                                    {{
+                                                                        $store.getters.get_client_exchange_rate(
+                                                                            "USDT",
+                                                                            $userassets.totalcontractusdt
+                                                                        )
+                                                                    }}</span>
+                                                                <span class="menu-sub-txt fw-5" v-else>{{
+                                                                    $store.getters.get_client_exchange_rate_name
+                                                                        .mark
+                                                                }}
+                                                                    ******</span>
+                                                            </a-col>
+                                                        </a-row>
+                                                    </nuxt-link>
+                                                    <a-divider class="my-0 header-divider" />
+                                                </div>
+                                                <!-- game account -->
+                                                <div class="px-4 header-list" v-if="shouldShowGame">
+                                                    <nuxt-link to="/person/game-account">
+                                                        <a-row :gutter="16" class="user-sec1">
+                                                            <a-col :lg="4" class="pt-1">
+                                                                <svg class="svg-icon" width="17" height="17">
+                                                                    <use
+                                                                        xlink:href="/images/svg/sprite.svg#Game-account-icon">
+                                                                    </use>
+                                                                </svg>
+                                                            </a-col>
+                                                            <a-col :lg="20" class="pr-0">
+                                                                <p class="menu-list-text fw-5">
+                                                                    {{ $t("public.ph80") }}
+                                                                </p>
+                                                                <span class="menu-sub-txt fw-5"
+                                                                    v-if="$usersettings.moreconfig?.fundsvisible">{{
+                                                                        $store.getters.get_client_exchange_rate_name.mark }}
+                                                                    {{
+                                                                        $store.getters.get_client_exchange_rate("USDT",
+                                                                            $userassets.totalgame
+                                                                        )
 
-                                                                }}</span>
-                                                            <span class="menu-sub-txt fw-5" v-else>{{
-                                                                $store.getters.get_client_exchange_rate_name
-                                                                    .mark
-                                                            }}
-                                                                ******</span>
-                                                        </a-col>
-                                                    </a-row>
-                                                </nuxt-link>
+                                                                    }}</span>
+                                                                <span class="menu-sub-txt fw-5" v-else>{{
+                                                                    $store.getters.get_client_exchange_rate_name
+                                                                        .mark
+                                                                }}
+                                                                    ******</span>
+                                                            </a-col>
+                                                        </a-row>
+                                                    </nuxt-link>
 
-                                                <a-divider class="my-0 header-divider" />
-                                            </div>
-                                            <div class="px-4 header-list">
-                                                <nuxt-link to="/rewards-hub">
-                                                    <a-row :gutter="16" class="user-sec1">
-                                                        <a-col :lg="4" class="pt-1">
-                                                            <img src="/images/reward-hub.svg" alt="" width="17"
-                                                                height="17">
-                                                            <!-- <svg class="svg-icon" width="17" height="17">
+                                                    <a-divider class="my-0 header-divider" />
+                                                </div>
+                                                <div class="px-4 header-list">
+                                                    <nuxt-link to="/rewards-hub">
+                                                        <a-row :gutter="16" class="user-sec1">
+                                                            <a-col :lg="4" class="pt-1">
+                                                                <img src="/images/reward-hub.svg" alt="" width="17"
+                                                                    height="17">
+                                                                <!-- <svg class="svg-icon" width="17" height="17">
                                                                 <use
                                                                     xlink:href="/images/svg/sprite.svg#institution-icon">
                                                                 </use>
                                                             </svg> -->
-                                                        </a-col>
-                                                        <a-col :lg="20" class="pr-0">
-                                                            <p class="menu-list-text fw-5 pt-1">
-                                                                {{ $t("tableskeys.bh5") }}
-                                                            </p>
-                                                            <span class="menu-sub-txt fw-5"
-                                                                v-if="$usersettings.moreconfig?.fundsvisible">{{
+                                                            </a-col>
+                                                            <a-col :lg="20" class="pr-0">
+                                                                <p class="menu-list-text fw-5 pt-1">
+                                                                    {{ $t("tableskeys.bh5") }}
+                                                                </p>
+                                                                <span class="menu-sub-txt fw-5"
+                                                                    v-if="$usersettings.moreconfig?.fundsvisible">{{
+                                                                        $store.getters.get_client_exchange_rate_name
+                                                                            .mark
+                                                                    }}
+                                                                    {{
+                                                                        $store.getters.get_client_exchange_rate(
+                                                                            "USDT",
+                                                                            $userassets.totalgift
+                                                                        )
+                                                                    }}</span>
+                                                                <span class="menu-sub-txt fw-5" v-else>{{
                                                                     $store.getters.get_client_exchange_rate_name
                                                                         .mark
                                                                 }}
-                                                                {{
-                                                                    $store.getters.get_client_exchange_rate(
-                                                                        "USDT",
-                                                                        $userassets.totalgift
-                                                                    )
-                                                                }}</span>
-                                                            <span class="menu-sub-txt fw-5" v-else>{{
-                                                                $store.getters.get_client_exchange_rate_name
-                                                                    .mark
-                                                            }}
-                                                                ******</span>
-                                                        </a-col>
-                                                    </a-row>
-                                                </nuxt-link>
-                                                <a-divider class="my-0 header-divider" />
-                                            </div>
+                                                                    ******</span>
+                                                            </a-col>
+                                                        </a-row>
+                                                    </nuxt-link>
+                                                    <a-divider class="my-0 header-divider" />
+                                                </div>
 
-                                            <div class="px-4 header-list">
-                                                <nuxt-link to="/person/wallet-history">
-                                                    <a-row :gutter="16" class="user-sec1 pb-4">
-                                                        <a-col :lg="4">
-                                                            <img src="/images/billing-details.svg" alt="" width="17"
-                                                                height="17">
-                                                            <!-- <svg class="svg-icon" width="17" height="17">
+                                                <div class="px-4 header-list">
+                                                    <nuxt-link to="/person/wallet-history">
+                                                        <a-row :gutter="16" class="user-sec1 pb-4">
+                                                            <a-col :lg="4">
+                                                                <img src="/images/billing-details.svg" alt="" width="17"
+                                                                    height="17">
+                                                                <!-- <svg class="svg-icon" width="17" height="17">
                                                                 <use
                                                                     xlink:href="/images/svg/sprite.svg#billing-details-icon">
                                                                 </use>
                                                             </svg> -->
-                                                        </a-col>
-                                                        <a-col :lg="20" class="pr-0">
-                                                            <p class="menu-list-text fw-5 pt-1">
-                                                                {{ $t("public.ph34") }}
-                                                            </p>
-                                                        </a-col>
-                                                    </a-row>
-                                                </nuxt-link>
-                                            </div>
-                                        </span>
+                                                            </a-col>
+                                                            <a-col :lg="20" class="pr-0">
+                                                                <p class="menu-list-text fw-5 pt-1">
+                                                                    {{ $t("public.ph34") }}
+                                                                </p>
+                                                            </a-col>
+                                                        </a-row>
+                                                    </nuxt-link>
+                                                </div>
+                                            </span>
+                                        </div>
                                     </template>
 
                                     <div class="icon-img orderimg-icon" @mouseover="hoverKey = 20"
@@ -1244,16 +1247,16 @@
         
         <MenuDrawer :show="showMenuDrawer" @onClose="showMenuDrawer = false" /> -->
         <PublicLanguage :isLanguage="isLanguage" :handleLanguageModal="handleLanguageModal" />
-        <PublicExchange :isExchange="isExchange" :handleExchangeModal="handleExchangeModal"/>
+        <PublicExchange :isExchange="isExchange" :handleExchangeModal="handleExchangeModal" />
         <PublicMenuDrawer :show="showMenuDrawer" @onClose="showMenuDrawer = false" />
     </div>
 </template>
 
 <script>
 // import MenuDrawer from "./MenuDrawer.vue";
- 
+
 // import lang from "./lang";
- 
+
 import crypto from "@/plugins/axios/crypto";
 import { mapGetters } from "vuex";
 import { btcCtid, androidLink, artileDirectLinks } from "~/utils/constants";
@@ -1262,7 +1265,7 @@ import { btcCtid, androidLink, artileDirectLinks } from "~/utils/constants";
 export default {
     components: {
         // Language: lang,
-    
+
         // MenuDrawer,
     },
     data() {

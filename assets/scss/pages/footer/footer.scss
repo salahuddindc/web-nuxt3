@@ -1,4 +1,4 @@
-@use "assets/variables/light.scss";
+@use "assets/variables/light.scss" as *;
 
 #new-footer {
     .footer-bg {
@@ -32,8 +32,8 @@
                 }
             }
         }
-
-        i.anticon.anticon-caret-right.ant-collapse-arrow {
+        
+        span.anticon.anticon-caret-right {
             display: none;
         }
 
@@ -159,7 +159,7 @@
             font-size: 1rem !important;
         }
 
-        i.anticon.anticon-caret-right.ant-collapse-arrow {
+        span.anticon.anticon-caret-right {
             display: block !important;
             right: 0 !important;
             position: absolute;

@@ -19,7 +19,7 @@ export default defineNuxtPlugin((nuxtApp) => {
 
             const { $store } = useNuxtApp()
             const baseInfo = AxiosConfig.getBaseInfo($store)
-            const access_token = AxiosConfig.getToken($store)
+            const access_token = await AxiosConfig.getToken($store)
 
             if (config.data) {
                 config.data = Object.assign({}, baseInfo, config.data)

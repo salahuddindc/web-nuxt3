@@ -42,17 +42,19 @@ const tokeninfo = {
     'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIwIiwic3ViIjoidGVzdCIsImlhdCI6IjE2ODA1NzY1MjkiLCJuYmYiOiIxNjgwNTc2NTI5IiwiZXhwIjo2NDgwNTc2NTI5LCJpc3MiOiJiaXRuYXNkYXEiLCJhdWQiOlsiczJtIiwiczJtIl0sImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6InZpc2l0b3IifQ.c5TGGOkHyBHuVm3k3AMLK041F6d_BAuj2GMvFrjHknM',
     'expire': new Date().getTime() - 10000000
 }
- 
+
 let _ip = ''
 
 export default {
     config,
-    getToken(store) {
+    getToken1(store) {
+        debugger
         let _token = store.state.hex_token.value;
+
         if (!_token || !_token.token)
             _token = tokeninfo;
         if (_token.expire < new Date().getTime()) {
-            if (process.client && tokeninfo.expire > 0) {
+            if (import.meta.client && tokeninfo.expire > 0) {
                 tokeninfo.expire = 0;
                 var requestBaseInfo = this.getBaseInfo(store);
                 store.dispatch('gettoken', requestBaseInfo).then((data) => {
@@ -62,11 +64,56 @@ export default {
                         _token = tokeninfo
                         store.commit('set_token', _token);
                     }
+                    console.log('store.state:::::inside', _token);
                 });
             }
         }
+        console.log('store.state:::::after', _token);
         store.commit('set_token', _token);
         return _token.token;
+    },
+    async getToken(store) {
+        let _token = store.state.hex_token.value
+        if (!_token || !_token.token) {
+            _token = tokeninfo;
+        }
+
+        console.log('store.state:::::before', _token);
+
+        // Check if token has expired
+        if (_token.expire < new Date().getTime()) {
+            if (import.meta.client && tokeninfo.expire > 0) {
+                tokeninfo.expire = 0; // Reset the token expiration
+                const requestBaseInfo = this.getBaseInfo(store);
+
+                try {
+                    // Fetch new token
+                    const tokenRes = await store.dispatch('gettoken', requestBaseInfo);
+                    console.log('store.state:tokenRes::::inside', tokenRes);
+
+                    if (tokenRes?.data) {
+                        // Update token and expiration
+                        tokeninfo.token = tokenRes.data;
+                        tokeninfo.expire = new Date().getTime() + 2 * 3600000;
+                        _token = tokeninfo;
+
+                        // Commit updated token to Vuex
+                        store.commit('set_token', _token);
+                    } else {
+                        throw new Error('Invalid token response');
+                    }
+                } catch (error) {
+                    console.error('Error fetching token:', error);
+                    throw error; // Propagate the error
+                }
+            }
+        }
+
+        // Ensure token is always committed
+        store.commit('set_token', _token);
+
+        console.log('store.state:::::after', _token);
+        return _token.token
     },
     getBaseInfo(store) {
         const info = baseInfo;

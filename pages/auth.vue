@@ -287,7 +287,7 @@ export default {
 
             }
 
-             
+
         },
 
         getUserInfo() {
@@ -302,7 +302,9 @@ export default {
                         expire: new Date().getTime() + 2 * 3600000,
                     }
                     this.$store.commit('set_token', tokenObj);
-                    _self.$store.commit('set_user_info', res);
+                    console.log('resresresres', res);
+                    const data = res.data ? res.data : res.hexdata;
+                    this.$store.commit('set_user_info', data);
                     localStorage.setItem('onLoggedIn', JSON.stringify({
                         ...tokenObj,
                         response: res
@@ -320,12 +322,12 @@ export default {
                             ""
                     }
 
-                    // if (returnUrl) {
-                    //     //console.log('this.returnurl', this.returnurl);
-                    //     location.href = returnUrl
-                    // } else {
+                    if (returnUrl) {
+                        //console.log('this.returnurl', this.returnurl);
+                        location.href = returnUrl
+                    } else {
                         location.href = '/'
-                    // }
+                    }
                 } else {
                     _self.state.signin = false;
                     _self.loading = false;

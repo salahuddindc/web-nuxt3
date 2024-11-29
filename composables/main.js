@@ -39,23 +39,27 @@ const $usersettings = computed(() => {
 
 const $userinfo = computed(() => {
     const { $store } = useNuxtApp()
-    if (!$store.state.hex_uid.value) {
-        return {}
-    }
-    const info = $store.state.hex_server_user_info.value;
-    const token = $store.state.hex_token.value;
-    if (!info || !token) {
+    console.log('$store', $store);
+    const user = $store.getters['auth/userInfo']
+    if (!user.uid) {
         return {}
     }
 
-    if (typeof info === 'string') {
-        return Crypto.decrypt(info, token);
+    const token = $store.state.hex_token.value;
+    if (!user || !token) {
+        return {}
+    }
+
+    if (typeof user === 'string') {
+        return Crypto.decrypt(user, token);
     } else {
-        return Object.keys(info).length > 0 ? info : {}
+        return Object.keys(user).length > 0 ? user : {}
     }
 })
 
-const loggedIn = computed(() => $userinfo.uid != undefined)
+const loggedIn = computed(() => {
+    return $userinfo.value.uid != undefined
+})
 
 
 const getCurrency = (key, value) => {
@@ -991,7 +995,7 @@ const getEvent = () => {
     }
 }
 const eventcallback = (data) => {
-     
+
     const { $store } = useNuxtApp()
     if (data.data.type == 102) {//c2c聊天消息
         var jobj = JSON.parse(data.data.msg);
@@ -1118,7 +1122,7 @@ export {
     global_get_local_time,
     global_get_utc_time,
     seconds_conversion,
-    
+
     global_get_order_type,
     global_get_contract_order_type,
     global_get_order_state,
@@ -1132,11 +1136,11 @@ export {
     global_get_leverage_state,
     formatDate,
     numFormatter
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
 
 };

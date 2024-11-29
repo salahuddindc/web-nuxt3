@@ -1,4 +1,5 @@
-@use "@/assets/scss/utilities";
+@use "assets/variables/light.scss" as *;
+@use "@/assets/scss/utilities" as *;
 
 .tab-bottom-line {
     max-width: 25px;

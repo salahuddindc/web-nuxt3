@@ -1,20 +1,24 @@
-@use 'assets/variables/light.scss';
+@use 'assets/variables/light.scss' as *;
 
 #social-links {
     .social-icon {
         display: flex;
         justify-content: center;
+
         .all-icon {
             margin-right: 20px;
         }
+
         .all-icon:last-child {
             margin-right: 0;
         }
     }
+
     @media screen and (max-width: 1024px) {
         .social-icon {
-            .all-icon { 
+            .all-icon {
                 height: 40px !important;
+
                 img {
                     height: 20px;
                 }

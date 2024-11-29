@@ -440,56 +440,6 @@ export default {
         console.log('Validation error:', error);
       }
       return
-
-
-
-      await this.$refs[formName].validate((valid) => {
-        if (valid) {
-          _self.loading = true;
-          _self.state.signin = true;
-          _sign.password = crypto.md5String(_sign.password);
-          _sign.areacode = _self.selectedDialCode;
-          _self.$store.dispatch('user_user_signin_verify', _sign).then(({ data }) => {
-            _self.verifyModel = data;
-            if (!data) {
-              throw data;
-            }
-            if (data.isabnormalip) {
-              return Captcha.init().then((res) => {
-                if (res && res.ret === 0) {
-                  _sign.randstr = res.randstr;
-                  _sign.ticket = res.ticket;
-                  return true
-                } else if (res && res.ret === 2) {
-                  throw ''
-                }
-              })
-            } else {
-              return true
-            }
-          }).then(async (data) => {
-            if (data) {
-              const userEmail = _self.verifyModel.email;
-
-              // Dispatch the action to update the 'visitor_user.userInput' state with the user's email
-              _self.$store.dispatch('setUserInput', userEmail);
-              await this.clearLocalData()
-
-              _self.$router.push({
-                name: 'auth',
-                params: {
-                  verifyModel: _self.verifyModel,
-                  signModel: _sign,
-                  returnurl: _self.returnurl
-                }
-              })
-            }
-          }).catch((res) => {
-            _self.state.signin = false;
-            _self.loading = false;
-          })
-        }
-      })
     },
     onSignInSuccess(googleUser) {
       const profile = googleUser.getBasicProfile()

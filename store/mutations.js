@@ -41,9 +41,13 @@ export function remove_user_info(state) {
     // Cookie.remove(state.hex_token.type);
 }
 
-export function set_user_info(state, res) {
-    const data = res.data ? res.data : res.hexdata;
+export function set_user_info(state, data) {
+    // const data = res.data ? res.data : res.hexdata;
+    
+    
+    console.log('set_user_info', data);
     state.hex_server_user_info.value = data;
+    console.log('set_user_info', state.hex_server_user_info.value);
     state.hex_uid.value = data.uid;
     state.hex_key.value = data.secretkey
     useCookie('hex_uid').value = data.uid;

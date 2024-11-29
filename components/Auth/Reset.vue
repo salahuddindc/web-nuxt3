@@ -254,26 +254,19 @@ export default {
                         required: true,
                         message: this.$t('messages.msg9'),
                     },
+                 
                     {
-                        min: 8,
-                        max: 20,
-                        message: this.$t('messages.msg8'),
-                        trigger: 'change'
-                    },
-                    {
-                        min: 8,
-                        max: 20,
                         validator: (rule, value, callback) => {
-                            if (value === '') {
-                                callback(new Error(this.$t('messages.msg9')))
+                            if (!value || value.length < 8 || value.length > 20) {
+                                callback(new Error(this.$t('messages.msg8'))); // Min and max length error
                             } else if (value !== this.resetForm.password) {
-                                callback(new Error(this.$t('messages.msg10')))
+                                callback(new Error(this.$t('messages.msg10'))); // Password mismatch error
                             } else {
-                                callback()
+                                callback(); // Pass validation
                             }
+
                         },
                         trigger: 'change',
-                        message: this.$t('messages.msg10')
                     }
                 ]
             }

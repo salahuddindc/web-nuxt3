@@ -1,4 +1,3 @@
-
 import path from 'path'
 
 const { serverPort } = require(path.resolve(__dirname, 'utils/constants.js'))
@@ -30,7 +29,7 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ['@nuxtjs/i18n'],
+  modules: ['@nuxtjs/i18n', '@nuxt/image', '@nuxt/image'],
   i18n: {
     vueI18n: './i18n.config.js' // if you are using custom path, default
   }
