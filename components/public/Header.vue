@@ -394,11 +394,12 @@
                                 {{ $t('home.headBull') }}
                             </nuxt-link>
                         </a-menu-item>
-                        <a-menu-item key="investment-plan" v-if="shouldShowBuyBnq">
+                        
+                        <!-- <a-menu-item key="investment-plan" v-if="shouldShowBuyBnq">
                             <nuxt-link to="/investment-plan">
                                 {{ $t('investment_plan') }}
                             </nuxt-link>
-                        </a-menu-item>
+                        </a-menu-item> -->
 
                         <a-menu-item key="financial" v-if="showFinancial">
                             <nuxt-link to="/financial">
@@ -1508,12 +1509,7 @@ export default {
         // }
 
         //console.log('path::::', path);
-
-        console.log(
-            "userInfo mounted:::",
-            $userinfo.uid,
-            !$userassets.totalassetes
-        );
+ 
     },
 };
 </script>

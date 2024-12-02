@@ -23,7 +23,6 @@
 export default {
     data() {
         return {
-
         }
     },
     methods: {
@@ -33,8 +32,8 @@ export default {
         subscribeWithSocket() {
 
             console.log("this>socket", this.$socket);
-            
-            let substr = "market.1.tickers"; 
+
+            let substr = "market.1.tickers";
             this.$socket.invoke({ sub: substr, type: this.$socket.type.quotation_daily_getall, })
 
             substr = `market.btcusdt.kline.1min`
@@ -51,8 +50,8 @@ export default {
 
         }
     },
-    mounted () {
-        
+    mounted() {
+
         fiatpaymenttypeget();
     },
 

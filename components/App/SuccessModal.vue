@@ -1,6 +1,6 @@
 <template>
     <div class="apply-success-modal">
-        <a-modal id="agent-apply-modal" v-model="show" :footer="false" :title="false" @cancel="close" width="400px"
+        <a-modal id="agent-apply-modal" v-model="localShow" :footer="false" :title="false" @cancel="close" width="400px"
             :maskClosable="false" centered :class="modalClass" :getContainer="getContainer">
             <a-row>
                 <a-col :lg="24" align="center">
@@ -66,7 +66,17 @@ export default {
             default: () => { }
         }
     },
+    data() {
+        return {
+            localShow: false
+        }
+    },
     emits: ['onClose', 'onOk'],
+    watch: {
+        show(newValue, oldValue) {
+            this.localShow = newValue
+        }
+    },
 
     methods: {
         close() {

@@ -12,20 +12,20 @@
                                 <p class="lh-16 fw-4 mb-xs-3 mb-sm-7 secondary-gray">{{ trade.trade }}</p>
                             </div>
                         </div>
-                       <a-row>
-                        <a-col :xs="0" :sm="24">
-                            <nuxt-link to="/trading-bot">
-                            <a-button class="primary-btn px-5">{{ $t('deal_new.dn45') }}</a-button>
-                        </nuxt-link>
-                        </a-col>
-                       </a-row>
+                        <a-row>
+                            <a-col :xs="0" :sm="24">
+                                <nuxt-link to="/trading-bot">
+                                    <a-button class="primary-btn px-5">{{ $t('deal_new.dn45') }}</a-button>
+                                </nuxt-link>
+                            </a-col>
+                        </a-row>
                     </a-col>
                     <a-col :sm="24" :md="11" :lg="13" :xl="14" :xxl="13" class="slider-row px-xs-0 px-sm-2">
                         <template v-if="loading">
                             <AppLoading height="133px" backgroundColor="transparent" />
                         </template>
-                        <no-ssr v-else>
-                            <carousel :loop="false" :speed="1500" :autoplay="false"
+                        <ClientOnly v-else>
+                            <!-- <carousel :loop="false" :speed="1500" :autoplay="false"
                                 :perPageCustom="[[320, 1], [375, 1], [425, 1], [575, 1], [767, 2], [992, 2], [1100, 2], [1200, 2], [1440, 2]]"
                                 :navigationEnabled="true" :scrollPerPage="true" :paginationEnabled="false">
                                 <slide v-for="(product, index) in StrategyDataa" :key="index">
@@ -37,14 +37,16 @@
                                     </div>
 
                                 </slide>
-                            </carousel>
-                        </no-ssr>
+                            </carousel> -->
+                        </ClientOnly>
                     </a-col>
                     <a-col :xs="24" :sm="0">
                         <nuxt-link to="/trading-bot">
-                                            <p class="mb-0 text-center pointer font-14 lh-18 fw-5">{{ $t('public.ph49')
-                                                }} <a-icon type="right" class="arrow-icon ml-1" style="font-size:12px" /></p>
-                                        </nuxt-link>
+                            <p class="mb-0 text-center pointer font-14 lh-18 fw-5">{{ $t('public.ph49')
+                                }}
+                                <RightOutlined class="arrow-icon ml-1" style="font-size:12px" />
+                            </p>
+                        </nuxt-link>
                     </a-col>
                 </a-row>
             </div>
@@ -53,15 +55,16 @@
 </template>
 
 <script>
-import carousel from '@/plugins/carousel/Carousel';
-import slide from '@/plugins/carousel/Slide';
+// import carousel from '@/plugins/carousel/Carousel';
+// import slide from '@/plugins/carousel/Slide';
 import moment from 'moment';
-import AppLoading from '../AppLoading.vue'
-import LineChart from '@/components/App/LineChart.vue'
-import TradingBotCard from '@/components/TradingBot/TradingBotCard.vue';
+import 'moment-timezone';
+
+
 export default {
     components: {
-        carousel, slide, AppLoading, LineChart, TradingBotCard
+        // carousel, slide, 
+
     },
     data() {
         return {
@@ -128,7 +131,7 @@ export default {
                             item.profit = item.profit.toFixed(2)
                             item.tradenum = parseInt(item.tradenum)
                             item.borrowmultiple = Symbol.borrowmultiple > 0 && item.strategytype == 2 ? Symbol.borrowmultiple : false
-                            item.symbolText = item.strategytype == 2 || item.strategytype == 1  ? Symbol.descriptions : Symbol.fcurrencyname
+                            item.symbolText = item.strategytype == 2 || item.strategytype == 1 ? Symbol.descriptions : Symbol.fcurrencyname
                             item.symbolImg = Symbol.icon
                             const coinid = (Symbol.fcurrencyname + '_' + Symbol.tcurrencyname).toLowerCase()
                             let redirecTo = '/deal-pro/' + coinid

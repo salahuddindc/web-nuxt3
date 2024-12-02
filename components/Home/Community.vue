@@ -95,7 +95,8 @@
 </template>
 
 <script>
-import { appleStoreLink, googleLinkLink, androidLink } from '~/plugins/constants'
+import { appleStoreLink, googleLinkLink, androidLink } from '~/utils/constants'
+import { isMobile } from '~/utils/helpers'
 
 export default {
     computed: {
@@ -115,9 +116,7 @@ export default {
         }
     },
     mounted() {
-        import("~/plugins/helpers").then(({ isMobile }) => {
-            this.isMobile = isMobile
-        });
+        this.isMobile = isMobile
     }
 }
 </script>

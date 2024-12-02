@@ -126,6 +126,10 @@ export default () => ({
     type: "",
   },
   c2c_message: {},
+  notification_message: {
+    content: { title: null, description: null, targetId: null, targetRoute: null, notificationType: null },
+    notificationSetting: { placement: null, style: {}, viewPort: null }
+  }, // for general use of notification. c2c_message and message may be no longer use
   hovers: 1,
   route: {
     active: "",

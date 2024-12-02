@@ -1,12 +1,13 @@
+@use 'sass:list'; // Add this at the top of your file
 @use "@/assets/variables/light.scss" as *;
 @use '@/assets/scss/breakpoints' as *;
-
+@use '@/assets/scss/common';
 // ◼◼◼ Margin Classes
 $margin-values: (
 ); // start with an empty list
 
-@for $i from 0 through 80 {
-    $margin-values: append($margin-values, $i * 1); // generate values from 1px to 80px and append them to the list
+@for $i from 1 through 80 {
+    $margin-values: list.append($margin-values, $i); // generate values from 1px to 80px and append them to the list
 }
 
 $margin-directions: (
@@ -115,8 +116,8 @@ $margin-directions: (
 $padding-values: (
 ); // start with an empty list
 
-@for $i from 0 through 80 {
-    $padding-values: append($padding-values, $i * 1); // generate values from 1px to 100px and append them to the list
+@for $i from 1 through 80 {
+    $padding-values: list.append($padding-values, $i ); // generate values from 1px to 100px and append them to the list
 }
 
 $padding-directions: (
@@ -321,7 +322,7 @@ body.square-module-body,body.copy-trade-body, body.partner-program-body,body.tra
     @include border-radius-utilities;
     @include font-weight-utilities;
      
-    @import '@/assets/scss/common';
+  
 
     h1 {
         font-size: $h1;

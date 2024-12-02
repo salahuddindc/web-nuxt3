@@ -4,8 +4,8 @@
             <AppLoading height="120.7px" backgroundColor="transparent" />
         </template>
         <div class="main-content" v-else>
-            <no-ssr>
-                <carousel  :loop="loop" :speed="speed"
+            <ClientOnly>
+                <!-- <carousel  :loop="loop" :speed="speed"
                     :perPageCustom="perPageCustom" :navigationEnabled="navigationEnabled" :scrollPerPage="false"
                     :paginationEnabled="false">
                     <slide v-for="(bannel, index) in swiperBannel" :key="index">
@@ -20,21 +20,21 @@
                                 sizes="xs:270px sm:310px md:340px lg:310px xl:320px xxl:310px 2xl:270px 3xl:300px" />
                         </div>
                     </slide>
-                </carousel>
-            </no-ssr>
+                </carousel> -->
+            </ClientOnly>
 
         </div>
     </div>
 </template>
 
 <script>
-import carousel from '@/plugins/carousel/Carousel';
-import slide from '@/plugins/carousel/Slide';
+// import carousel from '@/plugins/carousel/Carousel';
+// import slide from '@/plugins/carousel/Slide';
 import { mapActions } from "vuex";
 export default {
-    components: {
-        carousel, slide
-    },
+    // components: {
+    //     carousel, slide
+    // },
     props: {
         channelid: {
             type: Number,

@@ -112,14 +112,11 @@ export default {
             let isShow = true
             if (subitem.id == 61) {
               isShow = this.getP2p;
-              console.log('getP2p', this.getP2p);
 
             } else if (subitem.id == 60) {
               isShow = this.getFinancial;
-              console.log('getP2p', this.getFinancial);
             } else if (subitem.id == 63) {
               isShow = this.showMargin;
-              console.log('getP2p', this.showMargin);
             }
             return isShow;
           })

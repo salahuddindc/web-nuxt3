@@ -47,7 +47,7 @@ const showGame = (state, getters) => {
     // true: hide
     // false: show
     const gameStatus = getters.getConstants.game
-    console.log('getters.getConstants.game', getters.getConstants.game);
+   
     
     const port = serverPort
     return gameStatus == 'true' ? true : false
@@ -66,7 +66,6 @@ const getEmails = (state, getters) => {
 
 const isServiceAvailable = (state, getters) => {
     // isServiceAvailable in your region
-    console.log('state.constants', state.constants);
     
     const available = state.constants.isruning || 'true'
 

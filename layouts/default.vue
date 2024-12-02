@@ -1,9 +1,14 @@
 <template>
-    <a-layout >
+    <a-layout>
+        <Default></Default>
         <PublicHeader />
-        <App00Header />
-        <slot /> 
+        <slot />
         <PublicFooter />
-        <App00Footer />
     </a-layout>
 </template>
+
+<script setup>
+
+</script>
+
+<style lang="scss" scoped></style>

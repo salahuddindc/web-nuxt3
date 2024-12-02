@@ -73,6 +73,7 @@ export default {
     },
     // 获取用户客户端指定币种的汇率转换
     get_client_exchange_rate: (state) => (name, quota, toclient) => {
+        let cur_usdt = ''
         if (!quota || !name) return '0.00';
         name = name && name.toLowerCase();
         if (name === "yx") name = 'usdt'; // 确定指定币种类型
@@ -211,6 +212,8 @@ export default {
     },
     //get the value of visitor email input
     getUserInput: (state) => state.visitor_user,
-    getSymbleinfos: (state) => state.symbleinfos || [],
+    getSymbleinfos: (state, getters, rootState, rootGetters) => {
+        return state.symbleinfos || []
+    },
     getCurrencyinfos: (state) => state.currencyinfos || [],
 }

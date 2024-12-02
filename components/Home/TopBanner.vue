@@ -7,7 +7,7 @@
                     <AppLoading height="600px" backgroundColor="transparent" />
                 </template>
                 <template v-else>
-                    <no-ssr>
+                    <ClientOnly>
                         <a-carousel :autoplaySpeed="10000" :autoplay="false"
                             :dotPosition="screenSize < 768 ? 'bottom' : 'right'" :dots="true" ref="OneCarousel">
 
@@ -20,9 +20,9 @@
                                         <div v-if="Userlogin"
                                             :class="promotion.subtitle == 'invest-in-the-coin-of-your-choice' ? 'mt-20 social-sec' : ''">
                                             <a-row>
-                                                <a-col :xs="{ span: 24, offset: 0 }" :sm="{ span: 18, offset: 3 }" :md="{ span: 24, offset: 0 }"
-                                                    :lg="{ span: 19, offset: 0 }" :xl="{ span: 21, offset: 0 }"
-                                                    :xxl="{ span: 19, offset: 0 }">
+                                                <a-col :xs="{ span: 24, offset: 0 }" :sm="{ span: 18, offset: 3 }"
+                                                    :md="{ span: 24, offset: 0 }" :lg="{ span: 19, offset: 0 }"
+                                                    :xl="{ span: 21, offset: 0 }" :xxl="{ span: 19, offset: 0 }">
                                                     <p
                                                         class="home-heading text-white font-xs-20 font-sm-28 font-xl-36 lh-xl-45 lh-lg-40 lh-md-35 lh-xs-27 lh-sm-40  mb-xs-3 mb-sm-5 fw-6">
                                                         {{ promotion.title }}</p>
@@ -33,7 +33,8 @@
                                                     :md="{ span: 24, offset: 0 }" :lg="{ span: 22, offset: 0 }"
                                                     :xl="{ span: 22, offset: 0 }" :xxl="{ span: 22, offset: 0 }"
                                                     class="">
-                                                    <p class="mb-5 fw-4 short-desc font-xs-14 font-sm-18  text-white connect-with-desc lh-xs-18 lh-sm-27">
+                                                    <p
+                                                        class="mb-5 fw-4 short-desc font-xs-14 font-sm-18  text-white connect-with-desc lh-xs-18 lh-sm-27">
                                                         {{ promotion.shortdescription }}
                                                     </p>
                                                 </a-col>
@@ -43,9 +44,10 @@
                                                     <a-col :xs="24" :sm="14" :md="24" :lg="14" :xl="12" :xxl="10">
                                                         <div class="">
                                                             <nuxt-link to="/person/authentication">
-                                                                <a-button class="primary-btn"
-                                                                    block>{{ $t('depositModal.dm3') }} <a-icon
-                                                                        type="arrow-right" /></a-button>
+                                                                <a-button class="primary-btn" block>{{
+                                                                    $t('depositModal.dm3') }}
+                                                                    <ArrowRightOutlined />
+                                                                </a-button>
                                                             </nuxt-link>
                                                         </div>
                                                     </a-col>
@@ -125,16 +127,17 @@
                                                     <p
                                                         class="mb-5 fw-4 text-white short-desc font-xs-14 font-sm-18  connect-with-desc lh-xs-18 lh-sm-27">
                                                         {{
-                                                        promotion.shortdescription }}
+                                                            promotion.shortdescription }}
                                                     </p>
                                                 </a-col>
                                             </a-row>
                                             <a-row :gutter="8" class="mb-3 home-form">
-                                                <a-form-model :model="getStartedForm" ref="ticketForm" :rules="rules"
+                                                <a-form :model="getStartedForm" ref="ticketForm" :rules="rules"
                                                     :hide-required-mark="true" label-align="left">
                                                     <a-col :xs="24" :sm="15" :md="15" :lg="12" :xl="12" :xxl="12">
-                                                        <AppFormModelItem prop="email">
-                                                            <a-input class="home-input font-16" v-model="getStartedForm.email"
+                                                        <AppFormModelItem name="email">
+                                                            <a-input class="home-input font-16"
+                                                                v-model="getStartedForm.email"
                                                                 :placeholder="$t('enter_email_phone_no')" />
                                                         </AppFormModelItem>
                                                     </a-col>
@@ -143,19 +146,20 @@
                                                             @click="join">{{
                                                                 $t('agent_plan.ap_join_aff') }}</a-button>
                                                     </a-col>
-                                                </a-form-model>
+                                                </a-form>
                                             </a-row>
 
 
                                             <a-row class="home-form" v-if="!isMobile">
                                                 <a-col :xs="10" :sm="8" :md="8" :lg="8" :xl="6">
-                                                    <p class="text-white font-xs-13 font-sm-14 mb-0">{{ $t('adsharing.as29') }}
+                                                    <p class="text-white font-xs-13 font-sm-14 mb-0">{{
+                                                        $t('adsharing.as29') }}
                                                     </p>
 
 
                                                     <div class="apps-icon">
                                                         <div class="icon-box pointer" @click="googleLogin"
-                                                            @touchstart="googleLogin" >
+                                                            @touchstart="googleLogin">
                                                             <nuxtImg src="/images/g-home-icon.svg" :placeholder="true"
                                                                 width="27px" height="27px" />
                                                         </div>
@@ -168,7 +172,8 @@
 
                                                 </a-col>
                                                 <a-col :xs="14" :sm="14" :md="14" :lg="4" :xl="4">
-                                                    <p class="text-white font-xs-13 font-sm-14 mb-3"> {{ $t('adsharing.as8') }}
+                                                    <p class="text-white font-xs-13 font-sm-14 mb-3"> {{
+                                                        $t('adsharing.as8') }}
                                                     </p>
 
                                                     <a-popover :title="false" trigger="hover" placement="right"
@@ -206,9 +211,9 @@
 
                                     <div class="mt-20 pt-10 left-side" v-else>
                                         <a-row>
-                                            <a-col :xs="{ span: 24, offset: 0 }" :sm="{ span: 18, offset: 3 }" :lg="{ span: 19, offset: 0 }"
-                                                :md="{ span: 24, offset: 0 }" :xl="{ span: 21, offset: 0 }"
-                                                :xxl="{ span: 19, offset: 0 }">
+                                            <a-col :xs="{ span: 24, offset: 0 }" :sm="{ span: 18, offset: 3 }"
+                                                :lg="{ span: 19, offset: 0 }" :md="{ span: 24, offset: 0 }"
+                                                :xl="{ span: 21, offset: 0 }" :xxl="{ span: 19, offset: 0 }">
                                                 <p
                                                     class="home-heading text-white font-xs-20 font-sm-28 font-xl-36 lh-xl-45 lh-lg-40 lh-md-35 lh-xs-27 lh-sm-40  mb-xs-3 mb-sm-5 fw-6">
                                                     {{ promotion.title }}</p>
@@ -217,17 +222,18 @@
                                         <a-row>
                                             <a-col :xs="{ span: 24, offset: 0 }" :sm="{ span: 18, offset: 3 }"
                                                 :md="{ span: 24, offset: 0 }" :lg="{ span: 23, offset: 0 }"
-                                                :xl="{ span: 18, offset: 0 }" :xxl="{ span: 18, offset: 0 }"
-                                                class="">
-                                                <p class="mb-5 lh-xs-18 lh-sm-27 short-desc font-xs-14 font-sm-18  text-white fw-4">{{
-                                                    promotion.shortdescription }}!</p>
+                                                :xl="{ span: 18, offset: 0 }" :xxl="{ span: 18, offset: 0 }" class="">
+                                                <p
+                                                    class="mb-5 lh-xs-18 lh-sm-27 short-desc font-xs-14 font-sm-18  text-white fw-4">
+                                                    {{
+                                                        promotion.shortdescription }}!</p>
                                                 <nuxt-link
                                                     :to="promotion.articlehref == '' ? '/deal-pro/btc_usdt?ctid=1575964013659730564' : promotion.articlehref.replace(/[\?&]lang=en_us/, '')">
                                                     <a-button class="primary-btn trading-start-btn px-8">{{
                                                         promotion.source
                                                             ==
                                                             ''
-                                                        ? $t('home_page.hp9') : promotion.source }}</a-button>
+                                                            ? $t('home_page.hp9') : promotion.source }}</a-button>
                                                 </nuxt-link>
 
                                             </a-col>
@@ -244,7 +250,7 @@
                                 </a-col>
                             </a-row>
                         </a-carousel>
-                    </no-ssr>
+                    </ClientOnly>
                 </template>
                 <template v-if="screenSize > 768">
                     <div class="main-icon d-none">
@@ -265,14 +271,14 @@
 </template>
 
 <script>
-import AppFormModelItem from '../App/AppFormModelItem.vue'
 import { mapGetters, mapActions } from 'vuex'
-import { promotionChannelId, icoLink, googleLinkLink, appleStoreLink } from '~/plugins/constants'
-import AppLoading from '../AppLoading.vue'
+import { promotionChannelId, icoLink, googleLinkLink, appleStoreLink } from '~/utils/constants'
+import { isMobile } from '~/utils/helpers'
+
 import NoService from './NoService.vue'
 export default {
     components: {
-        AppFormModelItem, AppLoading, NoService
+        NoService
     },
     props: {
         isAvailable: {
@@ -335,13 +341,13 @@ export default {
 
         screenSize() {
             let size = 1024
-            if (process.client) {
+            if (import.meta.client) {
                 size = window.innerWidth
             }
             return size
         },
         Userlogin() {
-            if (this.$userinfo.uid)
+            if ($userinfo.uid)
                 return true
             else
                 return false
@@ -349,7 +355,7 @@ export default {
         ...mapGetters('article', ['getPromotions']),
         ...mapGetters('general', ['loadingPromotions']),
         promotions: function () {
-            if (this.loggedIn) {
+            if (loggedIn) {
                 return this.getPromotions.filter((promotion) => promotion.subtitle != 'register-verify-and-trade')
             } else {
                 return this.getPromotions.filter((promotion) => promotion.subtitle != 'invest-in-the-coin-of-your-choice')
@@ -357,13 +363,6 @@ export default {
             return this.getPromotions
         },
 
-
-    },
-    mounted() {
-        this.fetchPromotions({ pageIndex: 1, pageSize: 30, channelId: promotionChannelId })
-        import("~/plugins/helpers").then(({ isMobile }) => {
-            this.isMobile = isMobile
-        });
 
     },
     methods: {
@@ -523,7 +522,12 @@ export default {
             })
         },
         //lOGIN FUNCTIONALITY ENDED ABOVE
-    }
+    },
+    mounted() {
+        this.fetchPromotions({ pageIndex: 1, pageSize: 30, channelId: promotionChannelId })
+        this.isMobile = isMobile
+
+    },
 }
 </script>
 

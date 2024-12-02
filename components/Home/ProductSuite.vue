@@ -19,7 +19,6 @@
 </template>
 
 <script>
-import { btcCtid } from '~/plugins/constants'
 import crypto from "@/plugins/axios/crypto"
 export default {
 data() {

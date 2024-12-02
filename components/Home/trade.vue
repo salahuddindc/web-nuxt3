@@ -1,64 +1,73 @@
 <template>
-  <a-table :columns="columns" :pagination="false" :data-source="copyMarketData" rowKey="ctid" :show-header="true"
+  <a-table :columns="columns" :pagination="false" :dataSource="copyMarketData" rowKey="ctid" :show-header="true"
     :loading="loading" :customRow="goDealNew" class="mt-2">
-    <div slot="pair" slot-scope="text, row">
-      <div class="pointer">
-        <img :src="row.logo" width="24px" height="24px" class="mr-3" />
-        <span>
-          <span class="symbolFrom fw-6 secondary-black">{{ getSymble(row.symble).from }}</span>
-          <span v-if="row.itype != '1'" class="symbolTo fw-5 secondary-gray">
-            /{{ getSymble(row.symble).to }}
-          </span>
-          <span v-else class="symbolTo ml-1 perpetual-txt fw-5">
-            &nbsp;{{ $t("contract.swap") }}
-          </span>
-          <span class="margin-trade-txt" v-if="
-            (tab == '-1' || row.itype == -1) &&
-            $store.state.symbleinfos?.length > 0
-          ">
-            {{ row.borrowmultiple }}X
-          </span>
-        </span>
-      </div>
-    </div>
-    <div slot="lastPrice" slot-scope="text, row">
-      <p class="mb-0">
-        ${{ global_get_tofixed(row.c, global_get_decimal(row.symble).p) }}
-        <span class="read-more fw-5">
-          <!-- {{ $store.getters.get_client_exchange_rate_name.mark }}  
-                    {{ getClientExchangeRate(row) }} -->
-        </span>
-      </p>
-    </div>
-    <div slot="volume" slot-scope="text, row">
-      <p class="mb-0">
-        {{ numFormatter(row.v) }}
-      </p>
-    </div>
+    <template #bodyCell="{ column, record }">
+      <template v-if="column.key === 'symble'">
+        <div>
+          <div class="pointer">
+            <img :src="record.logo" width="24px" height="24px" class="mr-3" />
+            <span>
+              <span class="symbolFrom fw-6 secondary-black">{{ getSymble(record.symble).from }}</span>
+              <span v-if="record.itype != '1'" class="symbolTo fw-5 secondary-gray">
+                /{{ getSymble(record.symble).to }}
+              </span>
+              <span v-else class="symbolTo ml-1 perpetual-txt fw-5">
+                &nbsp;{{ $t("contract.swap") }}
+              </span>
+              <span class="margin-trade-txt" v-if="
+                (tab == '-1' || record.itype == -1) &&
+                $store.state.symbleinfos?.length > 0
+              ">
+                {{ record.borrowmultiple }}X
+              </span>
+            </span>
+          </div>
+        </div>
 
-    <div slot="change" slot-scope="text, row">
-      <span :class="row.c - row.o < 0 ? 'red-active' : 'up-dark'">{{ getlimitprice(row) }}%<img :src="limitPrice(row.c, row.o) < 0
-          ? '/images/red-up-arrow.svg'
-          : '/images/green-blue-up-arrow.svg'
-        " height="12" width="auto" class="ml-1 mb-1" /></span>
-    </div>
-    <div slot="action" slot-scope="text, row">
-      <a-button class="trade-btn cancel-outline-btn fw-6" @click="
-        goDeal(
-          '' + row.symble + '',
-          row.itype == 1 ? 'contract' : row.itype == -1 ? 'margin' : 'spot'
-        )
-        ">{{ $t("home.tradeDeal") }}</a-button>
-    </div>
+      </template>
+      <template v-if="column.key === 'lastPrice'">
+        <div>
+          <p class="mb-0">
+            ${{ global_get_tofixed(record.c, global_get_decimal(record.symble).p) }}
+            <span class="read-more fw-5">
+            </span>
+          </p>
+        </div>
+      </template>
+      <template v-if="column.key === 'volume'">
+        <div>
+          <p class="mb-0">
+            {{ numFormatter(record.v) }}
+          </p>
+        </div>
+      </template>
+      <template v-if="column.key === 'change'">
+        <div>
+          <span :class="record.c - record.o < 0 ? 'red-active' : 'up-dark'">{{ getlimitprice(record) }}%<img :src="limitPrice(record.c, record.o) < 0
+            ? '/images/red-up-arrow.svg'
+            : '/images/green-blue-up-arrow.svg'
+            " height="12" width="auto" class="ml-1 mb-1" /></span>
+        </div>
+      </template>
+      <template v-if="column.key === 'action'">
+        <div>
+          <a-button class="trade-btn cancel-outline-btn fw-6" @click="
+            goDeal(
+              '' + record.symble + '',
+              record.itype == 1 ? 'contract' : record.itype == -1 ? 'margin' : 'spot'
+            )
+            ">{{ $t("home.tradeDeal") }}</a-button>
+        </div>
+      </template>
+    </template>
+
+    <!--  -->
   </a-table>
 </template>
 
 <script>
-import NoData from "@/components/public/NoData";
 export default {
-  components: {
-    NoData,
-  },
+
   props: {
     marketdata: {
       type: Array,
@@ -97,47 +106,7 @@ export default {
   },
   data() {
     return {
-      // copyMarketData:[],
       isMobile: undefined,
-      /* columns: [
-        {
-          title: this.$t("tableskeys.tk1"),
-          dataIndex: "pair",
-          key: "pair",
-          scopedSlots: { customRender: "pair" },
-          width: 170,
-        },
-        {
-          title: this.$t("tableskeys.tk2"),
-          dataIndex: "lastPrice",
-          key: "lastPrice",
-          scopedSlots: { customRender: "lastPrice" },
-          width: 140,
-        },
-
-        {
-          title: this.$t("tableskeys.tk5"),
-          dataIndex: "change",
-          key: "change",
-          scopedSlots: { customRender: "change" },
-          width: 140,
-        },
-        {
-          title: this.$t("home_page.volume_home"),
-          dataIndex: "volume",
-          key: "volume",
-          scopedSlots: { customRender: "volume" },
-          width: 120,
-        },
-        {
-          title: this.$t("home.tradeOperation"),
-          dataIndex: "action",
-          key: "action",
-          scopedSlots: { customRender: "action" },
-          width: 100,
-          align: "end",
-        },
-      ], */
       canvasary: [],
       bg: {
         buy: "rgba(74,196,158,0.000089)",
@@ -155,71 +124,43 @@ export default {
       const desktopColumns = [
         {
           title: this.$t("tableskeys.tk1"),
-          dataIndex: "pair",
-          key: "pair",
-          scopedSlots: { customRender: "pair" },
+          dataIndex: "symble",
+          key: "symble",
           width: 170,
         },
         {
           title: this.$t("tableskeys.tk2"),
           dataIndex: "lastPrice",
           key: "lastPrice",
-          scopedSlots: { customRender: "lastPrice" },
           width: 140,
         },
         {
           title: this.$t("tableskeys.tk5"),
           dataIndex: "change",
           key: "change",
-          scopedSlots: { customRender: "change" },
           width: 140,
         },
         {
           title: this.$t("home_page.volume_home"),
           dataIndex: "volume",
           key: "volume",
-          scopedSlots: { customRender: "volume" },
           width: 120,
         },
         {
           title: this.$t("home.tradeOperation"),
           dataIndex: "action",
           key: "action",
-          scopedSlots: { customRender: "action" },
           width: 100,
           align: "end",
         },
       ];
 
-      if (this.xsScreen || this.smScreen) {
-        return [
-          {
-            title: this.$t("tableskeys.tk1"),
-            dataIndex: "pair",
-            key: "pair",
-            scopedSlots: { customRender: "pair" },
-            width: 170,
-          },
-          {
-            title: this.$t("tableskeys.tk2"), // Last Price
-            dataIndex: "lastPrice",
-            key: "lastPrice",
-            scopedSlots: { customRender: "lastPrice" },
-            width: 110,
-          },
-          {
-            title: this.$t("tableskeys.tk5"), // Change
-            dataIndex: "change",
-            key: "change",
-            scopedSlots: { customRender: "change" },
-            width: 100,
-          },
-        ];
-      }
+
 
       return desktopColumns;
     },
     copyMarketData() {
+
       if (this.marketdata.length > 0) {
         return this.marketdata.slice(0, 8);
       } else return [];
@@ -228,7 +169,7 @@ export default {
   methods: {
     getlimitprice(item) {
       return (
-        (item.c - item.o < 0 ? "-" : "+") + this.global_get_limitprice(item)
+        (item.c - item.o < 0 ? "-" : "+") + global_get_limitprice(item)
       );
     },
     handleRowClick(row) {

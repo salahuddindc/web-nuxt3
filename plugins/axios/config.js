@@ -78,7 +78,7 @@ export default {
             _token = tokeninfo;
         }
 
-        console.log('store.state:::::before', _token);
+        // console.log('store.state:::::before', _token);
 
         // Check if token has expired
         if (_token.expire < new Date().getTime()) {
@@ -89,7 +89,7 @@ export default {
                 try {
                     // Fetch new token
                     const tokenRes = await store.dispatch('gettoken', requestBaseInfo);
-                    console.log('store.state:tokenRes::::inside', tokenRes);
+                    // console.log('store.state:tokenRes::::inside', tokenRes);
 
                     if (tokenRes?.data) {
                         // Update token and expiration
@@ -112,7 +112,7 @@ export default {
         // Ensure token is always committed
         store.commit('set_token', _token);
 
-        console.log('store.state:::::after', _token);
+        // console.log('store.state:::::after', _token);
         return _token.token
     },
     getBaseInfo(store) {

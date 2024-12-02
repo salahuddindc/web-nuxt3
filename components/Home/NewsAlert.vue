@@ -35,7 +35,7 @@
 </template>
 
 <script>
-import { announcementId } from '~/plugins/constants';
+import { announcementId } from '~/utils/constants';
 import { mapState, mapActions, mapGetters } from "vuex";
 export default {
 

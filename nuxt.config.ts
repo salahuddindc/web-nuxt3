@@ -9,6 +9,13 @@ const { uiTheme } = require(path.resolve(__dirname, 'utils/ui-theme.js'))
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
+  app: {
+    head: {
+      meta: [
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' }
+      ],
+    }
+  },
 
   devServer: {
     port: serverPort,

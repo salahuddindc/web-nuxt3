@@ -47,6 +47,7 @@ export default {
     async makeApiCall({ rootState, rootGetters }, params) {
         try {
 
+            const { $axios } = useNuxtApp();
             const general = rootState.general
             const metadata = params.metadata
 
@@ -64,13 +65,13 @@ export default {
             let response = null
             const paramsMD5 = CryptoJS.MD5(JSON.stringify(params)).toString()
 
-            if (shouldStoreDataInCache && process.client && window.localStorage.getItem(paramsMD5) && (new Date().getTime() < (new Date(JSON.parse(window.localStorage.getItem(paramsMD5)).expireTime).getTime() + (60 * 60 * 1000)))) {
+            if (shouldStoreDataInCache && import.meta.client && window.localStorage.getItem(paramsMD5) && (new Date().getTime() < (new Date(JSON.parse(window.localStorage.getItem(paramsMD5)).expireTime).getTime() + (60 * 60 * 1000)))) {
                 response = JSON.parse(window.localStorage.getItem(paramsMD5))
                 if (loader) {
                     general[loader] = false
                 }
             } else {
-                response = await this.$axios.post(end_point, params, {})
+                response = await $axios.post(end_point, params, {})
 
                 if (loader) {
                     general[loader] = false
@@ -80,7 +81,7 @@ export default {
                     throw Error(response)
                 }
  
-                if (process.client && response.data && shouldStoreDataInCache) {
+                if (import.meta.client && response.data && shouldStoreDataInCache) {
                     let storageData = response
                     storageData.expireTime = new Date()
                     window.localStorage.setItem(paramsMD5, JSON.stringify(storageData));

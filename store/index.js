@@ -11,8 +11,7 @@ import market from "./modules/market";
 import strategy from "./modules/strategy";
 import playcard from "./modules/playcard";
 import constants from "./modules/constants";
-import shuftipro from "./modules/shufti-pro";
-import trade from "./modules/trade";
+ import trade from "./modules/trade";
 import size from "./modules/size";
 import copyTrade from "./modules/copy-trade";
 import bround from "./modules/bround";
@@ -42,7 +41,6 @@ const store = createStore({
     size,
     bround,
     // chat,
-    'shufti-pro': shuftipro,
     'copy-trade': copyTrade,
     'user-finance': userFinance
   },

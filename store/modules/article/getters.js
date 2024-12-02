@@ -6,7 +6,6 @@ import {
     bitnasdaqNewsChannelId,
 } from "~/utils/constants";
 import Noimage from "/images/noimage.png";
-
 export default {
     getArticleDetail(state) {
         return [state.articleChannels];

@@ -228,7 +228,6 @@ export default {
           }, 300) */
     },
     beforeRouteEnter(to, from, next) {
-        console.log('to', to, 'from', from.meta);
         next((vm) => {
             const params = vm.$store.getters['auth/getTempData']
             console.log('paramsparamsparams', params);

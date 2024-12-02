@@ -1,32 +1,40 @@
 <template>
-    <a-table :columns="columns" :pagination="false" :data-source="topgainers.slice(0, 7)" rowKey="ctid" :customRow="goDeal" :loading="loading" class="mt-2"
-        :rowClassName="() => { return 'pointer' }">
-        <div slot="pair" slot-scope="text,row">
-            <div>
-                <span><span class="symbolFrom secondary-black fw-6">{{ getSymble(row.symble).from }}</span><span class="symbolTo fw-5 secondary-gray">
-                        {{ $t('deal_new.dn10') }}</span></span>
+    <div>
+        <a-table :columns="columns" :pagination="false" :data-source="topgainers.slice(0, 7)" rowKey="ctid"
+            :customRow="goDeal" :loading="loading" class="mt-2" :rowClassName="() => { return 'pointer' }">
+            <template #bodyCell="{ column, record }">
+                <template v-if="column.key === 'pair'">
+                    <div>
+                        <span><span class="symbolFrom secondary-black fw-6">{{ getSymble(record.symble).from }}</span><span
+                                class="symbolTo fw-5 secondary-gray">
+                                {{ $t('deal_new.dn10') }}</span></span>
+                    </div>
+                </template>
 
 
-            </div>
-        </div>
-        <div slot="lastPrice" slot-scope="text,row">
-            <p class="mb-0">{{ global_get_tofixed(row.c, global_get_decimal(row.symble).p) }}
-              
-            </p>
-            <span class="second-txt fw-5"> ≈ {{ $store.getters.get_client_exchange_rate_name.mark }}{{
-                getClientExchangeRate(row) }}</span>
-            <!-- <img class="equivalent" src="/images/delta.svg" /> -->
-           
-        </div>
-        <div slot="changes" slot-scope="text,row">
-            <span v-if="tab == '2'" :class="row.c - row.o < 0 ? 'red-active' : 'up-dark'">${{ numFormatter(row.c * row.v)
-            }}<img :src="row.c - row.o < 0 ? '/images/red-up-arrow.svg' : '/images/green-blue-up-arrow.svg'" height="12"
-                    width="auto" class="ml-1 mb-1" /></span>
-            <span v-else :class="row.c - row.o < 0 ? 'red-active' : 'up-dark'">{{ getlimitprice(row) }}%<img
-                    :src="row.c - row.o < 0 ? '/images/red-up-arrow.svg' : '/images/green-blue-up-arrow.svg'" height="12"
-                    width="auto" class="ml-1 mb-1" /></span>
-        </div>
-    </a-table>
+                <template v-if="column.key === 'lastPrice'">
+                    <div>
+                        <p class="mb-0">{{ global_get_tofixed(record.c, global_get_decimal(record.symble).p) }}</p>
+
+                        <span class="second-txt fw-5"> ≈ {{ $store.getters.get_client_exchange_rate_name.mark }}{{
+                            getClientExchangeRate(record) }}</span>
+                    </div>
+                </template>
+
+                <template v-if="column.key === 'changes'">
+                    <div>
+                        <span v-if="tab == '2'" :class="record.c - record.o < 0 ? 'red-active' : 'up-dark'">
+                            ${{ numFormatter(record.c * record.v) }}
+                            <img :src="record.c - record.o < 0 ? '/images/red-up-arrow.svg' : '/images/green-blue-up-arrow.svg'"
+                                height="12" width="auto" class="ml-1 mb-1" /></span>
+                        <span v-else :class="record.c - record.o < 0 ? 'red-active' : 'up-dark'">{{ getlimitprice(record) }}%<img
+                                :src="record.c - record.o < 0 ? '/images/red-up-arrow.svg' : '/images/green-blue-up-arrow.svg'"
+                                height="12" width="auto" class="ml-1 mb-1" /></span>
+                    </div>
+                </template>
+            </template>
+        </a-table>
+    </div>
 </template>
 
 <script>
@@ -45,9 +53,9 @@ export default {
         tab: {
             type: String
         },
-        loading:{
-            type:Boolean,
-            default:true
+        loading: {
+            type: Boolean,
+            default: true
         }
     },
     data() {
@@ -59,21 +67,18 @@ export default {
                         title: this.$t("tableskeys.tk11"),
                         dataIndex: 'pair',
                         key: 'pair',
-                        scopedSlots: { customRender: 'pair' },
                         width: 120,
                     },
                     {
                         title: this.$t("tableskeys.tk2"),
                         dataIndex: 'lastPrice',
                         key: 'lastPrice',
-                        scopedSlots: { customRender: 'lastPrice' },
                         width: 80,
                     },
                     {
                         title: this.tab == 2 ? 'Total 24h Vol' : this.$t('texts.txt41'),
                         dataIndex: 'changes',
                         key: 'changes',
-                        scopedSlots: { customRender: 'changes' },
                         width: 90,
                         align: 'end'
                     },
@@ -89,7 +94,7 @@ export default {
         getlimitprice(item) {
             return (
                 (item.c - item.o < 0 ? "-" : "+") +
-                this.global_get_limitprice(item)
+                global_get_limitprice(item)
             );
         },
         topGainers(data) {
@@ -97,7 +102,7 @@ export default {
             array.sort((a, b) => {
                 const x = a.c - a.o < 0 ? -1 : 1;
                 const y = b.c - b.o < 0 ? -1 : 1;
-                return y * parseFloat(this.global_get_limitprice(b)) - x * parseFloat(this.global_get_limitprice(a))
+                return y * parseFloat(global_get_limitprice(b)) - x * parseFloat(global_get_limitprice(a))
             })
             return array;
         },
@@ -130,7 +135,7 @@ export default {
             array.sort((a, b) => {
                 const x = a.c - a.o < 0 ? -1 : 1;
                 const y = b.c - b.o < 0 ? -1 : 1;
-                return x * parseFloat(this.global_get_limitprice(a)) - y * parseFloat(this.global_get_limitprice(b))
+                return x * parseFloat(global_get_limitprice(a)) - y * parseFloat(global_get_limitprice(b))
             })
             return array;
         },

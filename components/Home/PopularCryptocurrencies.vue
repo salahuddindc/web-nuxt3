@@ -7,72 +7,92 @@
                     <a-card class="left-card first-table" :bordered="false">
                         <a-tabs default-active-key="1" v-model="activeTab" @change="changeTab">
                             <a-tab-pane key="0">
-                                <span slot="tab">
-                                    {{ $t('marketdetail.markdet1') }}
-                                    <p v-show="activeTab == '0'" class="tab-bottom-line mb-0"></p>
+                                <template #tab>
+                                    <span>
+                                        {{ $t('marketdetail.markdet1') }}
+                                        <p v-show="activeTab == '0'" class="tab-bottom-line mb-0"></p>
 
-                                </span>
+                                    </span>
+                                </template>
+
                                 <trade :getSymble="getSymble" :getClientExchangeRate="getClientExchangeRate"
                                     :marketdata="getDataArray" tab="2" :loading="marketDataLoading" />
                             </a-tab-pane>
                             <a-tab-pane key="1">
-                                <span slot="tab">
-                                    {{ $t('tabkeys.tab19') }}
-                                    <p v-show="activeTab == '1'" class="tab-bottom-line mb-0"></p>
+                                <template #tab>
+                                    <span>
+                                        {{ $t('tabkeys.tab19') }}
+                                        <p v-show="activeTab == '1'" class="tab-bottom-line mb-0"></p>
 
-                                </span>
+                                    </span>
+                                </template>
                                 <trade :getSymble="getSymble" :getClientExchangeRate="getClientExchangeRate"
                                     :loading="marketDataLoading" :marketdata="getDataArray" tab="0" />
 
                                 <a-row>
                                     <a-col :xs="24" :sm="0">
                                         <nuxt-link to="/market">
-                                            <p class="mb-0 text-center pointer font-14 lh-18 fw-5 mt-3">{{ $t('public.ph49')
-                                                }} <a-icon type="right" class="arrow-icon ml-1" style="font-size:12px" /></p>
+                                            <p class="mb-0 text-center pointer font-14 lh-18 fw-5 mt-3">{{
+                                                $t('public.ph49')
+                                                }} </p>
+                                            <RightOutlined class="arrow-icon ml-1" style="font-size:12px" />
                                         </nuxt-link>
                                     </a-col>
                                 </a-row>
                             </a-tab-pane>
                             <a-tab-pane key="2">
-                                <span slot="tab">
-                                    {{ $t('tabkeys.tab20') }}
-                                    <p v-show="activeTab == '2'" class="tab-bottom-line mb-0"></p>
+                                <template #tab>
+                                    <span>
+                                        {{ $t('tabkeys.tab20') }}
+                                        <p v-show="activeTab == '2'" class="tab-bottom-line mb-0"></p>
 
-                                </span>
+                                    </span>
+                                </template>
                                 <trade :getSymble="getSymble" :getClientExchangeRate="getClientExchangeRate"
                                     :loading="marketDataLoading" :marketdata="getDataArray" tab="-1" />
                                 <a-row>
                                     <a-col :xs="24" :sm="0">
                                         <nuxt-link to="/market">
-                                            <p class="mb-0 text-center pointer font-14 lh-18 fw-5 mt-3">{{ $t('public.ph49')
-                                                }} <a-icon type="right" class="arrow-icon ml-1" style="font-size:12px" /></p>
+                                            <p class="mb-0 text-center pointer font-14 lh-18 fw-5 mt-3">{{
+                                                $t('public.ph49')
+                                                }}
+                                                <RightOutlined class="arrow-icon ml-1" style="font-size:12px" />
+                                            </p>
                                         </nuxt-link>
                                     </a-col>
                                 </a-row>
                             </a-tab-pane>
                             <a-tab-pane key="3">
-                                <span slot="tab">
-                                    {{ $t('tabkeys.tab21') }}
-                                    <p v-show="activeTab == '3'" class="tab-bottom-line mb-0"></p>
+                                <template #tab>
+                                    <span>
+                                        {{ $t('tabkeys.tab21') }}
+                                        <p v-show="activeTab == '3'" class="tab-bottom-line mb-0"></p>
 
-                                </span>
+                                    </span>
+                                </template>
                                 <trade :getSymble="getSymble" :getClientExchangeRate="getClientExchangeRate"
                                     :loading="marketDataLoading" :marketdata="getDataArray" tab="1" />
                                 <a-row>
                                     <a-col :xs="24" :sm="0">
                                         <nuxt-link to="/market">
-                                            <p class="mb-0 text-center pointer font-14 lh-18 fw-5 mt-3">{{ $t('public.ph49')
-                                                }} <a-icon type="right" class="arrow-icon ml-1" style="font-size:12px" /></p>
+                                            <p class="mb-0 text-center pointer font-14 lh-18 fw-5 mt-3">{{
+                                                $t('public.ph49')
+                                                }}
+                                                <RightOutlined class="arrow-icon ml-1" style="font-size:12px" />
+                                            </p>
                                         </nuxt-link>
                                     </a-col>
                                 </a-row>
                             </a-tab-pane>
-                            <span slot="tabBarExtraContent">
-                                <nuxt-link to="/market">
-                                    <p class="mb-0 text-right pointer view-all pr-10 fw-5">{{ $t('public.ph49') }}
-                                        <a-icon type="right" class="arrow-icon ml-1" /></p>
-                                </nuxt-link>
-                            </span>
+                            <template #rightExtra>
+                                <span>
+                                    <nuxt-link to="/market">
+                                        <p class="mb-0 text-right pointer view-all pr-10 fw-5">{{ $t('public.ph49') }}
+                                            <RightOutlined class="arrow-icon ml-1" />
+                                        </p>
+                                    </nuxt-link>
+                                </span>
+                            </template>
                         </a-tabs>
 
                     </a-card>
@@ -81,20 +101,23 @@
                     <a-card class="left-card" :bordered="false">
                         <a-tabs default-active-key="1" v-model="tab">
                             <a-tab-pane key="0">
-                                <span slot="tab">
-                                    {{ $t('tabkeys.tab22') }}
-                                    <p v-show="tab == '0'" class="tab-bottom-line mb-0"></p>
-
-                                </span>
+                                <template #tab>
+                                    <span>
+                                        {{ $t('tabkeys.tab22') }}
+                                        <p v-show="tab == '0'" class="tab-bottom-line mb-0"></p>
+                                    </span>
+                                </template>
                                 <RightTabs :getSymble="getSymble" :getClientExchangeRate="getClientExchangeRate"
                                     :loading="marketDataLoading" :marketdata="marketdata_futrue" tab="0" key="0" />
                             </a-tab-pane>
                             <a-tab-pane key="1">
-                                <span slot="tab">
-                                    {{ $t('tabkeys.tab23') }}
-                                    <p v-show="tab == '1'" class="tab-bottom-line mb-0"></p>
+                                <template #tab>
+                                    <span>
+                                        {{ $t('tabkeys.tab23') }}
+                                        <p v-show="tab == '1'" class="tab-bottom-line mb-0"></p>
 
-                                </span>
+                                    </span>
+                                </template>
                                 <RightTabs :getSymble="getSymble" :getClientExchangeRate="getClientExchangeRate"
                                     :loading="marketDataLoading" :marketdata="marketdata_futrue" tab="1" key="1" />
                             </a-tab-pane>
@@ -189,8 +212,7 @@ export default {
 
             },
             immediate: true,
-            deep: true
-            ,
+            deep: true,
         }
     },
     methods: {
@@ -239,7 +261,6 @@ export default {
                     pageSize: 300 //have to change
                 }).then((res) => {
                     const data = res.data || {}
-                    console.log(res, "resresresres")
                     _self.marketDataLoading = false;
                     _self.marketdata_spot = [];
                     _self.marketdata_recommend = [];
@@ -287,7 +308,7 @@ export default {
             }
         },
         getSymble(s) {
-            s = this.global_get_uppercase(s);
+            s = global_get_uppercase(s);
             s = s.split("/");
             return {
                 from: s[0],
@@ -308,10 +329,9 @@ export default {
         },
         getFavorites() {
             const _self = this;
-            if (!this.$userinfo.uid) {
+            if (!$userinfo.uid) {
                 return
             }
-            console.log('im calling in market getFavorites ');
             _self.$store.dispatch('user_self_selection_getlist', { type: 0 }).then(({ data }) => {
 
                 if (data) {

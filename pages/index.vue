@@ -1,16 +1,19 @@
 <template>
   <div ref="home" id="home">
-    <NewHome />
+    <HomeNewHome />
   </div>
 </template>
 <script>
-import NewHome from '~/components/Home/NewHome.vue';
+
 export default {
-  name: "HomePage",
-  components: {
-    NewHome
+  setup() {
+    useHead({
+      bodyAttrs: {
+        class: 'home-page-body',
+      },
+    })
   },
-};
+}
 </script>
 <style lang="scss">
 @use '@/assets/scss/pages/new-home/home.scss';

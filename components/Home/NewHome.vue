@@ -1,12 +1,6 @@
 <template>
   <div>
-    <!-- <AppMarquee />   -->
-    <!-- this is for testing only -->
-    <!--  <div>
-    <a-button type="primary" @click="showModal">
-      Open Modal with async logic
-    </a-button>
-  </div> -->
+
 
     <TopBanner :isAvailable="isServiceAvailable" />
     <NewsAlert />
@@ -19,12 +13,10 @@
       <BeginnerGuide />
       <Community />
     </div>
-    <!--  <BuyBnqNow v-if="loggedIn" />
-    <BuyBnqNowGuest v-else /> -->
 
+    <!--
     <NoServicesModal :visible="showSuccessModal" @onClose="closeModal" v-if="showSuccessModal" />
-    <!-- <SuccessModal :show="showSuccessModal" :successModel="{ heading: 'heading', message: 'message' }"
-      v-if="showSuccessModal" /> -->
+     -->
   </div>
 </template>
 
@@ -37,8 +29,8 @@ import CopyTrading from "./CopyTrading.vue";
 import ProductSuite from "./ProductSuite.vue";
 import BeginnerGuide from "./BeginnerGuide.vue";
 import Community from "./Community.vue";
- 
-import AppMarquee from "../App/Marquee.vue";
+
+
 import NoServicesModal from "./NoServicesModal.vue";
 import { mapGetters } from "vuex";
 import SuccessModal from "../App/SuccessModal.vue";
@@ -51,17 +43,9 @@ export default {
     ProductSuite,
     BeginnerGuide,
     Community,
-   
-    AppMarquee,
+
     NoServicesModal,
     SuccessModal
-  },
-  head() {
-    return {
-      bodyAttrs: {
-        class: 'home-page-body',
-      }
-    }
   },
   data() {
     return {
@@ -70,11 +54,7 @@ export default {
     }
   },
   computed: {
-    ...mapGetters("constants", ["isServiceAvailable"]),
-
-    loggedIn() {
-      return this.$userinfo.uid != undefined;
-    },
+    ...mapGetters("constants", ["isServiceAvailable"])
   },
   watch: {
 

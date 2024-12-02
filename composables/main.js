@@ -39,7 +39,6 @@ const $usersettings = computed(() => {
 
 const $userinfo = computed(() => {
     const { $store } = useNuxtApp()
-    console.log('$store', $store);
     const user = $store.getters['auth/userInfo']
     if (!user.uid) {
         return {}
@@ -77,7 +76,6 @@ const getSymbol = (key, value, iType = 0) => {
 
 const getSymbolInfos = async () => {//获取交易对
     const { $store } = useNuxtApp();
-    console.log('storessssss', $store);
     var symbolinfos = $store.state.symbleinfos;// this.$storage.get("getSymbolinfos")
 
     if (symbolinfos) {
@@ -89,7 +87,6 @@ const getSymbolInfos = async () => {//获取交易对
         return symbolinfos;
     } else {
         var result = await $store.dispatch('com_symbleinfos_get', {});
-        console.log('getSymbolInfos  symbleinfos', JSON.parse(JSON.stringify(result.data)));
         $store.commit('set_symbleinfos', JSON.parse(JSON.stringify(result.data)));
         // this.$storage.set("getSymbolinfos", JSON.parse(JSON.stringify(result.data)), 200 * 3600000);//12小时过期  1 * 3600000
         return result.data;
@@ -598,7 +595,6 @@ const getContractsInfos = (data, type) => {//获取币种信息
 const getdecimalsinfos = async () => {//获取币种信息
     const { $store, $storage } = useNuxtApp()
     var precision_result = $storage.get("getdecimalsinfos_1")
-    console.log('precision_resultprecision_resultprecision_resultprecision_result', precision_result);
 
     if (precision_result) {
         $store.commit('set_decimals_list', precision_result);

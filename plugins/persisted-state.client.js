@@ -32,7 +32,6 @@ export default defineNuxtPlugin(({ $store }) => {
             if (tokenObject) {
                 const { token, expire } = JSON.parse(tokenObject);
                 const stateValues = JSON.parse(persistedState);
-                console.log('keykeykey', stateValues, expire && hasExpired(expire));
                 // Check if the expiration time has passed
                 if (expire && hasExpired(expire)) {
                     // Reset the persisted state if expired
@@ -42,7 +41,6 @@ export default defineNuxtPlugin(({ $store }) => {
                 }
                 // Add a check to confirm state structure
                 if (typeof stateValues === 'object' && stateValues !== null) {
-                    console.log('State is valid:', stateValues);
                     return stateValues;
                 } else {
                     console.warn('Invalid state format:', stateValues);
