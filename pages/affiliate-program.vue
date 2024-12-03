@@ -1,15 +1,21 @@
 <template>
-    <div>
-
+    <div id="affiliate-program">
+        <AffiliateProgram />
     </div>
 </template>
 
 <script>
-    export default {
-        
-    }
+export default {
+    setup() {
+        useHead({
+            bodyAttrs: {
+                class: 'affiliate-program-body',
+            },
+        })
+    },
+}
 </script>
 
-<style lang="scss" scoped>
-
+<style lang="scss">
+@use '@/assets/scss/pages/footer/affiliate-program.scss';
 </style>

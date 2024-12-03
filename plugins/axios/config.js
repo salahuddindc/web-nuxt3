@@ -117,9 +117,11 @@ export default {
     },
     getBaseInfo(store) {
         const info = baseInfo;
+ 
+        
         info.uid = store.state.hex_uid.value;
         info.key = store.state.hex_key.value;
-        if (!process.server || baseInfo.ip == '127.0.0.1') {
+        if (import.meta.client || baseInfo.ip == '127.0.0.1') {
             if (store.state.ip == '') {
                 fetch('https://api.ipify.org?format=json').then(x => x.json()).then(({ ip }) => {
                     if (ip) {
@@ -132,7 +134,7 @@ export default {
                 info.ip = store.state.ip;
             }
             //info.ip = window.returnCitySN ? window.returnCitySN["cip"] : store.state.ip;
-            if (process.client)
+            if (import.meta.client)
                 info.deviceid = window.navigator.userAgent.toLowerCase();
         }
         info.lang = store.state.hex_lang.locale;

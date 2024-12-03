@@ -39,7 +39,6 @@ const userInfo = (state, getters, rootState, rootGetters) => {
     viplevel: null,
     withdrawlimtperday: null,
   }
-  console.log('rootState', rootState);
   
   return rootState.hex_server_user_info.value ? rootState.hex_server_user_info.value : defaultUserObject
 }

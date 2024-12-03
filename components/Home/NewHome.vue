@@ -14,9 +14,9 @@
       <Community />
     </div>
 
-    <!--
-    <NoServicesModal :visible="showSuccessModal" @onClose="closeModal" v-if="showSuccessModal" />
-     -->
+
+    <NoServicesModal :visible="showServiceModal" v-if="showServiceModal" />
+
   </div>
 </template>
 
@@ -49,7 +49,7 @@ export default {
   },
   data() {
     return {
-      showSuccessModal: false,
+      showServiceModal: false,
       homeBannerChannelId: homeBannerChannelId,
     }
   },
@@ -60,26 +60,25 @@ export default {
 
     isServiceAvailable: {
       handler(val) {
-        if (process.client) {
+        if (import.meta.client) {
 
           this.showModal()
         }
       },
       immediate: true, // Trigger the handler immediately when the component is mounted
     },
-
   },
   methods: {
     showModal() {
       const showServiceAvailableModal = localStorage.getItem('showServiceAvailableModal') != 'false'
       if (!this.isServiceAvailable && showServiceAvailableModal) {
-        this.showSuccessModal = true;
+        this.showServiceModal = true
       } else {
-        this.showSuccessModal = false;
+        this.showServiceModal = false
       }
     },
     closeModal() {
-      this.showSuccessModal = false;
+      this.showServiceModal = false
       localStorage.setItem('showServiceAvailableModal', 'false')
     },
   },

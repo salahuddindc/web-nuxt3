@@ -311,18 +311,25 @@ $padding-directions: (
 }
 
 
-body.home-page-body,body.calculator-body,body.investment-plans-body,
+body.home-page-body,
+body.calculator-body,
+body.investment-plans-body,
 body.play-card-game-body,
 body.convert-body,
-body.square-module-body,body.copy-trade-body, body.partner-program-body,body.trading-bot-body,body.market-details-body {
+body.square-module-body,
+body.copy-trade-body,
+body.partner-program-body,
+body.trading-bot-body,
+body.market-details-body,
+body.affiliate-program-body {
     @include margin-utilities;
     @include padding-utilities;
     @include fonts-utilities;
     @include line-height-utilities;
     @include border-radius-utilities;
     @include font-weight-utilities;
-     
-  
+
+
 
     h1 {
         font-size: $h1;
@@ -348,6 +355,7 @@ body.square-module-body,body.copy-trade-body, body.partner-program-body,body.tra
         font-size: $h6;
     }
 }
-body.play-card-game-body{
-   background: #111111;
+
+body.play-card-game-body {
+    background: #111111;
 }

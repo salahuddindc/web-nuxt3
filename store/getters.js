@@ -213,7 +213,7 @@ export default {
     //get the value of visitor email input
     getUserInput: (state) => state.visitor_user,
     getSymbleinfos: (state, getters, rootState, rootGetters) => {
-        return state.symbleinfos || []
+        return  state.symbleinfos || []
     },
     getCurrencyinfos: (state) => state.currencyinfos || [],
 }

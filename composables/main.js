@@ -76,11 +76,12 @@ const getSymbol = (key, value, iType = 0) => {
 
 const getSymbolInfos = async () => {//获取交易对
     const { $store } = useNuxtApp();
-    var symbolinfos = $store.state.symbleinfos;// this.$storage.get("getSymbolinfos")
-
+    var symbolinfos = $store.state.symbleinfos
+    console.log('symbolinfossymbolinfos', symbolinfos);
+    
     if (symbolinfos) {
-        $store.commit('set_symbleinfos', symbolinfos);
-        $store.dispatch('com_symbleinfos_get', {}).then(res => {
+        // $store.commit('set_symbleinfos', symbolinfos);
+        $store.dispatch('com_symbleinfos_get', {}).then(res => {  console.log('symbolinfossymbolinfos:res', res);
             $store.commit('set_symbleinfos', res.data);
             // this.$storage.set("getSymbolinfos", res.data, 200 * 3600000);
         })

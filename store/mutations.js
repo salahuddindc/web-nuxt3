@@ -31,9 +31,9 @@ export function remove_user_info(state) {
     state.hex_uid.value = '';
     state.hex_key.value = '';
     state.hex_token.value = { expire: '', token: '' };
-    useCookie('hex_uid').value = null;
-    useCookie('hex_key').value = null;
-    useCookie('hex_token').value = null;
+    useCookie('HEX_UID').value = null;
+    useCookie('HEX_KEY').value = null;
+    useCookie('HEX_TOKEN').value = null;
 
     // --deperacated-in-nuxt2
     // Cookie.remove(state.hex_uid.type);
@@ -43,15 +43,15 @@ export function remove_user_info(state) {
 
 export function set_user_info(state, data) {
     // const data = res.data ? res.data : res.hexdata;
-    
-    
+
+
     console.log('set_user_info', data);
     state.hex_server_user_info.value = data;
     console.log('set_user_info', state.hex_server_user_info.value);
     state.hex_uid.value = data.uid;
     state.hex_key.value = data.secretkey
-    useCookie('hex_uid').value = data.uid;
-    useCookie('hex_key').value = data.secretkey;
+    useCookie('HEX_UID').value = data.uid;
+    useCookie('HEX_KEY').value = data.secretkey;
 
     // --deperacated-in-nuxt2
     // Cookie.set(state.hex_uid.type, data.uid);
@@ -136,10 +136,10 @@ export function set_client_collect(state, id) {
     window.localStorage.setItem('HEX_COLLECT', JSON.stringify(collect))
 }
 export function set_symbleinfos(state, data) {
-
     state.symbleinfos = data;
 }
 export function set_currencyinfos(state, data) {
+    useCookie('currencyinfos').value = JSON.stringify(data);
     state.currencyinfos = data;
 }
 export function set_legaltypes(state, data) {

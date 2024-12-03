@@ -94,5 +94,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import '@/assets/scss/components/app/banners.scss';
+@use '@/assets/scss/components/app/banners.scss';
 </style>

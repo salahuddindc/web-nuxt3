@@ -260,21 +260,21 @@ export default {
             // this.$refs.userProfileCard.updateNick();
         }
     },
-    mounted() {
+    async mounted() {
         getTokenAndUserInfo()
-        this.$nextTick(() => {
-            getdecimalsinfos()
+        this.$nextTick(async () => {
+            await getdecimalsinfos()
             getUserIP()
             /*是否维护中*/
             this.fetchConstants({ key: "common_system_error" })
             /*汇率*/
             this.getRate()
             /*法币收款方式*/
-            fiatpaymenttypeget()
+            await fiatpaymenttypeget()
             /*订阅用户通知事件 */
 
-            getSymbolInfos()
-            getcurrencyinfos()
+            await getSymbolInfos()
+            // await getcurrencyinfos()
 
         });
         if (this.$storage) {

@@ -12,15 +12,15 @@ export default defineNuxtPlugin(({ $store }) => {
     createPersistedState({
         key: 'auth-symbol-persistedstate',
         paths: [
-            'currencyinfos',
-            'symbleinfos',
-            'hex_server_user_info',
-            'hex_server_user_assets',
-            'hex_server_user_settings',
-            'hex_uid',
-            'hex_key',
-            'constants.adjustmentCoefficients',
-            'copy-trade.selectedTrader',
+            // 'currencyinfos',
+            // 'symbleinfos',
+            // 'hex_server_user_info',
+            // 'hex_server_user_assets',
+            // 'hex_server_user_settings',
+            // // 'hex_uid',
+            // // 'hex_key',
+            // 'constants.adjustmentCoefficients',
+            // 'copy-trade.selectedTrader',
         ],
         // Triggered when the state is loaded from storage
         getState: (key) => {

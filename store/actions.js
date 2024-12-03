@@ -15,6 +15,8 @@ export default {
             hex_tradeview = useCookie('tradeView').value ? useCookie('tradeView').value : 'std',
             hex_token = useCookie(state.hex_token.type).value ? useCookie(state.hex_token.type).value : ''
         // app.i18n.locale = hex_lang;
+        console.log('hex_langhex_langhex_langhex_lang', hex_lang, hex_uid);
+
         commit('set_lang', hex_lang);
         // //设置默认币种
         commit('set_client_exchange', hex_exchange);
@@ -26,6 +28,7 @@ export default {
         commit('set_server_uid', hex_uid);
         // // 设置key
         commit('set_server_key', hex_key);
+        commit('set_token', hex_token)
     },
     async setUserInputttt({ commit, dispatch }, params) {
 
