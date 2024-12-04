@@ -1,5 +1,5 @@
 <template>
-    <AppSelect :showSearch="true" :type="$t('placeholders.select_country')" :order="countryList" market="Select"
+    <AppSelect :showSearch="false" :type="$t('placeholders.select_country')" :order="countryList" market="Select"
         @searchData="onChange" />
 </template>
 

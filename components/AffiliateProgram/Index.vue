@@ -34,7 +34,7 @@
           </a-row>
         </div>
       </div>
-      <!-- <div class="commission-benefits mt-8">
+      <div class="commission-benefits mt-8">
         <div class="main-content">
           <a-card :bordered="false">
             <h2
@@ -92,8 +92,8 @@
             </a-row>
           </div>
         </div>
-      </div> -->
-      <!-- <div class="main-content my-8">
+      </div>
+      <div class="main-content my-8">
         <a-card :bordered="false" class="pt-5 financial-card">
           <a-row class="">
             <a-col :lg="24">
@@ -101,12 +101,12 @@
             </a-col>
           </a-row>
         </a-card>
-      </div> -->
+      </div>
     </div>
-    <!-- <div v-if="applyAgentModel">
-      <ApplyAgentModal :applyAgentModel="applyAgentModel" :close="close" :applyFormData="applyFormData" />
+    <div v-if="applyAgentModel">
+      <ApplyAgentModal :applyAgentModel="applyAgentModel" @on-close="close" :applyFormData="applyFormData" />
     </div>
-    <ApplySuccessModal :applySuccessModel="successModel" @applySuccessModelClose="successModel = {}" /> -->
+    <ApplySuccessModal :applySuccessModel="successModel" @applySuccessModelClose="successModel = {}" />
   </div> >
 </template>
 
@@ -180,7 +180,7 @@ export default {
         this.$router.push("/login?returnurl=" + this.$route.path);
         return; // Exit the function
       }
-      if (this.$usersettings.iskol) {
+      if ($usersettings.iskol) {
         var kolPanelLink = "https://newaffiliates.bitnasdaq.com/";
         window.open(kolPanelLink, "_blank");
       } else {

@@ -1,6 +1,6 @@
 <template>
     <div class="apply-success-modal">
-        <a-modal centered id="agent-apply-modal" v-model="show" :footer="false" :title="false" @cancel="close"
+        <a-modal centered class="agent-apply-modal" v-model="show" :footer="false" :title="false" @cancel="close"
             width="400px">
             <a-row>
                 <a-col :lg="24" align="center">

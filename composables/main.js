@@ -48,7 +48,8 @@ const $userinfo = computed(() => {
     if (!user || !token) {
         return {}
     }
-
+ 
+    
     if (typeof user === 'string') {
         return Crypto.decrypt(user, token);
     } else {
@@ -75,23 +76,20 @@ const getSymbol = (key, value, iType = 0) => {
 
 
 const getSymbolInfos = async () => {//获取交易对
-    const { $store } = useNuxtApp();
-    var symbolinfos = $store.state.symbleinfos
-    console.log('symbolinfossymbolinfos', symbolinfos);
-    
-    if (symbolinfos) {
-        // $store.commit('set_symbleinfos', symbolinfos);
-        $store.dispatch('com_symbleinfos_get', {}).then(res => {  console.log('symbolinfossymbolinfos:res', res);
-            $store.commit('set_symbleinfos', res.data);
-            // this.$storage.set("getSymbolinfos", res.data, 200 * 3600000);
+    const { $store, $storage } = useNuxtApp();
+
+    let symbolInfos = $storage.get("symbolInfos") || [];
+    if (symbolInfos.length == 0) {
+        $store.dispatch('com_symbleinfos_get', {}).then(res => {
+            console.log('symbolinfossymbolinfos:res', res);
+            symbolInfos = res.data
+            $store.commit('set_symbleinfos', symbolInfos);
+            $storage.set("symbolInfos", symbolInfos, 200 * 3600000);
         })
-        return symbolinfos;
-    } else {
-        var result = await $store.dispatch('com_symbleinfos_get', {});
-        $store.commit('set_symbleinfos', JSON.parse(JSON.stringify(result.data)));
-        // this.$storage.set("getSymbolinfos", JSON.parse(JSON.stringify(result.data)), 200 * 3600000);//12小时过期  1 * 3600000
-        return result.data;
+        return symbolInfos
     }
+    $store.commit('set_symbleinfos', symbolInfos);
+    return symbolInfos
 }
 
 
@@ -351,20 +349,18 @@ const getTokenAndUserInfo = async () => {
 const getcurrencyinfos = async () => {//获取币种信息
     const { $store, $storage } = useNuxtApp()
     var currencyinfos = $store.getters["getCurrencyinfos"]
-
-    if (currencyinfos) {
+    let currencyInfos = $storage.get("currencyInfos") || []
+    if (currencyInfos.length == 0) {
         $store.commit('set_currencyinfos', currencyinfos);
         $store.dispatch('com_currencyinfos_get', {}).then(res => {
-            $store.commit('set_currencyinfos', res.data)
-            $storage.set("getcurrencyinfos", res.data, 200 * 3600000)
+            currencyinfos = res.data
+            $store.commit('set_currencyinfos', currencyinfos)
+            $storage.set("currencyInfos", currencyinfos, 200 * 3600000)
         })
         return currencyinfos
-    } else {
-        var result = await $store.dispatch('com_currencyinfos_get', {});
-        $store.commit('set_currencyinfos', result.data);
-        $storage.set("getcurrencyinfos", result.data, 200 * 3600000);//12小时过期  1 * 3600000
-        return result.data;
     }
+    $store.commit('set_currencyinfos', currencyInfos)
+    return currencyinfos
 }
 
 // 将本地交易对数据数据设置到store

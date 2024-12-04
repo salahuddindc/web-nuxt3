@@ -1,40 +1,45 @@
 <template>
   <div>
     <a-select v-if="showSearch" style="width: 100%" :open="open" :placeholder="$t('placeholders.plh61')"
-      v-on:select="setOpen(false)" @dropdownVisibleChange="onOpen" v-model="selectVal" @change="changeVal">
-      <!-- <a-icon v-if="open" slot="suffixIcon" type="up" />
-      <a-icon v-else slot="suffixIcon" type="down" v-on:click="setOpen(true)" /> -->
-      <img src="/images/fill-arrow-up.svg" v-if="open" slot="suffixIcon" type="up" />
-      <img src="/images/fill-arrow-down.svg" v-else slot="suffixIcon" type="down" v-on:click="setOpen(true)" />
+      v-on:select="setOpen(false)" @dropdownVisibleChange="onOpen" v-model:value="selectVal" @change="changeVal">
 
-      <div slot="dropdownRender" slot-scope="menu">
-        <div style="padding: 4px 8px; cursor: pointer;">
-          <a-input v-if="open" :placeholder="$t('placeholders.plh5')" ref="search" v-on:blur="setOpen(false)"
-            v-model="searchValue" class="all-input-search" />
+      <template #suffixIcon>
+        <img src="/images/fill-arrow-up.svg" v-if="open" type="up" />
+        <img src="/images/fill-arrow-down.svg" v-else type="down" v-on:click="setOpen(true)" />
+      </template>
+
+
+      <template #dropdownRender="{ menuNode: menu }">
+        <div>
+          <div style="padding: 4px 8px; cursor: pointer;">
+            <a-input v-if="open" :placeholder="$t('placeholders.plh5')" ref="search" v-on:blur="setOpen(false)"
+              v-model:value="searchValue" class="all-input-search" />
+          </div>
+          <a-divider style="margin: 4px 0;" />
+          <v-nodes :vnodes="menu" />
         </div>
-        <a-divider style="margin: 4px 0;" />
-        <v-nodes :vnodes="menu" />
-      </div>
-      <a-select-option v-for="(item, index) in getCurrencyList" :key="index"
-        v-if="filterOptions(item.value ? item.value.toLowerCase() : item.name ? item.name.toLowerCase() : item.fcurrencyname.toLowerCase())">
+      </template>
+
+      <!-- v-if="filterOptions(item.value ? item.value.toLowerCase() : item.name ? item.name.toLowerCase() : item.fcurrencyname.toLowerCase())" -->
+      <a-select-option v-for="(item, index) in getCurrencyList" :key="index">
         <div class="col-alignment">
           <img v-if="item.icon" :src="item.icon" width="auto" height="15" class="mr-2" />
-          <div style="height: 10px;" v-if="item.color" :style="{ background: `${item.color}` }" class="mr-2">&nbsp;</div>
-          <div>
-            {{
-              global_get_uppercase(item.value ? (item.tcurrencyname ==
-                "YX" ? item.fcurrencyname + $t('contract.swap') : item.value) : item.currencyname ? item.currencyname :
-                item.name ? item.name : item.fcurrencyname) }}
+          <div style="height: 10px;" v-if="item.color" :style="{ background: `${item.color}` }" class="mr-2">&nbsp;
+          </div>
+          <div> {{ global_get_uppercase(item.value ? (item.tcurrencyname ==
+            "YX" ? item.fcurrencyname + $t('contract.swap') : item.value) : item.currencyname ? item.currencyname :
+            item.name ? item.name : item.fcurrencyname) }}
           </div>
         </div>
-
-
       </a-select-option>
+ 
     </a-select>
     <a-select v-else :placeholder="$t('placeholders.plh61')" :open="open" style="width:100%;" v-model="selectVal"
       @change="changeVal" @dropdownVisibleChange="toggleOpen()">
-      <img src="/images/fill-arrow-up.svg" v-if="open" slot="suffixIcon" type="up" />
-      <img src="/images/fill-arrow-down.svg" v-else slot="suffixIcon" type="down" />
+      <template #suffixIcon>
+        <img src="/images/fill-arrow-up.svg" v-if="open" type="up" />
+        <img src="/images/fill-arrow-down.svg" v-else type="down" />
+      </template>
 
 
       <a-select-option v-for="(item, index) in getCurrencyList" :key="index">
@@ -62,7 +67,11 @@ export default {
   components: {
     VNodes: {
       functional: true,
-      render: (h, ctx) => ctx.props.vnodes,
+      type: Object,
+      required: true,
+      render: (h, ctx) => {
+        return h.$props.vnodes
+      },
     },
   },
   props: ["order", 'market', 'type', 'frenchcurrency', 'margin', 'label', 'showSearch'],

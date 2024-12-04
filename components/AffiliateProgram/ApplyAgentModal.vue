@@ -1,183 +1,175 @@
 <template>
-    <div class="agent-apply-modal">
-        <a-modal id="agent-apply-modal" v-model:open="localShow" :footer="false" :title="false" @cancel="close"
-            width="767px">
-            <a-form ref="applyForm" :model="applyForm" :rules="rules" :hide-required-mark="true"
-                label-align="left">
-                <a-row :gutter="16">
-                    <a-col :lg="1"></a-col>
-                    <a-col :lg="21" align="center">
-                        <p class="mb-2 apply-heading fw-5">{{ $t(metada.title) }}</p>
-                    </a-col>
-                    <a-col :lg="2" class=""> <img src="/images/ud-cross.svg" class="pointer" @click="close" />
-                    </a-col>
-                </a-row>
-                <a-row :gutter="16">
-                    <a-col :lg="24" align="center">
-                        <p class="my-3 apply-desc fw-5">{{ $t(metada.description) }} </p>
-                    </a-col>
-                </a-row>
-                <a-row :gutter="16">
-                    <a-col :xs="24" :sm="24" :md="24" :lg="24" :xl="12">
-                        <a-form-item has-feedback :label="$t('labels.account_id')" prop="accountId" :colon="false"
-                            :wrapper-col="{
-                                xl: 24,
-                                lg: 24,
-                                md: 24,
-                                sm: 24,
-                                xs: 24,
-                            }">
-                            <a-input v-model="applyForm.accountId" :placeholder="$t('partner.account_id')" />
-                        </a-form-item>
-                    </a-col>
-                    <a-col :xs="24" :sm="24" :md="24" :lg="24" :xl="12">
-                        <a-form-item has-feedback :label="$t('labels.full_name')" prop="fullName" :colon="false"
-                            :wrapper-col="{
-                                xl: 24,
-                                lg: 24,
-                                md: 24,
-                                sm: 24,
-                                xs: 24,
-                            }">
-                            <a-input v-model="applyForm.fullName"
-                                :placeholder="$t('placeholders.enter_your_full_name')" />
-                        </a-form-item>
-                    </a-col>
-                </a-row>
-                <a-row :gutter="16">
-                    <a-col :xs="24" :sm="24" :md="24" :lg="24" :xl="12">
-                        <a-form-item has-feedback :label="$t('labels.lbl3')" prop="emailAddress" :colon="false"
-                            :wrapper-col="{
-                                xl: 24,
-                                lg: 24,
-                                md: 24,
-                                sm: 24,
-                                xs: 24,
-                            }">
-                            <a-input v-model="applyForm.emailAddress" :placeholder="$t('placeholders.plh3')" />
-                        </a-form-item>
-                    </a-col>
-                    <a-col :xs="24" :sm="24" :md="24" :lg="24" :xl="12">
-                        <a-form-item has-feedback :label="$t('labels.lbl4')" prop="country" :colon="false"
-                            :wrapper-col="{
-                                xl: 24,
-                                lg: 24,
-                                md: 24,
-                                sm: 24,
-                                xs: 24,
-                            }">
-                            <AppCountriesDropdown v-model="applyForm.country" :countries="countries"
-                                @onChange="onChangeCountry" />
-                            <!-- <a-input v-model="applyForm.country" :placeholder="$t('placeholders.select_country')" /> -->
+    <!-- <div class="agent-apply-modal"> -->
+    <a-modal class="agent-apply-modal" :visible="localShow" :footer="false" :title="false" @cancel="close"
+        width="767px">
+        <a-form ref="applyForm" :model="applyForm" :rules="rules" :hide-required-mark="true" label-align="left">
+            <a-row :gutter="16">
+                <a-col :lg="1"></a-col>
+                <a-col :lg="21" align="center">
+                    <p class="mb-2 apply-heading fw-5">{{ $t(metada.title) }}</p>
+                </a-col>
+                <a-col :lg="2" class=""> <img src="/images/ud-cross.svg" class="pointer" @click="close" />
+                </a-col>
+            </a-row>
+            <a-row :gutter="16">
+                <a-col :lg="24" align="center">
+                    <p class="my-3 apply-desc fw-5">{{ $t(metada.description) }} </p>
+                </a-col>
+            </a-row>
+            <a-row :gutter="16">
+                <a-col :xs="24" :sm="24" :md="24" :lg="24" :xl="12">
+                    <a-form-item has-feedback :label="$t('labels.account_id')" name="accountId" :colon="false"
+                        :wrapper-col="{
+                            xl: 24,
+                            lg: 24,
+                            md: 24,
+                            sm: 24,
+                            xs: 24,
+                        }">
+                        <a-input v-model:value="applyForm.accountId" :placeholder="$t('partner.account_id')" />
+                    </a-form-item>
+                </a-col>
+                <a-col :xs="24" :sm="24" :md="24" :lg="24" :xl="12">
+                    <a-form-item has-feedback :label="$t('labels.full_name')" name="fullName" :colon="false"
+                        :wrapper-col="{
+                            xl: 24,
+                            lg: 24,
+                            md: 24,
+                            sm: 24,
+                            xs: 24,
+                        }">
+                        <a-input v-model:value="applyForm.fullName"
+                            :placeholder="$t('placeholders.enter_your_full_name')" />
+                    </a-form-item>
+                </a-col>
+            </a-row>
+            <a-row :gutter="16">
+                <a-col :xs="24" :sm="24" :md="24" :lg="24" :xl="12">
+                    <a-form-item has-feedback :label="$t('labels.lbl3')" name="emailAddress" :colon="false"
+                        :wrapper-col="{
+                            xl: 24,
+                            lg: 24,
+                            md: 24,
+                            sm: 24,
+                            xs: 24,
+                        }">
+                        <a-input v-model:value="applyForm.emailAddress" :placeholder="$t('placeholders.plh3')" />
+                    </a-form-item>
+                </a-col>
+                <a-col :xs="24" :sm="24" :md="24" :lg="24" :xl="12">
+                    <a-form-item has-feedback :label="$t('labels.lbl4')" name="country" :colon="false" :wrapper-col="{
+                        xl: 24,
+                        lg: 24,
+                        md: 24,
+                        sm: 24,
+                        xs: 24,
+                    }">
+                        <AppCountriesDropdown v-model:value="applyForm.country" :countries="countries"
+                            @onChange="onChangeCountry" />
 
-                        </a-form-item>
-                    </a-col>
-                </a-row>
+                    </a-form-item>
+                </a-col>
+            </a-row>
 
-                <a-row :gutter="16">
-                    <a-col :xs="24" :sm="24" :md="24" :lg="24" :xl="12">
-                        <a-form-item has-feedback :label="$t('partner.social_links')"
-                            prop="socialLinkForPrimaryMarketing" :colon="false" :wrapper-col="{
-                                xl: 24,
-                                lg: 24,
-                                md: 24,
-                                sm: 24,
-                                xs: 24,
-                            }">
-                            <a-input v-model="applyForm.socialLinkForPrimaryMarketing"
-                                :placeholder="$t('partner.share_social_links')" />
+            <a-row :gutter="16">
+                <a-col :xs="24" :sm="24" :md="24" :lg="24" :xl="12">
+                    <a-form-item has-feedback :label="$t('partner.social_links')" name="socialLinkForPrimaryMarketing"
+                        :colon="false" :wrapper-col="{
+                            xl: 24,
+                            lg: 24,
+                            md: 24,
+                            sm: 24,
+                            xs: 24,
+                        }">
+                        <a-input v-model:value="applyForm.socialLinkForPrimaryMarketing"
+                            :placeholder="$t('partner.share_social_links')" />
 
 
-                        </a-form-item>
-                    </a-col>
+                    </a-form-item>
+                </a-col>
 
-                    <a-col :xs="24" :sm="24" :md="24" :lg="24" :xl="12">
-                        <a-form-item has-feedback :label="$t('partner.members')" prop="members" :colon="false"
-                            :wrapper-col="{
-                                xl: 24,
-                                lg: 24,
-                                md: 24,
-                                sm: 24,
-                                xs: 24,
-                            }">
-                            <a-input v-model="applyForm.members" :placeholder="$t('partner.number_members')"
-                                type="number" />
-                        </a-form-item>
-                    </a-col>
-                </a-row>
+                <a-col :xs="24" :sm="24" :md="24" :lg="24" :xl="12">
+                    <a-form-item has-feedback :label="$t('partner.members')" name="members" :colon="false" :wrapper-col="{
+                        xl: 24,
+                        lg: 24,
+                        md: 24,
+                        sm: 24,
+                        xs: 24,
+                    }">
+                        <a-input v-model:value="applyForm.members" :placeholder="$t('partner.number_members')"
+                            type="number" />
+                    </a-form-item>
+                </a-col>
+            </a-row>
 
-                <a-row :gutter="16">
+            <a-row :gutter="16">
 
 
-                    <a-col :xs="24" :sm="24" :md="24" :lg="24" :xl="12">
-                        <a-form-item has-feedback :label="$t('partner.social_platform')"
-                            prop="socialPlatFormLinks" :colon="false" :wrapper-col="{
-                                xl: 24,
-                                lg: 24,
-                                md: 24,
-                                sm: 24,
-                                xs: 24,
-                            }">
-                            <a-select class="ant-tags-select-list" mode="tags" style="width: 100%"
-                                :token-separators="[',']" notFoundContent="" :placeholder="$t('partner.add_more')"
-                                @change="filterSocialLinks" v-model="applyForm.socialPlatFormLinks">
+                <a-col :xs="24" :sm="24" :md="24" :lg="24" :xl="12">
+                    <a-form-item has-feedback :label="$t('partner.social_platform')" name="socialPlatFormLinks"
+                        :colon="false" :wrapper-col="{
+                            xl: 24,
+                            lg: 24,
+                            md: 24,
+                            sm: 24,
+                            xs: 24,
+                        }">
+                        <a-select class="ant-tags-select-list" mode="tags" style="width: 100%" :token-separators="[',']"
+                            notFoundContent="" :placeholder="$t('partner.add_more')" @change="filterSocialLinks"
+                            v-model:value="applyForm.socialPlatFormLinks">
 
-                            </a-select>
-                        </a-form-item>
-                    </a-col>
-                    <a-col :xs="24" :sm="24" :md="24" :lg="24" :xl="12">
-                        <a-form-item has-feedback :label="$t('person.pd15')" prop="phoneNumber" :colon="false"
-                            :wrapper-col="{
-                                xl: 24,
-                                lg: 24,
-                                md: 24,
-                                sm: 24,
-                                xs: 24,
-                            }">
-                            <a-input v-model="applyForm.phoneNumber" type="number" :placeholder="$t('person.ps7')" />
-                        </a-form-item>
-                    </a-col>
-                    <a-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
-                        <a-form-item has-feedback :label="$t('partner.intro')" prop="introduction" :colon="false"
-                            :wrapper-col="{
-                                xl: 24,
-                                lg: 24,
-                                md: 24,
-                                sm: 24,
-                                xs: 24,
-                            }">
-                            <a-textarea v-model="applyForm.introduction" :placeholder="$t('partner.intro2')"
-                                allow-clear />
-                        </a-form-item>
-                    </a-col>
-                </a-row>
-                <a-row :gutter="16" class="mt-3">
-                    <a-col :xs="24" :sm="24" :md="24" :lg="12" :xl="12">
-                        <a-button class="cancel-outline-btn fw-5" block @click="close">{{ $t('agent_plan.ap8') }}
-                        </a-button>
-                    </a-col>
-                    <a-col :xs="24" :sm="24" :md="24" :lg="12" :xl="12">
-                        <a-button class="primary-btn fw-5" :loading="loading" block @click="applyAgentPlan">
-                            {{ this.$t('agent_plan.ap4') }}
-                        </a-button>
+                        </a-select>
+                    </a-form-item>
+                </a-col>
+                <a-col :xs="24" :sm="24" :md="24" :lg="24" :xl="12">
+                    <a-form-item has-feedback :label="$t('person.pd15')" name="phoneNumber" :colon="false" :wrapper-col="{
+                        xl: 24,
+                        lg: 24,
+                        md: 24,
+                        sm: 24,
+                        xs: 24,
+                    }">
+                        <a-input v-model:value="applyForm.phoneNumber" type="number" :placeholder="$t('person.ps7')" />
+                    </a-form-item>
+                </a-col>
+                <a-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
+                    <a-form-item has-feedback :label="$t('partner.intro')" name="introduction" :colon="false"
+                        :wrapper-col="{
+                            xl: 24,
+                            lg: 24,
+                            md: 24,
+                            sm: 24,
+                            xs: 24,
+                        }">
+                        <a-textarea v-model:value="applyForm.introduction" :placeholder="$t('partner.intro2')"
+                            allow-clear />
+                    </a-form-item>
+                </a-col>
+            </a-row>
+            <a-row :gutter="16" class="mt-3">
+                <a-col :xs="24" :sm="24" :md="24" :lg="12" :xl="12">
+                    <a-button class="cancel-outline-btn fw-5" block @click="close">{{ $t('agent_plan.ap8') }}
+                    </a-button>
+                </a-col>
+                <a-col :xs="24" :sm="24" :md="24" :lg="12" :xl="12">
+                    <a-button class="primary-btn fw-5" :loading="loading" block @click="applyAgentPlan">
+                        {{ this.$t('agent_plan.ap4') }}
+                    </a-button>
 
-                    </a-col>
-                </a-row>
-            </a-form>
-        </a-modal>
-    </div>
+                </a-col>
+            </a-row>
+        </a-form>
+    </a-modal>
+    <!-- </div> -->
 </template>
 
-<script> 
+<script>
 
 export default {
     name: 'ApplyAgentModal',
     props: {
         applyAgentModel: {
             type: Boolean
-        },
-        close: {
-            type: Function
         },
         applyFormData: {
             type: Object,
@@ -201,7 +193,7 @@ export default {
                 };
             }
         }
-    }, 
+    },
     data() {
         return {
             loading: false,
@@ -256,11 +248,6 @@ export default {
         };
     },
 
-
-    mounted() {
-        this.getCountries()
-        this.getUserStatus()
-    },
     watch: {
         applyFormData: {
             handler(newValue) {
@@ -286,9 +273,11 @@ export default {
         applyAgentModel: {
             handler(newVal, oldVal) {
                 this.localShow = newVal
-            }
+            },
+            immediate: true
         }
     },
+    emits: ['onClose'],
     methods: {
         async getUserStatus() {
             const hexServerUserInfo = this.$store.state.hex_server_user_info;
@@ -321,42 +310,42 @@ export default {
         },
 
         async applyAgentPlan() {
-            const _self = this;
-            await this.$refs['applyForm'].validate(async (valid) => {
-                if (valid) {
-                    this.loading = true;
-                    const postData = {
-                        id: this.userTicketNo,
-                        typeName: 'affiliate',
-                        content: _self.$t('community.com19'),
-                        jsonContent: JSON.stringify(_self.applyForm),
+            const _self = this
+            try {
+                await this.$refs['applyForm'].validate()
+
+                const postData = {
+                    id: this.userTicketNo,
+                    typeName: 'affiliate',
+                    content: _self.$t('community.com19'),
+                    jsonContent: JSON.stringify(_self.applyForm),
+                };
+                this.loading = true;
+                const data = await this.$store.dispatch('work_order_update', postData);
+                this.loading = false;
+                console.log("data", data)
+                if (data.code == 200) {
+                    this.applyForm = {
+                        fullName: '',
+                        emailAddress: '',
+                        country: '',
+                        accountId: '',
+                        country: '',
+                        socialLinkForPrimaryMarketing: '',
+                        members: '',
+                        introduction: '',
+                        phoneNumber: ''
                     };
-                    try {
-                        const data = await this.$store.dispatch('work_order_update', postData);
-                        console.log("data", data)
-                        if (data.code == 200) {
-                            this.applyForm = {
-                                fullName: '',
-                                emailAddress: '',
-                                country: '',
-                                accountId: '',
-                                country: '',
-                                socialLinkForPrimaryMarketing: '',
-                                members: '',
-                                introduction: '',
-                                phoneNumber: ''
-                            };
-                            _self.getUserStatus();
-                            _self.$store.commit('set_message', { type: 'ok', text: this.$t('texts.txt1') + ' ' + this.metada.title });
-                            _self.close();
-                        }
-                        this.loading = false;
-                    }
-                    catch (error) {
-                        this.loading = false;
-                    }
+                    _self.getUserStatus();
+                    _self.$store.commit('set_message', { type: 'ok', text: this.$t('texts.txt1') + ' ' + this.metada.title });
+                    this.close()
                 }
-            });
+
+            } catch (error) {
+                console.log('Validation error:', error)
+            }
+
+
         },
         onChangeCountry(country) {
             if (country) {
@@ -399,6 +388,13 @@ export default {
                 })
             })
         },
+        close() {
+            this.$emit('onClose')
+        }
+    },
+    mounted() {
+        this.getCountries()
+        this.getUserStatus()
     },
 
 }

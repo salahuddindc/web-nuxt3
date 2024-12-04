@@ -27,8 +27,7 @@
     "qr-code-styling": "^1.8.4",
     "vue": "latest",
     "vue-tel-input": "^9.2.0",
-    "vuex": "^4.0.2",
-    "vuex-persistedstate": "^4.1.0"
+    "vuex": "^4.0.2"
   },
   "devDependencies": {
     "less": "^4.2.0",

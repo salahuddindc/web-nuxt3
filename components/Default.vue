@@ -274,7 +274,7 @@ export default {
             /*订阅用户通知事件 */
 
             await getSymbolInfos()
-            // await getcurrencyinfos()
+            await getcurrencyinfos()
 
         });
         if (this.$storage) {

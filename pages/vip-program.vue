@@ -1,15 +1,13 @@
 <template>
-    <div>
-
+    <div id="bitnasdaq-vip">
+        <BitnasdaqVip />
     </div>
 </template>
 
 <script>
-    export default {
-        
-    }
+
 </script>
 
-<style lang="scss" scoped>
-
+<style lang="scss">
+@use '@/assets/scss/pages/bitnasdaq-vip/bitnasdaq-vip.scss';
 </style>
