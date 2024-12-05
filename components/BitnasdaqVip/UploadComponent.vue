@@ -1,6 +1,6 @@
 <template>
   <div>
-    <a-upload action="" list-type="picture-card" v-model:value="localArray" @preview="handlePreview"
+    <a-upload action="" list-type="picture-card" v-model:file-list="localArray" @preview="handlePreview"
       @change="handleChange">
       <div v-if="fileList.length < 1">
         <img src="/images/upload-icon.svg" />
@@ -33,6 +33,7 @@ export default {
       immediate: true
     }
   },
+  emits: ['cancel', 'preview', 'change'],
   methods: {
     handleCancel() {
       this.$emit('cancel');

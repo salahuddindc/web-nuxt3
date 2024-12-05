@@ -3,7 +3,7 @@
         <div class="main-content">
             <p class="main-heading mb-2 text-black fw-5">{{ $t('tableskeys.vt1') }}</p>
             <p class="main-decs text-black fw-4 mb-0">{{ $t('vip_pro.vip_note') }}</p>
-            <no-ssr>
+            <ClientOnly>
                 <!-- <carousel :perPage="vipLevels.length > 7 ? 7 : vipLevels.length" :loop="false" :speed="1500"
                     :navigationEnabled="true" :autoplay="false" :perPageCustom="[[300, 1],[500, 2],[900, 3],[1100, 3], [1200, 4], [1400, 4]]"
                     :scrollPerPage="false" :paginationEnabled="false" ref="carasoul">
@@ -13,7 +13,7 @@
 
                     </slide>
                 </carousel> -->
-            </no-ssr>
+            </ClientOnly>
         </div>
     </div>
 </template>
@@ -22,6 +22,7 @@
 // import carousel from '@/plugins/carousel/Carousel';
 // import slide from '@/plugins/carousel/Slide';
 // import select from '@/components/security/deal_select'
+ 
 import VipLevelCard from './VipLevelCard.vue';
 export default {
     components: {

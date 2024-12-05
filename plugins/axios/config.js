@@ -78,8 +78,6 @@ export default {
             _token = tokeninfo;
         }
 
-        // console.log('store.state:::::before', _token);
-
         // Check if token has expired
         if (_token.expire < new Date().getTime()) {
             if (import.meta.client && tokeninfo.expire > 0) {
@@ -110,15 +108,13 @@ export default {
         }
 
         // Ensure token is always committed
-        store.commit('set_token', _token);
-
-        // console.log('store.state:::::after', _token);
+        store.commit('set_token', _token); 
         return _token.token
     },
-    getBaseInfo(store) {
+    getBaseInfo(store, url) {
         const info = baseInfo;
- 
-        
+
+
         info.uid = store.state.hex_uid.value;
         info.key = store.state.hex_key.value;
         if (import.meta.client || baseInfo.ip == '127.0.0.1') {
@@ -138,8 +134,9 @@ export default {
                 info.deviceid = window.navigator.userAgent.toLowerCase();
         }
         info.lang = store.state.hex_lang.locale;
-        info.timestamp = new Date().getTime();
-        info.ranstr = this.getUUID();
+        const timestamp = new Date().getTime();
+        info.timestamp = timestamp;
+        info.ranstr = this.getUUID()
         return info
     },
     getUserIP(onNewIP) {

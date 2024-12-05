@@ -1,7 +1,8 @@
 <template>
-    <div class="apply-success-modal">
-        <a-modal centered class="agent-apply-modal" v-model="show" :footer="false" :title="false" @cancel="close"
-            width="400px">
+
+    <a-modal centered class="agent-apply-modal" :visible="show" :footer="false" :title="false" @cancel="close"
+        width="400px">
+        <div class="apply-success-modal">
             <a-row>
                 <a-col :lg="24" align="center">
                     <img :src="image" class="pt-2" />
@@ -13,9 +14,8 @@
                     <a-button class="primary-btn fw-5" block @click="close()">Ok</a-button>
                 </a-col>
             </a-row>
-
-        </a-modal>
-    </div>
+        </div>
+    </a-modal>
 </template>
 
 <script>

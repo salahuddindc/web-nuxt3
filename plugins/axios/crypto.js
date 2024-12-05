@@ -13,6 +13,7 @@ export default {
   encrypt(str, token) {
     let _token = token,
       _str = str;
+      
 
     _token = _token.split('.')[2];
 

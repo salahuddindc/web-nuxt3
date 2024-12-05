@@ -1,4 +1,4 @@
-@use "assets/variables/light.scss";
+@use "assets/variables/light.scss" as *;
 
 #invite {
     .left-invitataion-card {
@@ -6,6 +6,7 @@
             padding: 24px;
         }
     }
+
     .user-invite {
         .main-heading {
             font-size: $fs_2xl;
@@ -19,6 +20,7 @@
         .invitation-link1 {
             font-size: $fs_2xl;
         }
+
         .invite-desc {
             font-size: $fs_sm;
             color: $heading-color;
@@ -60,6 +62,7 @@
         .join-our-affiliate:hover {
             color: $primary-color !important;
         }
+
         .user-identity-card {
             .ant-card-body {
                 padding: 24px;
@@ -206,6 +209,7 @@
 
     .invite-innertable {
         padding: 24px;
+
         .components-table-demo-nested {
             border-radius: 9px;
             border: 0.5px solid #D0D5DD;
@@ -216,45 +220,54 @@
                 border-radius: 9px 9px 0 0;
                 color: $text-grey;
             }
-            .ant-table-tbody > tr > td { 
+
+            .ant-table-tbody>tr>td {
                 border-radius: 0;
 
             }
+
             .ant-table-placeholder {
                 border-bottom: none;
                 border-radius: 0px 0px 9px 9px;
 
             }
+
             .ant-table-pagination.ant-pagination {
                 margin-right: 12px;
             }
         }
+
         tr.ant-table-expanded-row {
             background: #fff;
         }
-        tr.ant-table-expanded-row td > .ant-table-wrapper {
+
+        tr.ant-table-expanded-row td>.ant-table-wrapper {
             margin: -16px -26px -17px;
         }
+
         .nested-invite-table {
             .ant-table-placeholder {
                 border: none;
             }
-            .ant-table-tbody > tr > td {
+
+            .ant-table-tbody>tr>td {
                 &:first-child {
                     padding-left: 68px;
                 }
             }
+
             .ant-table-thead>tr>th {
                 background-color: #fff;
                 font-weight: 500;
                 border-radius: 0;
                 color: $secondary-gray;
                 border-color: #f6f6fe;
+
                 &:first-child {
                     padding-left: 68px;
                 }
             }
-          
+
         }
 
         .ant-table-row-collapsed::after,
@@ -301,6 +314,7 @@
             padding-left: 40px;
             font-weight: 500;
             margin-top: 10px;
+
             li {
                 p {
                     font-weight: 500;
@@ -326,28 +340,33 @@
 
 
     @media screen and (max-width: 1280px) {
-   
+
         .left-invitataion-card {
             .ant-card-body {
                 padding: 12px 20px;
             }
         }
+
         .user-invite .invited-people .ant-card-body {
             padding: 20px;
         }
-        .user-invite { 
-            .invitation-link1  {
+
+        .user-invite {
+            .invitation-link1 {
                 margin-top: 0 !important;
             }
+
             .invite1-desc {
-            padding-top: 0 !important;
+                padding-top: 0 !important;
             }
+
             .invitataion-card {
-            padding: 20px 0 40px 0;
-            .ant-card-body {
-            padding: 0;
+                padding: 20px 0 40px 0;
+
+                .ant-card-body {
+                    padding: 0;
+                }
             }
-        }
         }
     }
 
@@ -363,10 +382,11 @@
         .first-link-p {
             padding-top: 0 !important;
         }
+
         .user-invite .invitataion-card {
             padding: 11px 0 24px 0;
         }
-  
+
         .user-invite {
             .invitataion-card .ant-card-body {
                 padding: 20px 0px;
@@ -376,6 +396,7 @@
                 font-size: $fs_xs;
             }
         }
+
         .article_content {
             ol {
                 li {

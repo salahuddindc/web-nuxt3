@@ -1,7 +1,8 @@
 
 import { computed } from 'vue';
 import { useNuxtApp } from '#app';
-
+import moment from 'moment';
+import 'moment-timezone';
 
 // Access Nuxt app instance once
 
@@ -48,8 +49,8 @@ const $userinfo = computed(() => {
     if (!user || !token) {
         return {}
     }
- 
-    
+
+
     if (typeof user === 'string') {
         return Crypto.decrypt(user, token);
     } else {

@@ -1,4 +1,4 @@
-@use "assets/variables/light.scss";
+@use "assets/variables/light.scss" as *;
 @use "@/assets/scss/global/mixins/scrollbar"; // Ant Table
 
 #recommend-friend {
@@ -196,7 +196,7 @@
         }
         #invitation,
         #keycopy {
-            color: $--normal-text;
+            color: $normal-text;
         }
         #copyimage {
             margin-bottom: 0.25rem !important;
@@ -597,7 +597,7 @@
             font-size: $fs_sm;
             color: $heading-color;
             padding: 1rem;
-            background-color: $--input-background;
+            background-color: $input-background;
             .deposit-address-link {
                 white-space: nowrap;
                 width: 300px;

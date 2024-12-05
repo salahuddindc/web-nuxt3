@@ -1,6 +1,7 @@
 <template>
-    <div class="agent-apply-modal">
-        <a-modal id="vip-modal" v-model:value="localShow" :footer="false" :title="false" @cancel="close" width="689px">
+
+    <a-modal class="vip-modal" :visible="localShow" :footer="false" :title="false" @cancel="close" width="689px">
+        <div class="agent-apply-modal">
             <a-form ref="vipForm" :model="vipForm" :rules="rules" :hide-required-mark="true" label-align="left">
                 <a-row :gutter="16">
                     <a-col :lg="22">
@@ -12,7 +13,7 @@
                 </a-row>
                 <a-row :gutter="16" class="mb-2 mtop-3">
                     <a-col :xs="24" :sm="24" :md="24" :lg="24" :xl="12">
-                        <a-form-item has-feedback :label="$t('labels.account_id')" prop="accountId" :colon="false"
+                        <a-form-item has-feedback :label="$t('labels.account_id')" name="accountId" :colon="false"
                             :label-col="{
                                 xl: 10,
                                 lg: 24,
@@ -20,26 +21,26 @@
                                 sm: 24,
                                 xs: 24,
                             }">
-                            <a-input v-model="vipForm.accountId" :placeholder="$t('partner.account_id')" />
+                            <a-input v-model:value="vipForm.accountId" :placeholder="$t('partner.account_id')" />
                         </a-form-item>
                     </a-col>
                     <a-col :xs="24" :sm="24" :md="24" :lg="24" :xl="12">
-                        <a-form-item has-feedback :label="$t('labels.full_name')" prop="fullName" :colon="false">
-                            <a-input v-model="vipForm.fullName"
+                        <a-form-item has-feedback :label="$t('labels.full_name')" name="fullName" :colon="false">
+                            <a-input v-model:value="vipForm.fullName"
                                 :placeholder="$t('placeholders.enter_your_full_name')" />
                         </a-form-item>
                     </a-col>
                 </a-row>
                 <a-row :gutter="16">
                     <a-col :xs="24" :sm="24" :md="24" :lg="24" :xl="12">
-                        <a-form-item has-feedback :label="$t('labels.lbl3')" prop="emailAddress" :colon="false">
-                            <a-input v-model="vipForm.emailAddress" :placeholder="$t('placeholders.plh3')" />
+                        <a-form-item has-feedback :label="$t('labels.lbl3')" name="emailAddress" :colon="false">
+                            <a-input v-model:value="vipForm.emailAddress" :placeholder="$t('placeholders.plh3')" />
                         </a-form-item>
                     </a-col>
 
                     <a-col :xs="24" :sm="24" :md="24" :lg="24" :xl="12">
-                        <a-form-item has-feedback :label="$t('labels.lbl9')" prop="phoneNumber" :colon="false">
-                            <a-input v-model="vipForm.phoneNumber" :placeholder="$t('person.ps7')"
+                        <a-form-item has-feedback :label="$t('labels.lbl9')" name="phoneNumber" :colon="false">
+                            <a-input v-model:value="vipForm.phoneNumber" :placeholder="$t('person.ps7')"
                                 pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" />
                         </a-form-item>
                     </a-col>
@@ -48,7 +49,7 @@
                 <p class="mb-4 success-desc">{{ $t('partner.spot_margin_future_monthly_trading_volume') }}</p>
                 <a-row :gutter="24" class="">
                     <a-col :xs="24" :sm="24" :md="24" :lg="24" :xl="7">
-                        <a-form-item has-feedback prop="spotTradingVolume" :colon="false">
+                        <a-form-item has-feedback name="spotTradingVolume" :colon="false">
 
                             <UploadComponentVue :fileList="spotFileList" :previewVisible="spotPreviewVisible"
                                 :previewImage="spotPreviewImage" @cancel="handleCancel('spot')"
@@ -58,7 +59,7 @@
                         </a-form-item>
                     </a-col>
                     <a-col :xs="24" :sm="24" :md="24" :lg="24" :xl="7">
-                        <a-form-item has-feedback prop="marginTradingVolume" :colon="false">
+                        <a-form-item has-feedback name="marginTradingVolume" :colon="false">
 
                             <UploadComponentVue :fileList="marginFileList" :previewVisible="marginPreviewVisible"
                                 :previewImage="marginPreviewImage" @cancel="handleCancel('margin')"
@@ -68,7 +69,7 @@
                         </a-form-item>
                     </a-col>
                     <a-col :xs="24" :sm="24" :md="24" :lg="24" :xl="7">
-                        <a-form-item has-feedback prop="futureTradingVolume" :colon="false">
+                        <a-form-item has-feedback name="futureTradingVolume" :colon="false">
 
                             <UploadComponentVue :fileList="futureFileList" :previewVisible="futurePreviewVisible"
                                 :previewImage="futurePreviewImage" @cancel="handleCancel('future')"
@@ -81,7 +82,7 @@
                 <p class="mt-3 mb-4 text-black">{{ $t('partner.bitnasdaq_vip_tier') }}</p>
                 <a-row :gutter="16">
                     <a-col :xs="24" :sm="24" :md="24" :lg="24" :xl="13">
-                        <a-form-item has-feedback prop="bitgetVipTier" :colon="false">
+                        <a-form-item has-feedback name="bitgetVipTier" :colon="false">
 
                             <UploadComponentVue :fileList="bitgetFileList" :previewVisible="bitgetPreviewVisible"
                                 :previewImage="bitgetPreviewImage" @cancel="handleCancel('bitget')"
@@ -106,8 +107,8 @@
                     </a-col>
                 </a-row>
             </a-form>
-        </a-modal>
-    </div>
+        </div>
+    </a-modal>
 </template>
 
 <script>
@@ -117,6 +118,9 @@ import { workOrderUpdateTypes } from "~/utils/constants";
 
 
 export default {
+    components: {
+        UploadComponentVue
+    },
     props: {
         vipModel: {
             type: Boolean
@@ -143,10 +147,7 @@ export default {
             }
         }
     },
-    components: {
-        UploadComponentVue
-    },
-    emits: ['onClose'],
+    emits: ['onClose', 'change'],
     data() {
         return {
             localShow: false,
@@ -223,7 +224,7 @@ export default {
                     this.vipForm = { ...newValue };
                 } else {
                     // Initialize with default values or user info
-                    console.log("watched else called", $userinfo)
+                     
                     this.vipForm = {
                         fullName: $userinfo.value.realname,
                         emailAddress: $userinfo.value.email,
@@ -345,23 +346,19 @@ export default {
                     reader.onload = () => resolve(reader.result.split(",")[1]);
                     reader.onerror = error => reject(error);
                 });
-                await this.$refs['vipForm'].validate(async (valid) => {
-                    if (valid) {
-                        const { data } = await this.$store.dispatch("com_image_upload", {
-                            imagetype: 0,
-                            imgbase64: imgUrlBase64,
-                            filename: new Date().getTime() + file.name
-                        });
+                await this.$refs['vipForm'].validate()
 
-                        if (data) {
-                            imgArrays[fileType].push(data.imgurl);
-                            console.log(data.imgurl)
-                            this.submitApplication(imgArrays);
-                        }
-
-                    }
+                const { data } = await this.$store.dispatch("com_image_upload", {
+                    imagetype: 0,
+                    imgbase64: imgUrlBase64,
+                    filename: new Date().getTime() + file.name
                 });
 
+                if (data) {
+                    imgArrays[fileType].push(data.imgurl);
+                    console.log(data.imgurl)
+                    this.submitApplication(imgArrays);
+                }
 
             } catch (error) {
                 console.error("Error uploading image:", error);
@@ -409,43 +406,47 @@ export default {
 
             // Remove the trailing comma and space
             imgString = imgString.slice(0, -2);
+            try {
+                await this.$refs['vipForm'].validate()
 
-            await this.$refs['vipForm'].validate(async (valid) => {
-                if (valid) {
-                    this.loading = true;
-                    const postData = {
-                        id: this.ticketNo,
-                        typeName: 'vip-program',
-                        content: 'Vip and My Fee',
-                        images: imgString,
-                        jsonContent: JSON.stringify(_self.vipForm),
-                    };
+                this.loading = true;
+                const postData = {
+                    id: this.ticketNo,
+                    typeName: 'vip-program',
+                    content: 'Vip and My Fee',
+                    images: imgString,
+                    jsonContent: JSON.stringify(_self.vipForm),
+                };
 
-                    try {
-                        const data = await this.$store.dispatch('work_order_update', postData);
-                        if (data.code == 200) {
-                            this.vipForm = {
-                                fullName: '',
-                                emailAddress: '',
-                                accountId: '',
-                                phoneNumber: '',
-                                spotTradingVolume: '',
-                                marginTradingVolume: '',
-                                futureTradingVolume: '',
-                                bitgetVipTier: ''
-                            };
-                            _self.getUserStatus();
-                            _self.$store.commit('set_message', { type: 'ok', text: 'Applied Successfully' });
-                            _self.close();
-                        }
-                        this.loading = false;
+                try {
+                    const data = await this.$store.dispatch('work_order_update', postData);
+                    if (data.code == 200) {
+                        this.vipForm = {
+                            fullName: '',
+                            emailAddress: '',
+                            accountId: '',
+                            phoneNumber: '',
+                            spotTradingVolume: '',
+                            marginTradingVolume: '',
+                            futureTradingVolume: '',
+                            bitgetVipTier: ''
+                        };
+                        _self.getUserStatus();
+                        _self.$store.commit('set_message', { type: 'ok', text: 'Applied Successfully' });
+                        _self.close();
                     }
-                    catch (error) {
-                        //console.log('Error', error)
-                        this.loading = false;
-                    }
+                    this.loading = false;
                 }
-            });
+                catch (error) {
+                    //console.log('Error', error)
+                    this.loading = false;
+                }
+            } catch (error) {
+
+            }
+
+
+
         },
 
     },

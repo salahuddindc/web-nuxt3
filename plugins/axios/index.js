@@ -18,8 +18,7 @@ export default defineNuxtPlugin((nuxtApp) => {
         async (config) => {
 
             const { $store } = useNuxtApp()
-            const baseInfo = AxiosConfig.getBaseInfo($store)
-            const access_token = await AxiosConfig.getToken($store)
+            const baseInfo = AxiosConfig.getBaseInfo($store, config.url)
 
             if (config.data) {
                 config.data = Object.assign({}, baseInfo, config.data)
@@ -29,6 +28,9 @@ export default defineNuxtPlugin((nuxtApp) => {
 
             if (config.data) {
                 const strData = JSON.stringify(config.data)
+                await AxiosConfig.getToken($store)
+                const tokenObj = $store.getters['getToken']
+                const access_token = tokenObj.token
                 console.log(config.url)
                 console.log(strData)
                 config.data = strData ? Crypto.encrypt(strData, access_token) : ''

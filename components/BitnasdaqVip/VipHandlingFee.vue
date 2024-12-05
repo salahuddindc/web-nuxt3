@@ -3,78 +3,91 @@
         <div class="main-content">
             <p class="main-heading mb-2 text-black fw-5">{{ $t('vip_pro.vip_level') }}</p>
             <p class="main-desc text-black fw-4 mb-0">{{ $t('vip_pro.vip_note2') }}</p>
-            <a-tabs default-active-key="1" class="mt-6" @change="onTabChange">
+            <a-tabs default-active-key="1" class="mt-6">
                 <a-tab-pane key="1" :tab="$t('tabkeys.tab59')">
-                    <a-row class="">
-                        <VipTables :vipColumns="vipLevelColums" :vipData="vipLevels">
-                            <template #vipLevel="{ row }">
+
+                    <a-table :columns="vipLevelColums" :data-source="vipLevels" :pagination="false"
+                        :row-key="record => record.key" :loading="loading">
+                        <template #bodyCell="{ column, record }">
+                            <template v-if="column.key === 'name'">
                                 <p class="col-alignment mb-0 vip-txt fw-5">
                                     <!-- <img src="/images/vip1.svg" class="mr-2" /> -->
-                                    {{ row.name.charAt(0).toUpperCase() + row.name.slice(1) }}
+                                    {{ record.name.charAt(0).toUpperCase() + record.name.slice(1) }}
                                 </p>
                             </template>
-                            <template #or="{ row }">
+                            <template v-if="column.key === 'or'">
                                 <p class="col-alignment mb-0 ">/</p>
                             </template>
-                            <template #amount="{ row }">
-                                <p class="col-alignment mb-0 vip-txt fw-5">{{ row.amout }}</p>
+                            <template v-if="column.key === 'amount'">
+                                <p class="col-alignment mb-0 vip-txt fw-5">{{ record.amout }}</p>
                             </template>
-                            <template #spotTradingVolume="{ row }">
-                                <p class="col-alignment mb-0 vip-txt fw-5">{{ row.spot_min }}-{{ row.spot_max }}</p>
+                            <template v-if="column.key === 'spotTradingVolume'">
+                                <p class="col-alignment mb-0 vip-txt fw-5">{{ record.spot_min }}-{{ record.spot_max
+                                    }}</p>
                             </template>
-                            <template #futureTradingVolume="{ row }">
-                                <p class=" mb-0 vip-txt fw-5">{{ row.future_min }}-{{ row.future_max }}</p>
+                            <template v-if="column.key === 'futureTradingVolume'">
+                                <p class=" mb-0 vip-txt fw-5">{{ record.future_min }}-{{ record.future_max }}</p>
                             </template>
-                        </VipTables>
-                    </a-row>
+                        </template>
+                    </a-table>
+
                 </a-tab-pane>
                 <a-tab-pane key="2" :tab="$t('person.pd30')" force-render>
-                    <a-row class="">
-                        <VipTables :vipColumns="withdrawColums" :vipData="currencies" v-if="!loading">
-                            <template #token="{ row }">
-                                <p class="col-alignment mb-0 vip-txt fw-5"><img :src="row.icon" height="24" width="24"
-                                        class="mr-2" />{{ row.currencyname }}<span class="wing-token fw-5 ml-1">{{
-                                            row.fullname }}</span></p>
+
+                    <a-table :columns="withdrawColums" :data-source="currencies" :pagination="false"
+                        :row-key="record => record.key" :loading="loading">
+                        <template #bodyCell="{ column, record }">
+                            <template v-if="column.key === 'token'">
+                                <p class="col-alignment mb-0 vip-txt fw-5"><img :src="record.icon" height="24"
+                                        width="24" class="mr-2" />{{ record.currencyname }}<span
+                                        class="wing-token fw-5 ml-1">{{
+                                            record.fullname }}</span></p>
                             </template>
-                            <template #borrowrate="{ row }">
-                                <p class="col-alignment mb-0 vip-txt fw-5">{{ row.borrowrate * 100 }}%</p>
+                            <template v-if="column.key === 'borrowrate'">
+                                <p class="col-alignment mb-0 vip-txt fw-5">{{ record.borrowrate * 100 }}%</p>
                             </template>
-                            <template #free="{ row }">
+                            <template v-if="column.key === 'free'">
                                 <p class=" mb-0 vip-txt fw-5">{{ $t('express.exp27') }}</p>
                             </template>
-                            <template #network="{ row }">
-                                <p class="col-alignment mb-0 vip-txt fw-5" v-for="(item, key) in row.mainChains"
+                            <template v-if="column.key === 'network'">
+                                <p class="col-alignment mb-0 vip-txt fw-5" v-for="(item, key) in record.mainChains"
                                     :key="key">{{ item.tokenfullname }}<span v-if="item.tokentype != ''">({{
                                         item.tokentype.toUpperCase() }})</span></p>
                             </template>
-                            <template #minimumWithdraw="{ row }">
-                                <p class="mb-0 vip-txt fw-5" v-for="(item, key) in row.mainChains" :key="key">{{
+                            <template v-if="column.key === 'minimumWithdraw'">
+                                <p class="mb-0 vip-txt fw-5" v-for="(item, key) in record.mainChains" :key="key">{{
                                     item.minwithdrawalamount }}</p>
                             </template>
-                            <template #withdrawFee="{ row }">
-                                <p class=" mb-0 vip-txt fw-5" v-for="(item, key) in row.mainChains" :key="key">{{
+                            <template v-if="column.key === 'withdrawFee'">
+                                <p class=" mb-0 vip-txt fw-5" v-for="(item, key) in record.mainChains" :key="key">{{
                                     item.withdrawalfee }}</p>
                             </template>
-                        </VipTables>
-                    </a-row>
+
+                        </template>
+                    </a-table>
+
                 </a-tab-pane>
                 <a-tab-pane key="3" :tab="$t('tabkeys.tab58')">
-                    <VipTables :vipColumns="tradingColums" :vipData="vipLevels">
-                        <template #vipLevel="{ row }">
-                            <p class="col-alignment mb-0 vip-txt fw-5">
-                                <!-- <img src="/images/vip1.svg" class="mr-2" /> -->
-                                {{ row.name.charAt(0).toUpperCase() + row.name.slice(1) }}
-                            </p>
+
+                    <a-table :columns="tradingColums" :data-source="vipLevels" :pagination="false"
+                        :row-key="record => record.key" :loading="loading">
+                        <template #bodyCell="{ column, record, index }">
+                            <template v-if="column.key === 'vipLevel'">
+                                <p class="col-alignment mb-0 vip-txt fw-5">
+                                    <!-- <img src="/images/vip1.svg" class="mr-2" /> -->
+                                    {{ record.name.charAt(0).toUpperCase() + record.name.slice(1) }}
+                                </p>
+                            </template>
+                            <template v-if="column.key === 'spotFee'">
+                                <p class=" mb-0 vip-txt fw-5"> {{ ((10 - index - 1) * 0.1 * 100 * spotMaker).toFixed(2)
+                                    }}%/{{ ((10 - index - 1) * 0.1 * 100 * spotTaker).toFixed(2) }}%</p>
+                            </template>
+                            <template v-if="column.key === 'futureFee'">
+                                <p class=" mb-0 vip-txt fw-5">{{ ((10 - index - 1) * 0.1 * 100 * futureMaker).toFixed(2)
+                                    }}%/{{ ((10 - index - 1) * 0.1 * 100 * futureTaker).toFixed(2) }}%</p>
+                            </template>
                         </template>
-                        <template #spotFee="{ index }">
-                            <p class=" mb-0 vip-txt fw-5"> {{ ((10 - index - 1) * 0.1 * 100 * spotMaker).toFixed(2)
-                                }}%/{{ ((10 - index - 1) * 0.1 * 100 * spotTaker).toFixed(2) }}%</p>
-                        </template>
-                        <template #futureFee="{ index }">
-                            <p class=" mb-0 vip-txt fw-5">{{ ((10 - index - 1) * 0.1 * 100 * futureMaker).toFixed(2)
-                                }}%/{{ ((10 - index - 1) * 0.1 * 100 * futureTaker).toFixed(2) }}%</p>
-                        </template>
-                    </VipTables>
+                    </a-table>
                 </a-tab-pane>
             </a-tabs>
         </div>
@@ -83,12 +96,10 @@
 </template>
 
 <script>
-import VipTables from './VipTables.vue'
+ 
 
 export default {
-    components: {
-        VipTables
-    },
+     
     computed: {
         spotMaker() {
             return this.$store.state.symbleinfos[0]?.buyfee
@@ -112,38 +123,32 @@ export default {
             vipLevelColums: [
                 {
                     title: this.$t('tableskeys.vt1'),
-                    dataIndex: 'vipLevel',
-                    scopedSlots: { customRender: 'vipLevel' },
+                    key: 'name',
                     width: 180,
                 },
                 {
                     title: this.$t('tableskeys.vt2'),
-                    dataIndex: 'amout',
-                    scopedSlots: { customRender: 'amount' },
+                    key: 'amount',
                     width: 160,
                 },
                 {
                     title: this.$t('tableskeys.vt3'),
-                    dataIndex: 'or',
-                    scopedSlots: { customRender: 'or' },
+                    key: 'or',
                     width: 100,
                 },
                 {
                     title: this.$t('tableskeys.vt4'),
-                    dataIndex: 'tradingVolume',
-                    scopedSlots: { customRender: 'spotTradingVolume' },
+                    key: 'spotTradingVolume',
                     width: 220,
                 },
                 {
                     title: this.$t('tableskeys.vt3'),
-                    dataIndex: 'or1',
-                    scopedSlots: { customRender: 'or' },
+                    key: 'or',
                     width: 80,
                 },
                 {
                     title: this.$t('tableskeys.vt5'),
-                    dataIndex: 'tradingUsdt',
-                    scopedSlots: { customRender: 'futureTradingVolume' },
+                    key: 'futureTradingVolume',
                     width: 180,
                     align: 'end'
                 },
@@ -152,43 +157,43 @@ export default {
                 {
                     title: this.$t('tableskeys.vt6'),
                     dataIndex: 'token',
-                    scopedSlots: { customRender: 'token' },
+                    key: 'token',
                     width: 200,
                 },
                 {
                     title: this.$t('tableskeys.wa8'),
                     dataIndex: 'network',
-                    scopedSlots: { customRender: 'network' },
+                    key: 'network',
                     width: 210,
                 },
                 {
                     title: this.$t('tableskeys.vt7'),
                     dataIndex: 'minimumWithdraw',
-                    scopedSlots: { customRender: 'minimumWithdraw' },
+                    key: 'minimumWithdraw',
                     width: 180,
                 },
                 {
                     title: this.$t('tableskeys.vt8'),
                     dataIndex: 'withdrawFee',
-                    scopedSlots: { customRender: 'withdrawFee' },
+                    key: 'withdrawFee',
                     width: 160,
                 },
                 {
                     title: this.$t('tableskeys.vt9'),
                     dataIndex: 'deposit',
-                    scopedSlots: { customRender: 'free' },
+                    key: 'deposit',
                     width: 160,
                 },
                 {
                     title: this.$t('tableskeys.vt10'),
                     dataIndex: 'borrowRate',
-                    scopedSlots: { customRender: 'borrowrate' },
+                    key: 'borrowrate',
                     width: 160,
                 },
                 {
                     title: this.$t('tableskeys.vt11'),
                     dataIndex: 'p2pFee',
-                    scopedSlots: { customRender: 'free' },
+                    key: 'free',
                     width: 140,
                     align: 'end'
 
@@ -197,20 +202,17 @@ export default {
             tradingColums: [
                 {
                     title: this.$t('tableskeys.vt12'),
-                    dataIndex: 'vipLevel',
-                    scopedSlots: { customRender: 'vipLevel' },
+                    key: 'vipLevel',
                     width: 270,
                 },
                 {
                     title: this.$t('tableskeys.vt13'),
-                    dataIndex: 'spotfee',
-                    scopedSlots: { customRender: 'spotFee' },
+                    key: 'spotFee',
                     width: 280,
                 },
                 {
                     title: this.$t('tableskeys.vt14'),
-                    dataIndex: 'futurefee',
-                    scopedSlots: { customRender: 'futureFee' },
+                    key: 'futureFee',
                     width: 120,
                     align: 'end'
 
@@ -218,14 +220,20 @@ export default {
             ]
         }
     },
+    watch: {
+        '$store.state.currencyinfos': {
+            handler: function (newValue, oldValue) {
+                if (newValue.length > 0) {
+                    this.getVipLevels();
+                    this.getMainChains();
+                    this.currencies = this.$store.state.currencyinfos;
+                }
+            },
+            immediate: true
+        }
+    },
     methods: {
-        onTabChange(key) {
-            console.log('keyeee', key);
-            if (key == 2) {
-                this.getMainChains()
-            }
 
-        },
         async getVipLevels() {
             try {
                 const { data } = await this.$store.dispatch('com_constants_getconstantsinfo', { key: "Vip_ConfigSetting" })
@@ -260,9 +268,7 @@ export default {
         }
     },
     async mounted() {
-        await this.getVipLevels();
-        //this.getMainChains();
-        this.currencies = this.$store.state.currencyinfos;
+
     }
 }
 </script>
