@@ -1,25 +1,11 @@
 <template>
     <div id="new-download">
-        <!-- <NewDownloads /> -->
+        <DownloadNewDownloads />
     </div>
 </template>
 
 <script setup>
-//     import NewDownloads from '@/components/Download/NewDownloads.vue'
-
-//   export default {
-//   components: {
-//       NewDownloads
-//   },
-//   head() {
-//       return {
-//         bodyAttrs: {
-//           class: 'downloads-body',
-//         }
-//       }
-//     },
-//   }
-
+ 
 useHead({
     bodyAttrs: {
         class: "downloads-body",

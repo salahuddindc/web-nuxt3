@@ -321,7 +321,8 @@ body.copy-trade-body,
 body.partner-program-body,
 body.trading-bot-body,
 body.market-details-body,
-body.affiliate-program-body {
+body.affiliate-program-body,
+body.downloads-body {
     @include margin-utilities;
     @include padding-utilities;
     @include fonts-utilities;

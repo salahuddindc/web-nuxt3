@@ -9,18 +9,17 @@ const { uiTheme } = require(path.resolve(__dirname, 'utils/ui-theme.js'))
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
+  devServer: {
+    port: serverPort,
+  },
   app: {
     head: {
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1' }
       ],
-    }
+    },
+    baseURL: '/', // or any correct base URL
   },
-
-  devServer: {
-    port: serverPort,
-  },
-
   css: [
     '@/assets/scss/main.scss',
     '@/assets/less/styles/base.less',
@@ -37,7 +36,7 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ['@nuxtjs/i18n', '@nuxt/image', '@nuxt/image'],
+  modules: ['@nuxtjs/i18n', '@nuxt/image'],
   i18n: {
     vueI18n: './i18n.config.js' // if you are using custom path, default
   }

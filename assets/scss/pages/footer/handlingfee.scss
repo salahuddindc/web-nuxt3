@@ -1,117 +1,143 @@
-@use "assets/variables/light.scss";
+@use "assets/variables/light.scss" as *;
 
 #handling-fee {
     background: $white;
+
     .text-desc {
         color: $heading-color;
         font-size: $fs_base;
     }
+
     .handling-fee-bg {
         background: url("/images/handling-fee.png");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
         padding: 60px 0;
+
         .main-heading {
             color: $white;
             font-size: $fs_16xl;
         }
+
         .title-dec {
-        font-size: $fs_base;
-        color: $white;
+            font-size: $fs_base;
+            color: $white;
         }
- 
-    }
-    .handling-fee-tabs {
-    .ant-tabs-nav.ant-tabs-nav-animated {
-        background-color: transparent;
-    }
-    .ant-tabs-nav .ant-tabs-tab {
-        font-size: $fs-base;
-        color: $text-grey;
-        background-color: transparent ;
-        padding: 9px 22px;
-        margin-right: 5px;
-    }
-    .ant-tabs-bar {
-        border-bottom: none;
-    }
-    .ant-tabs-tab-active.ant-tabs-tab {
-        background-color: $primary-color !important;
-        color: $white !important;
-        border-radius: 100px !important;
-        margin-right: 5px;
-        padding: 9px 22px !important;
 
     }
-    .tabs-title {
-        font-size: $fs_7xl;
-        color: $heading-color;
+
+    .handling-fee-tabs {
+        .ant-tabs-nav.ant-tabs-nav-animated {
+            background-color: transparent;
+        }
+
+        .ant-tabs-nav .ant-tabs-tab {
+            font-size: $fs-base;
+            color: $text-grey;
+            background-color: transparent;
+            padding: 9px 22px;
+            margin-right: 5px;
+        }
+
+        .ant-tabs-bar {
+            border-bottom: none;
+        }
+
+        .ant-tabs-tab-active.ant-tabs-tab {
+            background-color: $primary-color !important;
+            color: $white !important;
+            border-radius: 100px !important;
+            margin-right: 5px;
+            padding: 9px 22px !important;
+
+        }
+
+        .tabs-title {
+            font-size: $fs_7xl;
+            color: $heading-color;
+        }
     }
-}
-.vip-tabs {
-    margin: 0 !important;
-    .ant-tabs-bar {
-        margin-bottom: 30px;
+
+    .vip-tabs {
+        margin: 0 !important;
+
+        .ant-tabs-bar {
+            margin-bottom: 30px;
+        }
     }
-}
-.tabs-card {
-    .ant-card-body {
-        padding: 0;
+
+    .tabs-card {
+        .ant-card-body {
+            padding: 0;
+        }
+
     }
-  
-}
+
     .primary-btn {
         height: 38px !important;
         margin-top: 30px;
     }
+
     .pt-8 {
         padding-top: 100px;
     }
+
     .pb-6 {
         padding-bottom: 60px;
     }
+
     .sub-heading {
         font-size: $fs_14xl;
         color: $heading-color;
     }
+
     .sub-text {
         font-size: $fs_2xl;
         color: $heading-color;
     }
+
     .cost-effective {
         font-size: 2rem;
         color: $white;
     }
+
     .title-desc {
         font-size: $fs_base;
         color: $heading-color;
         line-height: 30px;
     }
+
     .ant-tabs-nav-wrap {
         padding: 0 !important;
     }
+
     .ant-table-tbody tr:last-child td {
         border-bottom: none !important;
     }
-    .ant-table-thead > tr:first-child > th:first-child {
+
+    .ant-table-thead>tr:first-child>th:first-child {
         padding-left: 5px !important;
     }
-    .ant-table-tbody > tr > td:first-child {
+
+    .ant-table-tbody>tr>td:first-child {
         padding-left: 5px !important;
     }
-    .ant-table-thead > tr > th {
+
+    .ant-table-thead>tr>th {
         background-color: $white;
         color: #9b9a9a;
         border-bottom: none;
     }
+
     .wing-token {
         color: #afafaf;
     }
- 
-    .ant-table-tbody > tr > td {
+
+    .ant-table-tbody>tr>td {
         border-bottom: 1px solid #f3f5f5 !important;
     }
+
     // .ant-tabs-nav .ant-tabs-tab:first-child {
     //     margin-left: 25px;
     // }
@@ -119,46 +145,56 @@
         font-size: $fs-base;
         color: $heading-color;
     }
+
     .ant-table-pagination.ant-pagination {
         margin-right: 16px;
     }
+
     .hadling-service {
         background: url("/images/service-bg.png");
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
         padding: 67px 0;
+
         .bitnasdaq-desc {
             font-size: $fs-base;
             max-width: 743px;
             color: $white;
+
             a {
                 text-decoration: underline;
                 color: $white;
             }
         }
     }
+
     @media screen and (max-width: 1200px) {
         .handling-fee-bg {
             .main-heading {
                 font-size: $fs_7xl;
             }
+
             .text-desc {
                 font-size: $fs-base;
             }
         }
+
         .sub-text {
             font-size: $fs_sm;
         }
+
         .title-desc {
             font-size: $fs_xs;
             line-height: 25px;
 
         }
-        .sub-heading { 
+
+        .sub-heading {
             font-size: $fs_7xl;
         }
-        .bitnasdaq-partner .bitnasdaq-desc { 
+
+        .bitnasdaq-partner .bitnasdaq-desc {
             font-size: $fs_sm;
         }
     }
