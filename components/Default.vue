@@ -263,18 +263,18 @@ export default {
     async mounted() {
         getTokenAndUserInfo()
         this.$nextTick(async () => {
-            await getdecimalsinfos()
+            getdecimalsinfos()
             getUserIP()
             /*是否维护中*/
             this.fetchConstants({ key: "common_system_error" })
             /*汇率*/
             this.getRate()
             /*法币收款方式*/
-            await fiatpaymenttypeget()
+            fiatpaymenttypeget()
             /*订阅用户通知事件 */
 
-            await getSymbolInfos()
-            await getcurrencyinfos()
+            getSymbolInfos()
+            getcurrencyinfos()
 
         });
         if (this.$storage) {

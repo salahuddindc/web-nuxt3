@@ -1,0 +1,37 @@
+/*覆盖elementUI的一些style 和 一些必要的全局设置*/
+input:disabled {
+  background-color: transparent;
+  cursor: not-allowed;
+}
+
+.article-content p.question-qrcode img {
+  width: 220px !important;
+}
+
+.coin-list-trades .el-loading-mask {
+  background: none;
+}
+
+.el-input__inner {
+  border-radius: 2px !important;
+}
+
+//针对Header nav的深色主题
+.popper__arrow {
+  border-bottom-color: #292e39 !important;
+}
+
+.popper__arrow::after {
+  border-bottom-color: #292e39 !important;
+}
+
+//针对其他页面的 浅色主题
+:deep(.set-el-select-style ){
+  .el-popper[x-placement^=bottom] .popper__arrow {
+    border-bottom-color: #fff !important;
+  }
+
+  .el-popper[x-placement^=bottom] .popper__arrow::after {
+    border-bottom-color: #fff !important;
+  }
+}

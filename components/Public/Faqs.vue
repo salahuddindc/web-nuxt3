@@ -5,7 +5,7 @@
             <p class="faqs-txt fw-5 mb-2">{{ $t("returntxt.rtxt32") }}</p>
             <a-collapse :expand-icon-position="expandIconPosition">
                 <template #expandIcon="props">
-                    <MinusOutlined v-if="props.isActive"/>
+                    <MinusOutlined v-if="props.isActive" />
                     <PlusOutlined v-else />
                 </template>
                 <a-collapse-panel v-for="(item, index) in displayedFaqs" :key="item.number"
@@ -77,8 +77,7 @@ export default {
         return {
             activeKey: [],
             faqsItem: [],
-            service: {},
-            loading: false,
+            loading: true,
             currentPage: 1,
             expandIconPosition: 'right',
         };
@@ -86,11 +85,15 @@ export default {
     watch: {
         activeKey(key) { },
         subtitle() {
-            this.fetchArticleInfo()
+            if (import.meta.client) {
+                this.fetchArticleInfo()
+            }
         },
         calculatorFaqsOptions: {
             handler: function (val) {
-                this.fetchArticleInfo()
+                if (import.meta.client) {
+                    this.fetchArticleInfo()
+                }
             },
             immediate: true
         },
@@ -119,33 +122,21 @@ export default {
             }
             try {
                 this.loading = true;
-                await this.fetchFaqs(pastData);
-                this.loading = false;
-
-                if (this.getFaqs) {
-                    if (this.hasCalculatorFaqs) {
-                        const activeCoin = this.getFaqs.find(
-                            (coin) => coin?.coin == this.calculatorFaqsOptions.coin
-                        );
-                        const activeFiat = activeCoin?.fiats.find(
-                            (fiat) => fiat?.name == this.calculatorFaqsOptions.fiat
-                        );
-                        this.faqsItem = activeFiat?.name == this.calculatorFaqsOptions.fiat ? activeFiat.faqs : []
-                    }
-                    else {
-                        this.faqsItem = this.getFaqs;
-                    }
-
+                const ss = await this.fetchFaqs(pastData)
+                this.loading = false
+                if (this.hasCalculatorFaqs) {
+                    const activeCoin = this.getFaqs.find(
+                        (coin) => coin?.coin == this.calculatorFaqsOptions.coin
+                    );
+                    const activeFiat = activeCoin?.fiats.find((fiat) => fiat?.name == this.calculatorFaqsOptions.fiat)
+                    this.faqsItem = activeFiat?.name == this.calculatorFaqsOptions.fiat ? activeFiat.faqs : []
                 }
                 else {
-                    this.service = {};
+                    this.faqsItem = this.getFaqs;
                 }
-
             } catch (error) {
-                this.service = {};
                 console.error('Error fetching FAQs:', error);
             }
-
         },
 
         handChange(page) {

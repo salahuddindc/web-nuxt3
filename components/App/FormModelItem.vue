@@ -15,7 +15,7 @@ export default {
     name: 'AppFormModelItem',
     props: {
         label: {
-            type: Number | String,
+            type: [Number, String],
             default: null
         },
         name: {

@@ -212,7 +212,6 @@ export default {
           this.selectVal = this.order[0]?.fcurrencyname
           break
       }
-      console.log(this.selectVal)
     },
     getfinancial() {
       this.getCurrencyList = []

@@ -97,7 +97,7 @@
                                                             </p>
                                                             <span class="promotion-desc-txt fw-5">{{
                                                                 $t("public.ph4")
-                                                            }}</span>
+                                                                }}</span>
                                                         </a-col>
                                                     </a-row>
                                                 </nuxt-link>
@@ -125,7 +125,7 @@
                                                             </p>
                                                             <span class="promotion-desc-txt fw-5">{{
                                                                 $t("public.ph8")
-                                                            }}</span>
+                                                                }}</span>
                                                         </a-col>
                                                     </a-row>
                                                 </nuxt-link>
@@ -251,7 +251,7 @@
                                                         </p>
                                                         <span class="menu-sub-txt fw-5">{{
                                                             $t("deposit.dc14")
-                                                        }}</span>
+                                                            }}</span>
                                                     </a-col>
                                                 </a-row>
                                             </a>
@@ -308,7 +308,7 @@
                                                         </p>
                                                         <span class="menu-sub-txt fw-5">{{
                                                             $t("public.ph19")
-                                                        }}</span>
+                                                            }}</span>
                                                     </a-col>
                                                 </a-row>
                                             </nuxt-link>
@@ -325,7 +325,7 @@
                                                         </p>
                                                         <span class="menu-sub-txt fw-5">{{
                                                             $t("public.ph21")
-                                                        }}</span>
+                                                            }}</span>
                                                     </a-col>
                                                 </a-row>
                                             </nuxt-link>
@@ -360,7 +360,7 @@
                                                         </p>
                                                         <span class="menu-sub-txt fw-5">{{
                                                             $t("public.ph23")
-                                                        }}</span>
+                                                            }}</span>
                                                     </a-col>
                                                 </a-row>
                                             </nuxt-link>
@@ -394,7 +394,7 @@
                                 {{ $t('home.headBull') }}
                             </nuxt-link>
                         </a-menu-item>
-                        
+
                         <!-- <a-menu-item key="investment-plan" v-if="shouldShowBuyBnq">
                             <nuxt-link to="/investment-plan">
                                 {{ $t('investment_plan') }}
@@ -1363,12 +1363,15 @@ export default {
         },
         loggedIn: {
             handler: function (val) {
+                console.log('$usersettings:$val', val);
                 if (val) {
-                    if (!this.$usersettings.moreconfig)
-                        this.global_refresh_user_settings();
+                    console.log('$usersettings:$usersettings', $usersettings);
+
+                    if (!$usersettings.moreconfig)
+                        global_refresh_user_settings();
 
                     if (!$userassets.totalassetes)
-                        this.global_refresh_user_assets();
+                        global_refresh_user_assets();
                 }
             },
             immediate: true,
@@ -1424,6 +1427,10 @@ export default {
                 return "/login?returnurl=demoTrade";
             }
         },
+        loggedIn(){
+            return loggedIn.value
+        }
+      
     },
     methods: {
         toggleDrawer() {
@@ -1509,7 +1516,7 @@ export default {
         // }
 
         //console.log('path::::', path);
- 
+
     },
 };
 </script>

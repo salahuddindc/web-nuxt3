@@ -29,7 +29,10 @@ export default {
             type: String,
             default: 'USDT'
         },
-        xData: [],
+        xData: {
+            type: [Array,String],
+            default: false
+        },
         showYAxis: {
             type: Boolean,
             default: false

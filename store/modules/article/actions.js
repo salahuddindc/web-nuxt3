@@ -80,7 +80,7 @@ export default {
         params.loader = 'laodingLatestArticles'
         params.storeDataInCache = true
         const response = await dispatch('makeApiCall', params)
-        console.log(params,"all article")
+        console.log(params, "all article")
         let articles = []
         if (response.data) {
             articles = response.data.pagedata ? response.data.pagedata : []
@@ -121,18 +121,18 @@ export default {
         params.end_point = url.articleInfo;
         params.loader = 'loadingArticleDetail';
         params.storeDataInCache = false;
-    
+
         const response = await dispatch('makeApiCall', params);
         const faqs = response.data;
-    
+
         commit('setFaqsParams', {
-          coin: params.coin,
-          fiat: params.fiat,
-          isCalculator: params.isCalculator
+            coin: params.coin,
+            fiat: params.fiat,
+            isCalculator: params.isCalculator
         });
         commit('setFaqs', faqs);
         return response
-      },
+    },
     async fetchBullishBearishData({ commit, dispatch }, payload) {
         const params = {
             end_point: url.articleInfo,

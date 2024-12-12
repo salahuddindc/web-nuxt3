@@ -5,19 +5,19 @@ const url = {
     markAsFavorite: "/userapi/v1.0/user/user.self.selection.add",
     removeFromFavorite: "/userapi/v1.0/user/user.self.selection.delete",
     favoriteList: "/userapi/v1.0/user/user.self.selection.getlist",
-    quotationDetails:"/transactionapi/v1.0/quotation/daily.get", //btc total assets
-    marketsentiment:"/transactionapi/v1.0/bi/marketsentiment.get"
+    quotationDetails: "/transactionapi/v1.0/quotation/daily.get", //btc total assets
+    marketsentiment: "/transactionapi/v1.0/bi/marketsentiment.get"
 }
 
 
 export default {
     async fetchCurrencyDetail({ commit, dispatch }, params) { //complete detail of currency
         params.end_point = url.articleInfo
-        const response = await dispatch('makeApiCall', params); 
+        const response = await dispatch('makeApiCall', params);
         const object = response.data
         commit('setCurrencyDetail', object)
     },
-    async fetchQuotationDetails({commit, dispatch}, params){ //BTC assets 
+    async fetchQuotationDetails({ commit, dispatch }, params) { //BTC assets 
         params.end_point = url.quotationDetails
         const response = await dispatch('makeApiCall', params);
         const object = response.data;
@@ -38,14 +38,14 @@ export default {
             dispatch('makeApiCall', params),
             dispatch('fetchFavoriteList', { type: 0 })
         ]);
-        const responseArray = response.data.pagedata
+        const responseArray = response.data.pagedata || []
 
         commit('setQuotationDailyData', responseArray)
     },
     async markAsFavorite({ commit, state, rootState, rootGetters, dispatch }, params) {
         params.end_point = url.markAsFavorite
         params.loader = 'addOrRemovingFromFavorite'
-        const response = await dispatch('makeApiCall', params) 
+        const response = await dispatch('makeApiCall', params)
 
         if (response.code == 200) {
             await dispatch('fetchFavoriteList', { type: 0 })
@@ -58,7 +58,7 @@ export default {
     async removeFromFavorite({ commit, state, rootState, rootGetters, dispatch }, params) {
         params.end_point = url.removeFromFavorite
         params.loader = 'addOrRemovingFromFavorite'
-        const response = await dispatch('makeApiCall', params); 
+        const response = await dispatch('makeApiCall', params);
 
         if (response.code == 200) {
             await dispatch('fetchFavoriteList', { type: 0 })
@@ -71,27 +71,28 @@ export default {
     async fetchFavoriteList({ commit, state, rootState, rootGetters, dispatch }, params) {
         params.end_point = url.favoriteList
         params.loader = 'fetchingFavoriteList'
-        const response = await dispatch('makeApiCall', params); 
+        const response = await dispatch('makeApiCall', params);
 
         if (response.code == 200) {
             commit('setFavoriteList', response.data)
         }
         return response
     },
-    async fetchMarketSentiment({commit,dispatch},params){
+    async fetchMarketSentiment({ commit, dispatch }, params) {
         params.end_point = url.marketsentiment
-        const response = await dispatch('makeApiCall', params); 
+        const response = await dispatch('makeApiCall', params);
 
         if (response.code == 200) {
             commit('setMarketSentiment', response.data)
-            console.log(response,"qqqqqqq")
+            console.log(response, "qqqqqqq")
         }
         return response
     },
 
     async makeApiCall({ commit, rootState, rootGetters }, params) {
         try {
- 
+            const { $axios } = useNuxtApp();
+
             const loader = params.loader ? params.loader : null
 
             const general = rootState.general
@@ -103,12 +104,12 @@ export default {
 
             params.lang = rootGetters.currentLang
             params.end_point = params.end_point ? params.end_point : url.channels
-            const response = await this.$axios.post(params.end_point, params, {})
+            const response = await $axios.post(params.end_point, params, {})
 
             if (loader) {
                 general[loader] = false
             }
- 
+
             if (response.code && response.code != 200) {
                 throw Error(response)
             }

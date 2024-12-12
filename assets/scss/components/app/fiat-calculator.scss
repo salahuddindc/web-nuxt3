@@ -1,4 +1,4 @@
-@use "@/assets/variables/light";
+@use "@/assets/variables/light" as *;
 @use "@/assets/scss/global/custom/web-font-size.scss"; // Custom Classes
 #fiat-calculator {
     .main-div {
